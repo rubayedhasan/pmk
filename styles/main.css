@@ -25,4 +25,6 @@ li {
 /* common styles  */
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

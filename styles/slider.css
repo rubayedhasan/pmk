@@ -18,6 +18,11 @@ li {
 }
 
 /* shared styles  */
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .font-playfair {
   font-family: "Playfair Display", serif;
 }
@@ -25,4 +30,94 @@ li {
 /* common styles  */
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* slider styles  */
+.slider-wrapper .slider-item {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrapper .slider-item:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: brightness(60%) contrast(120%);
+  background-image: url("../assets/slider/medical_team_pmk.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-wrapper .slider-item:nth-child(2):before {
+  background-image: url("../assets/slider/nursing_collage.png");
+}
+.slider-wrapper .slider-item:nth-child(3):before {
+  background-image: url("../assets/slider/various_project.jpg");
+}
+.slider-wrapper .slider-item:nth-child(4):before {
+  background-image: url("../assets/slider/wash_project.jpg");
+}
+.slider-wrapper .slider-item:nth-child(5):before {
+  background-image: url("../assets/slider/world_bank_visitor_at_pmk.jpg");
+}
+.slider-wrapper .slider-item:nth-child(6):before {
+  background-image: url("../assets/slider/infont_of_pmk.png");
+}
+
+.slider-wrapper .slider-item .slider-content {
+  color: #fff;
+  z-index: 20;
+  position: relative;
+  padding: 30px 20px;
+  width: 1400px;
+}
+
+.slider-wrapper .slider-item .slider-content > * {
+  max-width: 55%;
+}
+
+.slider-item .slider-content .slider-subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #e8f5e9;
+}
+
+.slider-item .slider-content .slider-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 5px;
+  line-height: 1.2;
+}
+
+.slider-item .slider-content .slider-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.slider-item .slider-content .slider-button {
+  color: #fff;
+  width: 250px;
+  padding: 13px 0;
+  border: 2px solid #fff;
+  display: block;
+  text-align: center;
+  margin-top: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.4s ease;
+}
+
+.slider-item .slider-content .slider-button:hover {
+  color: #000;
+  background-color: #fff;
 }
