@@ -51,26 +51,27 @@ body {
   top: 0;
   left: 0;
   filter: brightness(60%) contrast(120%);
-  background-image: url("../assets/slider/medical_team_pmk.jpg");
+  background-image: url("../assets/slider/infont_of_pmk.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .slider-wrapper .slider-item:nth-child(2):before {
+  background-image: url("../assets/slider/medical_team_pmk.jpg");
+}
+
+.slider-wrapper .slider-item:nth-child(3):before {
   background-image: url("../assets/slider/nursing_collage.png");
 }
-.slider-wrapper .slider-item:nth-child(3):before {
+.slider-wrapper .slider-item:nth-child(4):before {
   background-image: url("../assets/slider/various_project.jpg");
 }
-.slider-wrapper .slider-item:nth-child(4):before {
+.slider-wrapper .slider-item:nth-child(5):before {
   background-image: url("../assets/slider/wash_project.jpg");
 }
-.slider-wrapper .slider-item:nth-child(5):before {
-  background-image: url("../assets/slider/world_bank_visitor_at_pmk.jpg");
-}
 .slider-wrapper .slider-item:nth-child(6):before {
-  background-image: url("../assets/slider/infont_of_pmk.png");
+  background-image: url("../assets/slider/world_bank_visitor_at_pmk.jpg");
 }
 
 .slider-wrapper .slider-item .slider-content {
