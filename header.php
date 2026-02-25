@@ -90,6 +90,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- slider controls  -->
+            <div class="slider-controls">
+                <div class="slider-pagination">
+                    <li class="slider-tab">Palli Mongal Karmosuchi (PMK)</li>
+                    <li class="slider-tab">PMK Hospital</li>
+                    <li class="slider-tab">PMK Nursing Collage</li>
+                    <li class="slider-tab">PMK-Various Project</li>
+                    <li class="slider-tab">PMK-Wash Project</li>
+                    <li class="slider-tab">PMK-Partnering impact with World Bank</li>
+                </div>
+            </div>
         </section>
     </main>
 
