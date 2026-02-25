@@ -10,9 +10,7 @@
 
 <body>
     <!-- section:: header  -->
-    <header>
-        <h1>Welcome to PMK</h1>
-    </header>
+    <?php require("./header.php") ?>
 
     <!-- section:: main  -->
     <main></main>

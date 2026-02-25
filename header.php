@@ -95,12 +95,12 @@
             <div class="slider-controls">
                 <div class="slider-pagination">
                     <div class="slider-indicator"></div>
-                    <li class="slider-tab">Palli Mongal Karmosuchi (PMK)</li>
+                    <li class="slider-tab">Palli Mongal Program</li>
                     <li class="slider-tab">PMK Hospital</li>
                     <li class="slider-tab">PMK Nursing Collage</li>
-                    <li class="slider-tab">PMK-Various Project</li>
-                    <li class="slider-tab">PMK-Wash Project</li>
-                    <li class="slider-tab">PMK-Partnering impact with World Bank</li>
+                    <li class="slider-tab">PMK Development Projects</li>
+                    <li class="slider-tab">PMK WASH Initiative</li>
+                    <li class="slider-tab">World Bank & PKSF Visit</li>
                 </div>
             </div>
 
