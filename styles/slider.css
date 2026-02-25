@@ -159,6 +159,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   transition: 0.4s ease;
+  white-space: nowrap;
 }
 
 .slider-item.swiper-slide-active .slider-content .slider-button {
