@@ -103,6 +103,12 @@
                     <li class="slider-tab">PMK-Partnering impact with World Bank</li>
                 </div>
             </div>
+
+            <!-- slider navigation (prev/next) -->
+            <div class="slider-navigation">
+                <button id="slider-prev" type="button" class="fa-solid fa-arrow-left-long"></button>
+                <button id="slider-next" type="button" class="fa-solid fa-arrow-right-long"></button>
+            </div>
         </section>
     </main>
 
