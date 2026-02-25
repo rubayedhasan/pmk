@@ -94,6 +94,7 @@
             <!-- slider controls  -->
             <div class="slider-controls">
                 <div class="slider-pagination">
+                    <div class="slider-indicator"></div>
                     <li class="slider-tab">Palli Mongal Karmosuchi (PMK)</li>
                     <li class="slider-tab">PMK Hospital</li>
                     <li class="slider-tab">PMK Nursing Collage</li>
