@@ -82,11 +82,22 @@ body {
 }
 
 .slider-wrapper .slider-item .slider-content {
+  opacity: 0;
   color: #fff;
   z-index: 20;
   position: relative;
   padding: 30px 20px;
   width: 1400px;
+}
+
+.slider-wrapper .slider-item.swiper-slide-active .slider-content {
+  animation: animation-opacity 0.8s 0.6s linear forwards;
+}
+
+@keyframes animation-opacity {
+  100% {
+    opacity: 1;
+  }
 }
 
 .slider-wrapper .slider-item .slider-content > * {
@@ -97,24 +108,49 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   color: #e8f5e9;
+  opacity: 0;
+  transform: translateY(60%);
 }
 
 .slider-item .slider-content .slider-title {
+  opacity: 0;
   font-size: 3rem;
   font-weight: 700;
   margin-top: 5px;
   line-height: 1.2;
+  text-transform: uppercase;
+  transform: translateY(60%);
+}
+
+.slider-item.swiper-slide-active
+  .slider-content
+  :where(.slider-subtitle, .slider-title) {
+  animation: animation-text 0.6s 0.6s linear forwards;
+}
+
+@keyframes animation-text {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .slider-item .slider-content .slider-description {
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
+  opacity: 0;
+  transform: translateY(60%);
+}
+
+.slider-item.swiper-slide-active .slider-content .slider-description {
+  animation: animation-text 0.6s 1s linear forwards;
 }
 
 .slider-item .slider-content .slider-button {
   color: #fff;
-  width: 250px;
+  opacity: 0;
+  width: 0;
   padding: 13px 0;
   border: 2px solid #fff;
   display: block;
@@ -125,9 +161,28 @@ body {
   transition: 0.4s ease;
 }
 
+.slider-item.swiper-slide-active .slider-content .slider-button {
+  animation: animation-button 0.6s 1.3s linear forwards;
+}
+
+@keyframes animation-button {
+  100% {
+    opacity: 1;
+    width: 250px;
+  }
+}
+
 .slider-item .slider-content .slider-button:hover {
   color: #000;
   background-color: #fff;
+}
+
+.slider-item .slider-content .slider-button span {
+  opacity: 0;
+}
+
+.slider-item.swiper-slide-active .slider-content .slider-button span {
+  animation: animation-opacity 0.6s 1.3s linear forwards;
 }
 
 /* slider pagination styles  */
