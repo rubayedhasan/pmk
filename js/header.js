@@ -1,3 +1,15 @@
+// navbar section logic
+const navbar = document.getElementById("navigation");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// slider section  logics
 // get the elements
 const sliderControls = document.querySelector(".slider-controls");
 const sliderIndicator = document.querySelector(".slider-indicator");
@@ -7,6 +19,10 @@ const sliderTabs = document.querySelectorAll(".slider-tab");
 function updateIndicator(tab, index) {
   sliderIndicator.style.transform = `translateX(${tab.offsetLeft - 20}px)`;
   sliderIndicator.style.width = `${tab.getBoundingClientRect().width}px`;
+
+  // active the current slider
+  sliderTabs.forEach((t) => t.classList.remove("active-slide"));
+  tab.classList.add("active-slide");
 
   // Calculate the scroll position and scroll smoothly
   const scrollLeft =
@@ -45,6 +61,10 @@ const swiper = new Swiper(".slider-container", {
 // Update the slide and pagination on click the tab
 sliderTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
+    // active the current slider
+    sliderTabs.forEach((t) => t.classList.remove("active-slide"));
+    tab.classList.add("active-slide");
+
     swiper.slideTo(index);
   });
 

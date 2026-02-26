@@ -18,6 +18,11 @@ li {
 }
 
 /* shared styles  */
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .font-playfair {
   font-family: "Playfair Display", serif;
 }
@@ -34,10 +39,16 @@ body {
   */
 /* responsive styles:: extra small devices  */
 @media (max-width: 575.98px) {
+  .container-width {
+    width: 100%;
+  }
 }
 
 /* responsive styles:: small devices  */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .container-width {
+    width: 100%;
+  }
 }
 
 /* responsive styles:: medium devices  */

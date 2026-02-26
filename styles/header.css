@@ -34,7 +34,62 @@ body {
   overflow-y: scroll;
 }
 
-/* slider styles  */
+/* navbar section styles  */
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+
+  background-color: rgba(255, 255, 255, 0.25); /* semi-transparent glass */
+  backdrop-filter: blur(10px); /* glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#navigation.scrolled {
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#navigation.scrolled .nav-link {
+  color: #1f2933;
+}
+
+#navigation.scrolled .nav-link:hover,
+#navigation.scrolled .nav-link.active {
+  color: #009966;
+}
+
+.brand-name {
+  width: 250px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-name img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #f4b400;
+}
+
+/* slider section styles  */
 .slider-container {
   position: relative;
   height: 100%;
@@ -210,17 +265,21 @@ body {
 .slider-pagination .slider-indicator {
   position: absolute;
   bottom: 0;
-  border-bottom: 2px solid #fff;
   transition: 0.4s ease-in-out;
+  border-bottom: 3px solid #f4b400;
 }
 
 .slider-pagination .slider-tab {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
   text-align: center;
   cursor: pointer;
   padding: 20px 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.slider-pagination .slider-tab.active-slide {
+  color: #f4b400;
 }
 
 .slider-navigation button {
@@ -254,6 +313,16 @@ body {
   */
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  #navigation {
+    height: auto;
+  }
+
+  #navigation .brand-name {
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+  }
+
   /* shared styles  */
   .container-width {
     width: 100%;
@@ -262,6 +331,10 @@ body {
   /* slider styles  */
   .slider-wrapper .slider-item {
     align-items: flex-start;
+  }
+
+  .slider-wrapper .slider-item .slider-content {
+    padding-top: 120px;
   }
 
   .slider-wrapper .slider-item .slider-content > * {
