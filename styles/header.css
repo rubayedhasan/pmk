@@ -43,9 +43,8 @@ body {
   height: 70px;
   z-index: 1000;
 
-  background-color: rgba(255, 255, 255, 0.25); /* semi-transparent glass */
-  backdrop-filter: blur(10px); /* glass blur effect */
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
   transition:
     background-color 0.3s ease,
@@ -68,14 +67,14 @@ body {
 }
 
 .brand-name {
-  width: 250px;
   display: inline-flex;
   align-items: center;
+  height: 70px;
 }
 
-.brand-name img {
-  width: 100%;
-  height: 100%;
+.brand-name #logo-img {
+  height: 60%;
+  width: auto;
   object-fit: contain;
 }
 
@@ -317,10 +316,14 @@ body {
     height: auto;
   }
 
-  #navigation .brand-name {
+  /* #navigation .brand-name {
     width: 200px;
     display: inline-flex;
     align-items: center;
+  } */
+
+  .brand-name #logo-img {
+    height: 50%;
   }
 
   /* shared styles  */
@@ -334,7 +337,7 @@ body {
   }
 
   .slider-wrapper .slider-item .slider-content {
-    padding-top: 120px;
+    padding-top: 85px;
   }
 
   .slider-wrapper .slider-item .slider-content > * {
@@ -365,6 +368,10 @@ body {
     }
   }
 
+  .slider-container .slider-controls {
+    bottom: 10px;
+  }
+
   .slider-controls .slider-pagination {
     align-items: flex-end;
   }
@@ -374,11 +381,11 @@ body {
     padding: 10px 30px;
   }
 
-  .slider-navigation button {
+  /* .slider-navigation button {
     background-color: transparent;
     top: unset;
     bottom: -35px;
-  }
+  } */
 
   .slider-navigation button:hover {
     background-color: transparent;

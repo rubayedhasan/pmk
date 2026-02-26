@@ -28,7 +28,7 @@
         <nav id="navigation" class="navbar navbar-expand-lg">
             <div class="container-fluid container-width">
                 <a class="navbar-brand brand-name" href="./index.php">
-                    <img src="./assets/logo/pmk_logo.png" alt="pmk logo">
+                    <img id="logo-img" src="./assets/logo/pmk_logo.png" alt="pmk logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Impact
+                                Achievements
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Success Stories</a></li>
@@ -94,7 +94,7 @@
                                 <li><a class="dropdown-item" href="#">Career</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Gallery
                             </a>
@@ -102,7 +102,7 @@
                                 <li><a class="dropdown-item" href="#">Photos</a></li>
                                 <li><a class="dropdown-item" href="#">Videos</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Contact
