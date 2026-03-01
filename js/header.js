@@ -10,7 +10,7 @@ navLinks.forEach((link) => {
   });
 });
 
-// sticky effect ob=ver navbar on scroll
+// sticky effect over navbar on scroll
 window.addEventListener("scroll", () => {
   if (window.scrollY > 80) {
     navbar.classList.add("scrolled");

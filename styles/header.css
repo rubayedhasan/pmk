@@ -79,6 +79,9 @@ body {
 }
 
 .navbar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5;
   color: #ffffff;
   font-weight: 500;
 }
@@ -86,6 +89,48 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #f4b400;
+}
+
+.navbar .dropdown .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  top: 50px;
+  background-color: #e8f5e9;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  min-width: 200px;
+  padding: 0;
+  border: 1px solid #f4b400;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+
+.navbar .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar .dropdown-menu li {
+  border-bottom: 1px solid #f4b400;
+}
+
+.navbar .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
 }
 
 /* slider section styles  */
@@ -312,23 +357,26 @@ body {
   */
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  /* shared styles  */
+  .container-width {
+    width: 100%;
+  }
+
+  /* navbar styles  */
   #navigation {
     height: auto;
   }
-
-  /* #navigation .brand-name {
-    width: 200px;
-    display: inline-flex;
-    align-items: center;
-  } */
 
   .brand-name #logo-img {
     height: 50%;
   }
 
-  /* shared styles  */
-  .container-width {
-    width: 100%;
+  .navbar .dropdown .dropdown-menu {
+    display: none;
+  }
+
+  .navbar .dropdown .dropdown-menu.show {
+    display: block;
   }
 
   /* slider styles  */
@@ -381,12 +429,6 @@ body {
     padding: 10px 30px;
   }
 
-  /* .slider-navigation button {
-    background-color: transparent;
-    top: unset;
-    bottom: -35px;
-  } */
-
   .slider-navigation button:hover {
     background-color: transparent;
   }
@@ -394,6 +436,10 @@ body {
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  #navigation {
+    height: auto;
+  }
+
   .slider-wrapper .slider-item .slider-content > * {
     max-width: 75%;
   }
