@@ -83,6 +83,26 @@ footer .footer-main {
   padding: 70px 20px;
 }
 
+.footer-main .widget-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-left: 3px solid #f4b400;
+  padding-left: 10px;
+}
+
+.footer-main .widget-description {
+  color: #e0e0e0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.footer-main .pmk-mini-logo {
+  width: 22%;
+  object-fit: contain;
+}
+
 /* copyright styles  */
 footer .copyright {
   background-color: #0c4a66;
@@ -100,6 +120,7 @@ footer .copyright {
   color: #cccccc;
   transition: 0.3s ease;
 }
+
 .nav .nav-item .nav-link:hover {
   color: #f1f1f1;
 }

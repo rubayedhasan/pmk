@@ -29,8 +29,29 @@
 
             <!-- main footer container  -->
             <section class="footer-main">
-                <div class="container-width">
-                    <p>footer content </p>
+                <div class="container container-width">
+                    <div class="row">
+                        <div class="col col-lg-3">
+                            <h3 class="widget-title">
+                                About PMK
+                            </h3>
+                            <figure>
+                                <img src="./assets/logo/logo.png" alt="pmk-logo" loading="lazy" class="pmk-mini-logo">
+                            </figure>
+                            <p class="widget-description">Established in 1988, PMK has over <script>
+                                    document.write(new Date().getFullYear() - 1988)
+                                </script> years of experience in advancing poverty reduction, social justice, climate resilience, and sustainable rural development across Bangladesh.</p>
+                        </div>
+                        <div class="col col-lg-3">
+                            <p>section 2</p>
+                        </div>
+                        <div class="col col-lg-3">
+                            <p>section 3</p>
+                        </div>
+                        <div class="col col-lg-3">
+                            <p>section 4</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
