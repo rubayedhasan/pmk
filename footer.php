@@ -18,7 +18,7 @@
 
 <body>
     <main>
-        <footer>
+        <footer class="pmk-footer">
             <!-- section:: membership -->
             <section class="membership">
                 <div class="container-width">
@@ -28,33 +28,35 @@
             </section>
 
             <!-- main footer container  -->
-            <!-- <div class="footer-main container-width container">
-                <div class="row">
-                    <div class="col-1 col-lg-4">
-                        <h4 class="widget-title">About PMK</h4>
-                        <figure class="footer-mini-logo">
-                            <img loading="lazy" src="./assets/logo/logo.png" alt="pmk logo">
-                        </figure>
-                        <p class="widget-content">Within 34 years long journey, PMK has made significant contribution in national level development activities through incorporating the interventions in different sectors.</p>
-                        <div class="social-icons"></div>
-                    </div>
-                    <div class="col-1 col-lg-4">
-                        <p>footer-2</p>
-                    </div>
-                    <div class="col-1 col-lg-4">
-                        <p>footer-3</p>
-                    </div>
+            <section class="footer-main">
+                <div class="container-width">
+                    <p>footer content </p>
                 </div>
-            </div> -->
+            </section>
 
             <!-- copyright text  -->
-            <!-- <div class="copyright">
-                <p class="copy-text">
-                    Copyright © <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed & Developed by MIS & ICT Department, Palli Mongal Karmosuchi (PMK)
-                </p>
-            </div> -->
+            <section class="copyright">
+                <div class="copyright-content d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap">
+                    <p class="copy-text">
+                        Copyright © <script>
+                            document.write(new Date().getFullYear())
+                        </script>, Designed & Developed by MIS & ICT Department, Palli Mongal Karmosuchi (PMK)
+                    </p>
+
+                    <!-- links  -->
+                    <ul class="nav justify-content-center justify-content-lg-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy Policy </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Terms of Service </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Transparency</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </footer>
     </main>
 

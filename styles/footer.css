@@ -16,6 +16,16 @@ a {
 li {
   list-style: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
 
 /* shared styles  */
 .container-width {
@@ -35,6 +45,10 @@ body {
 }
 
 /* footer section's  styles  */
+footer.pmk-footer {
+  margin-top: 56px;
+}
+
 footer .membership {
   background-color: #0f8f63;
   text-align: center;
@@ -62,47 +76,33 @@ footer .membership {
   background: #f1f1f1;
 }
 
-/* footer {
-  margin: 56px 0 0;
-  padding-top: 80px;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
+/* footer-main section styles  */
 footer .footer-main {
   color: #fff;
+  background-color: #0f5675;
+  padding: 70px 20px;
 }
 
-.footer-main .widget-title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  border-left: 5px solid #f4b400;
-  padding-left: 12px;
-  text-transform: uppercase;
-}
-
-.footer-main .widget-content {
-  color: #999;
-  font-size: 1rem;
-  line-height: 26px;
-  text-align: justify;
-}
-
-.footer-mini-logo img {
-  width: 20%;
-}
-
+/* copyright styles  */
 footer .copyright {
-  background-color: #f4b400;
-  padding: 25px 0 15px;
+  background-color: #0c4a66;
+  padding: 20px;
 }
 
-footer .copyright .copy-text {
-  color: rgb(17, 17, 17);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-align: center;
-} */
+.copyright .copyright-content {
+  color: #cccccc;
+  font-size: 0.875rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav .nav-item .nav-link {
+  color: #cccccc;
+  transition: 0.3s ease;
+}
+.nav .nav-item .nav-link:hover {
+  color: #f1f1f1;
+}
 /*
 ------------Slider responsive styles------------
   */
