@@ -167,6 +167,52 @@ footer .footer-main {
   color: #0f8f63;
 }
 
+.footer-main .address {
+  margin-top: 50px;
+}
+
+.footer-main .address p {
+  color: #e0e0e0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.footer-main .address p:nth-child(n + 1) {
+  margin-bottom: 10px;
+}
+
+.footer-main .newsletter h5 {
+  margin: 10px 0 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.footer-main .newsletter form {
+  display: flex;
+}
+
+.footer-main .newsletter form input {
+  flex: 1;
+  font-size: 0.875rem;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+}
+
+.footer-main .newsletter form button {
+  background-color: #0f8f63;
+  border: none;
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-main .newsletter form button:hover {
+  background: #0c6e4d;
+}
 /* copyright styles  */
 footer .copyright {
   background-color: #0c4a66;

@@ -29,7 +29,7 @@
 
             <!-- main footer container  -->
             <section class="footer-main">
-                <div class="container container-width">
+                <div class="container">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         <!-- about PMK  -->
                         <div class="col">
@@ -126,8 +126,25 @@
 
                             </nav>
                         </div>
+
+                        <!-- contact  -->
                         <div class="col">
-                            <p>section 4</p>
+                            <h3 class="widget-title">Contact US</h3>
+
+                            <div class="address">
+                                <p>Zirabo, Ashulia, Dhaka-1341, Bangladesh</p>
+                                <p>Email: info@pmk-bd.org</p>
+                                <p>Phone: +880 1709 91 40 00</p>
+                            </div>
+
+                            <!-- newsletter  -->
+                            <div class="newsletter">
+                                <h5>Subscribe to Updates</h5>
+                                <form>
+                                    <input type="email" name="user-email" id="input-email" placeholder="Your Email Address">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
