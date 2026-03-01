@@ -30,8 +30,9 @@
             <!-- main footer container  -->
             <section class="footer-main">
                 <div class="container container-width">
-                    <div class="row">
-                        <div class="col col-lg-3">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                        <!-- about PMK  -->
+                        <div class="col">
                             <h3 class="widget-title">
                                 About PMK
                             </h3>
@@ -67,13 +68,65 @@
 
 
                         </div>
-                        <div class="col col-lg-3">
-                            <p>section 2</p>
+                        <!-- our program  -->
+                        <div class="col">
+                            <h3 class="widget-title">Our Programs</h3>
+
+                            <!-- footer nav  -->
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Microfinance Program</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Hospital & Healthcare</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>PMK Nursing College</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Technical Training</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Tissue Culture Lab</span></a>
+                            </nav>
                         </div>
-                        <div class="col col-lg-3">
-                            <p>section 3</p>
+
+                        <!-- quick links  -->
+                        <div class="col">
+                            <h3 class="widget-title">Quick Links</h3>
+
+                            <!-- footer nav  -->
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>About PMK</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Leadership</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Annual Reports</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Careers</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </span> <span>Contact</span></a>
+
+                            </nav>
                         </div>
-                        <div class="col col-lg-3">
+                        <div class="col">
                             <p>section 4</p>
                         </div>
                     </div>
@@ -86,7 +139,7 @@
                     <p class="copy-text">
                         Copyright © <script>
                             document.write(new Date().getFullYear())
-                        </script>, Designed & Developed by MIS & ICT Department, Palli Mongal Karmosuchi (PMK)
+                        </script>, All Rights Reserved by MIS & ICT Department, PMK
                     </p>
 
                     <!-- links  -->

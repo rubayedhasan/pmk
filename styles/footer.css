@@ -146,6 +146,27 @@ footer .footer-main {
 .social-link.github:hover {
   background: #333333;
 }
+
+.footer-main nav {
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.footer-main .nav-link {
+  color: #e0e0e0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.4s ease;
+}
+
+.footer-main .nav-link:hover {
+  color: #0f8f63;
+}
+
 /* copyright styles  */
 footer .copyright {
   background-color: #0c4a66;
@@ -159,12 +180,12 @@ footer .copyright {
   margin: 0 auto;
 }
 
-.nav .nav-item .nav-link {
+.copyright-content .nav .nav-item .nav-link {
   color: #cccccc;
   transition: 0.3s ease;
 }
 
-.nav .nav-item .nav-link:hover {
+.copyright-content .nav .nav-item .nav-link:hover {
   color: #f1f1f1;
 }
 /*
