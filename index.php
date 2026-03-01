@@ -26,7 +26,7 @@
     </main>
 
     <!-- section:: footer  -->
-    <footer></footer>
+    <?php include("./footer.php") ?>
 
 
     <!-- Linked font awesome script  -->

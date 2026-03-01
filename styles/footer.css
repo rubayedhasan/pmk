@@ -1,0 +1,86 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* reset all default styles  */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* shared styles  */
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* common styles  */
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* footer section's  styles  */
+footer {
+  margin: 56px 0 0;
+  padding-top: 80px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer .copyright {
+  background-color: #f4b400;
+  padding: 25px 0 15px;
+}
+
+footer .copyright .copy-text {
+  color: rgb(17, 17, 17);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+/*
+------------Slider responsive styles------------
+  */
+/* responsive styles:: extra small devices  */
+@media (max-width: 575.98px) {
+  .container-width {
+    width: 100%;
+  }
+}
+
+/* responsive styles:: small devices  */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container-width {
+    width: 100%;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: small devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: small devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: small devices  */
+@media (min-width: 1400px) {
+}
