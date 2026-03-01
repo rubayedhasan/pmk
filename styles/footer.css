@@ -22,7 +22,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li {
   padding: 0;
   margin: 0;
 }
@@ -103,6 +105,47 @@ footer .footer-main {
   object-fit: contain;
 }
 
+.footer-main .social-icons {
+  margin-top: 18px;
+}
+
+.social-icons li {
+  display: inline-flex;
+}
+
+.social-icons .social-link {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.social-icons .social-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.social-link.facebook:hover {
+  background: #1877f2;
+}
+
+.social-link.twitter:hover {
+  background: #000000;
+}
+
+.social-link.instagram:hover {
+  background: #e4405f;
+}
+
+.social-link.github:hover {
+  background: #333333;
+}
 /* copyright styles  */
 footer .copyright {
   background-color: #0c4a66;

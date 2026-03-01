@@ -41,6 +41,31 @@
                             <p class="widget-description">Established in 1988, PMK has over <script>
                                     document.write(new Date().getFullYear() - 1988)
                                 </script> years of experience in advancing poverty reduction, social justice, climate resilience, and sustainable rural development across Bangladesh.</p>
+
+                            <ul class="social-icons d-flex gap-3 justify-content-start">
+                                <li>
+                                    <a href="https://facebook.com/themefisher" target="_blank" class="social-link facebook">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="social-link twitter">
+                                        <i class="fa-brands fa-square-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="social-link instagram">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="social-link github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+
                         </div>
                         <div class="col col-lg-3">
                             <p>section 2</p>
