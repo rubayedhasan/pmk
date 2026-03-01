@@ -30,7 +30,7 @@
             <!-- main footer container  -->
             <section class="footer-main">
                 <div class="container">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gap-x-5">
                         <!-- about PMK  -->
                         <div class="col">
                             <h3 class="widget-title">

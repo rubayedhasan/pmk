@@ -195,13 +195,15 @@ footer .footer-main {
 .footer-main .newsletter form input {
   flex: 1;
   font-size: 0.875rem;
+  font-weight: 500;
   padding: 10px;
   border: none;
   outline: none;
-  font-weight: 500;
 }
 
 .footer-main .newsletter form button {
+  font-size: 0.875rem;
+  font-weight: 600;
   background-color: #0f8f63;
   border: none;
   padding: 10px 16px;
@@ -238,7 +240,7 @@ footer .copyright {
 ------------Slider responsive styles------------
   */
 /* responsive styles:: extra small devices  */
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .container-width {
     width: 100%;
   }
@@ -247,27 +249,51 @@ footer .copyright {
   .membership .welcome-text {
     font-size: 1.55rem;
   }
-}
 
-/* responsive styles:: small devices  */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .container-width {
-    width: 100%;
+  .footer-main .widget-title {
+    margin-top: 30px;
+  }
+
+  .footer-main nav {
+    margin-top: 30px;
   }
 }
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-main .widget-title {
+    margin-top: 30px;
+  }
+
+  .footer-main nav {
+    margin-top: 30px;
+  }
 }
 
-/* responsive styles:: small devices  */
+/* responsive styles:: large devices  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .footer-main .newsletter form {
+    display: block;
+  }
+  .footer-main .newsletter form input {
+    border-radius: 4px;
+    font-size: 0.75rem;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .footer-main .newsletter form button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
 }
 
-/* responsive styles:: small devices  */
+/* responsive styles:: extra large devices  */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
 }
 
-/* responsive styles:: small devices  */
+/* responsive styles:: extra extra large devices  */
 @media (min-width: 1400px) {
 }
