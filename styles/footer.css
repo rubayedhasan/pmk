@@ -52,6 +52,7 @@ footer .membership {
   color: #0f8f63;
   background-color: #fff;
   padding: 12px 28px;
+  font-size: 1rem;
   font-weight: 600;
   border-radius: 4px;
   transition: background 0.3s ease;
@@ -109,6 +110,11 @@ footer .copyright .copy-text {
 @media (max-width: 575.98px) {
   .container-width {
     width: 100%;
+  }
+
+  /* footer section styles  */
+  .membership .welcome-text {
+    font-size: 1.55rem;
   }
 }
 
