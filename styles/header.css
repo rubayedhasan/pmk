@@ -18,6 +18,16 @@ li {
 }
 
 /* shared styles  */
+:root {
+  --pmk-green: #1f8f63;
+  --pmk-green-light: #e6f4ef;
+  --pmk-blue: #0e5a7c;
+  --pmk-blue-dark: #083d56;
+  --pmk-gold: #f4b400;
+  --pmk-dark: #1f2933;
+  --pmk-white: #ffffff;
+}
+
 .container-width {
   width: 80%;
   margin: 0 auto;
@@ -63,7 +73,7 @@ body {
 
 #navigation.scrolled .nav-link:hover,
 #navigation.scrolled .nav-link.active {
-  color: #009966;
+  color: var(--pmk-green);
 }
 
 .brand-name {
@@ -82,13 +92,13 @@ body {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.5;
-  color: #ffffff;
+  color: var(--pmk-white);
   font-weight: 500;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #f4b400;
+  color: var(--pmk-gold);
 }
 
 .navbar .dropdown .dropdown-menu {
@@ -98,14 +108,14 @@ body {
   opacity: 0;
   transform: translateY(50px);
   top: 50px;
-  background-color: #e8f5e9;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 8px;
   backdrop-filter: blur(8px);
   min-width: 200px;
   padding: 0;
-  border: 1px solid #f4b400;
+  background-color: var(--pmk-green-light);
+  border: 1px solid var(--pmk-green);
   transition:
     opacity 0.3s ease,
     transform 0.3s ease,
@@ -120,7 +130,7 @@ body {
 }
 
 .navbar .dropdown-menu li {
-  border-bottom: 1px solid #f4b400;
+  border-bottom: 1px solid var(--pmk-green);
 }
 
 .navbar .dropdown-menu li:last-child {
@@ -213,7 +223,7 @@ body {
 
 .slider-wrapper .slider-item .slider-content {
   opacity: 0;
-  color: #fff;
+  color: var(--pmk-white);
   z-index: 20;
   position: relative;
   padding: 30px 20px;
@@ -279,11 +289,11 @@ body {
 }
 
 .slider-item .slider-content .slider-button {
-  color: #fff;
+  color: var(--pmk-white);
   opacity: 0;
   width: 0;
   padding: 13px 0;
-  border: 2px solid #fff;
+  border: 2px solid var(--pmk-white);
   display: block;
   text-align: center;
   margin-top: 45px;
@@ -306,7 +316,7 @@ body {
 
 .slider-item .slider-content .slider-button:hover {
   color: #000;
-  background-color: #fff;
+  background-color: var(--pmk-white);
 }
 
 .slider-item .slider-content .slider-button span {
@@ -341,7 +351,7 @@ body {
   position: absolute;
   bottom: 0;
   transition: 0.4s ease-in-out;
-  border-bottom: 3px solid #f4b400;
+  border-bottom: 3px solid var(--pmk-gold);
 }
 
 .slider-pagination .slider-tab {
@@ -358,7 +368,7 @@ body {
 }
 
 .slider-navigation button {
-  color: #fff;
+  color: var(--pmk-white);
   background-color: #202022;
   height: 40px;
   width: 40px;
