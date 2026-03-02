@@ -30,6 +30,19 @@ li {
 }
 
 /* shared styles  */
+:root {
+  --pmk-green: #1f8f63;
+  --pmk-green-dark: #176f4e;
+  --pmk-green-light: #e6f4ef;
+
+  --pmk-blue: #0e5a7c;
+  --pmk-blue-dark: #083d56;
+
+  --pmk-dark: #1f2933;
+  --pmk-gray-light: #e0e0e0;
+  --pmk-white: #ffffff;
+}
+
 .container-width {
   width: 80%;
   margin: 0 auto;
@@ -52,44 +65,44 @@ footer.pmk-footer {
 }
 
 footer .membership {
-  background-color: #0f8f63;
+  background: linear-gradient(135deg, var(--pmk-green), var(--pmk-blue));
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .membership .welcome-text {
-  color: #fff;
+  color: var(--pmk-white);
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .membership .member-btn {
-  color: #0f8f63;
-  background-color: #fff;
-  padding: 12px 28px;
+  color: var(--pmk-white);
+  background-color: var(--pmk-blue-dark);
+  padding: 12px 30px;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: background 0.3s ease;
 }
 
 .membership .member-btn:hover {
-  background: #f1f1f1;
+  background: var(--pmk-dark);
 }
 
 /* footer-main section styles  */
 footer .footer-main {
-  color: #fff;
-  background-color: #0f5675;
-  padding: 70px 20px;
+  background-color: var(--pmk-blue-dark);
+  color: var(--pmk-white);
+  padding: 80px 20px;
 }
 
 .footer-main .widget-title {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 20px;
-  border-left: 3px solid #f4b400;
+  border-left: 3px solid var(--pmk-green);
   padding-left: 10px;
 }
 
@@ -114,7 +127,7 @@ footer .footer-main {
 }
 
 .social-icons .social-link {
-  color: #fff;
+  color: var(--pmk-white);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -164,7 +177,7 @@ footer .footer-main {
 }
 
 .footer-main .nav-link:hover {
-  color: #0f8f63;
+  color: var(--pmk-green);
 }
 
 .footer-main .address {
@@ -204,20 +217,20 @@ footer .footer-main {
 .footer-main .newsletter form button {
   font-size: 0.875rem;
   font-weight: 600;
-  background-color: #0f8f63;
+  background-color: var(--pmk-green);
   border: none;
   padding: 10px 16px;
-  color: #fff;
+  color: var(--pmk-white);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .footer-main .newsletter form button:hover {
-  background: #0c6e4d;
+  background: var(--pmk-green-dark);
 }
 /* copyright styles  */
 footer .copyright {
-  background-color: #0c4a66;
+  background-color: var(--pmk-blue);
   padding: 20px;
 }
 
