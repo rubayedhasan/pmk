@@ -1,0 +1,52 @@
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0)
+  );
+
+  backdrop-filter: none;
+  transition: all 0.35s ease;
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--pmk-gold);
+}
+
+#navigation.scrolled {
+  background-color: #ffffff;
+  height: 70px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+#navigation.scrolled .nav-link {
+  color: var(--pmk-dark);
+}
+
+#navigation.scrolled .nav-link:hover {
+  color: var(--pmk-green);
+}
+
+.brand-name {
+  transition: all 0.3s ease;
+}
+
+#navigation.scrolled .brand-name #logo-img {
+  height: 50%;
+}
