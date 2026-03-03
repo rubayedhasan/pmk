@@ -138,7 +138,7 @@
                                 <h5>Subscribe to Updates</h5>
                                 <form>
                                     <input type="email" name="user-email" id="input-email" placeholder="Your Email Address">
-                                    <button type="submit">Subscribe</button>
+                                    <button id="subscribe-btn" type="submit">Subscribe</button>
                                 </form>
                             </div>
                         </div>
@@ -172,6 +172,8 @@
         </footer>
     </main>
 
+    <!-- Linked my custom script  -->
+    <script src="./js/newsletter.js"></script>
 </body>
 
 </html>
