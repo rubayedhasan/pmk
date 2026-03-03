@@ -15,17 +15,172 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
+
 <body>
     <!-- section:: header  -->
     <?php require("./header.php") ?>
 
     <!-- section:: main  -->
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perspiciatis, debitis, aut ad quas tenetur aliquid veritatis dolores repellat hic animi quia ea magni cumque mollitia dolorem corrupti adipisci officiis accusantium ducimus, totam repudiandae voluptatum dolorum labore! Suscipit alias nemo itaque veritatis, ut at maxime. Aspernatur nobis sed, ipsam tenetur enim ut repudiandae veritatis perspiciatis voluptate unde voluptatibus veniam possimus, doloribus incidunt excepturi praesentium facere! Inventore est voluptatum fuga. Quam exercitationem in possimus sequi necessitatibus optio quos, eius est voluptas sapiente quia, ipsam quidem! Sapiente nesciunt quae alias! Explicabo architecto laborum enim quis libero hic fugit ducimus ipsum expedita, repellendus, debitis adipisci! Et, quidem fuga? Pariatur, debitis eveniet, officia est eius eos autem odio beatae quasi doloribus deleniti. Dolore enim ipsum est deserunt eligendi adipisci illo blanditiis voluptatum, dolor numquam necessitatibus nisi dolores similique ea quo repudiandae odit, quas voluptas modi doloremque vero eaque dignissimos rerum. Itaque asperiores laborum quasi cum totam cupiditate aspernatur, omnis dolor corrupti amet necessitatibus aliquid pariatur eveniet, dolorum doloremque magnam porro! Facilis tempore dignissimos fugiat ratione quaerat, placeat harum, ab culpa exercitationem inventore voluptatum? Maiores nihil porro cum laborum consequatur nobis autem eos commodi eius mollitia minus delectus ratione consequuntur pariatur voluptate facilis possimus, officiis voluptas sint, corrupti quo sit atque minima? Expedita molestiae similique ut excepturi non, delectus accusamus sapiente blanditiis rerum laborum velit neque enim molestias dolor. Aliquid officia error doloremque, reiciendis tenetur sint fugiat at voluptates facere quas consequuntur voluptas reprehenderit delectus. Cum esse expedita sunt dolorum, non nulla dignissimos quibusdam quasi debitis architecto atque obcaecati odit sequi id iste rerum aperiam sint neque? Repellat eum, totam debitis sit mollitia nobis ea architecto sed nisi repudiandae amet odio tempore voluptatibus impedit expedita culpa inventore cupiditate delectus veniam ipsum dolores autem id obcaecati voluptas? Quisquam, maiores eveniet, fugiat ipsa dolores quae assumenda beatae ab expedita at quo tempora rem consectetur! Blanditiis tenetur pariatur minus consectetur adipisci magnam sed numquam aspernatur molestiae! Esse reiciendis similique exercitationem quidem maxime, excepturi quod beatae! Vel numquam placeat at voluptatem perferendis pariatur reiciendis deserunt necessitatibus sequi voluptatum nisi exercitationem nemo distinctio quidem quibusdam unde, deleniti ex alias commodi iusto. Optio, fuga! Iste natus magni est molestiae, laudantium blanditiis dolores maiores incidunt odit optio consectetur, voluptatem totam consequuntur quisquam facilis recusandae voluptas sed asperiores amet dolor voluptatibus eveniet illo. Totam non aliquid adipisci expedita voluptates accusamus eveniet deserunt magni dolores culpa! Necessitatibus voluptatum mollitia doloremque minus delectus vitae esse, voluptate harum dolore magni corporis ut autem placeat nesciunt consequatur aliquam voluptates maxime excepturi provident vero iste laudantium tenetur natus a. Quo, dolores! Autem reiciendis doloremque esse animi ipsa illum fugiat magnam odio, soluta cupiditate quas suscipit, laudantium dicta consequatur necessitatibus dignissimos doloribus quibusdam minima voluptatum inventore aliquam quam quaerat nesciunt ab? Incidunt eveniet sunt ut veniam modi doloremque quisquam necessitatibus beatae consequatur quidem fuga doloribus voluptatum, hic libero quae eius totam ad inventore vero voluptates eaque. Sit quisquam voluptates tempora, eos, unde in fuga voluptatum neque, quibusdam nostrum eius. Autem non ullam earum quisquam mollitia praesentium qui voluptas eaque.</p>
-        <p>Nobis reprehenderit possimus perspiciatis, aut voluptatibus odit laudantium maxime optio aliquid nam et illum ipsam? Nesciunt quae velit similique quas! Assumenda corporis alias nesciunt delectus, temporibus dolorem accusantium maiores, quo hic numquam consectetur, ipsa minima nobis rerum facilis! Unde dolore quasi inventore voluptatum aspernatur voluptatibus, saepe nostrum? Hic fugit illo praesentium quidem autem ipsam quas est, at harum veritatis repellat recusandae, molestias cumque numquam animi distinctio quisquam velit enim voluptas non aliquid perferendis similique iure. Obcaecati ratione distinctio dignissimos dicta, nihil reprehenderit nobis magnam et autem aperiam ipsum quos ex amet deserunt deleniti nulla quisquam debitis eligendi unde. Illum officiis explicabo totam dolorum veritatis, quia expedita, laborum tempore necessitatibus, molestias praesentium odio tenetur voluptates voluptate reiciendis blanditiis unde voluptas id vitae! Iste veritatis magni dolor, ipsum repellendus illum rem tempore ab atque, perferendis placeat? Dolorum aliquam temporibus numquam consequatur non sunt excepturi, autem maiores, ipsa nihil sequi quasi laboriosam dolor corrupti omnis accusantium ab rem hic nostrum rerum cupiditate. Culpa optio ab maiores, impedit tempore repellendus harum voluptatem dolore, reprehenderit saepe voluptatibus totam, obcaecati facilis? Exercitationem debitis perspiciatis sint incidunt, obcaecati quo consectetur alias beatae eaque ut eius soluta tempora odit magnam in accusantium facere quas corrupti dolorum mollitia iusto eum velit omnis suscipit? Ad odio adipisci quis dolores aspernatur temporibus. Ducimus, dignissimos? Sed repellat doloribus harum voluptate a qui tempore maxime earum quos voluptatum unde, esse ut sint cumque eligendi excepturi in, similique consequuntur. Laborum, tempore quia qui deserunt assumenda modi accusantium unde itaque, consectetur quasi molestiae distinctio. Expedita tempore omnis, commodi quas eius, tenetur quam accusantium earum nemo quaerat ullam reprehenderit tempora. Repellat deleniti ipsa dignissimos perferendis unde, iusto minima nihil consectetur ad quos velit sapiente necessitatibus obcaecati incidunt odit in aspernatur? Minima nostrum, deleniti recusandae laborum accusamus enim omnis expedita facere voluptas tempora! Veniam quas ea tempore quaerat sunt et corporis recusandae! Enim, veniam sunt! Necessitatibus, fugiat molestias. Architecto earum voluptates itaque consectetur quidem omnis facilis nobis nam neque deleniti, velit vel esse enim in quam assumenda, repellendus officiis? Perferendis est ut dolores officia magnam reiciendis nesciunt nostrum, omnis assumenda nulla iste doloremque sapiente? Voluptatem voluptatum et consequatur, accusamus possimus molestias doloremque, voluptate voluptatibus nisi, sapiente soluta quibusdam quidem ratione tenetur a. Dolorem fuga inventore obcaecati incidunt beatae dolore vel quaerat quos hic officiis in perspiciatis eos, tempore tenetur odit? Saepe temporibus odio suscipit accusantium doloremque aut, neque odit! Tenetur quidem voluptas esse, iusto dolores expedita repellat ipsum non dolor, culpa cumque quia omnis? Labore consectetur vero distinctio facilis suscipit, assumenda minus eligendi, adipisci doloribus qui sunt dolorem blanditiis officiis earum enim. Possimus laudantium delectus optio dolor at est similique voluptates, rerum praesentium voluptatem rem cumque doloremque et quos fuga sint, molestiae vitae enim culpa dolorem labore distinctio, non perferendis. Similique quia itaque neque, nam eaque doloribus, voluptatum iure nostrum assumenda a laborum, quisquam rerum hic minima ipsum tempora odit inventore. Tempora suscipit impedit saepe vero minima obcaecati magni earum delectus accusantium nemo repudiandae sint, itaque debitis aspernatur omnis reiciendis pariatur iure minus, velit, aperiam necessitatibus possimus?</p>
-        <p>Recusandae vitae quos ab eveniet at possimus quo, nobis cumque nesciunt eligendi perferendis necessitatibus harum eos deserunt provident totam quaerat iste aperiam dolores dolor, molestiae velit adipisci? Esse quibusdam adipisci vel sunt magni nisi, saepe modi totam soluta? Optio cupiditate repellendus cumque hic consequatur excepturi velit qui nemo corrupti, molestiae doloremque provident ea esse corporis libero aut, unde beatae architecto facere a, repudiandae eum! Dolorem, et error? Repellat sed doloremque a adipisci corrupti suscipit reprehenderit nam ex reiciendis modi est praesentium doloribus nostrum sit, nulla vero quae sapiente quidem quas facilis voluptatibus fuga ab. Error hic voluptas, voluptatum quos sapiente quo praesentium facilis ducimus. Voluptas alias eaque itaque beatae, maxime ut, facilis molestias ratione odio doloremque laborum inventore tempora ipsa necessitatibus voluptatem iste repudiandae harum minus! At quos ipsum quibusdam aperiam cum quis deserunt cupiditate, qui veritatis quo necessitatibus ut fugit veniam numquam debitis rem voluptate. Voluptatibus sunt delectus repudiandae nobis commodi nihil tenetur earum reiciendis est eveniet molestiae sint dolorum, totam iure quisquam veritatis. Quae ad reprehenderit amet autem fugit molestias deleniti illum? Reprehenderit mollitia harum minus, aspernatur et totam, nobis vero modi amet nemo explicabo aperiam asperiores incidunt numquam nulla laudantium omnis ipsam quibusdam temporibus sapiente. Tempora impedit, laborum adipisci accusamus provident ratione itaque, deserunt fuga aliquid distinctio blanditiis earum, est magni? Cum delectus optio quisquam fuga iste iusto doloribus sapiente, ipsum numquam laboriosam dolores in eius dolorum architecto itaque voluptatem quae nostrum maiores neque quis error porro harum debitis. Reprehenderit blanditiis libero alias tempore laudantium velit expedita cupiditate laborum quidem deleniti error earum, minima enim. Aliquid natus maiores voluptates nostrum ad architecto sed porro facilis, nobis minus illo voluptatibus necessitatibus. Ab vel impedit, laboriosam molestias ex maxime. Nobis praesentium in labore laborum perspiciatis repellat provident ut, debitis iste? Libero quas nostrum cum architecto modi sint natus rerum? Nisi ad consectetur sit expedita natus asperiores aperiam, odio eaque tempora corporis nobis labore dignissimos, in dolor reprehenderit quisquam rem explicabo sed illum pariatur, eveniet molestias voluptatum eos! Alias fugiat eius corporis, laudantium quo adipisci sit vel quaerat, nulla iusto eos eaque atque expedita harum natus cum quisquam numquam illo, tenetur possimus amet inventore distinctio dignissimos. Fugit accusamus error unde velit autem illo numquam ipsam repudiandae, necessitatibus, sequi quos illum dolore voluptates, nostrum iste! Est nemo maxime ad libero obcaecati sit amet provident earum explicabo non voluptate aperiam dolorum ex inventore facere, omnis iure consectetur, aut distinctio ratione! Quas omnis, id deleniti sit enim, officiis illum minus tenetur dignissimos consectetur voluptatum, ratione iusto et. Ea incidunt perspiciatis numquam aperiam illo eius commodi obcaecati suscipit est, blanditiis, dicta recusandae nemo libero voluptatibus nihil, voluptatem vitae provident consequuntur. Quibusdam, non nemo. Magni repudiandae quos nulla dolorum maiores rem. Veritatis, esse est. Quia, totam. At, veniam obcaecati vitae suscipit magni vero inventore nihil iusto hic qui. Vel repellendus vero quisquam distinctio delectus voluptates vitae nulla consectetur non minima cupiditate sunt ab, quibusdam odio deserunt tenetur obcaecati natus excepturi culpa recusandae et tempora ipsa doloribus debitis? Tenetur expedita blanditiis officia nihil ducimus, impedit sint.</p>
-        <p>Deleniti quae sequi doloribus laudantium voluptatem inventore praesentium eos, nemo nobis facere ea laboriosam cupiditate porro assumenda alias accusamus, natus consequatur neque. Adipisci magnam maiores expedita sunt. Consectetur quibusdam obcaecati asperiores quos nulla debitis eaque fugiat magni voluptate nostrum accusantium, aperiam numquam soluta, facilis tenetur? Sequi expedita nesciunt eos laboriosam, sit asperiores, error inventore magni rem tempora vero excepturi officia ex illo officiis consequuntur cupiditate quas modi unde! Inventore cumque molestias quaerat fugit. Labore eveniet reprehenderit eos aliquid unde, blanditiis perspiciatis sint saepe suscipit tempore, cum vero doloremque, quibusdam rerum. Qui aperiam mollitia voluptatibus distinctio dolor alias odit saepe maiores, facere ipsam dolores neque provident, laudantium vero, consectetur iure ab rerum. Itaque deserunt quasi doloremque, eveniet quisquam mollitia, natus quod voluptates beatae molestiae necessitatibus eum vel quos consequatur maiores, totam aperiam minima maxime. Molestiae reiciendis illum possimus commodi sequi nulla consectetur facere dolores placeat porro, fugit libero inventore esse quo. Sit error corrupti earum sed, debitis ipsam dolorum autem non necessitatibus provident possimus excepturi unde optio ipsa? Eum quibusdam exercitationem tempora veniam eveniet iusto quo. Quidem culpa voluptatum saepe possimus adipisci odit dolorem excepturi nisi, est quisquam doloremque sint dolores ea incidunt ratione debitis. Ipsum, ut. Laborum necessitatibus, in hic laudantium, dicta sapiente illo nihil sequi suscipit corporis quisquam accusantium pariatur autem possimus qui error nobis voluptatem saepe quibusdam, obcaecati consectetur quae quam. Consequuntur natus modi dignissimos fuga ullam. Aliquid, ullam sed. Ratione dolorum, minima odio sed, vero illum doloribus numquam tempore rerum aut veritatis quod consectetur aspernatur harum ea, perspiciatis nostrum mollitia dolor nemo assumenda. Fuga asperiores vel quas quos impedit placeat et cum totam illo recusandae. Voluptatibus voluptas commodi inventore quia a unde eveniet aut, fugit, illum animi at cumque quibusdam consequuntur? Molestiae dignissimos deleniti optio repudiandae sequi sapiente quaerat, consectetur nesciunt eum in laboriosam. Magnam, repellendus laudantium velit natus impedit eligendi, praesentium fugiat quidem soluta quis nisi cupiditate ut esse? Impedit, ipsa facilis animi dicta voluptatum laborum quod soluta quibusdam pariatur cumque suscipit, similique quasi earum? Laborum dolor fuga facere soluta provident, magnam ex obcaecati temporibus, asperiores magni accusantium? Vero fugiat pariatur cum delectus! Quidem unde expedita optio veniam totam quas cum iste accusantium ipsum, deserunt blanditiis itaque voluptatem molestiae. Porro perspiciatis aut explicabo. Adipisci velit, perspiciatis sequi culpa hic sint ullam soluta, error quo nam ipsam! Unde beatae sunt nam eum labore illo quia sint vero asperiores veritatis atque assumenda facere impedit commodi repudiandae ducimus, voluptates iste natus. Numquam, quisquam voluptatum id reprehenderit, voluptas quas maiores doloremque repudiandae repellendus voluptatibus minus accusantium recusandae! Et doloribus accusantium quidem laboriosam. Similique recusandae nihil amet, a nam nisi ut sapiente iure sit sequi consequuntur incidunt, inventore praesentium odit dignissimos voluptatibus officia facilis laudantium aperiam! Exercitationem vel aliquam dolor nihil dolorum voluptate autem quae maiores rerum hic molestiae optio aliquid saepe tenetur eius porro nemo provident nostrum aspernatur quisquam, ex consectetur dicta! Accusamus, harum natus. Deleniti, ut magni voluptates blanditiis eaque ipsum earum nihil modi possimus fuga. Deleniti doloremque molestias illum, veniam eius nulla in expedita impedit accusamus, debitis fugit.</p>
-        <p>Esse odio ducimus consectetur, quas molestias aliquam? Delectus assumenda magnam exercitationem, quam amet deleniti natus nesciunt distinctio odio veniam commodi, aut mollitia, alias nisi sint vel ipsam laboriosam. Quibusdam unde, dignissimos pariatur obcaecati magni ab aliquid libero voluptatem autem tempora fugiat doloribus mollitia nihil modi quis rerum inventore exercitationem laudantium qui explicabo illum, dolor, ipsum dolorem. Ipsum laborum aliquam pariatur eligendi neque voluptatibus eos quae ipsam at officiis exercitationem blanditiis sed, sequi aperiam obcaecati ut deleniti. Corrupti, ratione nostrum maiores itaque dolorum quod placeat sunt voluptatum sapiente incidunt debitis quae maxime hic quas odit perspiciatis fugit quo fuga? Voluptatum aliquam quia quasi laborum iste, atque asperiores voluptate inventore nam quod placeat ratione voluptates numquam, eos, aperiam deleniti cumque at obcaecati accusamus fugit possimus? Molestias, rerum perspiciatis nam quo cum aut reiciendis ipsam aspernatur eum quisquam deleniti optio iste doloribus quam modi quis, ea vitae eius error beatae voluptatem consequuntur? Cupiditate, quisquam laboriosam autem dolor illum porro maxime. Officiis corporis excepturi perspiciatis voluptate reprehenderit minima praesentium quisquam velit ex autem distinctio esse voluptatum sapiente doloremque iure eius, possimus hic, neque dolores debitis blanditiis quam! Fuga ratione perferendis placeat, natus a commodi architecto ex dignissimos, obcaecati quo facilis, nam ipsam explicabo possimus ducimus est optio aspernatur eligendi. Nihil quos ipsum quae et, explicabo quo, id architecto dolorem inventore est voluptatibus excepturi culpa optio dolore repudiandae, laudantium voluptate in soluta officiis ullam ad blanditiis a? Saepe, earum reiciendis! Assumenda illum amet quia aliquam molestiae! Aspernatur, neque? Qui atque ad asperiores, dolore laboriosam perferendis, impedit tenetur et doloremque unde repudiandae id possimus omnis est autem excepturi exercitationem nostrum praesentium voluptates corporis. Corporis repellat, dolorem aut fuga, aliquid totam accusamus molestias itaque distinctio eum obcaecati consequuntur aperiam labore? Repellendus iure, commodi dolores at neque magni dolorum distinctio aut error nemo doloribus mollitia facilis corrupti animi ad. Quibusdam dolorem suscipit quas consectetur unde asperiores? Aperiam aspernatur, ipsum nemo reiciendis repudiandae nulla hic rerum obcaecati, facilis adipisci quos quisquam quam nam dolorum nihil ipsa aliquid excepturi at qui. Sint quod corrupti quis, rem in eos nostrum ducimus voluptatum quia mollitia aspernatur, commodi reprehenderit qui aliquam esse magni. Corrupti minus magnam tempora optio, nostrum minima deleniti a commodi libero culpa repellat exercitationem aliquam et autem, ab fugiat error molestiae tenetur quaerat veritatis repudiandae distinctio quam. Consequuntur quibusdam illum ea. Velit nihil dolorum, corporis cum natus architecto aspernatur adipisci non. Optio, minus placeat minima dolore sit et, provident libero eius nisi suscipit porro quam maxime dignissimos neque doloremque consequatur? Repudiandae deleniti iste consequuntur quasi doloremque aperiam labore blanditiis earum. Obcaecati eos consectetur molestias fuga, iusto natus expedita incidunt esse tempore atque, doloremque libero sequi quia pariatur, quaerat quibusdam alias optio distinctio? Sit similique explicabo iusto voluptas reprehenderit temporibus nihil tempora nobis perspiciatis, doloremque delectus deserunt vero beatae sequi ab harum ratione eligendi autem culpa provident cupiditate neque quaerat? Minus quos aliquid quae illo fugit ad aliquam sint itaque eius quas. Tempora qui quam quibusdam distinctio exercitationem esse sit modi aliquid quasi cum iste dolores, incidunt corrupti doloremque repellendus alias!</p>
+
+        <!-- section:: about pmk  -->
+        <!-- <section id="about-us">
+            <div class="container container-width">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-container">
+
+                            <span class="section-tag">About PMK</span>
+
+                            <h5 class="section-subtitle">
+                                Palli Mongal Karmosuchi (PMK) – A National Non-Profit Organization Since 1988
+                            </h5>
+
+                            <h3 class="section-title font-playfair">
+                                Empowering the Poor Through Sustainable Rural Development
+                            </h3>
+
+                            <p class="section-description">
+                                Palli Mongal Karmosuchi (PMK) was established in 1988 as a voluntary social initiative to support underprivileged and rural communities in Bangladesh. What began as a small local effort in Zirabo, Ashulia, has grown into a nationally registered and recognized development organization. PMK works to improve the socio-economic conditions of poor families through rural development programs, microfinance services, livelihood opportunities, and community-based support initiatives. The organization strives to create lasting impact by promoting dignity, self-reliance, and inclusive growth. Legally registered with the Directorate of Social Services, NGO Affairs Bureau, Joint Stock Companies, and Microcredit Regulatory Authority, PMK operates with transparency, accountability, and full regulatory compliance under the leadership of Ms. Kamrun Nahar, Chief Executive.
+                            </p>
+
+                            <a href="#" class="about-btn">
+                                <span>Our Story</span>
+                                <span><i class="fa-solid fa-book-open"></i></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="about-us">
+            <div class="container container-width">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-container">
+                            <!-- Small Top Label -->
+                            <span class="section-tag">About PMK</span>
+                            <!-- subtitle  -->
+                            <h5 class="section-subtitle">
+                                Palli Mongal Karmosuchi (PMK) – A National Non-Profit Organization Since 1988
+                            </h5>
+                            <!-- title  -->
+                            <h3 class="section-title font-playfair">
+                                Empowering the Poor Through Sustainable Rural Development
+                            </h3>
+                            <!-- motive  -->
+                            <div class="organization-motive">
+                                <div class="org-description">
+
+                                    <div class="description-columns">
+                                        <p class="description">
+                                            Palli Mongal Karmosuchi (PMK) was established in 1988 as a voluntary social initiative to support underprivileged and rural communities in Bangladesh. What began as a small local effort in Zirabo, Ashulia, has grown into a nationally registered and recognized development organization.
+                                        </p>
+                                        <p class="description">
+                                            PMK works to improve the socio-economic conditions of poor families through rural development programs, microfinance services, livelihood opportunities, and community-based support initiatives. The organization strives to create lasting impact by promoting dignity, self-reliance, and inclusive growth.
+                                        </p>
+                                        <p class="description">
+                                            Legally registered with the Directorate of Social Services, NGO Affairs Bureau, Joint Stock Companies, and Microcredit Regulatory Authority, PMK operates with transparency, accountability, and full regulatory compliance under the leadership of Ms. Kamrun Nahar, Chief Executive.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- accordion  -->
+                                <div class="accordion" id="accordionExample">
+                                    <!-- 1st:accordion  -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <span><i class="fa-regular fa-lightbulb"></i></span>
+                                                <span> Our Vision – What PMK Strives to Achieve</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <h5>PMK Vision</h5>
+                                                <p>To lead and empower communities toward an inclusive, just, and sustainable society where economic opportunity, social equity, environmental responsibility, and democratic participation enable every individual to live with dignity, self-reliance, and hope for a better future.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2nd:accordion  -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span><i class="fa-solid fa-bullseye"></i></span>
+                                                <span>Our Mission – How We Make a Difference</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <h5>PMK Mission</h5>
+                                                <p>To implement development programs that improve livelihoods, education, health, and social wellbeing in rural and underprivileged communities, fostering self-reliance, empowerment, and sustainable growth through participatory approaches, innovation, and transparent leadership.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3rd:accordion  -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <span><i class="fa-solid fa-list-check"></i></span>
+                                                <span>Our Objectives – Key Goals Guiding Our Work</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <h5> PMK Objectives</h5>
+                                                <ul>
+                                                    <li>
+                                                        <span><i class="fa-solid fa-square-check"></i></span>
+                                                        <span>Promote socio-economic development for poor and marginalized communities.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span><i class="fa-solid fa-square-check"></i></span>
+                                                        <span>Provide livelihood, education, and health support programs.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span><i class="fa-solid fa-square-check"></i></span>
+                                                        <span>Strengthen community participation and self-reliance.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span><i class="fa-solid fa-square-check"></i></span>
+                                                        <span>Ensure environmental sustainability and social justice.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span><i class="fa-solid fa-square-check"></i></span>
+                                                        <span>Operate with transparency, accountability, and regulatory compliance.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- button  -->
+                            <a href="#" class="about-btn">
+                                <span>Our Story</span>
+                                <span><i class="fa-solid fa-book-open"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section::founder message  -->
+        <!-- <section class="founder-message">
+            <div class="message">
+                <p>I am pleased to present the Palli Mongal Karmosuchi (PMK)s Annual
+                    Report for the year 2020-2021 to share the achievements of our organization.
+                    First of all, I would like to commend all members who are savers and borrowers
+                    of PMK for their dedication to make the year successful in all aspects.</p>
+            </div>
+            <figure>
+                <img src="./assets/photos/Kamrun_Nahar_ED_MAM.jpeg" alt="ED of pmk">
+            </figure>
+        </section> -->
     </main>
 
     <!-- section:: footer  -->

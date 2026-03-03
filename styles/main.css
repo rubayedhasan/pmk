@@ -1,59 +1,261 @@
-/* import google font */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* import basic styles (root.css */
+@import "./root.css";
 
-/* reset all default styles  */
-* {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  box-sizing: border-box;
+/* about section's styles */
+/* #about-us {
+  padding: 100px 0;
+  background-color: var(--pmk-green-light);
 }
 
-a {
+#about-us .section-container {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+} */
+
+/* Small Top Label */
+/* .section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--pmk-white);
+  color: var(--pmk-green-dark);
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+} */
+
+/* Subtitle */
+/* .section-container .section-subtitle {
+  color: var(--pmk-green-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 14px;
+} */
+
+/* Title */
+/* .section-container .section-title {
+  color: var(--pmk-blue-dark);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+} */
+
+/* Description */
+/* .section-container .section-description {
+  color: var(--pmk-dark);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  column-count: 3;
+  column-span: all;
+  text-align: justify;
+} */
+
+/* Button */
+/* .section-container .about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin-top: 20px;
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+  border: none;
+  border-radius: 4px;
   text-decoration: none;
+  transition: all 0.3s ease;
+} */
+
+/* Icon animation */
+/* .section-container .about-btn i {
+  transition: transform 0.3s ease;
 }
 
-li {
-  list-style: none;
+.section-container .about-btn:hover {
+  background-color: var(--pmk-green-dark);
 }
 
-/* shared styles  */
-:root {
-  --pmk-green: #1f8f63;
-  --pmk-green-dark: #176f4e;
-  --pmk-green-light: #e6f4ef;
+.section-container .about-btn:hover i {
+  transform: translateX(6px);
+} */
 
-  --pmk-blue: #0e5a7c;
-  --pmk-blue-dark: #083d56;
-
-  --pmk-dark: #1f2933;
-  --pmk-gray-light: #e0e0e0;
-  --pmk-white: #ffffff;
+/* about section */
+#about-us {
+  padding: 100px 0;
 }
 
-.container-width {
-  width: 80%;
+#about-us .section-container {
+  text-align: center;
   margin: 0 auto;
 }
 
-.font-playfair {
+/* Small Top Label */
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--pmk-white);
+  color: var(--pmk-green-dark);
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.section-container .section-subtitle {
+  color: var(--pmk-green-dark);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Title */
+.section-container .section-title {
+  color: var(--pmk-blue-dark);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+.organization-motive {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.organization-motive .org-description .description {
+  color: var(--pmk-dark);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: justify;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.organization-motive .org-description .description::first-letter {
+  font-size: 1.75rem;
+  font-weight: 700;
   font-family: "Playfair Display", serif;
 }
 
-/* common styles  */
-body {
-  font-family: "Lato", sans-serif;
-  overflow-x: hidden;
-  overflow-y: scroll;
+.organization-motive .org-description .description:hover {
+  color: var(--pmk-blue-dark);
 }
 
-main {
-  margin-top: 56px;
+/* accordion styles  */
+.accordion {
+  width: 100%;
+  margin: 0 auto 40px;
+  background-color: var(--pmk-green-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/*
-------------Slider responsive styles------------
-  */
+.accordion-item {
+  border: none;
+  margin-bottom: 16px;
+}
+
+.accordion-button {
+  color: var(--pmk-white);
+  background: linear-gradient(335deg, var(--pmk-green), var(--pmk-blue));
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.accordion-button i {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+  color: var(--pmk-white);
+  background: linear-gradient(135deg, var(--pmk-green), var(--pmk-blue));
+  box-shadow: none;
+}
+
+.accordion-button:focus i {
+  color: var(--pmk-gold);
+}
+
+.accordion-body {
+  background: var(--pmk-white);
+  border-radius: 0 0 6px 6px;
+}
+
+.accordion-body h5 {
+  color: var(--pmk-blue);
+  border-left: 3px solid var(--pmk-blue);
+  padding-left: 6px;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.accordion-body p,
+.accordion-body ul li {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.accordion-body ul li span i {
+  color: var(--pmk-blue);
+}
+
+/* Button */
+.section-container .about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin-top: 20px;
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Icon animation */
+.section-container .about-btn i {
+  transition: transform 0.3s ease;
+}
+
+.section-container .about-btn:hover {
+  background-color: var(--pmk-green-dark);
+}
+
+.section-container .about-btn:hover i {
+  transform: translateX(6px);
+}
+
 /* responsive styles:: extra small devices  */
 @media (max-width: 575.98px) {
   .container-width {
