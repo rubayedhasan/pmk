@@ -412,17 +412,36 @@ body {
     height: auto;
   }
 
+  #navigation .navbar-collapse {
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-thumb {
+    background-color: var(--pmk-green-dark);
+    border-radius: 6px;
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-button {
+    width: 5px;
+    height: 5px;
+    background-color: var(--pmk-dark);
+    border-radius: 50%;
+  }
+
   .brand-name #logo-img {
     height: 50%;
   }
-
-  /* .navbar .dropdown .dropdown-menu {
-    display: none;
-  }
-
-  .navbar .dropdown .dropdown-menu.show {
-    display: block;
-  } */
 
   /* slider styles  */
   .slider-wrapper .slider-item {
@@ -486,13 +505,32 @@ body {
     height: auto;
   }
 
-  /* .navbar .dropdown .dropdown-menu {
-    display: none;
+  #navigation .navbar-collapse {
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
-  .navbar .dropdown .dropdown-menu.show {
-    display: block;
-  } */
+  #navigation .navbar-collapse::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-thumb {
+    background-color: var(--pmk-green-dark);
+    border-radius: 6px;
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  #navigation .navbar-collapse::-webkit-scrollbar-button {
+    width: 5px;
+    height: 5px;
+    background-color: var(--pmk-dark);
+    border-radius: 50%;
+  }
 
   /* slider styles  */
   .slider-wrapper .slider-item .slider-content > * {
