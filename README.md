@@ -84,53 +84,73 @@ box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 transition: transform 0.4s ease;
 }
 
-/_ Image _/
-.about-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.6s ease;
-}
+ <div class="accordion" id="accordionExample">
+            <!-- 1st:accordion  -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span><i class="fa-regular fa-lightbulb"></i></span>
+                        <span> Our Vision – What PMK Strives to Achieve</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h5>PMK Vision</h5>
+                        <p>To lead and empower communities toward an inclusive, just, and sustainable society where economic opportunity, social equity, environmental responsibility, and democratic participation enable every individual to live with dignity, self-reliance, and hope for a better future.</p>
+                    </div>
+                </div>
+            </div>
 
-/_ Hover Effect _/
-.about-image:hover {
-transform: scale(1.05);
-}
+            <!-- 2nd:accordion  -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span><i class="fa-solid fa-bullseye"></i></span>
+                        <span>Our Mission – How We Make a Difference</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h5>PMK Mission</h5>
+                        <p>To implement development programs that improve livelihoods, education, health, and social wellbeing in rural and underprivileged communities, fostering self-reliance, empowerment, and sustainable growth through participatory approaches, innovation, and transparent leadership.</p>
+                    </div>
+                </div>
+            </div>
 
-.about-image:hover img {
-transform: scale(1.1);
-}
-
-/_ Animations _/
-@keyframes rotateRing {
-from {
-transform: rotate(0deg);
-}
-to {
-transform: rotate(360deg);
-}
-}
-
-@keyframes blobMove {
-0%,
-100% {
-transform: translate(0px, 0px);
-}
-50% {
-transform: translate(10px, -10px);
-}
-}
-
-/_ Responsive _/
-@media (max-width: 992px) {
-.about-image-wrapper {
-width: 300px;
-height: 300px;
-}
-
-.image-blob,
-.image-ring {
-width: 340px;
-height: 340px;
-}
-}
+            <!-- 3rd:accordion  -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span><i class="fa-solid fa-list-check"></i></span>
+                        <span>Our Objectives – Key Goals Guiding Our Work</span>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h5> PMK Objectives</h5>
+                        <ul>
+                            <li>
+                                <span><i class="fa-solid fa-square-check"></i></span>
+                                <span>Promote socio-economic development for poor and marginalized communities.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-square-check"></i></span>
+                                <span>Provide livelihood, education, and health support programs.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-square-check"></i></span>
+                                <span>Strengthen community participation and self-reliance.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-square-check"></i></span>
+                                <span>Ensure environmental sustainability and social justice.</span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-square-check"></i></span>
+                                <span>Operate with transparency, accountability, and regulatory compliance.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
