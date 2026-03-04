@@ -19,7 +19,7 @@ li {
 
 /* shared styles  */
 :root {
-  --pmk-green: #1f8f63;
+  --pmk-green: #00946a;
   --pmk-green-dark: #176f4e;
   --pmk-green-light: #e6f4ef;
 
@@ -46,5 +46,5 @@ body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: var(--pmk-green-light);
+  /* background-color: var(--pmk-green-light); */
 }
