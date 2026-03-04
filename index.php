@@ -103,7 +103,7 @@
                         <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
                         <div class="perspective-head">
                             <span><i class="fa-regular fa-lightbulb"></i></span>
-                            <h5 class="perspective-subtitle">What PMK Strives to Achieve</h5>
+                            <h5 class="perspective-subtitle font-playfair">What PMK Strives to Achieve</h5>
                         </div>
                         <p class="perspective-text">To lead and empower communities toward an inclusive, just, and sustainable society where economic opportunity, social equity, environmental responsibility, and democratic participation enable every individual to live with dignity, self-reliance, and hope for a better future.</p>
                     </div>
@@ -113,7 +113,7 @@
                         <h4 class="perspective-title font-playfair">PMK <span>Mission</span></h4>
                         <div class="perspective-head">
                             <span><i class="fa-solid fa-bullseye"></i></span>
-                            <h5 class="perspective-subtitle">How We Make a Difference</h5>
+                            <h5 class="perspective-subtitle font-playfair">How We Make a Difference</h5>
                         </div>
                         <p class="perspective-text">To implement development programs that improve livelihoods, education, health, and social wellbeing in rural and underprivileged communities, fostering self-reliance, empowerment, and sustainable growth through participatory approaches, innovation, and transparent leadership.</p>
                     </div>
@@ -123,7 +123,7 @@
                         <h4 class="perspective-title font-playfair"><span>Objectives</span> of PMK</h4>
                         <div class="perspective-head">
                             <span><i class="fa-solid fa-list-check"></i></span>
-                            <h5 class="perspective-subtitle">Key Goals Guiding Our Work</h5>
+                            <h5 class="perspective-subtitle font-playfair">Key Goals Guiding Our Work</h5>
                         </div>
                         <ul>
                             <li>

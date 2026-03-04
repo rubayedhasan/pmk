@@ -190,7 +190,7 @@
 .perspective-object {
   border: 2px solid var(--pmk-blue-dark);
   border-radius: 6px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 16px;
 }
 
@@ -223,22 +223,8 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 24px;
+  margin: 24px 0;
 }
-
-/* .perspective-object .perspective-head span {
-  border: 2px solid var(--pmk-blue-dark);
-  padding: 10;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.perspective-object .perspective-head span i {
-  color: var(--pmk-green);
-  font-size: 1.5rem;
-} */
 
 .perspective-object .perspective-head span {
   border: 2px solid var(--pmk-green-light);
@@ -266,6 +252,21 @@
 
 .perspective-object .perspective-head span:hover i {
   color: var(--pmk-white);
+}
+
+.perspective-object .perspective-head .perspective-subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--pmk-dark);
+  line-height: 1.4;
+}
+.perspective-object .perspective-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--pmk-dark);
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 70px;
 }
 
 /* responsive styles:: extra small devices  */
