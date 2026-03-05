@@ -89,64 +89,72 @@
 
         <!-- section:: pmk perspective  -->
         <div class="container-width">
-            <section id="pmk-perspective" class="row">
-                <!-- perspective-handler  -->
-                <div class="col perspective-handler">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates minima obcaecati quas officiis maiores ea, tempora quae accusantium, enim nulla exercitationem labore quaerat molestias mollitia expedita assumenda. Eaque, vitae laudantium!</p>
+            <section id="pmk-perspective">
+                <!-- section header  -->
+                <hgroup class="section-header">
+                    <h2 class="head-title font-playfair">Our <span>Perspective</span></h2>
+                    <p class="head-text">Guiding principles that shape PMK's commitment to sustainable community development.</p>
+                </hgroup>
 
-                </div>
+                <div class="row">
+                    <!-- perspective-handler  -->
+                    <div class="col perspective-handler">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates minima obcaecati quas officiis maiores ea, tempora quae accusantium, enim nulla exercitationem labore quaerat molestias mollitia expedita assumenda. Eaque, vitae laudantium!</p>
 
-                <!-- perspective content  -->
-                <div class="col perspective-content">
-                    <!-- vision -->
-                    <div id="pmk-vision" class="perspective-object">
-                        <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
-                        <div class="perspective-head">
-                            <span><i class="fa-regular fa-lightbulb"></i></span>
-                            <h5 class="perspective-subtitle font-playfair">What PMK Strives to Achieve</h5>
-                        </div>
-                        <p class="perspective-text">To lead and empower communities toward an inclusive, just, and sustainable society where economic opportunity, social equity, environmental responsibility, and democratic participation enable every individual to live with dignity, self-reliance, and hope for a better future.</p>
                     </div>
 
-                    <!-- mission  -->
-                    <div id="pmk-mission" class="perspective-object">
-                        <h4 class="perspective-title font-playfair">PMK <span>Mission</span></h4>
-                        <div class="perspective-head">
-                            <span><i class="fa-solid fa-bullseye"></i></span>
-                            <h5 class="perspective-subtitle font-playfair">How We Make a Difference</h5>
+                    <!-- perspective content  -->
+                    <div class="col perspective-content">
+                        <!-- vision -->
+                        <div id="pmk-vision" class="perspective-object">
+                            <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
+                            <div class="perspective-head">
+                                <span><i class="fa-regular fa-lightbulb"></i></span>
+                                <h5 class="perspective-subtitle font-playfair">What PMK Strives to Achieve</h5>
+                            </div>
+                            <p class="perspective-text">To lead and empower communities toward an inclusive, just, and sustainable society where economic opportunity, social equity, environmental responsibility, and democratic participation enable every individual to live with dignity, self-reliance, and hope for a better future.</p>
                         </div>
-                        <p class="perspective-text">To implement development programs that improve livelihoods, education, health, and social wellbeing in rural and underprivileged communities, fostering self-reliance, empowerment, and sustainable growth through participatory approaches, innovation, and transparent leadership.</p>
-                    </div>
 
-                    <!-- objective  -->
-                    <div id="pmk-objective" class="perspective-object">
-                        <h4 class="perspective-title font-playfair"><span>Objectives</span> of PMK</h4>
-                        <div class="perspective-head">
-                            <span><i class="fa-solid fa-list-check"></i></span>
-                            <h5 class="perspective-subtitle font-playfair">Key Goals Guiding Our Work</h5>
+                        <!-- mission  -->
+                        <div id="pmk-mission" class="perspective-object">
+                            <h4 class="perspective-title font-playfair">PMK <span>Mission</span></h4>
+                            <div class="perspective-head">
+                                <span><i class="fa-solid fa-bullseye"></i></span>
+                                <h5 class="perspective-subtitle font-playfair">How We Make a Difference</h5>
+                            </div>
+                            <p class="perspective-text">To implement development programs that improve livelihoods, education, health, and social wellbeing in rural and underprivileged communities, fostering self-reliance, empowerment, and sustainable growth through participatory approaches, innovation, and transparent leadership.</p>
                         </div>
-                        <ul>
-                            <li>
-                                <span><i class="fa-solid fa-square-check"></i></span>
-                                <span>Promote socio-economic development for poor and marginalized communities.</span>
-                            </li>
-                            <li>
-                                <span><i class="fa-solid fa-square-check"></i></span>
-                                <span>Provide livelihood, education, and health support programs.</span>
-                            </li>
-                            <li>
-                                <span><i class="fa-solid fa-square-check"></i></span>
-                                <span>Strengthen community participation and self-reliance.</span>
-                            </li>
-                            <li>
-                                <span><i class="fa-solid fa-square-check"></i></span>
-                                <span>Ensure environmental sustainability and social justice.</span>
-                            </li>
-                            <li>
-                                <span><i class="fa-solid fa-square-check"></i></span>
-                                <span>Operate with transparency, accountability, and regulatory compliance.</span>
-                            </li>
-                        </ul>
+
+                        <!-- objective  -->
+                        <div id="pmk-objective" class="perspective-object">
+                            <h4 class="perspective-title font-playfair"><span>Objectives</span> of PMK</h4>
+                            <div class="perspective-head">
+                                <span><i class="fa-solid fa-list-check"></i></span>
+                                <h5 class="perspective-subtitle font-playfair">Key Goals Guiding Our Work</h5>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span><i class="fa-regular fa-square-check"></i></span>
+                                    <span>Promote socio-economic development for poor and marginalized communities.</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-regular fa-square-check"></i></span>
+                                    <span>Provide livelihood, education, and health support programs.</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-regular fa-square-check"></i></span>
+                                    <span>Strengthen community participation and self-reliance.</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-regular fa-square-check"></i></span>
+                                    <span>Ensure environmental sustainability and social justice.</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-regular fa-square-check"></i></span>
+                                    <span>Operate with transparency, accountability, and regulatory compliance.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
