@@ -20,7 +20,6 @@
     <!-- section:: header  -->
     <header>
         <!-- section:: navbar  -->
-        <?php require_once("./navbar.php") ?>
 
         <!-- section:: banner  -->
         <?php require_once("./banner.php") ?>

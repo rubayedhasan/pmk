@@ -418,10 +418,6 @@
 
 /* responsive styles:: extra small devices  */
 @media (max-width: 767.98px) {
-  .container-width {
-    width: 100%;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -453,6 +449,55 @@
   .about-image-wrapper .image-ring {
     height: 300px;
     width: 300px;
+  }
+
+  /* pmk-perspective section style  */
+  #pmk-perspective .row {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .perspective-circle {
+    height: 280px;
+    width: 280px;
+  }
+
+  .perspective-circle::after {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-center {
+    width: 140px;
+    height: 140px;
+  }
+
+  .circle-center span {
+    font-size: 1.5rem;
+  }
+
+  .circle-center .circle-text {
+    font: 1.125rem;
+  }
+
+  .circle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .btn-1 {
+    top: -15px;
+  }
+
+  .btn-2 {
+    bottom: 70px;
+    right: -10px;
+  }
+
+  .btn-3 {
+    bottom: 70px;
+    left: -10px;
   }
 }
 
