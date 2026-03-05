@@ -97,16 +97,10 @@
                 </hgroup>
 
                 <div class="row">
-                    <!-- perspective-handler  -->
-                    <div class="col perspective-handler">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates minima obcaecati quas officiis maiores ea, tempora quae accusantium, enim nulla exercitationem labore quaerat molestias mollitia expedita assumenda. Eaque, vitae laudantium!</p>
-
-                    </div>
-
                     <!-- perspective content  -->
                     <div class="col perspective-content">
                         <!-- vision -->
-                        <div id="pmk-vision" class="perspective-object">
+                        <div id="pmk-vision" class="perspective-object object-visible">
                             <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
                             <div class="perspective-head">
                                 <span><i class="fa-regular fa-lightbulb"></i></span>
@@ -156,6 +150,29 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- perspective-handler  -->
+                    <div class="col perspective-tabs">
+                        <div class="perspective-circle">
+                            <div class="circle-center">
+                                <span><i class="fa-regular fa-lightbulb"></i></span>
+                                <h4 class="circle-text font-playfair">Vision</h4>
+                            </div>
+
+                            <!-- perspective content control buttons  -->
+                            <button type="button" class="circle-btn btn-1">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </button>
+                            <button type="button" class="circle-btn btn-2">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </button>
+                            <button type="button" class="circle-btn btn-3">
+                                <i class="fa-solid fa-list-check"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
         </div>

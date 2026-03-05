@@ -208,8 +208,101 @@
   margin-top: 10px;
 }
 
-#pmk-perspective .perspective-content .perspective-object {
-  /* display: none; */
+.perspective-circle {
+  position: relative;
+  height: 420px;
+  width: 420px;
+  margin: auto;
+}
+
+.perspective-circle::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 4px solid var(--pmk-green-light);
+  border-radius: 50%;
+}
+
+.perspective-circle::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed var(--pmk-green-light);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: var(--pmk-green-light);
+  border: 1px solid var(--pmk-green-light);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.circle-center span {
+  color: var(--pmk-green);
+  font-size: 1.75rem;
+}
+
+.circle-center .circle-text {
+  color: var(--pmk-blue-dark);
+  font: 1.4rem;
+  font-weight: 600;
+}
+
+.circle-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: var(--pmk-white);
+  border: 1px solid var(--pmk-green);
+  background-color: var(--pmk-green);
+  border-radius: 50%;
+  font: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-1 {
+  top: -30px;
+  left: 42%;
+}
+
+.btn-2 {
+  bottom: 70px;
+  right: 10px;
+}
+
+.btn-3 {
+  bottom: 70px;
+  left: -10px;
+}
+
+.circle-btn:hover {
+  transform: scale(1.1);
+}
+
+.perspective-object {
+  display: none;
   background-color: var(--pmk-white);
   border-radius: 10px;
   padding: 35px;
@@ -219,9 +312,13 @@
   transition: all 0.3s ease;
 }
 
-#pmk-perspective .perspective-content .perspective-object:hover {
+.perspective-object:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.object-visible {
+  display: block;
 }
 
 .perspective-object .perspective-title {
