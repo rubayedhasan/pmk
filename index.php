@@ -21,8 +21,8 @@
     <header>
         <!-- section:: navbar  -->
 
+
         <!-- section:: banner  -->
-        <?php require_once("./banner.php") ?>
     </header>
 
     <!-- section:: main  -->
@@ -95,9 +95,9 @@
                     <p class="head-text">Guiding principles that shape PMK's commitment to sustainable community development.</p>
                 </hgroup>
 
-                <div class="row">
+                <div class="perspective-container">
                     <!-- perspective content  -->
-                    <div class="col perspective-content">
+                    <div class="perspective-content">
                         <!-- vision -->
                         <div id="pmk-vision" class="perspective-object object-visible">
                             <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
@@ -151,7 +151,7 @@
                     </div>
 
                     <!-- perspective-handler  -->
-                    <div class="col perspective-tabs">
+                    <div class="perspective-tabs">
                         <div class="perspective-circle">
                             <div class="circle-center">
                                 <span><i class="fa-regular fa-lightbulb"></i></span>

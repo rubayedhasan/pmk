@@ -53,8 +53,8 @@ body {
 /* responsive styles:: extra small devices  */
 @media (max-width: 767.98px) {
   .container-width {
-    width: 100%;
-    padding: 0 20px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
   }
 }
 

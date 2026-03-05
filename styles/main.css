@@ -208,6 +208,12 @@
   margin-top: 10px;
 }
 
+#pmk-perspective .perspective-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
 .perspective-circle {
   position: relative;
   height: 420px;
@@ -452,9 +458,12 @@
   }
 
   /* pmk-perspective section style  */
-  #pmk-perspective .row {
-    flex-direction: column-reverse;
-    gap: 50px;
+  #pmk-perspective .perspective-container {
+    grid-template-columns: 1fr;
+  }
+
+  .perspective-content {
+    order: 2;
   }
 
   .perspective-circle {
@@ -526,6 +535,15 @@
   .about-image-wrapper .image-ring {
     height: 340px;
     width: 340px;
+  }
+
+  /* pmk-perspective section style  */
+  #pmk-perspective .perspective-container {
+    grid-template-columns: 1fr;
+  }
+
+  .perspective-content {
+    order: 2;
   }
 }
 
