@@ -189,7 +189,7 @@
 
 #pmk-perspective .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .section-header .head-title {
@@ -307,8 +307,25 @@
   transform: scale(1.1);
 }
 
+.btn-animation {
+  animation: zoomInZoomOut 5s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes zoomInZoomOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .perspective-object {
   display: none;
+  height: 430px;
   background-color: var(--pmk-white);
   border-radius: 10px;
   padding: 35px;

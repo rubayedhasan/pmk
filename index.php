@@ -20,9 +20,11 @@
     <!-- section:: header  -->
     <header>
         <!-- section:: navbar  -->
+        <?php include("./navbar.php") ?>
 
 
         <!-- section:: banner  -->
+        <?php include("./banner.php") ?>
     </header>
 
     <!-- section:: main  -->
@@ -159,13 +161,13 @@
                             </div>
 
                             <!-- perspective content control buttons  -->
-                            <button type="button" class="circle-btn btn-1">
+                            <button title="vision" type="button" class="circle-btn btn-1" data-target="pmk-vision">
                                 <i class="fa-regular fa-lightbulb"></i>
                             </button>
-                            <button type="button" class="circle-btn btn-2">
+                            <button title="mission" type="button" class="circle-btn btn-2" data-target="pmk-mission">
                                 <i class="fa-solid fa-bullseye"></i>
                             </button>
-                            <button type="button" class="circle-btn btn-3">
+                            <button title="objectives" type="button" class="circle-btn btn-3" data-target="pmk-objective">
                                 <i class="fa-solid fa-list-check"></i>
                             </button>
                         </div>
