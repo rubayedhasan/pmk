@@ -1,10 +1,54 @@
-/* import basic styles (root.css */
-@import "./root.css";
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* ================================
-   ABOUT SECTION
-================================ */
+/* reset all default styles  */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* shared styles  */
+:root {
+  --pmk-green: #00946a;
+  --pmk-green-dark: #176f4e;
+  --pmk-green-light: #e6f4ef;
+
+  --pmk-blue: #0e5a7c;
+  --pmk-blue-dark: #083d56;
+  --pmk-gold: #f4b400;
+
+  --pmk-dark: #1f2933;
+  --pmk-gray-light: #e0e0e0;
+  --pmk-white: #ffffff;
+}
+
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* common styles  */
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* about section's style  */
 #about-pmk {
   padding-top: 120px;
 }
@@ -13,7 +57,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 70px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -192,16 +236,17 @@
   margin-bottom: 80px;
 }
 
-.section-header .head-title {
+.head-title {
   color: var(--pmk-blue-dark);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
-.section-header .head-title span {
+
+.head-title span {
   color: var(--pmk-green);
 }
 
-.section-header .head-text {
+.head-text {
   color: var(--pmk-dark);
   font-size: 1rem;
   font-weight: 400;
@@ -279,7 +324,7 @@
   border: 1px solid var(--pmk-green);
   background-color: var(--pmk-green);
   border-radius: 50%;
-  font: 1.25rem;
+  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,7 +353,7 @@
 }
 
 .btn-animation {
-  animation: zoomInZoomOut 5s linear infinite;
+  animation: zoomInZoomOut 2s linear infinite;
   transition: all 0.3s ease-in-out;
 }
 
@@ -386,10 +431,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--pmk-green-light);
-  transition: all 0.3s ease;
-}
-
-.perspective-object .perspective-head span i {
   color: var(--pmk-green);
   font-size: 1.4rem;
   transition: all 0.3s ease;
@@ -441,6 +482,26 @@
 
 /* responsive styles:: extra small devices  */
 @media (max-width: 767.98px) {
+  /* common styles  */
+  .container-width {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+
+  .section-title,
+  .head-title {
+    font-size: 2rem;
+  }
+
+  .organization-motive p,
+  .about-btn,
+  .head-text,
+  .perspective-object .perspective-text {
+    font-size: 0.875rem;
+  }
+
+  /* about section styles */
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -454,27 +515,27 @@
     font-size: 1rem;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-  .organization-motive p,
-  .about-btn {
-    font-size: 0.875rem;
-  }
-
   /* IMAGE */
   .about-image-wrapper {
     height: 260px;
     width: 260px;
   }
 
-  .about-image-wrapper .image-blob,
-  .about-image-wrapper .image-ring {
+  .about-image-wrapper .image-blob {
     height: 300px;
     width: 300px;
   }
 
+  .about-image-wrapper .image-ring {
+    display: none;
+  }
+
   /* pmk-perspective section style  */
+
+  #pmk-perspective .section-header {
+    margin-bottom: 55px;
+  }
+
   #pmk-perspective .perspective-container {
     grid-template-columns: 1fr;
   }
@@ -525,10 +586,36 @@
     bottom: 70px;
     left: -10px;
   }
+
+  .perspective-object {
+    height: max-content;
+    padding: 30px;
+  }
+
+  .perspective-object .perspective-title {
+    font-size: 1.5rem;
+  }
+
+  .perspective-object .perspective-head .perspective-subtitle {
+    font-size: 1rem;
+  }
+
+  .perspective-object .perspective-head span {
+    width: 50px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* common styles  */
+  .section-title,
+  .head-title {
+    font-size: 2.275rem;
+  }
+
+  /* about section style  */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -536,10 +623,6 @@
 
   .pmk-picture {
     height: 420px;
-  }
-
-  .section-title {
-    font-size: 2.275rem;
   }
 
   /* IMAGE */

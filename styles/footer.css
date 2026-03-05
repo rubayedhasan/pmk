@@ -1,5 +1,52 @@
-/* import basic styles(root.css) */
-@import "./root.css";
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* reset all default styles  */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* shared styles  */
+:root {
+  --pmk-green: #00946a;
+  --pmk-green-dark: #176f4e;
+  --pmk-green-light: #e6f4ef;
+
+  --pmk-blue: #0e5a7c;
+  --pmk-blue-dark: #083d56;
+  --pmk-gold: #f4b400;
+
+  --pmk-dark: #1f2933;
+  --pmk-gray-light: #e0e0e0;
+  --pmk-white: #ffffff;
+}
+
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* common styles  */
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
 /* footer section's  styles  */
 footer.pmk-footer {
@@ -198,7 +245,8 @@ footer .copyright {
 /* responsive styles:: extra small devices  */
 @media (max-width: 767.98px) {
   .container-width {
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 0 20px;
   }
 
   /* footer section styles  */

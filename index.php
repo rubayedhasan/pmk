@@ -18,70 +18,61 @@
 
 <body>
     <!-- section:: header  -->
-    <header>
-        <!-- section:: navbar  -->
-        <?php include("./navbar.php") ?>
-
-
-        <!-- section:: banner  -->
-        <?php include("./banner.php") ?>
-    </header>
+    <?php require_once("./header.php") ?>
 
     <!-- section:: main  -->
     <main>
         <!-- section:: about pmk  -->
         <div class="container-width">
-            <section id="about-pmk" class="row">
-                <div class="col">
-                    <div class="about-grid">
+            <section id="about-pmk">
+                <div class="about-grid">
 
-                        <!-- LEFT : IMAGE -->
-                        <div class="about-image-wrapper">
-                            <!-- gradient blob  -->
-                            <div class="image-blob"></div>
+                    <!-- LEFT : IMAGE -->
+                    <div class="about-image-wrapper">
+                        <!-- gradient blob  -->
+                        <div class="image-blob"></div>
 
-                            <!-- ring effect  -->
-                            <div class="image-ring"></div>
+                        <!-- ring effect  -->
+                        <div class="image-ring"></div>
 
-                            <!-- circular image  -->
-                            <figure class="about-image">
-                                <img src="./assets/images/dummy-img-3.png" alt="">
-                            </figure>
+                        <!-- circular image  -->
+                        <figure class="about-image">
+                            <img src="./assets/images/dummy-img-3.png" alt="">
+                        </figure>
+                    </div>
+
+                    <!-- RIGHT : CONTENT -->
+                    <div class="about-content">
+
+                        <span class="section-tag">About PMK</span>
+
+                        <h5 class="section-subtitle">
+                            Palli Mongal Karmosuchi (PMK) – A National Non-Profit Organization Since 1988
+                        </h5>
+
+                        <h3 class="section-title font-playfair">
+                            Empowering Communities Through Sustainable Rural Development
+                        </h3>
+
+                        <div class="organization-motive">
+                            <p>
+                                Established in 1988, Palli Mongal Karmosuchi (PMK) began as a voluntary social initiative committed to supporting underprivileged rural communities in Bangladesh. From its origins in Zirabo, Ashulia, PMK has evolved into a nationally registered and recognized development organization.
+                            </p>
+
+                            <p>
+                                PMK advances socio-economic resilience through integrated rural development programs, inclusive microfinance services, livelihood creation initiatives, and community-based support mechanisms. Our approach promotes dignity, self-reliance, and inclusive growth.
+                            </p>
+
+                            <p>
+                                Registered with the Directorate of Social Services, NGO Affairs Bureau, Joint Stock Companies, and the Microcredit Regulatory Authority, PMK operates with transparency, accountability, and full regulatory compliance under the leadership of Ms. Kamrun Nahar, Chief Executive.
+                            </p>
                         </div>
 
-                        <!-- RIGHT : CONTENT -->
-                        <div class="about-content">
+                        <a href="#" class="about-btn">
+                            <span>Our Story</span>
+                            <span><i class="fa-solid fa-book-open"></i></span>
+                        </a>
 
-                            <span class="section-tag">About PMK</span>
-
-                            <h5 class="section-subtitle">
-                                Palli Mongal Karmosuchi (PMK) – A National Non-Profit Organization Since 1988
-                            </h5>
-
-                            <h3 class="section-title font-playfair">
-                                Empowering Communities Through Sustainable Rural Development
-                            </h3>
-
-                            <div class="organization-motive">
-                                <p>
-                                    Established in 1988, Palli Mongal Karmosuchi (PMK) began as a voluntary social initiative committed to supporting underprivileged rural communities in Bangladesh. From its origins in Zirabo, Ashulia, PMK has evolved into a nationally registered and recognized development organization.
-                                </p>
-
-                                <p>
-                                    PMK advances socio-economic resilience through integrated rural development programs, inclusive microfinance services, livelihood creation initiatives, and community-based support mechanisms. Our approach promotes dignity, self-reliance, and inclusive growth.
-                                </p>
-
-                                <p>
-                                    Registered with the Directorate of Social Services, NGO Affairs Bureau, Joint Stock Companies, and the Microcredit Regulatory Authority, PMK operates with transparency, accountability, and full regulatory compliance under the leadership of Ms. Kamrun Nahar, Chief Executive.
-                                </p>
-                            </div>
-
-                            <a href="#" class="about-btn">
-                                <span>Our Story</span>
-                                <span><i class="fa-solid fa-book-open"></i></span>
-                            </a>
-
-                        </div>
                     </div>
                 </div>
             </section>
@@ -181,7 +172,7 @@
     </main>
 
     <!-- section:: footer  -->
-    <?php include("./footer.php") ?>
+    <?php require_once("./footer.php") ?>
 
 
     <!-- Linked font awesome script  -->
