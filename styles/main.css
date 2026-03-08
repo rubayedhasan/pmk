@@ -9,6 +9,19 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -257,6 +270,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
+}
+
+.perspective-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .perspective-circle {
@@ -540,10 +559,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .perspective-content {
-    order: 2;
-  }
-
   .perspective-circle {
     height: 280px;
     width: 280px;
@@ -585,6 +600,10 @@ body {
   .btn-3 {
     bottom: 70px;
     left: -10px;
+  }
+
+  .perspective-content {
+    order: 2;
   }
 
   .perspective-object {
@@ -642,6 +661,21 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .perspective-circle {
+    height: 380px;
+    width: 380px;
+  }
+
+  .perspective-circle::after {
+    width: 260px;
+    height: 260px;
+  }
+
+  .circle-center {
+    width: 190px;
+    height: 190px;
+  }
+
   .perspective-content {
     order: 2;
   }
@@ -649,6 +683,31 @@ body {
 
 /* responsive styles:: large devices  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* pmk-perspective section style  */
+  #pmk-perspective .perspective-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .perspective-circle {
+    height: 380px;
+    width: 380px;
+  }
+
+  .perspective-circle::after {
+    width: 260px;
+    height: 260px;
+  }
+
+  .circle-center {
+    width: 190px;
+    height: 190px;
+  }
+
+  .perspective-object {
+    height: 520px;
+  }
 }
 
 /* responsive styles:: extra large devices  */

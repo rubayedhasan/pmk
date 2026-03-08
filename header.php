@@ -24,6 +24,64 @@
 <body>
     <!-- section:: main -->
     <header>
+        <!-- section:: mini nav -->
+        <section id="mini-nav">
+            <div class="container-width">
+                <div class="mini-nav-container">
+                    <!-- key info  -->
+                    <div class="mini-key-info-bar">
+                        <!-- key: phone  -->
+                        <div class="key-item">
+                            <span><i class="fa-solid fa-square-phone"></i></span>
+                            <p>+880 1709 91 40 00</p>
+                        </div>
+                        <!-- key: working time  -->
+                        <div class="key-item">
+                            <span><i class="fa-solid fa-clock"></i></span>
+                            <p>Sun - Thu 9:00AM - 5:00PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- mini navigation  -->
+                    <div>
+                        <!-- mini-navbar  -->
+                        <!-- <ul class="nav mini-navbar">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">WEBMAIL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CAREER</a>
+                            </li>
+                        </ul> -->
+
+                        <!-- social icons  -->
+                        <!-- <ul>
+                            <li>
+                                <a href="https://facebook.com/themefisher" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@pallimongalkarmosuchipmk9007" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- navbar  -->
         <nav id="navigation" class="navbar navbar-expand-lg">
             <div class="container-fluid container-width">
