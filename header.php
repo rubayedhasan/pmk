@@ -32,11 +32,11 @@
                     <div class="mini-key-info-bar">
                         <!-- key: phone  -->
                         <div class="key-item">
-                            <span><i class="fa-solid fa-square-phone"></i></span>
+                            <span><i class="fa-solid fa-phone"></i></span>
                             <p>+880 1709 91 40 00</p>
                         </div>
                         <!-- key: working time  -->
-                        <div class="key-item">
+                        <div class="key-item d-none d-lg-flex">
                             <span><i class="fa-solid fa-clock"></i></span>
                             <p>Sun - Thu 9:00AM - 5:00PM
                             </p>
@@ -44,22 +44,33 @@
                     </div>
 
                     <!-- mini navigation  -->
-                    <div>
+                    <div class="mini-nav-container">
                         <!-- mini-navbar  -->
-                        <!-- <ul class="nav mini-navbar">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">WEBMAIL</a>
+                        <ul class="mini-navbar">
+                            <li>
+                                <a class="mini-nav-link" href="mailto:info@pmk-bd.org" target="_blank">
+                                    <span><i class="fa-regular fa-envelope"></i></span>
+                                    <span>WEBMAIL</span>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">NEWS</a>
+                            <li>
+                                <a class="mini-nav-link" href=" #">
+                                    <span><i class="fa-regular fa-newspaper"></i></span>
+                                    <span>NEWS</span>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CAREER</a>
+                            <li>
+                                <a class="mini-nav-link" href=" #">
+                                    <span><i class="fa-solid fa-user-tie"></i></span>
+                                    <span>
+                                        CAREER
+                                    </span>
+                                </a>
                             </li>
-                        </ul> -->
+                        </ul>
 
                         <!-- social icons  -->
-                        <!-- <ul>
+                        <ul class="mini-social-bar">
                             <li>
                                 <a href="https://facebook.com/themefisher" target="_blank">
                                     <i class="fa-brands fa-facebook"></i>
@@ -75,7 +86,7 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </a>
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
                 </div>
 

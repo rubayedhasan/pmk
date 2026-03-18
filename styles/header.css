@@ -94,6 +94,34 @@ body {
 .key-item p {
   font-size: 0.875rem;
   font-weight: 600;
+  padding-top: 2px;
+}
+
+.mini-nav-container {
+  display: flex;
+}
+
+.mini-navbar,
+.mini-social-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.mini-navbar {
+  margin-right: 20px;
+}
+
+.mini-navbar .mini-nav-link {
+  color: var(--pmk-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.mini-social-bar li a {
+  color: var(--pmk-white);
 }
 
 /* navbar section styles  */
