@@ -20,7 +20,7 @@
                     <!-- key: phone  -->
                     <div class="key-item">
                         <span><i class="fa-solid fa-phone"></i></span>
-                        <p>+880 1709 91 40 00</p>
+                        <p><a href="tel:+8801709914000">+880 1709 91 40 00</a></p>
                     </div>
                     <!-- key: working time  -->
                     <div class="key-item">

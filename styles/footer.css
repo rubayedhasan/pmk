@@ -194,6 +194,10 @@ footer .footer-main {
   font-weight: 500;
 }
 
+.footer-main .address p a {
+  color: #e0e0e0;
+}
+
 .footer-main .address p:nth-child(n + 1) {
   margin-bottom: 10px;
 }

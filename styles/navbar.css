@@ -97,6 +97,10 @@ body {
   padding-top: 2px;
 }
 
+.key-item p a {
+  color: var(--pmk-white);
+}
+
 .container-mini-navbar {
   display: flex;
 }
@@ -117,11 +121,18 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.mini-navbar .mini-nav-link:hover,
+.mini-social-bar li a:hover {
+  color: var(--pmk-blue-dark);
 }
 
 .mini-social-bar li a {
   color: var(--pmk-white);
+  transition: 0.3s ease-in-out;
 }
 
 /* navbar (main) section styles  */

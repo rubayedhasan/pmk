@@ -132,8 +132,8 @@
 
                             <div class="address">
                                 <p>Zirabo, Ashulia, Dhaka-1341, Bangladesh</p>
-                                <p>Email: info@pmk-bd.org</p>
-                                <p>Phone: +880 1709 91 40 00</p>
+                                <p>Email: <a href="mailto:info@pmk-bd.org">info@pmk-bd.org</a></p>
+                                <p>Phone: <a href="tel:+8801709914000">+880 1709 91 40 00</a></p>
                             </div>
 
                             <!-- newsletter  -->
