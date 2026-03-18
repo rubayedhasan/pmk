@@ -18,14 +18,11 @@
 
 <body>
     <!-- section:: header  -->
-    <header>
-        <!-- Linked navbar section  -->
-        <?php include("./navbar.php") ?>
+    <!-- Linked navbar section  -->
+    <?php include("./navbar.php") ?>
 
-        <!-- Linked banner section  -->
-        <?php include("./banner.php") ?>
-    </header>
-
+    <!-- Linked banner section  -->
+    <?php include("./banner.php") ?>
     <!-- section:: main  -->
     <main>
         <!-- section:: about pmk  -->

@@ -70,7 +70,7 @@ body {
 
 .slider-wrapper .slider-item {
   position: relative;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 60px - 70px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ body {
   left: 0;
   filter: brightness(60%) contrast(120%);
   background-image: url("../assets/slider/infont_of_pmk.png");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -237,7 +237,7 @@ body {
   position: absolute;
   bottom: 0;
   transition: 0.4s ease-in-out;
-  border-bottom: 3px solid var(--pmk-gold);
+  border-bottom: 3px solid var(--pmk-white);
 }
 
 .slider-pagination .slider-tab {
@@ -250,7 +250,8 @@ body {
 }
 
 .slider-pagination .slider-tab.active-slide {
-  color: var(--pmk-gold);
+  color: var(--pmk-white);
+  font-weight: 700;
 }
 
 .slider-navigation button {

@@ -84,7 +84,9 @@
     <nav id="navigation" class="navbar navbar-expand-lg">
         <div class="container-fluid container-width">
             <a class="navbar-brand brand-name" href="./index.php">
-                <img id="logo-img" src="./assets/logo/pmk_logo.png" alt="pmk logo">
+                <img id="logo-img" src="./assets/logo/main-logo.png" alt="pmk logo">
+                <span class="org-name font-playfair">Palli Mongal
+                    <br> Karmosuchi (PMK)</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
