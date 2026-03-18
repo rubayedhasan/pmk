@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMK Home</title>
+    <title>PMK | Home</title>
     <!-- Linked Fav Icon  -->
     <link rel="shortcut icon" href="./assets/logo/main-logo.png" type="image/x-icon">
 
@@ -18,7 +18,13 @@
 
 <body>
     <!-- section:: header  -->
-    <?php require_once("./header.php") ?>
+    <header>
+        <!-- Linked navbar section  -->
+        <?php include("./navbar.php") ?>
+
+        <!-- Linked banner section  -->
+        <?php include("./banner.php") ?>
+    </header>
 
     <!-- section:: main  -->
     <main>
