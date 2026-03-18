@@ -36,7 +36,7 @@
                             <p>+880 1709 91 40 00</p>
                         </div>
                         <!-- key: working time  -->
-                        <div class="key-item d-none d-lg-flex">
+                        <div class="key-item">
                             <span><i class="fa-solid fa-clock"></i></span>
                             <p>Sun - Thu 9:00AM - 5:00PM
                             </p>
@@ -44,7 +44,7 @@
                     </div>
 
                     <!-- mini navigation  -->
-                    <div class="mini-nav-container">
+                    <div class="container-mini-navbar">
                         <!-- mini-navbar  -->
                         <ul class="mini-navbar">
                             <li>
