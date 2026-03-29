@@ -33,15 +33,10 @@ li {
 /* shared styles  */
 :root {
   --pmk-green: #00946a;
-  --pmk-green-dark: #176f4e;
   --pmk-green-light: #e6f4ef;
-
-  --pmk-blue: #0e5a7c;
   --pmk-blue-dark: #083d56;
-  --pmk-gold: #f4b400;
 
   --pmk-dark: #1f2933;
-  --pmk-gray-light: #e0e0e0;
   --pmk-white: #ffffff;
 }
 
@@ -67,26 +62,28 @@ footer.pmk-footer {
 }
 
 footer .membership {
-  background: linear-gradient(135deg, var(--pmk-green), var(--pmk-blue));
   text-align: center;
   padding: 50px 20px;
 }
 
 .membership .welcome-text {
-  color: var(--pmk-white);
+  color: var(--pmk-blue-dark);
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .membership .member-btn {
+  background: var(--pmk-green);
   color: var(--pmk-white);
-  background-color: var(--pmk-blue-dark);
   padding: 12px 30px;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 6px;
   transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .membership .member-btn:hover {
@@ -95,7 +92,7 @@ footer .membership {
 
 /* footer-main section styles  */
 footer .footer-main {
-  background-color: var(--pmk-blue-dark);
+  background-color: var(--pmk-dark);
   color: var(--pmk-white);
   padding: 80px 20px;
 }
@@ -237,7 +234,10 @@ footer .footer-main {
 }
 /* copyright styles  */
 footer .copyright {
-  background-color: var(--pmk-blue);
+  background-color: var(--pmk-dark);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 10px 30px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
 

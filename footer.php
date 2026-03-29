@@ -2,17 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PMK ! Footer</title>
     <!-- Linked Fav Icon  -->
-    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon">
+    <link
+        rel="shortcut icon"
+        href="./assets/logo/logo.png"
+        type="image/x-icon" />
 
     <!-- linked bootstrap stylesheet  -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
 
     <!-- Liked my custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/footer.css" />
 </head>
 
 <body>
@@ -21,8 +24,12 @@
             <!-- section:: membership -->
             <section class="membership">
                 <div class="container-width">
-                    <h3 class="welcome-text">Together We Build Sustainable Communities</h3>
-                    <a href="" class="member-btn">Become A Member</a>
+                    <h3 class="welcome-text">
+                        Together We Build Sustainable Communities
+                    </h3>
+                    <a href="" class="member-btn">
+                        <span><i class="fa-solid fa-people-group"></i></span>
+                        <span>Become A Member</span></a>
                 </div>
             </section>
 
@@ -32,19 +39,30 @@
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                         <!-- about PMK  -->
                         <div class="col">
-                            <h3 class="widget-title">
-                                About PMK
-                            </h3>
+                            <h3 class="widget-title">About PMK</h3>
                             <figure>
-                                <img src="./assets/logo/logo.png" alt="pmk-logo" loading="lazy" class="pmk-mini-logo">
+                                <img
+                                    src="./assets/logo/main-logo.png"
+                                    alt="pmk-logo"
+                                    loading="lazy"
+                                    class="pmk-mini-logo" />
                             </figure>
-                            <p class="widget-description">Established in 1988, PMK has over <script>
-                                    document.write(new Date().getFullYear() - 1988)
-                                </script> years of experience in advancing poverty reduction, social justice, climate resilience, and sustainable rural development across Bangladesh.</p>
+                            <p class="widget-description">
+                                Established in 1988, PMK has over
+                                <script>
+                                    document.write(new Date().getFullYear() - 1988);
+                                </script>
+                                years of experience in advancing poverty reduction, social
+                                justice, climate resilience, and sustainable rural development
+                                across Bangladesh.
+                            </p>
 
                             <ul class="social-icons d-flex gap-3 justify-content-start">
                                 <li>
-                                    <a href="https://facebook.com/themefisher" target="_blank" class="social-link facebook">
+                                    <a
+                                        href="https://facebook.com/themefisher"
+                                        target="_blank"
+                                        class="social-link facebook">
                                         <i class="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
@@ -64,8 +82,6 @@
                                     </a>
                                 </li>
                             </ul>
-
-
                         </div>
                         <!-- our program  -->
                         <div class="col">
@@ -76,23 +92,28 @@
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Microfinance Program</span></a>
+                                    </span>
+                                    <span>Microfinance Program</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Hospital & Healthcare</span></a>
+                                    </span>
+                                    <span>Hospital & Healthcare</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>PMK Nursing College</span></a>
+                                    </span>
+                                    <span>PMK Nursing College</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Technical Training</span></a>
+                                    </span>
+                                    <span>Technical Training</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Tissue Culture Lab</span></a>
+                                    </span>
+                                    <span>Tissue Culture Lab</span></a>
                             </nav>
                         </div>
 
@@ -105,24 +126,28 @@
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>About PMK</span></a>
+                                    </span>
+                                    <span>About PMK</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Leadership</span></a>
+                                    </span>
+                                    <span>Leadership</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Annual Reports</span></a>
+                                    </span>
+                                    <span>Annual Reports</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Careers</span></a>
+                                    </span>
+                                    <span>Careers</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
-                                    </span> <span>Contact</span></a>
-
+                                    </span>
+                                    <span>Contact</span></a>
                             </nav>
                         </div>
 
@@ -132,15 +157,23 @@
 
                             <div class="address">
                                 <p>Zirabo, Ashulia, Dhaka-1341, Bangladesh</p>
-                                <p>Email: <a href="mailto:info@pmk-bd.org">info@pmk-bd.org</a></p>
-                                <p>Phone: <a href="tel:+8801709914000">+880 1709 91 40 00</a></p>
+                                <p>
+                                    Email: <a href="mailto:info@pmk-bd.org">info@pmk-bd.org</a>
+                                </p>
+                                <p>
+                                    Phone: <a href="tel:+8801709914000">+880 1709 91 40 00</a>
+                                </p>
                             </div>
 
                             <!-- newsletter  -->
                             <div class="newsletter">
                                 <h5>Subscribe to Updates</h5>
                                 <form>
-                                    <input type="email" name="user-email" id="input-email" placeholder="Your Email Address">
+                                    <input
+                                        type="email"
+                                        name="user-email"
+                                        id="input-email"
+                                        placeholder="Your Email Address" />
                                     <button id="subscribe-btn" type="submit">Subscribe</button>
                                 </form>
                             </div>
@@ -151,11 +184,14 @@
 
             <!-- copyright text  -->
             <section class="copyright">
-                <div class="copyright-content d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap">
+                <div
+                    class="copyright-content d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap">
                     <p class="copy-text">
-                        Copyright © <script>
-                            document.write(new Date().getFullYear())
-                        </script>, All Rights Reserved by MIS & ICT Department, PMK
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        , All Rights Reserved by MIS & ICT Department, PMK
                     </p>
 
                     <!-- links  -->
