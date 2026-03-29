@@ -13,7 +13,7 @@
 <body>
     <!-- section:: mini nav -->
     <section id="mini-nav">
-        <div class="container-width">
+        <div class="container-fluid container-width">
             <div class="mini-nav-container">
                 <!-- key info  -->
                 <div class="mini-key-info-bar">
@@ -76,7 +76,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -84,9 +83,7 @@
     <nav id="navigation" class="navbar navbar-expand-lg">
         <div class="container-fluid container-width">
             <a class="navbar-brand brand-name" href="./index.php">
-                <img id="logo-img" src="./assets/logo/main-logo.png" alt="pmk logo">
-                <span class="org-name font-playfair">Palli Mongal
-                    <br> Karmosuchi (PMK)</span>
+                <img id="logo-img" src="./assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
