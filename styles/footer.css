@@ -34,9 +34,12 @@ li {
 :root {
   --pmk-green: #00946a;
   --pmk-green-light: #e6f4ef;
+  --pmk-green-dark-sublet: #1e2d26;
+
   --pmk-blue-dark: #083d56;
 
   --pmk-dark: #1f2933;
+  --pmk-dark-sublet: #1d2a24;
   --pmk-white: #ffffff;
 }
 
@@ -92,7 +95,7 @@ footer .membership {
 
 /* footer-main section styles  */
 footer .footer-main {
-  background-color: var(--pmk-dark);
+  background-color: var(--pmk-green-dark-sublet);
   color: var(--pmk-white);
   padding: 80px 20px;
 }
@@ -247,10 +250,7 @@ footer .footer-main {
 
 /* copyright styles  */
 footer .copyright {
-  background-color: var(--pmk-dark);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: var(--pmk-dark-sublet);
   padding: 20px;
 }
 
