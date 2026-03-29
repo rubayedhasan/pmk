@@ -205,33 +205,46 @@ footer .footer-main {
   font-weight: 600;
 }
 
+/* newsletter form wrapper */
 .footer-main .newsletter form {
   display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .footer-main .newsletter form input {
   flex: 1;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 10px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
   border: none;
   outline: none;
+  background: transparent;
+  color: var(--pmk-white);
+}
+
+.footer-main .newsletter form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-main .newsletter form button {
-  font-size: 0.875rem;
-  font-weight: 600;
-  background-color: var(--pmk-green);
-  border: none;
   padding: 10px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--pmk-green);
   color: var(--pmk-white);
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 
+/* hover */
 .footer-main .newsletter form button:hover {
-  background: var(--pmk-green-dark);
+  background: #007a59;
 }
+
 /* copyright styles  */
 footer .copyright {
   background-color: var(--pmk-dark);
@@ -278,6 +291,25 @@ footer .copyright {
   .footer-main nav {
     margin-top: 30px;
   }
+
+  .footer-main .newsletter form {
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+    background: none;
+    gap: 8px;
+  }
+
+  .footer-main .newsletter form input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .footer-main .newsletter form button {
+    width: 100%;
+    border-radius: 4px;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -289,25 +321,30 @@ footer .copyright {
   .footer-main nav {
     margin-top: 30px;
   }
+
+  .footer-main .newsletter form button {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
 }
 
 /* responsive styles:: large devices  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .footer-main .newsletter form {
-    display: block;
-  }
-  .footer-main .newsletter form input {
-    border-radius: 4px;
-    font-size: 0.75rem;
-    width: 100%;
-    display: inline-block;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+    background: none;
   }
 
+  .footer-main .newsletter form input,
   .footer-main .newsletter form button {
-    margin-top: 12px;
-    padding: 8px 12px;
-    font-size: 0.85rem;
+    width: 100%;
     border-radius: 4px;
+  }
+
+  .footer-main .newsletter form input {
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 }
 
