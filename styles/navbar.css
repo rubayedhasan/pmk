@@ -65,9 +65,14 @@ body {
   overflow-y: scroll;
 }
 
+#mini-nav .container-width,
+#navigation .container-width {
+  width: calc(100% - 40px);
+}
+
 /* mini nav (top) section  styles  */
 #mini-nav {
-  height: 60px;
+  height: 50px;
   color: var(--pmk-white);
   background-color: var(--pmk-green);
   display: flex;
@@ -78,25 +83,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
 .mini-key-info-bar {
   display: flex;
-  align-items: center;
-  height: 100%;
-  gap: 20px;
+  gap: 15px;
 }
 
 .key-item {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
+  gap: 6px;
 }
 
 .key-item p {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   padding-top: 2px;
 }
@@ -107,43 +108,40 @@ body {
 
 .container-mini-navbar {
   display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .mini-navbar,
 .mini-social-bar {
   display: flex;
-  gap: 20px;
-}
-
-.mini-navbar {
-  margin-right: 30px;
+  gap: 15px;
 }
 
 .mini-navbar .mini-nav-link {
   color: var(--pmk-white);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
 }
 
 .mini-navbar .mini-nav-link:hover,
 .mini-social-bar li a:hover {
   color: var(--pmk-blue-dark);
+  opacity: 0.7;
 }
 
 .mini-social-bar li a {
+  opacity: 1;
   color: var(--pmk-white);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /* navbar (main) section styles  */
 #navigation {
-  /* position: fixed;
-  top: 60px;
-  left: 0; */
   position: sticky;
   top: 0;
   width: 100%;
@@ -156,24 +154,22 @@ body {
 }
 
 .brand-name {
-  display: inline-flex;
+  height: 65px;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  height: 70px;
 }
 
-.brand-name #logo-img {
-  height: 70%;
-  width: auto;
-  object-fit: contain;
+.brand-name img {
+  height: 45px;
 }
 
 .navbar .nav-link {
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 8px 12px;
   letter-spacing: 0.5;
+  font-size: 0.875rem;
   color: var(--pmk-blue-dark);
-  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navbar .nav-link:hover,
@@ -181,48 +177,46 @@ body {
   color: var(--pmk-green);
 }
 
-.navbar .dropdown .dropdown-menu {
-  display: block;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(50px);
-  top: 50px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+.dropdown-menu {
   border: none;
-  border-radius: 8px;
-  backdrop-filter: blur(8px);
-  min-width: 200px;
-  padding: 0;
-  background-color: var(--pmk-green-light);
-  border: 1px solid var(--pmk-green);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: var(--pmk-white);
+  transform: translateY(15px);
+
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.1s;
+    height 0.35s ease,
+    opacity 0.25s ease;
 }
 
-.navbar .dropdown .dropdown-menu.show {
-  height: auto;
+.dropdown:last-child .dropdown-menu {
+  transform: translate(-60px, 15px);
+}
+
+.dropdown-menu.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
-.navbar .dropdown-menu li {
-  border-bottom: 1px solid var(--pmk-green);
+.dropdown-item {
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #083d564a;
 }
 
-.navbar .dropdown-menu li:last-child {
+.dropdown-menu li:last-child .dropdown-item {
   border-bottom: none;
 }
 
-.navbar .dropdown-menu .dropdown-item {
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 8px;
+.dropdown-item:hover {
+  background: var(--pmk-green-light);
 }
 
 .navbar-toggler {
@@ -325,6 +319,13 @@ body {
   .brand-name #logo-img {
     height: 60%;
   }
+
+  .dropdown-menu {
+    transform: translateY(0);
+  }
+  .dropdown:last-child .dropdown-menu {
+    transform: translate(0);
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -375,12 +376,22 @@ body {
 
 /* responsive styles:: small devices  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .brand-name img {
+    height: 35px;
+  }
 }
 
 /* responsive styles:: small devices  */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
+  .brand-name img {
+    height: 35px;
+  }
 }
 
 /* responsive styles:: small devices  */
 @media (min-width: 1400px) {
+  #mini-nav .container-width,
+  #navigation .container-width {
+    width: 1400px;
+  }
 }

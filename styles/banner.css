@@ -70,7 +70,7 @@ body {
 
 .slider-wrapper .slider-item {
   position: relative;
-  height: calc(100vh - 60px - 70px);
+  height: calc(100vh - 50px - 70px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ body {
 }
 
 .slider-wrapper .slider-item .slider-content > * {
-  max-width: 55%;
+  max-width: 75%;
 }
 
 .slider-item .slider-content .slider-subtitle {
@@ -140,7 +140,7 @@ body {
 
 .slider-item .slider-content .slider-title {
   opacity: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 5px;
   line-height: 1.2;
@@ -182,7 +182,7 @@ body {
   border: 2px solid var(--pmk-white);
   display: block;
   text-align: center;
-  margin-top: 45px;
+  margin-top: 25px;
   font-size: 1rem;
   font-weight: 600;
   transition: 0.4s ease;
@@ -242,10 +242,10 @@ body {
 
 .slider-pagination .slider-tab {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: center;
   cursor: pointer;
-  padding: 20px 30px;
+  padding: 20px 30px 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -294,7 +294,7 @@ body {
   /* slider styles  */
 
   .slider-wrapper .slider-item {
-    align-items: flex-start;
+    align-items: center;
     height: 380px;
   }
 
@@ -307,7 +307,7 @@ body {
   }
 
   .slider-item .slider-content .slider-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .slider-item .slider-content .slider-description {
@@ -316,7 +316,7 @@ body {
   .slider-item .slider-content .slider-button {
     padding: 10px 0;
     font-size: 0.75rem;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 
   @keyframes animation-button {
@@ -338,17 +338,27 @@ body {
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* slider styles  */
-  .slider-wrapper .slider-item .slider-content > * {
-    max-width: 75%;
+  .slider-item .slider-content .slider-subtitle {
+    font-size: 1rem;
   }
 
   .slider-item .slider-content .slider-title {
-    font-size: 2.375rem;
+    font-size: 1.85rem;
+  }
+
+  .slider-item .slider-content .slider-description {
+    font-size: 0.9rem;
   }
 
   .slider-item .slider-content .slider-button {
-    margin-top: 30px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .slider-pagination .slider-tab {
+    font-size: 0.7rem;
+    padding: 15px 20px 10px;
   }
 }
 

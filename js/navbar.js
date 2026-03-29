@@ -10,36 +10,34 @@ navLinks.forEach((link) => {
   });
 });
 
-// sticky effect over navbar on scroll
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 80) {
-//     navbar.classList.add("scrolled");
-//   } else {
-//     navbar.classList.remove("scrolled");
-//   }
-// });
+// handler function::  for show dropdown menu
+document.querySelectorAll(".navbar .dropdown > .nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    // get the parent Element
+    const parent = this.parentElement;
 
-// change the logo on large devices
-// document.addEventListener("DOMContentLoaded", () => {
-//   const logoImg = document.getElementById("logo-img");
-//   // Function to update logo
-//   const updateTheLogo = () => {
-//     const windowSize = window.matchMedia(
-//       "(min-width:992px) and (max-width:1199.98px)",
-//     );
-//     if (windowSize.matches) {
-//       logoImg.src = "./assets/logo/logo.png";
-//     } else {
-//       logoImg.src = "./assets/logo/pmk_logo.png";
-//     }
-//   };
-//   // Run on page load
-//   updateTheLogo();
-//   // Listen for screen changes dynamically
-//   const windowSize = window.matchMedia(
-//     "(min-width:992px) and (max-width:1199.98px)",
-//   );
-//   windowSize.addEventListener("change", updateTheLogo);
-//   // Optional: also update on window resize
-//   window.addEventListener("resize", updateTheLogo);
-// });
+    // get the current menu
+    const menu = parent.querySelector(".dropdown-menu");
+
+    // close other menu
+    document.querySelectorAll(".dropdown-menu").forEach((otherMenu) => {
+      if (otherMenu !== menu) {
+        otherMenu.style.height = 0;
+        otherMenu.classList.remove("active");
+      }
+    });
+
+    // toggle the menu
+    if (menu.classList.contains("active")) {
+      menu.style.height = menu.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        menu.style.height = "0px";
+      });
+
+      menu.classList.remove("active");
+    } else {
+      menu.classList.add("active");
+      menu.style.height = menu.scrollHeight + "px";
+    }
+  });
+});

@@ -166,7 +166,6 @@ body {
   object-fit: cover;
 }
 
-/* CONTENT */
 .about-content {
   text-align: left;
 }
@@ -507,6 +506,11 @@ body {
     margin: 0 20px;
   }
 
+  #about-pmk,
+  #pmk-perspective {
+    padding-top: 80px;
+  }
+
   .section-title,
   .head-title {
     font-size: 2rem;
@@ -534,7 +538,6 @@ body {
     font-size: 1rem;
   }
 
-  /* IMAGE */
   .about-image-wrapper {
     height: 260px;
     width: 260px;
