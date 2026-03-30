@@ -95,7 +95,7 @@
                     <!-- perspective content  -->
                     <div class="perspective-content">
                         <!-- vision -->
-                        <div id="pmk-vision" class="perspective-object object-visible">
+                        <div id="pmk-vision" class="perspective-object variant-green object-visible">
                             <h4 class="perspective-title font-playfair">PMK <span>Vision</span></h4>
                             <div class="perspective-head">
                                 <span><i class="fa-regular fa-lightbulb"></i></span>
@@ -105,7 +105,7 @@
                         </div>
 
                         <!-- mission  -->
-                        <div id="pmk-mission" class="perspective-object">
+                        <div id="pmk-mission" class="perspective-object variant-blue">
                             <h4 class="perspective-title font-playfair">PMK <span>Mission</span></h4>
                             <div class="perspective-head">
                                 <span><i class="fa-solid fa-bullseye"></i></span>
@@ -115,7 +115,7 @@
                         </div>
 
                         <!-- objective  -->
-                        <div id="pmk-objective" class="perspective-object">
+                        <div id="pmk-objective" class="perspective-object variant-green-dark">
                             <h4 class="perspective-title font-playfair"><span>Objectives</span> of PMK</h4>
                             <div class="perspective-head">
                                 <span><i class="fa-solid fa-list-check"></i></span>
