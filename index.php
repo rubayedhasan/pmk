@@ -175,15 +175,13 @@
         <!-- section:: founder message -->
         <div class="container-width">
             <section id="founder-message">
-                <!-- left:: chief executive message  -->
+                <!-- Top:: chief executive message  -->
                 <div class="executive-message">
                     <!-- Left: Message -->
                     <div class="message-container">
                         <div class="message-quote">
                             <p>
-                                Since our humble beginnings in 1988, initiated by dedicated local youth,
-                                Palli Mongal Karmosuchi (PMK) has grown into a leading non-profit
-                                organization committed to the socio-economic development of Bangladesh.
+                                As we reflect on our journey at Palli Mongal Karmosuchi (PMK), we are reminded of our humble beginnings in 1988, initiated by the voluntary efforts of local youth. Today, we stand as a leadin non-profit organization committed to the socio-economic development of Bangladesh.
                             </p>
 
                             <p>
@@ -202,32 +200,44 @@
                                 continued dedication. Together, we will achieve lasting change.
                             </p>
                         </div>
+                    </div>
 
+                    <!-- Right: Photo -->
+                    <div class="executive-photo">
+                        <figure class="photo-container">
+                            <img
+                                src="./assets/photos/kamrun_nahar_executive_of_pmk.png"
+                                alt="Chief Executive of PMK"
+                                class="exe-photo" />
+                        </figure>
+
+                        <!-- executive monogram  -->
                         <div class="executive-monogram">
                             <strong>Kamrun Nahar</strong>
                             <span>Chief Executive</span>
                             <span>Palli Mongal Karmosuchi (PMK)</span>
                         </div>
                     </div>
-
-                    <!-- Right: Photo -->
-                    <figure class="executive-photo-container">
-                        <img
-                            src="./assets/photos/kamrun_nahar_executive_of_pmk.png"
-                            alt="Chief Executive of PMK"
-                            class="executive-photo" />
-                    </figure>
                 </div>
 
-                <!-- right:: deputy executive message  -->
+                <!-- Bottom:: deputy executive message  -->
                 <div class="deputy-executive-message">
                     <!-- Left: Photo -->
-                    <figure class="executive-photo-container">
-                        <img
-                            src="./assets/photos/dewan_faisal_deputy_of_pmk-2.png"
-                            alt="deputy Executive of PMK"
-                            class="executive-photo" />
-                    </figure>
+                    <div class="executive-photo">
+                        <figure class="photo-container">
+                            <img
+                                src="./assets/photos/dewan_faisal_deputy_of_pmk-2.png"
+                                alt="Deputy Executive of PMK"
+                                class="exe-photo" />
+                        </figure>
+
+                        <!-- executive monogram  -->
+                        <div class="executive-monogram">
+                            <strong>Dewan Faisal</strong>
+                            <span>Deputy Chief Executive</span>
+                            <span>Palli Mongal Karmosuchi (PMK)</span>
+                        </div>
+                    </div>
 
                     <!-- Right: Message -->
                     <div class="message-container">
@@ -246,15 +256,10 @@
 
                             <p>
                                 With deep gratitude, I acknowledge the tireless efforts of our staff, partners and supporters. Together, we are building a future that promises growth, opportunity and lasting change for all.
-                                Dewan Faisal
                             </p>
                         </div>
 
-                        <div class="executive-monogram">
-                            <strong>Dewan Faisal</strong>
-                            <span>Deputy Chief Executive</span>
-                            <span>Palli Mongal Karmosuchi (PMK)</span>
-                        </div>
+
                     </div>
                 </div>
             </section>
