@@ -72,8 +72,8 @@
                         </div>
 
                         <a href="#" class="about-btn">
-                            <span>Our Story</span>
                             <span><i class="fa-solid fa-book-open"></i></span>
+                            <span>Our Story</span>
                         </a>
 
                     </div>
@@ -171,6 +171,95 @@
                 </div>
             </section>
         </div>
+
+        <!-- section:: founder message -->
+        <div class="container-width">
+            <section id="founder-message">
+                <!-- left:: chief executive message  -->
+                <div class="executive-message">
+                    <!-- Left: Message -->
+                    <div class="message-container">
+                        <div class="message-quote">
+                            <p>
+                                Since our humble beginnings in 1988, initiated by dedicated local youth,
+                                Palli Mongal Karmosuchi (PMK) has grown into a leading non-profit
+                                organization committed to the socio-economic development of Bangladesh.
+                            </p>
+
+                            <p>
+                                Our Microfinance Program plays a key role in fostering entrepreneurship
+                                and generating employment across 35 districts, empowering communities
+                                and supporting sustainable economic growth.
+                            </p>
+
+                            <p>
+                                We remain committed to transparency, accountability, and innovation,
+                                continuously working to expand our reach and deepen our impact.
+                            </p>
+
+                            <p>
+                                We sincerely thank our staff, partners, and supporters for their
+                                continued dedication. Together, we will achieve lasting change.
+                            </p>
+                        </div>
+
+                        <div class="executive-monogram">
+                            <strong>Kamrun Nahar</strong>
+                            <span>Chief Executive</span>
+                            <span>Palli Mongal Karmosuchi (PMK)</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Photo -->
+                    <figure class="executive-photo-container">
+                        <img
+                            src="./assets/photos/kamrun_nahar_executive_of_pmk.png"
+                            alt="Chief Executive of PMK"
+                            class="executive-photo" />
+                    </figure>
+                </div>
+
+                <!-- right:: deputy executive message  -->
+                <div class="deputy-executive-message">
+                    <!-- Left: Photo -->
+                    <figure class="executive-photo-container">
+                        <img
+                            src="./assets/photos/dewan_faisal_deputy_of_pmk-2.png"
+                            alt="deputy Executive of PMK"
+                            class="executive-photo" />
+                    </figure>
+
+                    <!-- Right: Message -->
+                    <div class="message-container">
+                        <div class="message-quote">
+                            <p>
+                                At Palli Mongal Karmosuchi (PMK), our journey of empowering commu-nities and fostering sustainable development has been at the heart of our mission since 1988. What began with the dedication of local youth has now grown into a nation wide movement, driving positive change across Bangladesh.
+                            </p>
+
+                            <p>
+                                Our Microfinance Program reflects this mission by supporting small-scale entrepreneurs, helping them grow their businesses and create job opportu-nities. By doing so, we're not only enhancing individual livelihoods but also strengthening the broader economic fabric in 35 districts.
+                            </p>
+
+                            <p>
+                                As we continue to expand our efforts, our commitment to transparency, accountability and innovation remains unwavering. We believe that collaboration and fresh ideas will enable us to extend our reach and provide more impactful support to those in need.
+                            </p>
+
+                            <p>
+                                With deep gratitude, I acknowledge the tireless efforts of our staff, partners and supporters. Together, we are building a future that promises growth, opportunity and lasting change for all.
+                                Dewan Faisal
+                            </p>
+                        </div>
+
+                        <div class="executive-monogram">
+                            <strong>Dewan Faisal</strong>
+                            <span>Deputy Chief Executive</span>
+                            <span>Palli Mongal Karmosuchi (PMK)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
     </main>
 

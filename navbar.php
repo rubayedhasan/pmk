@@ -112,10 +112,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Microfinance Program</a></li>
-                            <li><a class="dropdown-item" href="#">Hospital & Healthcare</a></li>
+                            <li><a class="dropdown-item" href="https://www.pmkhospital.com/">Hospital & Healthcare</a></li>
                             <li><a class="dropdown-item" href="#">Technical Training</a></li>
                             <li><a class="dropdown-item" href="#">Tissue Culture Lab</a></li>
-                            <li><a class="dropdown-item" href="#">PMK Nursing College</a></li>
+                            <li><a class="dropdown-item" href="https://www.pmknursingcollege.edu.bd/">PMK Nursing College</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
