@@ -182,7 +182,7 @@
                 </hgroup>
 
                 <!-- message slider  -->
-                <div id="leadership-message-slider" class="carousel slide" data-bs-touch="true" data-bs-interval="false">
+                <div id="leadership-message-slider" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#leadership-message-slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#leadership-message-slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
