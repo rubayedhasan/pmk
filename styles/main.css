@@ -509,6 +509,14 @@ body {
   padding-top: 120px;
 }
 
+.carousel-indicators {
+  bottom: -25px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--pmk-blue-dark);
+}
+
 .message-envelope {
   margin-bottom: 25px;
 }
@@ -546,9 +554,10 @@ body {
 .deputy-executive-message {
   display: grid;
   gap: 80px;
-  margin-top: 40px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 80%;
+  max-width: 90%;
+  height: 700px;
 }
 
 .executive-message {
@@ -615,12 +624,12 @@ body {
 }
 
 .executive-message .executive-monogram {
-  bottom: 194px;
+  top: 352px;
   left: 45px;
 }
 
 .deputy-executive-message .executive-monogram {
-  bottom: 284px;
+  top: 371px;
   right: 45px;
 }
 
