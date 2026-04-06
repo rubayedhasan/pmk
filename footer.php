@@ -15,7 +15,7 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
 
     <!-- Liked my custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/footer-alter.css" />
 </head>
 
 <body>
@@ -98,12 +98,12 @@
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
-                                    <span>Hospital & Healthcare</span></a>
+                                    <span>Our Projects</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
-                                    <span>PMK Nursing College</span></a>
+                                    <span>PMK Community Health</span></a>
                                 <a class="nav-link" href="#">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
