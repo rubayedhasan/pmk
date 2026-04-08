@@ -303,6 +303,7 @@ body {
   }
 
   .slider-item .slider-content .slider-description {
+    color: var(--pmk-white);
     font-size: 0.75rem;
   }
   .slider-item .slider-content .slider-button {

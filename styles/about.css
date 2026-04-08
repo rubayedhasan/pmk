@@ -76,6 +76,7 @@ p {
 .long-img-container {
   width: 393px;
   height: 510px;
+  position: relative;
 }
 
 .wider-img-container {
@@ -88,6 +89,8 @@ p {
 
 .long-img,
 .wide-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   border: 5px solid var(--pmk-green);
@@ -107,19 +110,22 @@ p {
 .experience {
   width: 110px;
   height: 80px;
-  background-color: var(--pmk-green);
-  border-radius: 20px;
-  border: 1px solid var(--pmk-green);
-  position: absolute;
-  top: 60px;
-  right: 280px;
+  aspect-ratio: 1 / 1;
+
   display: flex;
   flex-direction: column;
   gap: 2px;
   align-items: center;
   justify-content: center;
+
+  position: absolute;
+  top: 30px;
+  right: -125px;
+
   text-align: center;
-  aspect-ratio: 1 / 1;
+  background-color: var(--pmk-green);
+  border-radius: 20px;
+  border: 1px solid var(--pmk-green);
   clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
   animation: slideExp 2.5s ease-in-out infinite;
 }
@@ -236,8 +242,75 @@ p {
   margin-top: 12px;
 }
 
-/* responsive styles:: extra small devices  */
+/*responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  /* about section  */
+  .about-image-container {
+    height: auto;
+    /* justify-content: flex-start; */
+  }
+
+  .long-img-container {
+    width: 258px;
+    height: 335px;
+  }
+
+  .wider-img-container {
+    width: 268px;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+  }
+
+  .experience {
+    width: 75px;
+    height: 75px;
+    top: 12px;
+    right: -78px;
+  }
+  .experience h4 {
+    font-size: 1rem;
+  }
+
+  .experience p {
+    font-size: 0.68rem;
+  }
+}
+
+/* responsive styles:: extra */
+@media (max-width: 424.98px) {
+  .about-image-container {
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .long-img-container {
+    width: 188px;
+    height: 243px;
+  }
+
+  .wider-img-container {
+    width: 232px;
+    height: 173px;
+    position: absolute;
+    left: 65px;
+  }
+
+  .experience {
+    width: 80px;
+    height: 65px;
+
+    right: -95px;
+    top: 10px;
+  }
+
+  .experience h4 {
+    font-size: 1rem;
+  }
+
+  .experience p {
+    font-size: 0.65rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
