@@ -96,7 +96,7 @@ footer .membership {
 /* footer-main section styles  */
 footer .footer-main {
   background-color: #00000008;
-  color: black;
+  color: var(--pmk-dark);
   padding: 80px 20px;
 }
 
@@ -254,10 +254,12 @@ footer .copyright {
 }
 
 .copyright .copyright-content {
-  color: black;
-  font-size: 0.875rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.copyright .copyright-content .copy-text {
+  font-size: 0.875rem;
 }
 
 .copyright-content .nav .nav-item .nav-link {

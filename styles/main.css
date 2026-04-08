@@ -56,7 +56,14 @@ body {
   overflow-y: scroll;
 }
 
-/* responsive styles:: extra small devices  */
+p {
+  color: var(--pmk-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
 }
 

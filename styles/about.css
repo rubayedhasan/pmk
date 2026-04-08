@@ -1,0 +1,257 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+/* reset all default styles  */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* shared styles  */
+:root {
+  --pmk-green: #00946a;
+  --pmk-green-dark: #176f4e;
+  --pmk-green-dark-sublet: #1e2d26;
+  --pmk-green-light: #e6f4ef;
+
+  --pmk-blue-dark: #083d56;
+
+  --pmk-dark: #1f2933;
+  --pmk-dark-sublet: #1d2a24;
+  --pmk-white: #ffffff;
+}
+
+.container-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* common styles  */
+body {
+  font-family: "Google Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+p {
+  color: var(--pmk-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* about section styles  */
+/* about image  */
+.about-image-container {
+  margin-top: 80px;
+  height: calc(100vh - 50px - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.long-img-container {
+  width: 393px;
+  height: 510px;
+}
+
+.wider-img-container {
+  width: 443px;
+  height: 330px;
+  position: absolute;
+  bottom: -70px;
+  left: 610px;
+}
+
+.long-img,
+.wide-img {
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid var(--pmk-green);
+}
+
+.long-img {
+  aspect-ratio: 1 / 1.2978;
+  clip-path: inset(0px 0% 0px 0px);
+  border-radius: 25px;
+}
+
+.wide-img {
+  aspect-ratio: 1 / 0.745;
+  border-radius: 35px;
+}
+
+.experience {
+  width: 110px;
+  height: 80px;
+  background-color: var(--pmk-green);
+  border-radius: 20px;
+  border: 1px solid var(--pmk-green);
+  position: absolute;
+  top: 60px;
+  right: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  animation: slideExp 2.5s ease-in-out infinite;
+}
+
+.experience h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--pmk-white);
+}
+.experience p {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--pmk-white);
+  font-weight: 500;
+}
+
+@keyframes slideExp {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+/* about content  */
+.about-content-container {
+  margin-top: 120px;
+  /* height: calc(100vh - 50px - 40px); */
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 60px 0;
+}
+
+.section-container {
+  text-align: center;
+}
+
+.section-label {
+  font-size: 1rem;
+  color: var(--pmk-green);
+  display: inline-block;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 12px;
+  color: var(--pmk-blue-dark);
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--pmk-green);
+  margin-top: 10px;
+}
+
+.section-description {
+  width: 88%;
+  margin: 18px auto 0;
+  line-height: 1.5;
+}
+
+/* vmo container  */
+.vmo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.vmo-card {
+  padding: 25px 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transform: translateY(0);
+  transition: all 0.5s ease;
+  border-top: 4px solid var(--pmk-green);
+}
+
+.vmo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  border-bottom: 4px solid var(--pmk-green);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vmo-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-weight: 600;
+  position: relative;
+}
+
+.vmo-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--pmk-green);
+}
+
+.vmo-body {
+  margin-top: 12px;
+}
+
+/* responsive styles:: extra small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

@@ -20,6 +20,14 @@
     <!-- Linked section:: Navar/Header  -->
     <?php include_once("./navbar.php") ?>
 
+    <?php include_once("./banner.php") ?>
+
+    <!-- section::Main  -->
+    <main>
+        <!-- Linked section:: About  -->
+        <?php include_once("./about.php"); ?>
+    </main>
+
 
     <!-- Linked section:: Footer  -->
     <?php include_once("./footer.php") ?>

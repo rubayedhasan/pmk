@@ -18,7 +18,7 @@
 
                 <div class="brand">
                     <a class="brand-name" href="./index.php">
-                        <img class="logo-img" src="./assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
+                        <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="./assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
                     </a>
                 </div>
 
@@ -67,7 +67,7 @@
         <div class="container-fluid container-width">
             <!-- brand name  -->
             <a class="brand-name d-inline-block d-lg-none" href="./index.php">
-                <img class="logo-img" src="./assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
+                <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="./assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
             </a>
 
             <!-- toggler button and menu  -->
