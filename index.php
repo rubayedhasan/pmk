@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Linked my custom stylesheet  -->
+    <link rel="stylesheet" href="./styles/button.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
@@ -26,6 +27,7 @@
     <main>
         <!-- Linked section:: About  -->
         <?php include_once("./about.php"); ?>
+
     </main>
 
 
@@ -40,6 +42,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Linked my custom script  -->
+    <script src="./js/button.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

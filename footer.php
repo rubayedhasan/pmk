@@ -15,6 +15,7 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
 
     <!-- Liked my custom stylesheet  -->
+    <!-- <link rel="stylesheet" href="./styles/button.css"> -->
     <link rel="stylesheet" href="./styles/footer-alter.css" />
 </head>
 
@@ -27,7 +28,7 @@
                     <h3 class="welcome-text">
                         Together We Build Sustainable Communities
                     </h3>
-                    <a href="" class="member-btn">
+                    <a href="" class="visit-btn button-effect">
                         <span><i class="fa-solid fa-people-group"></i></span>
                         <span>Become A Member</span></a>
                 </div>
@@ -218,6 +219,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
 
     <!-- Linked my custom script  -->
+    <!-- <script src="./js/button.js"></script> -->
     <script src="./js/newsletter.js"></script>
 </body>
 
