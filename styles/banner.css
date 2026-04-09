@@ -154,6 +154,7 @@ body {
 }
 
 .slider-item .slider-content .slider-description {
+  color: var(--pmk-white);
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;

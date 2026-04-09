@@ -30,6 +30,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 /* shared styles  */
 :root {
   --pmk-green: #00946a;
@@ -57,8 +62,8 @@ body {
 }
 p {
   color: var(--pmk-dark);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.7;
   font-weight: 400;
 }
 
@@ -66,7 +71,7 @@ p {
 /* about image  */
 .about-image-container {
   margin-top: 80px;
-  height: calc(100vh - 50px - 40px);
+  height: calc(100vh - 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,9 +161,9 @@ p {
 /* about content  */
 .about-content-container {
   margin-top: 120px;
-  /* height: calc(100vh - 50px - 40px); */
+  /* height: calc(100vh - 40px); */
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-container {
@@ -168,8 +173,20 @@ p {
 .section-label {
   font-size: 1rem;
   color: var(--pmk-green);
-  display: inline-block;
   font-weight: 600;
+  position: relative;
+}
+
+.section-label::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  height: 1.5px;
+  width: 22px;
+  background-color: var(--pmk-blue-dark);
+  border-radius: 2px;
+  display: block;
 }
 
 .section-title {
@@ -239,11 +256,46 @@ p {
 }
 
 .vmo-body {
-  margin-top: 12px;
+  margin-top: 16px;
+}
+
+.button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.visit-btn {
+  background: var(--pmk-green);
+  color: var(--pmk-white);
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.visit-btn:hover {
+  background: var(--pmk-green-dark-sublet);
+}
+
+.btn-indicator {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.visit-btn:hover .btn-indicator {
+  transform: rotate(0deg);
 }
 
 /*responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  p {
+    font-size: 1rem;
+  }
+
   /* about section  */
   .about-image-container {
     height: auto;
@@ -275,6 +327,103 @@ p {
   .experience p {
     font-size: 0.68rem;
   }
+
+  /* about content container */
+  .about-content-container {
+    height: auto;
+  }
+
+  .section-label {
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-description {
+    width: 100%;
+  }
+
+  .vmo-title {
+    font-size: 1.125rem;
+  }
+
+  .vmo-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  p {
+    font-size: 1.1rem;
+  }
+
+  /* about image container  */
+  .long-img-container {
+    width: 392px;
+    height: 508px;
+  }
+
+  .wider-img-container {
+    width: 435px;
+    height: 323px;
+    bottom: -120px;
+    left: 250px;
+  }
+
+  /* about content container  */
+  /* about content container */
+  .about-content-container {
+    height: auto;
+  }
+
+  .section-label {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-description {
+    width: 100%;
+  }
+
+  .vmo-title {
+    font-size: 1.125rem;
+  }
+
+  .vmo-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .wider-img-container {
+    bottom: -110px;
+    left: 345px;
+  }
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
 }
 
 /* responsive styles:: extra */
@@ -311,20 +460,4 @@ p {
   .experience p {
     font-size: 0.65rem;
   }
-}
-
-/* responsive styles:: medium devices  */
-@media (min-width: 768px) and (max-width: 991.98px) {
-}
-
-/* responsive styles:: large devices  */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-}
-
-/* responsive styles:: extra large devices  */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-}
-
-/* responsive styles:: extra extra large devices  */
-@media (min-width: 1400px) {
 }

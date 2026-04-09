@@ -30,6 +30,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 /* shared styles  */
 :root {
   --pmk-green: #00946a;
@@ -58,8 +63,8 @@ body {
 
 p {
   color: var(--pmk-dark);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.7;
   font-weight: 400;
 }
 

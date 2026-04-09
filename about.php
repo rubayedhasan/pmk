@@ -75,6 +75,14 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- about visit button  -->
+                <div class="button-container">
+                    <button type="button" class="visit-btn">
+                        <span>Stories That Inspire</span>
+                        <span class="btn-indicator"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>

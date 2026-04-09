@@ -469,6 +469,7 @@ body {
   }
 
   .navbar .nav-link {
+    gap: 3px;
     padding: 10px;
     font-size: 0.775rem;
   }
