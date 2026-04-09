@@ -15,18 +15,19 @@
         <!-- section:: About Image  -->
         <section class="about-image-container">
             <!-- 1st: image  -->
-            <figure class="long-img-container">
-                <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="./assets/images/dummy-img-3.png" alt="dummy">
-
+            <div class="image-wrapper">
+                <figure class="long-img-container shinny-effect">
+                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="./assets/images/dummy-img-3.png" alt="dummy">
+                </figure>
                 <!-- experience year -->
                 <div class="experience">
                     <h4>38+</h4>
                     <p>Years Of Experience</p>
                 </div>
-            </figure>
+            </div>
 
             <!-- 2nd: image  -->
-            <figure class="wider-img-container">
+            <figure class="wider-img-container shinny-effect">
                 <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="./assets/images/dummy-img-1.png" alt="dummy">
             </figure>
         </section>

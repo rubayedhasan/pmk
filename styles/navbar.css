@@ -1,72 +1,7 @@
-/* import google font */
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+/* import common styles  */
+@import url("./common.css");
 
-/* reset all default styles  */
-* {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-/* shared styles  */
-:root {
-  --pmk-green: #00946a;
-  --pmk-green-dark: #176f4e;
-  --pmk-green-dark-sublet: #1e2d26;
-  --pmk-green-light: #e6f4ef;
-
-  --pmk-blue-dark: #083d56;
-
-  --pmk-dark: #1f2933;
-  --pmk-dark-sublet: #1d2a24;
-  --pmk-white: #ffffff;
-}
-
-/* common styles  */
-body {
-  font-family: "Google Sans", sans-serif;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-.container-fluid {
-  padding: 0;
-}
-
-.container-width {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/* common styles  */
-body {
-  font-family: "Lato", sans-serif;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
+/* group styles  */
 #mini-nav .container-width,
 #navigation .container-width {
   width: calc(100% - 40px);

@@ -1,0 +1,60 @@
+/* make containers capable of holding shine */
+.shinny-effect {
+  overflow: hidden;
+}
+
+/* shine layers */
+.shinny-effect::before,
+.shinny-effect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 150%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translate(-50%, -50%) rotate(25deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* hover trigger */
+.shinny-effect:hover::before {
+  animation: toTopRight 2.5s ease forwards;
+}
+
+.shinny-effect:hover::after {
+  animation: toBottomLeft 2.5s ease forwards;
+}
+
+/* ↗ center → exact top-right edge */
+@keyframes toTopRight {
+  0% {
+    transform: translate(-50%, -50%) rotate(25deg) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(25deg)
+      translate(calc(50vw), calc(-50vh));
+    opacity: 0;
+  }
+}
+
+/* ↙ center → exact bottom-left edge */
+@keyframes toBottomLeft {
+  0% {
+    transform: translate(-50%, -50%) rotate(25deg) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(25deg)
+      translate(calc(-50vw), calc(50vh));
+    opacity: 0;
+  }
+}
