@@ -28,13 +28,17 @@
                     <ul class="mini-navbar">
                         <li>
                             <a class="mini-nav-link" href=" #">
-                                <span><i class="fa-regular fa-newspaper"></i></span>
+                                <span class="nav-icon">
+                                    <img src="./assets/icons/newspaper-regular-full.svg" alt="newspaper icon">
+                                </span>
                                 <span>NEWS</span>
                             </a>
                         </li>
                         <li>
                             <a class="mini-nav-link" href="https://careers.pmk.org.bd/" target="_blank">
-                                <span><i class="fa-solid fa-user-tie"></i></span>
+                                <span class="nav-icon">
+                                    <img src="./assets/icons/user-tie-solid-full.svg" alt="user icon">
+                                </span>
                                 <span> CAREER </span>
                             </a>
                         </li>
@@ -47,7 +51,9 @@
                             type="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="fa-solid fa-earth-asia"></i> <span>English</span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/earth-asia-solid-full.svg" alt="earth icon">
+                            </span> <span>English</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -80,8 +86,11 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./index.php">
-                            <span><i class="fa-solid fa-house"></i></span>
-                            <span>Home</span></a>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/house-solid-full.svg" alt="house icon">
+                            </span>
+                            <span>Home</span>
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
@@ -90,7 +99,9 @@
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span><i class="fa-solid fa-address-card"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/address-card-solid-full.svg" alt="card icon">
+                            </span>
                             <span>About PMK</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -108,8 +119,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span><i class="fa-solid fa-hands-bound"></i></span>
-                            <span>Microfinance</span></a>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/hands-bound-solid-full.svg" alt="hand bound icon">
+                            </span>
+                            <span>Microfinance</span>
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
@@ -118,7 +132,9 @@
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span><i class="fa-solid fa-folder-open"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/folder-open-solid-full.svg" alt="folder open icon">
+                            </span>
                             <span>Projects</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -134,7 +150,9 @@
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span><i class="fa-solid fa-brain"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/brain-solid-full.svg" alt="brain icon">
+                            </span>
                             <span>Our Initiatives</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -150,7 +168,9 @@
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span><i class="fa-solid fa-book"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/book-solid-full.svg" alt="book icon">
+                            </span>
                             <span>Case Studies</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -167,7 +187,9 @@
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span><i class="fa-solid fa-chart-pie"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/chart-pie-solid-full.svg" alt="pie chart icon">
+                            </span>
                             <span>Reports</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -178,14 +200,17 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span class="nav-icon">
+                                <img src="./assets/icons/location-dot-solid-full.svg" alt="location icon">
+                            </span>
                             <span>Working Area</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span><i class="fa-solid fa-square-phone"></i></span>
-                            <span>Contact</span></a>
+                            <span class="nav-icon"><img src="./assets/icons/square-phone-solid-full.svg" alt="phone icon"></span>
+                            <span>Contact</span>
+                        </a>
                     </li>
                 </ul>
             </div>

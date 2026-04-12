@@ -46,7 +46,7 @@
 
 .mini-navbar .mini-nav-link {
   color: var(--pmk-blue-dark);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 5px;
   font-size: 0.85rem;
@@ -60,6 +60,9 @@
 }
 
 .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: var(--pmk-blue-dark);
   font-size: 0.85rem;
   font-weight: 600;
@@ -73,7 +76,7 @@
   height: 40px;
   background-color: var(--pmk-green-light);
   /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .navbar .nav-link {
@@ -90,6 +93,18 @@
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: var(--pmk-dark-sublet);
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-icon img {
+  width: 100%;
+  height: 100%;
 }
 
 /* dropdown styles  */
@@ -445,5 +460,10 @@
   /* nav dropdown indicator  */
   .navbar .dropdown-toggle::after {
     margin: 0 0 3px;
+  }
+}
+@media (max-width: 350px) {
+  .brand-name .logo-img {
+    height: 32px;
   }
 }
