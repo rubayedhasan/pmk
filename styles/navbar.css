@@ -59,6 +59,11 @@
   color: var(--pmk-green);
 }
 
+.lang-container {
+  display: flex;
+  align-items: center;
+}
+
 .lang-btn {
   display: inline-flex;
   align-items: center;

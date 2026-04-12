@@ -29,6 +29,10 @@
         <!-- Linked section:: About  -->
         <?php include_once("./about.php"); ?>
 
+        <!-- Linked section:: Executive Message  -->
+        <?php include_once("./executive.php") ?>
+
+
     </main>
 
 
