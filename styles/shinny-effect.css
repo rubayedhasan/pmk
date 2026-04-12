@@ -1,5 +1,6 @@
 /* make containers capable of holding shine */
 .shinny-effect {
+  position: relative;
   overflow: hidden;
 }
 

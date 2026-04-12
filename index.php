@@ -32,7 +32,8 @@
         <!-- Linked section:: Executive Message  -->
         <?php include_once("./executive.php") ?>
 
-
+        <!-- Linked section:: PMK At a Glance  -->
+        <?php include_once("./glance.php") ?>
     </main>
 
 

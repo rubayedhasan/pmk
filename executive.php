@@ -24,7 +24,7 @@
                 <!-- ED Message  -->
                 <div class="exe-col">
                     <!-- executive image  -->
-                    <figure class="profile">
+                    <figure class="profile shinny-effect">
                         <img src="./assets/photos/kamrun_nahar_executive_of_pmk.png" alt="ED of PMK">
 
                         <!-- caption  -->
@@ -77,7 +77,7 @@
                     </div>
 
                     <!-- executive photo  -->
-                    <figure class="profile">
+                    <figure class="profile shinny-effect">
                         <img src="./assets/photos/dewan_faisal_deputy_of_pmk.png" alt="DED of PMK">
 
                         <figcaption class="info">

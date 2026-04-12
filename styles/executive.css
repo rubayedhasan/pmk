@@ -1,3 +1,7 @@
+/* import common styles  */
+@import url("./common.css");
+
+/* pmk executive section styles  */
 .pmk-executive {
   padding: 80px 20px;
   background: linear-gradient(135deg, #f0fdfa, #ecfeff);
@@ -73,6 +77,15 @@
   );
 }
 
+/* hover trigger */
+.exe-col:hover .shinny-effect::before {
+  animation: toTopRight 2.5s ease forwards;
+}
+
+.exe-col:hover .shinny-effect::after {
+  animation: toBottomLeft 2.5s ease forwards;
+}
+
 .profile {
   display: flex;
   justify-content: flex-start;
@@ -95,12 +108,6 @@
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--pmk-green);
-  transition: all 0.5s ease-in-out;
-  transform: scale(1);
-}
-
-.exe-col:hover .profile img {
-  transform: scale(1.05);
 }
 
 .info h4 {
@@ -165,6 +172,11 @@
   }
   .exe-row {
     grid-template-columns: 1fr;
+  }
+
+  .pmk-executive .section-container p {
+    font-size: 0.875rem;
+    margin-top: 3px;
   }
 
   .profile {

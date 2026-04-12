@@ -206,22 +206,6 @@
     height: auto;
   }
 
-  .section-label {
-    font-size: 0.875rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-  }
-
-  .section-description {
-    width: 100%;
-  }
-
   .vmo-title {
     font-size: 1.125rem;
   }
@@ -255,22 +239,6 @@
   /* about content container */
   .about-content-container {
     height: auto;
-  }
-
-  .section-label {
-    font-size: 0.95rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-  }
-
-  .section-description {
-    width: 100%;
   }
 
   .vmo-title {
