@@ -31,31 +31,8 @@
   bottom: -80px;
 }
 
-.pmk-executive .section-title span {
-  color: var(--pmk-green);
-  position: relative;
-}
-.pmk-executive .section-title span::after {
-  content: "";
-
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  display: inline-block;
-  width: 25%;
-  height: 3px;
-  border-radius: 2px;
-  background-color: var(--pmk-green);
-}
-
-.pmk-executive .section-container p {
-  font-size: 1rem;
-  margin-top: 8px;
-}
-
 .exe-row {
-  margin-top: 40px;
+  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 50px;
@@ -172,11 +149,6 @@
   }
   .exe-row {
     grid-template-columns: 1fr;
-  }
-
-  .pmk-executive .section-container p {
-    font-size: 0.875rem;
-    margin-top: 3px;
   }
 
   .profile {

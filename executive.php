@@ -14,10 +14,24 @@
     <!-- section::Executive  -->
     <section class="pmk-executive">
         <div class="container-width">
-            <!-- section info  -->
             <hgroup class="section-container">
-                <h3 class="section-title">Words from <span>Our Leaders</span></h3>
-                <p>Voices from the leadership of PMK</p>
+
+                <span class="section-label">
+                    Leadership Message
+                </span>
+
+                <h3 class="section-title">
+                    Voices from Our Leadership
+                </h3>
+
+                <h4 class="section-subtitle">
+                    Insights and reflections from the Executive and Deputy Executive of PMK
+                </h4>
+
+                <p class="section-description">
+                    Discover the perspectives of our leadership as they share their vision, commitment, and strategic direction for advancing sustainable development and empowering communities across Bangladesh.
+                </p>
+
             </hgroup>
 
             <div class="exe-row">

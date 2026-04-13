@@ -10,6 +10,4 @@ buttons.forEach((button) => {
     console.log(pointHor, pointVer);
     console.log(button);
   });
-  console.log(button);
 });
-console.log(buttons);
