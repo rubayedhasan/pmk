@@ -35,17 +35,6 @@
         <!-- Linked section:: PMK At a Glance  -->
         <?php include_once("./glance.php") ?>
 
-
-        <div style="margin:50px 0">
-            <h3>Remaining sections (In Progress)</h3>
-            <p>founder information</p>
-            <p>project (as linked clickable card)</p>
-            <p>Our impact or pmk at a glance (count down)</p>
-            <p>our Story (Gallery & videos)</p>
-            <p>Project Work Update section (categorizes recent project update blog type )</p>
-            <p>latest news section (blog type)</p>
-            <p>partner & supports </p>
-        </div>
     </main>
 
 

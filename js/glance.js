@@ -1,3 +1,6 @@
+/**
+ * script for count down the kpi items
+ */
 // get the element
 const graphicalBoard = document.getElementById("impact-graphical-board");
 
@@ -79,3 +82,103 @@ const observeContainer = new IntersectionObserver(
 if (graphicalBoard) {
   observeContainer.observe(graphicalBoard);
 }
+
+/**
+ * ============================================================================================================
+ * script for showing graph and charts
+ */
+const ctx = document.getElementById("myChart");
+
+// LABELS
+const labelMap = {
+  "employee-count": "Employees",
+  "member-count": "Members",
+  "borrower-count": "Borrowers",
+  "branch-count": "Branches",
+  "area-count": "Areas",
+  "zone-count": "Zones",
+  "division-count": "Divisions",
+  "district-count": "Districts",
+  "upazila-count": "Upazilas",
+  "village-count": "Villages",
+};
+
+// 🎨 Premium NGO palette
+const palette = [
+  "#1D4ED8",
+  "#059669",
+  "#F59E0B",
+  "#0EA5E9",
+  "#8B5CF6",
+  "#EF4444",
+  "#22C55E",
+  "#6366F1",
+  "#F97316",
+  "#EC4899",
+];
+
+// Convert entries
+const entries = Object.entries(dataOfPmk);
+
+// Sort DESC (important)
+entries.sort((a, b) => b[1] - a[1]);
+
+const labels = entries.map(([k]) => labelMap[k]);
+const rawValues = entries.map(([, v]) => v);
+
+// 🔥 LOG SCALE (this is the fix)
+const logValues = rawValues.map((v) => Math.log10(v + 1));
+
+// Normalize to make chart balanced but still proportional
+const max = Math.max(...logValues);
+const normalizedValues = logValues.map((v) => (v / max) * 100);
+
+// Keep real values for tooltip
+new Chart(ctx, {
+  type: "pie",
+  data: {
+    labels,
+    datasets: [
+      {
+        data: normalizedValues,
+        backgroundColor: palette,
+        borderColor: "#fff",
+        borderWidth: 2,
+        hoverOffset: 14,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          padding: 12,
+        },
+      },
+
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            const i = context.dataIndex;
+
+            return [
+              `${labels[i]}`,
+              `Value: ${rawValues[i].toLocaleString()}`,
+              `Normalized: ${normalizedValues[i].toFixed(2)}`,
+            ];
+          },
+        },
+      },
+    },
+
+    animation: {
+      animateRotate: true,
+      duration: 1200,
+    },
+  },
+});

@@ -34,6 +34,12 @@
 
             <!-- graphical board   -->
             <div id="impact-graphical-board">
+                <!-- chart  -->
+                <div class="chart-board">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <!-- kpi cards  -->
                 <div class="kpi-cards">
                     <div class="kpi-card">
                         <h4 id="employee-count"></h4>
@@ -76,14 +82,12 @@
                         <p>Villages</p>
                     </div>
                 </div>
-
-                <!-- chart  -->
-                <div class="chart-board">
-
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- Linked chart js script  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Linked custom script  -->
     <script src="./js/glance.js"></script>
