@@ -52,30 +52,8 @@
                     </p>
                 </hgroup>
 
-                <!-- vision, mission, objective  -->
-                <div class="vmo-container">
-                    <div class="vmo-card">
-                        <h5 class="vmo-title">Our Vision
-                        </h5>
-                        <p class="vmo-body">
-                            To empower communities toward an inclusive, just, and sustainable society where opportunity, equity, responsibility, and participation ensure dignity, self-reliance, and hope.
-                        </p>
-                    </div>
-                    <div class="vmo-card">
-                        <h5 class="vmo-title">Our Mission
-                        </h5>
-                        <p class="vmo-body">
-                            To implement development programs that improve livelihoods, education, health, and wellbeing, fostering self-reliance, empowerment, and sustainable growth through participatory, innovative, transparent leadership.
-                        </p>
-                    </div>
-                    <div class="vmo-card">
-                        <h5 class="vmo-title">Our Objective
-                        </h5>
-                        <p class="vmo-body">
-                            Promote socio-economic development for marginalized communities by providing livelihood, education, and health support, strengthening participation, ensuring sustainability, justice, transparency, and accountability.
-                        </p>
-                    </div>
-                </div>
+                <!-- Linked vmo (vision, mission, objective) section  -->
+                <?php include_once("./perspective.php") ?>
 
                 <!-- about visit button  -->
                 <div class="button-container">

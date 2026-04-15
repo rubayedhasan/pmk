@@ -1,0 +1,419 @@
+/* pmk perspective section styles */
+#pmk-perspective {
+  padding-top: 80px;
+}
+
+#pmk-perspective .perspective-container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+}
+
+.perspective-object {
+  display: none;
+  height: 370px;
+  background-color: var(--pmk-white);
+  border-radius: 10px;
+  padding: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.perspective-object.variant-green {
+  border-left: 4px solid var(--pmk-green);
+}
+
+.perspective-object.variant-blue {
+  border-left: 4px solid var(--pmk-blue-dark);
+}
+
+.perspective-object.variant-green-dark {
+  border-left: 4px solid var(--pmk-green-dark);
+}
+
+.perspective-object:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: var(--pmk-green-light);
+}
+
+.object-visible {
+  display: block;
+}
+
+.perspective-object .perspective-title {
+  color: var(--pmk-blue-dark);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.perspective-object .perspective-title span {
+  color: var(--pmk-green);
+  position: relative;
+}
+
+.perspective-object .perspective-title span:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  right: 0;
+  height: 3px;
+  width: 60px;
+  background: var(--pmk-green);
+  border-radius: 6px;
+}
+
+.perspective-object .perspective-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 30px 0 16px;
+}
+
+.perspective-object .perspective-head span {
+  border: 2px solid var(--pmk-green-light);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pmk-green-light);
+  color: var(--pmk-green);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.perspective-object .perspective-head span:hover {
+  background-color: var(--pmk-green);
+}
+
+.perspective-object .perspective-head span:hover i {
+  color: var(--pmk-white);
+}
+
+.perspective-object .perspective-head span:active {
+  transform: scale(0.92);
+}
+
+.perspective-object .perspective-head .perspective-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--pmk-dark);
+  line-height: 1.4;
+}
+.perspective-object .perspective-text {
+  line-height: 1.8;
+  margin-top: 10px;
+  max-width: 680px;
+}
+
+.perspective-object ul {
+  margin-top: 12px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.perspective-object ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.perspective-object ul li i {
+  color: var(--pmk-green);
+  margin-top: 4px;
+}
+
+.perspective-object ul li span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.perspective-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perspective-circle {
+  position: relative;
+  height: 340px;
+  width: 340px;
+  margin: auto;
+}
+
+.perspective-circle::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 4px solid var(--pmk-green-light);
+  border-radius: 50%;
+}
+
+.perspective-circle::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 3px dashed var(--pmk-green-light);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background-color: var(--pmk-green-light);
+  border: 1px solid var(--pmk-green-light);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.circle-center span {
+  color: var(--pmk-green);
+  font-size: 1.5rem;
+}
+
+.circle-center .circle-text {
+  color: var(--pmk-blue-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.circle-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: var(--pmk-white);
+  border: 1px solid var(--pmk-green);
+  background-color: var(--pmk-green);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-1 {
+  top: -30px;
+  left: 42%;
+}
+
+.btn-2 {
+  bottom: 55px;
+  right: -5px;
+}
+
+.btn-3 {
+  bottom: 70px;
+  left: -10px;
+}
+
+.circle-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-animation {
+  animation: zoomInZoomOut 2s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes zoomInZoomOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* responsive styles:: extra small devices  */
+@media (max-width: 767.98px) {
+  /* pmk-perspective section style  */
+  #pmk-perspective .perspective-container {
+    grid-template-columns: 1fr;
+  }
+
+  .perspective-circle {
+    height: 240px;
+    width: 240px;
+  }
+
+  .perspective-circle::after {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-center {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle-center span {
+    font-size: 1.3rem;
+  }
+
+  .circle-center .circle-text {
+    font-size: 0.88rem;
+  }
+
+  .circle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .btn-1 {
+    top: -15px;
+  }
+
+  .btn-2 {
+    bottom: 70px;
+    right: -10px;
+  }
+
+  .btn-3 {
+    bottom: 70px;
+    left: -10px;
+  }
+
+  .perspective-content {
+    order: 2;
+  }
+
+  .perspective-object {
+    height: max-content;
+    padding: 30px;
+  }
+
+  .perspective-object .perspective-title {
+    font-size: 1.5rem;
+  }
+
+  .perspective-object .perspective-head .perspective-subtitle {
+    font-size: 1rem;
+  }
+
+  .perspective-object .perspective-head span {
+    width: 50px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .perspective-object .perspective-text {
+    text-align: justify;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* pmk-perspective section style  */
+  #pmk-perspective .perspective-container {
+    grid-template-columns: 1fr;
+  }
+
+  .perspective-circle {
+    height: 300px;
+    width: 300px;
+  }
+
+  .perspective-circle::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-center .circle-text {
+    font-size: 1.165rem;
+  }
+
+  .circle-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .perspective-content {
+    order: 2;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* pmk-perspective section style  */
+  #pmk-perspective .perspective-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .perspective-circle {
+    height: 300px;
+    width: 300px;
+  }
+
+  .perspective-circle::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-center {
+    width: 115px;
+    height: 115px;
+  }
+
+  .circle-center .circle-text {
+    font-size: 1.165rem;
+  }
+
+  .perspective-object {
+    height: 500px;
+  }
+
+  .circle-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-3 {
+    bottom: 60px;
+    left: -12px;
+  }
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
