@@ -253,6 +253,38 @@
   }
 }
 
+/* smooth scrolling effect  */
+
+.perspective-content,
+.perspective-tabs {
+  opacity: 0;
+  transition:
+    transform 2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+.perspective-content {
+  transform: translateX(-60px) scale(0.97);
+}
+
+.perspective-tabs {
+  transform: translateX(60px) scale(0.97);
+}
+
+.section-visible .perspective-content,
+.section-visible .perspective-tabs {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.section-visible .perspective-content {
+  transition-delay: 0.1s;
+}
+
+.section-visible .perspective-tabs {
+  transition-delay: 0.3s;
+}
+
 /* responsive styles:: extra small devices  */
 @media (max-width: 767.98px) {
   /* pmk-perspective section style  */

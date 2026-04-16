@@ -13,7 +13,7 @@
 
     <div class="container-width">
         <!-- section:: About Image  -->
-        <section class="about-image-container">
+        <section id="about-image-container">
             <!-- 1st: image  -->
             <div class="image-wrapper">
                 <figure class="long-img-container shinny-effect">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- section:: About Content-container  -->
-    <section class="about-content-container">
+    <section id="about-content-container">
         <div class="container-width">
             <div class="about-content">
                 <hgroup class="section-container">

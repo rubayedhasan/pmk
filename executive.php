@@ -12,7 +12,7 @@
 <body>
 
     <!-- section::Executive  -->
-    <section class="pmk-executive">
+    <section id="pmk-executive">
         <div class="container-width">
             <hgroup class="section-container">
 
@@ -53,7 +53,6 @@
                     <div class="content">
                         <div class="msg-packet">
                             <h4 class="msg-title">Message from the Chief Executive</h4>
-                            <p class="msg-tag">Palli Mongal Karmosuchi (PMK)</p>
                         </div>
 
                         <div class="message">
@@ -75,7 +74,6 @@
                     <div class="content">
                         <div class="msg-packet">
                             <h4 class="msg-title">Message from the Deputy Executive</h4>
-                            <p class="msg-tag">Palli Mongal Karmosuchi (PMK)</p>
                         </div>
 
                         <div class="message">

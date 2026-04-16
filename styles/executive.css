@@ -2,29 +2,29 @@
 @import url("./common.css");
 
 /* pmk executive section styles  */
-.pmk-executive {
+#pmk-executive {
   padding: 80px 20px;
   background: linear-gradient(135deg, #f0fdfa, #ecfeff);
   position: relative;
   overflow: hidden;
 }
 
-.pmk-executive:before,
-.pmk-executive:after {
+#pmk-executive:before,
+#pmk-executive:after {
   content: "";
   position: absolute;
   border-radius: 50%;
   background: rgba(22, 160, 133, 0.1);
 }
 
-.pmk-executive::before {
+#pmk-executive::before {
   width: 300px;
   height: 300px;
   top: -100px;
   left: -100px;
 }
 
-.pmk-executive::after {
+#pmk-executive::after {
   width: 250px;
   height: 250px;
   right: -80px;
@@ -124,14 +124,6 @@
   border-radius: 5px;
 }
 
-.msg-tag {
-  color: var(--pmk-green);
-  font-size: 0.95rem;
-  font-family: 300;
-  padding-left: 15px;
-  margin-top: 3px;
-}
-
 .message {
   margin-top: 20px;
 }
@@ -143,7 +135,7 @@
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
-  .pmk-executive {
+  #pmk-executive {
     padding: 80px 20px;
     height: auto;
   }
@@ -173,7 +165,7 @@
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .pmk-executive {
+  #pmk-executive {
     height: auto;
   }
   .exe-row {

@@ -47,7 +47,7 @@ buttonContainers.forEach((buttonContainer) =>
 );
 
 // about image container section's observer api
-const aboutImage = document.querySelector(".about-image-container ");
+const aboutImage = document.querySelector("#about-image-container ");
 
 const observeAboutImage = new IntersectionObserver(
   (observedItems) => {
@@ -65,3 +65,22 @@ const observeAboutImage = new IntersectionObserver(
 );
 
 observeAboutImage.observe(aboutImage);
+
+// pmk-perspective section's observer api
+const pmkPerspective = document.querySelector("#pmk-perspective");
+
+const observedPerspective = new IntersectionObserver(
+  (observedItems) => {
+    observedItems.forEach((observedItem) => {
+      if (observedItem.isIntersecting) {
+        observedItem.target.classList.add("section-visible");
+      } else {
+        observedItem.target.classList.remove("section-visible");
+      }
+    });
+  },
+  {
+    threshold: [0.3],
+  },
+);
+observedPerspective.observe(pmkPerspective);
