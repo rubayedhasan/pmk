@@ -22,7 +22,11 @@
     <!-- Linked section:: Navar/Header  -->
     <?php include_once("./navbar.php") ?>
 
+    <!-- Linked section:: Banner  -->
     <?php include_once("./banner.php") ?>
+
+    <!-- Linked section:: Social Media  -->
+    <?php include_once("./social.php") ?>
 
     <!-- section::Main  -->
     <main>
