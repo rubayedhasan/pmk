@@ -28,9 +28,13 @@
                     <h3 class="welcome-text">
                         Together We Build Sustainable Communities
                     </h3>
-                    <a href="" class="visit-btn button-effect">
-                        <span><i class="fa-solid fa-people-group"></i></span>
-                        <span>Become A Member</span></a>
+
+                    <!-- footer visit button  -->
+                    <div class="button-container">
+                        <a href="" class="visit-btn button-effect">
+                            <span><i class="fa-solid fa-people-group"></i></span>
+                            <span>Become A Member</span></a>
+                    </div>
                 </div>
             </section>
 
