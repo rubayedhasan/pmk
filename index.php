@@ -60,6 +60,7 @@
     <!-- Linked my custom script  -->
     <script src="./js/button.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/observer.js"></script>
 </body>
 
 </html>

@@ -44,6 +44,69 @@
   line-height: 1.5;
 }
 
+/* .section-label,
+.section-title,
+.section-subtitle,
+.section-description {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.visible-section-head .section-label,
+.visible-section-head .section-title,
+.visible-section-head .section-subtitle,
+.visible-section-head .section-description {
+  opacity: 1;
+  visibility: visible;
+}
+.visible-section-head .section-title {
+  transition-delay: 0.3s;
+}
+.visible-section-head .section-subtitle {
+  transition-delay: 0.5s;
+}
+.visible-section-head .section-description {
+  transition-delay: 0.7s;
+} */
+
+.section-label,
+.section-title,
+.section-subtitle,
+.section-description {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.visible-section-head .section-label,
+.visible-section-head .section-title,
+.visible-section-head .section-subtitle,
+.visible-section-head .section-description {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.visible-section-head .section-label {
+  transition-delay: 0.1s;
+}
+
+.visible-section-head .section-title {
+  transition-delay: 0.25s;
+}
+
+.visible-section-head .section-subtitle {
+  transition-delay: 0.4s;
+}
+
+.visible-section-head .section-description {
+  transition-delay: 0.55s;
+}
+
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   .section-label {

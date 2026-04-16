@@ -11,7 +11,7 @@
 
 <body>
     <!-- section:: pmk perspective  -->
-    <section id="pmk-perspective">
+    <div id="pmk-perspective">
         <div class="perspective-container">
             <!-- perspective content  -->
             <div class="perspective-content">
@@ -90,7 +90,7 @@
             </div>
 
         </div>
-    </section>
+    </div>
 
     <!-- Linked custom script  -->
     <script src="./js/perspective.js"></script>

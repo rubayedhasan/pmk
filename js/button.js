@@ -7,7 +7,5 @@ buttons.forEach((button) => {
 
     button.style.setProperty("--leftValue", pointHor + "px");
     button.style.setProperty("--topValue", pointVer + "px");
-    console.log(pointHor, pointVer);
-    console.log(button);
   });
 });
