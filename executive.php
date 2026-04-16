@@ -56,14 +56,9 @@
                         </div>
 
                         <div class="message">
-                            <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.</p>
-                            <p>
-                                Our Microfinance Program reflects this mission by supporting small-scale entrepreneurs, helping them grow their businesses and create employment opportunities across 35 districts, strengthening livelihoods and contributing to inclusive and sustainable economic progress nationwide.
+                            <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.
+                                <a class="see-more" href="">See More</a>
                             </p>
-                            <p>
-                                As we continue to expand our efforts, our commitment to transparency, accountability, and innovation remains strong, enabling us to reach more people and enhance the effectiveness of our development initiatives.
-                            </p>
-                            <p>With deep gratitude, we acknowledge the tireless efforts of our staff, partners, and supporters. Together, we are building a future of growth and lasting change.</p>
                         </div>
                     </div>
                 </div>
@@ -77,14 +72,9 @@
                         </div>
 
                         <div class="message">
-                            <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.</p>
-                            <p>
-                                Our Microfinance Program reflects this mission by supporting small-scale entrepreneurs, helping them grow their businesses and create employment opportunities across 35 districts, strengthening livelihoods and contributing to inclusive and sustainable economic progress nationwide.
+                            <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.
+                                <a class="see-more" href="">See More</a>
                             </p>
-                            <p>
-                                As we continue to expand our efforts, our commitment to transparency, accountability, and innovation remains strong, enabling us to reach more people and enhance the effectiveness of our development initiatives.
-                            </p>
-                            <p>With deep gratitude, we acknowledge the tireless efforts of our staff, partners, and supporters. Together, we are building a future of growth and lasting change.</p>
                         </div>
                     </div>
 

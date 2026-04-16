@@ -84,3 +84,7 @@ const observedPerspective = new IntersectionObserver(
   },
 );
 observedPerspective.observe(pmkPerspective);
+
+// pmk-executive section's observer api
+const executiveRow = document.querySelector(".exe-row");
+observedPerspective.observe(executiveRow);
