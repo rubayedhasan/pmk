@@ -6,16 +6,16 @@ const graphicalBoard = document.getElementById("impact-graphical-board");
 
 // data of the glance field
 const dataOfPmk = {
-  "employee-count": 11575,
-  "member-count": 51254512,
-  "borrower-count": 35299580,
-  "branch-count": 365,
-  "area-count": 300,
+  "employee-count": 2775,
+  "member-count": 379721,
+  "borrower-count": 313219,
+  "branch-count": 364,
+  "area-count": 71,
   "zone-count": 25,
   "division-count": 8,
-  "district-count": 52,
-  "upazila-count": 382,
-  "village-count": 65820,
+  "district-count": 36,
+  "upazila-count": 236,
+  "village-count": 46003,
 };
 
 // function:: calculate the number
