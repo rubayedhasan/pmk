@@ -134,6 +134,7 @@
 }
 
 .see-more {
+  color: inherit;
   text-decoration: underline;
 }
 

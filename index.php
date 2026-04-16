@@ -38,21 +38,15 @@
 
         <!-- Linked section:: PMK At a Glance  -->
         <?php include_once("./glance.php") ?>
-
-        <div style="margin:50px 0">
-            <h3>Remaining sections (In Progress)</h3>
-            <p>founder information</p>
-            <p>project (as linked clickable card)</p>
-            <p>our Story (Gallery & videos)</p>
-            <p>Project Work Update section (categorizes recent project update blog type )</p>
-            <p>latest news section (blog type)</p>
-            <p>partner & supports </p>
-        </div>
     </main>
 
 
     <!-- Linked section:: Footer  -->
     <?php include_once("./footer.php") ?>
+
+
+    <!-- Linked section :: construction Notice  -->
+    <?php include_once("./notice.php") ?>
 
     <!-- Linked font awesome script  -->
     <script src="https://kit.fontawesome.com/ff87b718c4.js" crossorigin="anonymous"></script>

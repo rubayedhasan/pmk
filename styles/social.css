@@ -3,7 +3,7 @@
 
 #social-media {
   width: 200px;
-  height: 75px;
+  height: 70px;
   padding: 8px;
   border: 1px solid var(--pmk-white);
   background: linear-gradient(135deg, var(--pmk-green-light), #dff5e1);
@@ -11,7 +11,7 @@
   border-bottom-right-radius: 8px;
 
   position: fixed;
-  right: -25px;
+  right: -30px;
   top: 50%;
   bottom: 0;
 

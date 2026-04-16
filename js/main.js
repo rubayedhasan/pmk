@@ -3,7 +3,7 @@ const links = document.querySelectorAll(".nav-link");
 links.forEach((link) => {
   link.addEventListener("click", () =>
     setTimeout(() => {
-      alert("This page is under Construction");
-    }, 350),
+      modal.classList.add("show");
+    }, 0),
   );
 });
