@@ -1,11 +1,11 @@
 /* pmk perspective section styles */
 #pmk-perspective {
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 #pmk-perspective .perspective-container {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 1.5fr 1fr;
   gap: 50px;
 }

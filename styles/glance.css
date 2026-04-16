@@ -62,6 +62,22 @@
   width: 400px !important;
 }
 
+/* smooth scrolling effect  */
+.chart-board {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.97);
+  transition:
+    transform 2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.section-visible .chart-board {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition-delay: 0.1s;
+}
+
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   #pmk-at-a-glance {

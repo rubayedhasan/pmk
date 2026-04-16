@@ -80,7 +80,7 @@ const observedPerspective = new IntersectionObserver(
     });
   },
   {
-    threshold: [0.3],
+    threshold: [0.2],
   },
 );
 observedPerspective.observe(pmkPerspective);
@@ -88,3 +88,7 @@ observedPerspective.observe(pmkPerspective);
 // pmk-executive section's observer api
 const executiveRow = document.querySelector(".exe-row");
 observedPerspective.observe(executiveRow);
+
+// at a glance section's observer api
+const impactGraphicalBoard = document.querySelector("#impact-graphical-board");
+observedPerspective.observe(impactGraphicalBoard);
