@@ -28,8 +28,16 @@ controllerButtons.forEach((button) => {
 
       if (filterBy === "all" || filterBy === categoryName) {
         item.style.display = "block";
+
+        setTimeout(() => {
+          item.classList.remove("fade-out");
+          item.classList.add("fade-in");
+        }, 10);
       } else {
-        item.style.display = "none";
+        item.classList.remove("fade-in");
+        item.classList.add("fade-out");
+
+        setTimeout(() => (item.style.display = "none"), 400);
       }
     });
   });

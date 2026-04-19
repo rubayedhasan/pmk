@@ -143,31 +143,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- gallery item  -->
-                        <div class="gallery-item" data-category="field">
-                            <div class="image-item">
-                                <img src="./assets/slider/infont_of_pmk.png" alt="">
-
-                                <!-- overlay  -->
-                                <div class="image-overlay">
-                                    <p>PMK Snaps</p>
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- gallery item  -->
-                        <div class="gallery-item" data-category="mfi-program">
-                            <div class="image-item">
-                                <img src="./assets/slider/wash_project.JPG" alt="">
-
-                                <!-- overlay  -->
-                                <div class="image-overlay">
-                                    <p>PMK Snaps</p>
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                </div>
-                            </div>
-                        </div>
 
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="community">
@@ -212,6 +187,14 @@
                     <div class="image-popover">
                         <span class="close-popover">&times;</span>
                         <img src="./assets/slider/various_project.JPG" alt="">
+                    </div>
+
+                    <!-- view more button  -->
+                    <div class="button-container">
+                        <button type="button" class="visit-btn visit-btn-outline button-effect">
+                            <span><i class="fa-solid fa-users-viewfinder"></i></span>
+                            <span>View More</span>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,8 @@
 /* pmk gallery section styles  */
 #pmk-image-gallery {
   margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 60px 0;
 }
 
 .controller-group-button {
@@ -24,6 +26,22 @@
   background-color: var(--pmk-green-dark-sublet);
 }
 
+.gallery-item {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery-item.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.gallery-item.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,6 +50,7 @@
 
   place-content: center;
   place-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .image-item {
@@ -120,6 +139,27 @@
 
   width: 750px;
   object-fit: cover;
+}
+
+.visit-btn-outline {
+  height: 45px;
+  width: 150px;
+  font-size: 0.875rem;
+
+  background: inherit;
+  color: var(--pmk-green-dark-sublet);
+
+  border: 1px solid var(--pmk-green-dark-sublet);
+  transition: all 0.3s ease-in-out;
+}
+
+.visit-btn-outline:hover {
+  color: var(--pmk-white);
+  border: 1px solid var(--pmk-green);
+}
+
+.visit-btn-outline.button-effect::after {
+  background-color: var(--pmk-green);
 }
 
 /* responsive styles:: small devices  */
