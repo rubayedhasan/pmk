@@ -39,16 +39,16 @@
                         <button type="button" class="visit-btn button-effect group-btn-active" data-filter="all">
                             <span>All Activities</span>
                         </button>
-                        <button type="button" class="visit-btn button-effect" data-filter=".field">
+                        <button type="button" class="visit-btn button-effect" data-filter="field">
                             <span>Field Operations</span>
                         </button>
-                        <button type="button" class="visit-btn button-effect" data-filter=".mfi-program">
+                        <button type="button" class="visit-btn button-effect" data-filter="mfi-program">
                             <span>MFI Programs</span>
                         </button>
-                        <button type="button" class="visit-btn button-effect" data-filter=".community">
+                        <button type="button" class="visit-btn button-effect" data-filter="community">
                             <span>Community Engagement</span>
                         </button>
-                        <button type="button" class="visit-btn button-effect" data-filter=".training">
+                        <button type="button" class="visit-btn button-effect" data-filter="training">
                             <span>Training & Workshops</span>
                         </button>
                     </div>
@@ -56,7 +56,7 @@
                     <!-- image gallery container  -->
                     <div class="image-gallery">
                         <!-- gallery item  -->
-                        <div class="gallery-item">
+                        <div class="gallery-item" data-category="field">
                             <div class="image-item">
                                 <img src="./assets/slider/infont_of_pmk.png" alt="">
 
@@ -69,7 +69,7 @@
                         </div>
 
                         <!-- gallery item  -->
-                        <div class="gallery-item">
+                        <div class="gallery-item" data-category="mfi-program">
                             <div class="image-item">
                                 <img src="./assets/slider/wash_project.JPG" alt="">
 
@@ -82,7 +82,7 @@
                         </div>
 
                         <!-- gallery item  -->
-                        <div class="gallery-item">
+                        <div class="gallery-item" data-category="community">
                             <div class="image-item">
                                 <img src="./assets/slider/medical_team_pmk.jpg" alt="">
 
@@ -95,9 +95,109 @@
                         </div>
 
                         <!-- gallery item  -->
-                        <div class="gallery-item">
+                        <div class="gallery-item" data-category="training">
                             <div class="image-item">
                                 <img src="./assets/slider/various_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="training">
+                            <div class="image-item">
+                                <img src="./assets/slider/world_bank_visitor_at_pmk.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="field">
+                            <div class="image-item">
+                                <img src="./assets/slider/infont_of_pmk.png" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="mfi-program">
+                            <div class="image-item">
+                                <img src="./assets/slider/wash_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="field">
+                            <div class="image-item">
+                                <img src="./assets/slider/infont_of_pmk.png" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="mfi-program">
+                            <div class="image-item">
+                                <img src="./assets/slider/wash_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="community">
+                            <div class="image-item">
+                                <img src="./assets/slider/medical_team_pmk.jpg" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="training">
+                            <div class="image-item">
+                                <img src="./assets/slider/various_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gallery item  -->
+                        <div class="gallery-item" data-category="training">
+                            <div class="image-item">
+                                <img src="./assets/slider/world_bank_visitor_at_pmk.JPG" alt="">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
