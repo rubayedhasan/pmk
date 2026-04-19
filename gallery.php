@@ -20,7 +20,7 @@
                     </span>
 
                     <h3 class="section-title">
-                        PMK Image Gallery
+                        PMK Visual Showcase
                     </h3>
 
                     <h4 class="section-subtitle">
@@ -28,7 +28,7 @@
                     </h4>
 
                     <p class="section-description">
-                        Explore a curated collection of images capturing PMK’s activities, community engagement, and service delivery across diverse regions. This gallery highlights real-world moments from field operations, microfinance initiatives, and organizational outreach, offering a visual perspective on scale, impact, and presence nationwide.
+                        Explore a curated collection of PMK images showing community engagement, field operations, and service delivery across Bangladesh, highlighting real moments from microfinance initiatives and outreach activities that reflect organizational impact and nationwide presence.
                     </p>
                 </hgroup>
 

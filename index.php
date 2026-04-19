@@ -41,6 +41,12 @@
 
         <!-- Linked section:: Gallery  -->
         <?php include_once("./gallery.php") ?>
+
+        <!-- Linked section:: video Gallery  -->
+        <?php include_once("./video-gallery.php") ?>
+
+        <!-- Linked section:: PMK Partners  -->
+        <?php include_once("./partner.php") ?>
     </main>
 
 

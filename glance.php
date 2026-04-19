@@ -27,7 +27,7 @@
                 </h4>
 
                 <p class="section-description">
-                    This section presents a comprehensive overview of PMK’s impact through key metrics and visual analytics, covering member engagement, microfinance activities, and geographic expansion across multiple administrative levels in Bangladesh.
+                    This section presents PMK’s impact through key metrics and visuals, highlighting member engagement, microfinance activities, and geographic expansion across Bangladesh.
                 </p>
             </hgroup>
 
