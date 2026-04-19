@@ -1,0 +1,50 @@
+/* import common styles  */
+@import url("./common.css");
+
+/* pmk gallery section styles  */
+#pmk-image-gallery {
+  margin-top: 120px;
+}
+
+.control-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.control-button-group .visit-btn {
+  height: 40px;
+  width: 175px;
+  font-size: 0.875rem;
+}
+
+.group-btn-active {
+  background-color: var(--pmk-green-dark-sublet);
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  .control-button-group .visit-btn {
+    height: 35px;
+    width: 160px;
+    font-size: 0.8rem;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

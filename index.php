@@ -38,6 +38,9 @@
 
         <!-- Linked section:: PMK At a Glance  -->
         <?php include_once("./glance.php") ?>
+
+        <!-- Linked section:: Gallery  -->
+        <?php include_once("./gallery.php") ?>
     </main>
 
 
@@ -46,7 +49,7 @@
 
 
     <!-- Linked section :: construction Notice  -->
-    <?php include_once("./notice.php") ?>
+    <!-- <?php include_once("./notice.php") ?> -->
 
     <!-- Linked font awesome script  -->
     <script src="https://kit.fontawesome.com/ff87b718c4.js" crossorigin="anonymous"></script>
