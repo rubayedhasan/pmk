@@ -26,6 +26,28 @@
   background-color: var(--pmk-green-dark-sublet);
 }
 
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+
+  place-content: center;
+  place-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px) scale(0.9);
+  transition: all 1.2s ease-in-out;
+  overflow: hidden;
+}
+
+.section-visible .image-gallery {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
 .gallery-item {
   opacity: 1;
   transform: scale(1);
@@ -40,17 +62,6 @@
 .gallery-item.fade-in {
   opacity: 1;
   transform: scale(1);
-}
-
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 30px;
-
-  place-content: center;
-  place-items: center;
-  transition: all 0.5s ease-in-out;
 }
 
 .image-item {

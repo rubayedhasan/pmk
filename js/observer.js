@@ -66,10 +66,8 @@ const observeAboutImage = new IntersectionObserver(
 
 observeAboutImage.observe(aboutImage);
 
-// pmk-perspective section's observer api
-const pmkPerspective = document.querySelector("#pmk-perspective");
-
-const observedPerspective = new IntersectionObserver(
+// observer api for all section
+const observedSections = new IntersectionObserver(
   (observedItems) => {
     observedItems.forEach((observedItem) => {
       if (observedItem.isIntersecting) {
@@ -83,12 +81,19 @@ const observedPerspective = new IntersectionObserver(
     threshold: [0.2],
   },
 );
-observedPerspective.observe(pmkPerspective);
+
+// pmk-perspective section's observer api
+const pmkPerspective = document.querySelector("#pmk-perspective");
+observedSections.observe(pmkPerspective);
 
 // pmk-executive section's observer api
 const executiveRow = document.querySelector(".exe-row");
-observedPerspective.observe(executiveRow);
+observedSections.observe(executiveRow);
 
 // at a glance section's observer api
 const impactGraphicalBoard = document.querySelector("#impact-graphical-board");
-observedPerspective.observe(impactGraphicalBoard);
+observedSections.observe(impactGraphicalBoard);
+
+// image gallery section's observer api
+const imageGallery = document.querySelector("#image-gallery-main-container");
+observedSections.observe(imageGallery);
