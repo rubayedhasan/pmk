@@ -35,6 +35,10 @@ button {
   outline: none;
 }
 
+img {
+  width: 100%;
+}
+
 /* common styles  */
 body {
   font-family: "Google Sans", sans-serif;

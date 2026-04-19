@@ -11,6 +11,7 @@
 
 <body>
     <main>
+        <!-- section :: PMK Image Gallery  -->
         <section id="pmk-image-gallery">
             <div class="container-width">
                 <hgroup class="section-container">
@@ -31,9 +32,10 @@
                     </p>
                 </hgroup>
 
+                <!-- image gallery  -->
                 <div id="image-gallery-main-container">
-
-                    <div class="button-container control-button-group">
+                    <!-- gallery category buttons  -->
+                    <div class="button-container controller-group-button">
                         <button type="button" class="visit-btn button-effect group-btn-active" data-filter="all">
                             <span>All Activities</span>
                         </button>
@@ -50,10 +52,75 @@
                             <span>Training & Workshops</span>
                         </button>
                     </div>
+
+                    <!-- image gallery container  -->
+                    <div class="image-gallery">
+                        <!-- gallery item  -->
+                        <div class="gallery-item">
+                            <div class="image-item">
+                                <img src="./assets/slider/infont_of_pmk.png" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item">
+                            <div class="image-item">
+                                <img src="./assets/slider/wash_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item">
+                            <div class="image-item">
+                                <img src="./assets/slider/medical_team_pmk.jpg" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item  -->
+                        <div class="gallery-item">
+                            <div class="image-item">
+                                <img src="./assets/slider/various_project.JPG" alt="">
+
+                                <!-- overlay  -->
+                                <div class="image-overlay">
+                                    <p>PMK Snaps</p>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- image popover container  -->
+                    <div class="image-popover">
+                        <span class="close-popover">&times;</span>
+                        <img src="./assets/slider/various_project.JPG" alt="">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+
+    <!-- Liked custom script  -->
+    <script src="./js/gallery.js"></script>
 </body>
 
 </html>
