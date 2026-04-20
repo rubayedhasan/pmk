@@ -57,6 +57,7 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="development-partners">
                     <h3 class="partner-type">
                         <i class="fa-solid fa-landmark"></i>

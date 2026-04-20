@@ -72,6 +72,7 @@ const observedSections = new IntersectionObserver(
     observedItems.forEach((observedItem) => {
       if (observedItem.isIntersecting) {
         observedItem.target.classList.add("section-visible");
+        console.log(observedItem);
       } else {
         observedItem.target.classList.remove("section-visible");
       }
@@ -97,3 +98,9 @@ observedSections.observe(impactGraphicalBoard);
 // image gallery section's observer api
 const imageGallery = document.querySelector("#image-gallery-main-container");
 observedSections.observe(imageGallery);
+
+// pmk partner section's observer api
+const nationalAccreditation = document.querySelector(".national-accreditation");
+const developmentPartner = document.querySelector(".development-partners");
+observedSections.observe(nationalAccreditation);
+observedSections.observe(developmentPartner);

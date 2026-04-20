@@ -6,6 +6,24 @@
   background-color: rgba(0, 0, 0, 0.03);
   padding: 60px 0;
 }
+
+.national-accreditation,
+.development-partners {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(-500px);
+  transition: all 1.2s ease;
+}
+
+.section-visible.national-accreditation,
+.section-visible.development-partners {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
 .partner-type {
   display: flex;
   align-items: center;
@@ -50,8 +68,6 @@
 
   transform: translateY(0);
   transition: all 0.25s ease;
-
-  cursor: pointer;
 }
 
 .accreditation-container figure:hover,
@@ -73,11 +89,17 @@
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  .national-accreditation,
+  .development-partners {
+    transform: translateX(-100px);
+  }
+
   .partner-type span {
     font-size: 1.2rem;
   }
 
-  figure img {
+  .accreditation-container figure img,
+  .partner-container figure img {
     max-height: 50px;
   }
 }
