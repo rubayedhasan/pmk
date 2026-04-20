@@ -1,69 +1,86 @@
-/* import common styles  */
 @import url("./common.css");
 
-/* pmk gallery section styles  */
+/* pmk partner section styles's  */
 #pmk-partners {
   margin-top: 120px;
   background-color: rgba(0, 0, 0, 0.03);
   padding: 60px 0;
 }
-
 .partner-type {
   display: flex;
-  gap: 8px;
-  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .partner-type img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-  object-position: center;
+  width: 40px;
+  height: 40px;
 }
+
 .partner-type i {
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   color: var(--pmk-dark);
-  margin-left: 10px;
 }
 
 .partner-type span {
-  color: var(--pmk-blue-dark);
+  font-size: 1.4rem;
   font-weight: 600;
-  font-size: 1.45rem;
-  line-height: 1.6;
+  color: var(--pmk-blue-dark);
 }
 
+.accreditation-container,
 .partner-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
-  justify-content: flex-start;
   align-items: center;
 }
 
+.accreditation-container figure,
 .partner-container figure {
-  width: 150px;
+  padding: 15px;
+  background: var(--pmk-white);
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(0);
+  transition: all 0.25s ease;
+
+  cursor: pointer;
 }
 
+.accreditation-container figure:hover,
+.partner-container figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.accreditation-container figure img,
 .partner-container figure img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
 }
 
 .development-partners {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   .partner-type span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  figure img {
+    max-height: 50px;
   }
 }
-
-/* responsive styles:: small devices  */
-/* @media (min-width: 576px) and (max-width: 767.98px) {
-} */
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {

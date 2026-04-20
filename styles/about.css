@@ -127,7 +127,6 @@
 /* about content  */
 #about-content-container {
   margin-top: 120px;
-  /* height: calc(100vh - 40px); */
   background-color: rgba(0, 0, 0, 0.03);
   padding: 40px 0;
 }
@@ -137,7 +136,6 @@
   /* about section  */
   #about-image-container {
     height: auto;
-    /* justify-content: flex-start; */
   }
 
   .long-img-container {
