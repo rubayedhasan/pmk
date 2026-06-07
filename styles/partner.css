@@ -1,0 +1,131 @@
+/* pmk partner section styles's  */
+#pmk-partners {
+  margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 60px 0;
+}
+
+.partner-parent-container {
+  overflow: hidden;
+}
+
+.national-accreditation,
+.development-partners {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s ease;
+}
+
+.national-accreditation {
+  transform: translateX(-300px);
+}
+.development-partners {
+  transform: translateX(300px);
+}
+
+.section-visible.national-accreditation,
+.section-visible.development-partners {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+.partner-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.partner-type img {
+  width: 40px;
+  height: 40px;
+}
+
+.partner-type i {
+  font-size: 1.5rem;
+  color: var(--pmk-dark);
+}
+
+.partner-type span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--pmk-blue-dark);
+}
+
+.accreditation-container,
+.partner-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.accreditation-container figure,
+.partner-container figure {
+  padding: 15px;
+  background: var(--pmk-white);
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(0);
+  transition: all 0.25s ease;
+}
+
+.accreditation-container figure:hover,
+.partner-container figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.accreditation-container figure img,
+.partner-container figure img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.development-partners {
+  margin-top: 50px;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  .national-accreditation {
+    transform: translateX(-100px);
+  }
+
+  .development-partners {
+    transform: translateX(100px);
+  }
+
+  .partner-type span {
+    font-size: 1.2rem;
+  }
+
+  .accreditation-container figure img,
+  .partner-container figure img {
+    max-height: 50px;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

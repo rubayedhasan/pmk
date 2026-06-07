@@ -1,0 +1,58 @@
+.membership {
+  text-align: center;
+  padding: 50px 20px 0;
+  margin-top: 50px;
+}
+
+.welcome-text {
+  color: var(--pmk-blue-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.visible-section-head.welcome-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.membership .button-container {
+  margin-top: 20px;
+}
+/* responsive styles:: extra small devices  */
+@media (max-width: 767.98px) {
+  .container-width {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+
+  /* footer section styles  */
+  .membership .welcome-text {
+    font-size: 1.55rem;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

@@ -1,0 +1,1450 @@
+/* common styles  */
+section:nth-child(even) {
+  background: #f3fff9;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* common section group style  */
+#about-project,
+#how-we-work,
+#who-we-help,
+#why-the-project-matters,
+#project-goal-and-objectives,
+#project-benefits,
+#project-services,
+#project-activity,
+#get-involved {
+  padding: 100px 0;
+}
+
+/* section header  */
+.page-eyebrow {
+  color: var(--pmk-green);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.74px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-eyebrow::after {
+  content: "";
+  flex: 1;
+  display: block;
+  max-width: 60px;
+  height: 1px;
+  background-color: var(--pmk-green);
+  opacity: 0.4;
+}
+
+.page-heder-title {
+  color: var(--pmk-blue-dark);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.head-highlight {
+  color: var(--pmk-green-dark);
+  font-style: italic;
+}
+
+.page-header-subtitle {
+  color: #6b7f79;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-top: 12px;
+  max-width: 600px;
+}
+
+/* project hero section's style  */
+#project-hero {
+  height: calc(100vh - 50px - 40px);
+  padding: 60px 20px 80px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(30, 45, 38, 0.88) 20%,
+      rgba(30, 45, 38, 0.72) 55%,
+      rgba(8, 61, 86, 0.55) 100%
+    ),
+    url("../assets/slider/Banner-3_1920by950.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hero-content-container {
+  margin: 0 10%;
+  position: relative;
+}
+
+.project-breadcrumb {
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+
+  position: absolute;
+  top: -40px;
+  left: 5px;
+}
+
+.pj-breadcrumb-active {
+  color: var(--pmk-green);
+}
+
+.project-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #5fffca;
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 8px 12px;
+  background-color: rgba(0, 148, 106, 0.25);
+  border: 1px solid rgba(0, 148, 106, 0.4);
+  border-radius: 50px;
+  margin: 12px 0 22px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #5fffca;
+  animation: dot_pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes dot_pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+#project-name {
+  color: var(--pmk-white);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  max-width: 970px;
+}
+
+#project-name em {
+  color: var(--pmk-green);
+  font-style: italic;
+}
+
+.project-hero-description {
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 950px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.project-btn {
+  color: var(--pmk-white);
+}
+
+.project-btn:hover i {
+  transform: rotate(0deg) scale(1.05) translateY(5px);
+}
+
+.project-coverage-bar {
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  background: rgba(8, 61, 86, 0.85);
+  backdrop-filter: blur(8px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.coverage-item {
+  padding: 18px 28px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.crb-value {
+  color: #5fffca;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.crb-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-meta-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--pmk-green-dark);
+}
+
+.project-meta-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.project-meta-item {
+  min-width: 150px;
+  color: var(--pmk-white);
+  padding: 16px 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-meta-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.meta-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.meta-pill {
+  color: #5fffca;
+  background-color: rgba(95, 255, 202, 0.15);
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.meta-small {
+  font-size: 0.78rem;
+}
+
+/* about project section's styles  */
+.about-project-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.about-body-text {
+  color: #4a5a55;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+
+.about-body-quote {
+  margin-top: 10px;
+  padding: 14px 18px;
+  background-color: var(--pmk-green-light);
+  border-left: 5px solid var(--pmk-green);
+  border-radius: 4px;
+}
+
+.quote-text {
+  color: var(--pmk-green-dark);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.quote-author {
+  display: block;
+  color: #6b7f79;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 8px;
+}
+
+.about-project-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aside-photo {
+  height: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.aside-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-aside-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.project-aside-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  background-color: var(--pmk-white);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+.project-aside-card:hover {
+  border-color: var(--pmk-green-dark);
+  background-color: var(--pmk-green-light);
+}
+
+.aside-card-label {
+  color: #6b7f79;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.aside-card-value {
+  color: var(--pmk-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* how we work section styles  */
+.project-work-life-cycle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 32px;
+}
+
+.pwlc-item {
+  padding: 24px 22px;
+  border: 1px solid #dde8e3;
+  position: relative;
+  background-color: var(--pmk-white);
+  transition: all 0.35s ease;
+}
+
+.pwlc-item:hover {
+  background-color: var(--pmk-green-light);
+}
+
+.pwlc-arrow {
+  position: absolute;
+  top: 10px;
+  right: -16px;
+
+  color: var(--pmk-green);
+  font-size: 1.65rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.pwlc-sl {
+  color: var(--pmk-green);
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  opacity: 0.3;
+  transition: all 0.35s ease;
+}
+
+.pwlc-item:hover .pwlc-sl {
+  opacity: 0.75;
+}
+
+.pwlc-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.pwlc-description {
+  color: #6b7f79;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* who the project helps section's styles */
+#who-we-help {
+  background-color: var(--pmk-green-light);
+}
+
+.beneficiaries-cards-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.beneficiary-card {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  border-radius: 8px;
+  cursor: default;
+  overflow: hidden;
+}
+
+.beneficiary-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: all 0.35s ease;
+}
+
+.beneficiary-card:hover img {
+  transform: scale(1.1);
+}
+
+.beneficiary-card-body {
+  position: absolute;
+  inset: 0;
+  padding: 24px 22px;
+  background: linear-gradient(to top, rgba(30, 45, 38, 0.9) 50%, transparent);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.beneficiary-card-label {
+  color: var(--pmk-green);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.beneficiary-card-title {
+  color: var(--pmk-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.beneficiary-card-description {
+  color: #6b7f79;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.beneficiary-impact-text {
+  color: var(--pmk-green);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* why the project matters section styles  */
+.project-purpose-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.pp-feature-image {
+  align-self: center;
+  width: 100%;
+  height: 350px;
+}
+
+.pp-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+}
+
+.challenge-describe-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+.challenge-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.symbol-icon {
+  color: var(--pmk-white);
+  font-size: 1.05rem;
+  font-weight: 500;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--pmk-green-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: var(--pmk-blue-dark);
+}
+
+.green-dark {
+  background-color: var(--pmk-green-dark);
+}
+
+.green-dark-sublet {
+  background-color: var(--pmk-green-dark-sublet);
+}
+
+.challenge-describe-body {
+  flex: 1;
+}
+
+.cdb-label {
+  color: var(--pmk-blue-dark);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+.cdb-text {
+  color: #5a6a6e;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* project goal and objectives section styles  */
+.project-goal-objective-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px;
+  margin-top: 32px;
+}
+
+.pgo-label {
+  color: var(--pmk-blue-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--pmk-green);
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.pgo-container {
+  margin-top: 24px;
+}
+
+.pgo-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.pgo-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pgo-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--pmk-green-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--pmk-green-dark);
+  margin-top: 1px;
+}
+.pgo-body-text {
+  flex: 1;
+  color: #4a5a55;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* project-benefits sections styles  */
+#project-benefits {
+  background-color: #123a2e;
+}
+
+#project-benefits .page-heder-title {
+  color: #6b7f79;
+}
+
+.benefit-layout {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 48px;
+  margin-top: 30px;
+}
+
+.layout-top,
+.layout-bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.layout-top {
+  grid-template-areas:
+    "grid-text grid-text benefit-card-1 benefit-card-2 benefit-card-2"
+    "grid-text grid-text benefit-card-3 benefit-card-3  benefit-card-4 ";
+}
+
+.layout-bottom {
+  grid-template-areas: "benefit-card-5 benefit-card-6 benefit-card-6 benefit-card-7 benefit-card-8";
+}
+
+.pb-feature-text {
+  grid-area: grid-text;
+  margin-right: 24px;
+}
+
+.pb-feature-text p,
+.feature-text h5,
+.feature-text p {
+  color: #6b7f79;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.feature-text {
+  margin-top: 12px;
+}
+
+.card-horizon-1 {
+  grid-area: benefit-card-1;
+}
+
+.card-horizon-2 {
+  grid-area: benefit-card-2;
+}
+
+.card-horizon-3 {
+  grid-area: benefit-card-3;
+}
+
+.card-horizon-4 {
+  grid-area: benefit-card-4;
+}
+.card-horizon-5 {
+  grid-area: benefit-card-5;
+}
+.card-horizon-6 {
+  grid-area: benefit-card-6;
+}
+.card-horizon-7 {
+  grid-area: benefit-card-7;
+}
+.card-horizon-8 {
+  grid-area: benefit-card-8;
+}
+
+.pb-feature-card {
+  width: 100%;
+}
+
+.pb-feature-image {
+  width: 100%;
+  margin: 0;
+  transition: all 0.35s ease-in-out;
+  overflow: hidden;
+}
+
+.pb-feature-image img {
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: all 0.35s ease-in-out;
+}
+
+.pb-feature-image:hover img {
+  transform: scale(1.05);
+}
+
+.pb-feature-card-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #2f6f57;
+  padding: 8px 12px;
+}
+
+.pb-feature-card-text {
+  color: #425466;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 8px 10px;
+  background-color: #eef7f1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* project impact section styles  */
+#project-impact {
+  padding: 40px 0;
+  background-color: var(--pmk-green);
+}
+
+.impact-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.igl-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.igl-item-value {
+  color: var(--pmk-white);
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.igl-item-label {
+  color: rgba(255, 255, 255, 0.55);
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* project gallery section styles  */
+#project-gallery {
+  padding: 48px 0;
+}
+
+.gallery-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.ggl-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+
+  position: relative;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.ggl-item img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+
+.ggl-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 148, 106, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease;
+}
+
+.ggl-overlay svg {
+  color: var(--pmk-white);
+  width: 24px;
+  height: 24px;
+}
+
+.ggl-item:hover img {
+  transform: scale(1.05);
+}
+
+.ggl-item:hover .ggl-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.long {
+  grid-column: span 3;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* get involved sections styles  */
+#get-involved .page-eyebrow {
+  justify-content: center;
+}
+
+#get-involved .page-heder-title {
+  text-align: center;
+}
+
+#get-involved .page-header-subtitle {
+  text-align: center;
+  margin: 12px auto 0;
+}
+
+#get-involved .button-container {
+  margin-top: 20px;
+}
+
+#get-involved .button-container .visit-btn {
+  width: 200px;
+}
+
+/* reset footer  */
+.footer-main {
+  margin-top: 0 !important;
+}
+
+.copyright {
+  background-color: #fff !important;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  #about-project,
+  #how-we-work,
+  #who-we-help,
+  #why-the-project-matters,
+  #project-goal-and-objectives,
+  #project-benefits,
+  #project-services,
+  #project-activity,
+  #get-involved {
+    padding: 50px 0;
+  }
+
+  #project-hero {
+    height: auto;
+    padding: 50px 20px 250px;
+    background-position: 62% center;
+  }
+
+  .project-hero-content-container {
+    margin: 0;
+  }
+
+  .project-breadcrumb {
+    position: static;
+    margin-bottom: 18px;
+    font-size: 0.72rem;
+    flex-wrap: wrap;
+  }
+
+  .project-hero-badge {
+    font-size: 0.68rem;
+    padding: 7px 12px;
+    margin: 0 0 18px;
+  }
+
+  #project-name {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.15;
+    max-width: 100%;
+  }
+
+  .project-hero-description {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 14px;
+  }
+
+  .project-btn {
+    margin-top: 22px;
+  }
+
+  .project-coverage-bar {
+    position: relative;
+    right: auto;
+    bottom: -2px;
+    margin-top: 50px;
+    z-index: 1;
+
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .coverage-item {
+    padding: 14px 10px;
+  }
+
+  .coverage-item:first-child {
+    border-left: none;
+  }
+
+  .crb-value {
+    font-size: 1rem;
+  }
+
+  .crb-label {
+    font-size: 0.68rem;
+  }
+
+  .project-meta-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .project-meta-item {
+    min-width: unset;
+    padding: 14px 12px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .meta-label {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+
+  .meta-value {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .meta-pill {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+  }
+
+  .meta-small {
+    font-size: 0.72rem;
+  }
+
+  /* about project section's styles  */
+  #about-project {
+    padding: 80px 0 50px;
+  }
+
+  .about-project-layout {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .aside-photo {
+    height: 300px;
+  }
+
+  /* how we work section styles  */
+  .project-work-life-cycle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pwlc-item {
+    padding: 18px 16px;
+  }
+
+  .pwlc-arrow {
+    display: none;
+  }
+
+  .pwlc-sl {
+    color: var(--pmk-green);
+    font-size: 1.2rem;
+  }
+
+  .pwlc-title {
+    color: var(--pmk-blue-dark);
+    font-size: 1.1rem;
+  }
+
+  .pwlc-description {
+    font-size: 0.875rem;
+  }
+
+  /* who the project helps section styles  */
+  .beneficiaries-cards-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .beneficiary-card {
+    height: 300px;
+  }
+
+  /* why the project matters section styles  */
+  .project-purpose-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .pp-feature-image {
+    height: 280px;
+  }
+
+  .challenge-describe-container {
+    margin-left: 0px;
+  }
+
+  /* project goal and objectives section styles  */
+  .project-goal-objective-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 48px;
+    margin-top: 24px;
+  }
+
+  .pgo-label {
+    font-size: 1.1rem;
+  }
+
+  .pgo-container {
+    margin-top: 24px;
+  }
+
+  .pgo-item {
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .pgo-check {
+    font-size: 0.875rem;
+  }
+
+  /* project-benefits section styles  */
+  .layout-top,
+  .layout-bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: none;
+  }
+
+  .pb-feature-text {
+    grid-area: auto;
+    margin-right: 0;
+  }
+
+  .card-horizon-1,
+  .card-horizon-2,
+  .card-horizon-3,
+  .card-horizon-4,
+  .card-horizon-5,
+  .card-horizon-6,
+  .card-horizon-7,
+  .card-horizon-8 {
+    grid-area: auto;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .pb-feature-card-title {
+    font-size: 0.95rem;
+  }
+
+  .pb-feature-card-text {
+    font-size: 0.9rem;
+  }
+
+  /* project impact section styles  */
+  #project-impact {
+    padding: 40px 0;
+  }
+
+  .impact-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .igl-item-value {
+    font-size: 1.25rem;
+  }
+
+  .igl-item-label {
+    font-size: 0.75rem;
+  }
+
+  /* project gallery section styles  */
+  .gallery-grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .long,
+  .wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 413px) {
+  .project-coverage-bar {
+    bottom: 15px;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* common styles  */
+  #about-project,
+  #how-we-work,
+  #who-we-help,
+  #why-the-project-matters,
+  #project-goal-and-objectives,
+  #project-benefits,
+  #project-services,
+  #project-activity,
+  #get-involved {
+    padding: 80px 0;
+  }
+
+  /* hero section's styles  */
+  #project-hero {
+    height: auto;
+    padding: 80px 40px 320px;
+    background-position: center;
+  }
+
+  .project-hero-content-container {
+    margin: 0;
+  }
+
+  #project-name {
+    max-width: 760px;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+  }
+
+  .project-hero-description {
+    max-width: 700px;
+  }
+
+  .project-coverage-bar {
+    right: 0;
+    bottom: 210px;
+    z-index: 1;
+  }
+
+  .coverage-item {
+    padding: 16px 18px;
+  }
+
+  .project-meta-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-meta-item:nth-child(3n) {
+    border-right: none;
+  }
+
+  /* about project section's styles  */
+  .about-project-layout {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .aside-photo {
+    height: 350px;
+  }
+
+  /* how we work section styles  */
+  .project-work-life-cycle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pwlc-arrow {
+    display: none;
+  }
+
+  .pwlc-item:nth-child(1) {
+    border-top: none;
+  }
+
+  .pwlc-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .pwlc-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .pwlc-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  /* who the project helps section styles  */
+  .beneficiaries-cards-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* why the project matters section styles  */
+  .project-purpose-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .pp-feature-image {
+    height: 300px;
+  }
+
+  .challenge-describe-container {
+    margin-left: 0px;
+  }
+
+  /* project goal and objectives section styles  */
+  .project-goal-objective-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* project-benefits section styles  */
+  .layout-top,
+  .layout-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: none;
+  }
+
+  .pb-feature-text {
+    grid-area: auto;
+    margin-right: 0;
+    grid-column: 1 /-1;
+  }
+
+  .card-horizon-1,
+  .card-horizon-2,
+  .card-horizon-3,
+  .card-horizon-4,
+  .card-horizon-5,
+  .card-horizon-6,
+  .card-horizon-7,
+  .card-horizon-8 {
+    grid-area: auto;
+  }
+
+  /* project impact section styles  */
+  .igl-item-value {
+    font-size: 1.4rem;
+  }
+
+  .igl-item-label {
+    font-size: 0.75rem;
+  }
+
+  /* project gallery section styles  */
+  .gallery-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .long {
+    grid-column: span 2;
+  }
+  .wide {
+    grid-column: auto;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .project-hero-content-container {
+    margin: 0 6%;
+  }
+
+  #project-name {
+    max-width: 850px;
+  }
+
+  .project-coverage-bar {
+    bottom: 110px;
+  }
+
+  .coverage-item {
+    padding: 16px 22px;
+  }
+
+  .project-meta-item {
+    min-width: auto;
+    padding: 15px 6px;
+  }
+
+  /* how we work section styles  */
+  .project-work-life-cycle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pwlc-arrow {
+    display: none;
+  }
+
+  .pwlc-item:nth-child(1) {
+    border-top: none;
+  }
+
+  .pwlc-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .pwlc-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .pwlc-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  /* who the project helps section styles  */
+  .beneficiaries-cards-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* why the project matters section styles  */
+  .project-purpose-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .challenge-describe-container {
+    margin-left: 0px;
+  }
+
+  .project-goal-objective-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* project-benefits section styles  */
+  .layout-top,
+  .layout-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: none;
+  }
+
+  .pb-feature-text {
+    grid-area: auto;
+    margin-right: 0;
+    grid-column: 1 /-1;
+  }
+
+  .card-horizon-1,
+  .card-horizon-2,
+  .card-horizon-3,
+  .card-horizon-4,
+  .card-horizon-5,
+  .card-horizon-6,
+  .card-horizon-7,
+  .card-horizon-8 {
+    grid-area: auto;
+  }
+
+  /* project impact section styles  */
+  .igl-item-value {
+    font-size: 1.4rem;
+  }
+
+  .igl-item-label {
+    font-size: 0.75rem;
+  }
+
+  /* project gallery section styles  */
+  .gallery-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .long {
+    grid-column: span 2;
+  }
+  .wide {
+    grid-column: auto;
+  }
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .project-hero-content-container {
+    margin: 0 8%;
+  }
+
+  .benefit-layout {
+    gap: 24px;
+  }
+
+  .layout-top,
+  .layout-bottom {
+    gap: 16px;
+  }
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

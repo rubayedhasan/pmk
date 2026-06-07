@@ -1,0 +1,988 @@
+/* common styles  */
+.block-display {
+  display: block;
+}
+.no-display {
+  display: none;
+}
+
+/* each sections  */
+#mfi-loan-products,
+#how-to-get-loan,
+#who-is-eligible-member,
+#about-loan {
+  padding: 100px 0;
+}
+
+/* section header  */
+.mfi-header-label {
+  color: var(--pmk-green);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background-color: var(--pmk-green-light);
+}
+
+.mfi-header-title {
+  color: var(--pmk-blue-dark);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: capitalize;
+  margin-top: 24px;
+}
+
+.mfi-header-description {
+  color: #6b7280;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-top: 16px;
+}
+
+/* mfi hero sections styles  */
+#mfi-hero {
+  width: 100%;
+  height: calc(100vh - 90px);
+  padding: 0 10%;
+  background-image: url("../assets/slider/mfi_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.mfi-hero-content {
+  max-width: 720px;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* mfi hero head section styles  */
+.mfi-hero-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.mfi-hero-head figure {
+  width: 42px;
+}
+
+.hero-head-label {
+  color: var(--pmk-green-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: -12px;
+}
+
+.hero-head-text {
+  display: block;
+  color: var(--pmk-green);
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: -4px;
+}
+
+/* hero body  */
+.mfi-hero-title {
+  color: var(--pmk-blue-dark);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 16px;
+}
+
+.mfi-hero-text {
+  color: #243746;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+/* mfi stats bar  */
+.mfi-stats-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 16px 10%;
+  background-color: var(--pmk-blue-dark);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mfi-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mfi-stat-item:not(:first-child) {
+  padding-left: 12px;
+}
+
+.mfi-stat-item:not(:last-child) {
+  border-right: 1px solid var(--pmk-green);
+}
+
+.mfi-stat-icon {
+  color: var(--pmk-white);
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--pmk-green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mfi-stat-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.mfi-stat-value {
+  color: var(--pmk-white);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.mfi-stat-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.mfi-stats-quote {
+  border-left: 2px solid var(--green);
+  padding-left: 1rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  line-height: 1.5;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mfi-stats-quote::before {
+  content: '"';
+  font-size: 1.8rem;
+  color: var(--pmk-green);
+  line-height: 1;
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* loan products layout section styles  */
+#mfi-loan-products {
+  background-color: #f8fbf9;
+}
+
+.loan-products-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.loan-product {
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.35s ease;
+}
+
+.loan-product:hover {
+  box-shadow: 0 12px 40px rgba(0, 148, 106, 0.1);
+}
+
+.header-ribbon {
+  position: relative;
+  align-self: center;
+  margin: 12px 0 24px;
+}
+
+.ribbon-body {
+  padding: 8px 45px;
+  border-radius: 4px;
+  border: 2px solid var(--pmk-dark);
+  background-color: var(--pmk-green-light);
+  box-shadow: 0 4px 0 var(--pmk-dark);
+  position: relative;
+  z-index: 2;
+}
+
+.loan-product-title {
+  margin: 0;
+  color: var(--pmk-blue-dark);
+  font-weight: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ribbon-tail {
+  position: absolute;
+  top: 6px;
+  width: 24px;
+  height: 100%;
+  border: 2px solid var(--pmk-dark);
+  background-color: var(--pmk-green-light);
+  z-index: 1;
+}
+
+.ribbon-tail.left {
+  left: -15px;
+  transform: skewY(-10deg);
+  border-right: none;
+}
+
+.ribbon-tail.right {
+  right: -15px;
+  transform: scaleY(10deg);
+  border-left: none;
+}
+
+.loan-product-body {
+  height: 100%;
+  padding: 18px;
+  padding-top: 48px;
+  margin: -44px 0 0;
+  border-radius: 6px;
+  border: 1px solid var(--pmk-green);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-product-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.product-info-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.product-info-sec {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.product-info-sec:not(:last-child) {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--pmk-green-dark);
+}
+
+.product-info-icon {
+  color: var(--pmk-green);
+}
+.product-info-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.product-info-label {
+  color: var(--pmk-dark);
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.product-info-value {
+  color: var(--pmk-green-dark);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.product-button-container {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-button {
+  width: 100%;
+  color: var(--pmk-green-dark);
+  font-size: 1rem;
+  font-size: 600;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 148, 106, 0.25);
+  background-color: var(--pmk-green-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  transition: all 0.35s ease-in-out;
+}
+
+.pb-icon {
+  transform: rotate(-45deg);
+  transition: all 0.35s ease-in-out;
+}
+
+.pb-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.product-button:hover {
+  background: var(--pmk-green);
+  color: var(--pmk-white);
+  border-color: var(--pmk-green);
+  box-shadow: 0 6px 14px rgba(0, 148, 106, 0.18);
+}
+
+.product-button:active {
+  box-shadow: none;
+}
+
+.product-button:hover .pb-icon {
+  transform: rotate(0deg);
+}
+
+/* how to get loan sections styles  */
+#how-to-get-loan .mfi-section-header {
+  text-align: center;
+}
+
+#how-to-get-loan .mfi-header-description {
+  margin: 16px auto 0;
+}
+
+.loan-process-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+
+  position: relative;
+}
+
+.loan-process-layout::before {
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 24px;
+  left: 10%;
+  right: 10%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pmk-green-light),
+    var(--pmk-green),
+    var(--pmk-green-light),
+    transparent
+  );
+}
+
+.step {
+  text-align: center;
+  padding: 0 16px;
+  z-index: 2;
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50%;
+  color: var(--pmk-green);
+  margin: 0 auto 16px;
+  border: 3px solid var(--pmk-green);
+  background-color: var(--pmk-white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.step-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+/* who is eligible member sections styles  */
+#who-is-eligible-member {
+  background-color: var(--pmk-green-light);
+}
+
+#who-is-eligible-member .mfi-header-label {
+  padding: 0;
+}
+
+.eligible-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.eligible-criteria {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.criteria-block {
+  display: flex;
+  gap: 12px;
+
+  padding: 16px 24px;
+  border-radius: 4px;
+  background-color: var(--pmk-white);
+
+  transition: all 0.35s ease-in-out;
+}
+
+.criteria-block:hover {
+  box-shadow: 0 6px 14px rgba(0, 148, 106, 0.18);
+}
+
+.criteria-icon {
+  color: var(--pmk-green);
+}
+
+.criteria-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.explain-criteria {
+  flex: 1;
+}
+
+.cr-label {
+  color: var(--pmk-dark);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cr-text {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 4px;
+}
+
+/* about loan sections styles  */
+.guide-group-button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  margin: 56px 0 32px;
+}
+
+.guide-button {
+  color: var(--pmk-green-dark);
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.45px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.guide-button-active {
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+}
+
+.guide-button:hover:not(.guide-button-active) {
+  background: rgba(0, 148, 106, 0.1);
+}
+
+/* loan purpose  */
+.loan-purpose-text {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 400;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+.loan-purpose-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.purpose-item {
+  height: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 148, 106, 0.15);
+  background-color: var(--pmk-white);
+  transition: all 0.35s ease;
+}
+
+.purpose-item:hover {
+  border: 1px solid var(--pmk-green);
+  box-shadow: 0 4px 16px rgba(0, 148, 106, 0.1);
+}
+
+.purpose-icon {
+  font-size: 2rem;
+}
+
+.purpose-title {
+  color: var(--pmk-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.purpose-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 8px;
+}
+
+.about-lone-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: var(--pmk-green-light);
+}
+
+.aln-icon {
+  font-size: 1.1rem;
+}
+
+.aln-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* reset footer  */
+.footer-main {
+  margin-top: 0 !important;
+}
+
+.copyright {
+  background-color: #fff !important;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  /* common styles  */
+  #mfi-loan-products,
+  #how-to-get-loan,
+  #who-is-eligible-member,
+  #about-loan {
+    padding: 60px 0;
+  }
+
+  .mfi-header-label {
+    font-size: 0.7rem;
+  }
+
+  .mfi-header-title {
+    font-size: 1.75rem;
+    margin-top: 18px;
+  }
+
+  .mfi-header-description {
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+
+  /* hero section  */
+  #mfi-hero {
+    height: auto;
+    background: linear-gradient(
+      to right,
+      rgba(30, 45, 38, 0.88) 20%,
+      rgba(30, 45, 38, 0.72) 55%,
+      rgba(8, 61, 86, 0.55) 100%
+    );
+    padding: 32px 5% 0;
+    flex-direction: column;
+    gap: 16px;
+    position: static;
+  }
+
+  /* mfi hero head section styles  */
+  .hero-head-label {
+    font-size: 1.05rem;
+  }
+
+  .hero-head-text {
+    font-size: 0.75rem;
+  }
+
+  /* hero body  */
+  .mfi-hero-title {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+
+  .mfi-hero-text {
+    font-size: 0.875rem;
+    margin-top: 8px;
+  }
+
+  .mfi-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    position: static;
+  }
+
+  .mfi-stat-item:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .mfi-stat-item:not(:last-child) {
+    border-right: none;
+  }
+
+  .mfi-stat-item:first-child,
+  .mfi-stat-item:nth-child(3) {
+    border-right: 1px solid var(--pmk-green);
+    padding-right: 8px;
+  }
+
+  .mfi-stat-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mfi-stat-value {
+    color: var(--pmk-white);
+    font-size: 1.025rem;
+  }
+
+  /* mfi loan products sections styles  */
+  .loan-products-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* how to get a loan  */
+  .loan-process-layout {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 40px;
+  }
+
+  .loan-process-layout::before {
+    display: none;
+  }
+
+  /* who-is-eligible-member */
+  .eligible-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* about loan sections styles  */
+  .guide-group-button {
+    margin: 40px 0 28px;
+  }
+
+  .guide-button {
+    font-size: 0.875rem;
+  }
+
+  /* loan purpose  */
+  .loan-purpose-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .purpose-icon {
+    font-size: 1.65rem;
+  }
+
+  .purpose-title {
+    margin-top: 8px;
+  }
+
+  .about-lone-note {
+    align-items: flex-start;
+  }
+
+  .aln-text {
+    font-size: 0.835rem;
+    text-align: justify;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* common styles  */
+  #how-to-get-loan,
+  #who-is-eligible-member,
+  #about-loan {
+    padding: 80px 0;
+  }
+
+  .mfi-header-title {
+    font-size: 1.85rem;
+  }
+
+  .mfi-header-description {
+    font-size: 1rem;
+  }
+
+  /* hero  */
+  #mfi-hero {
+    height: auto;
+    padding: 16px 6% 16px 2%;
+  }
+
+  .mfi-hero-content {
+    max-width: 480px;
+    border-radius: 8px;
+  }
+
+  /* mfi hero head section styles  */
+  .mfi-hero-head figure {
+    width: 40px;
+  }
+
+  .hero-head-label {
+    font-size: 1.1rem;
+  }
+
+  .hero-head-text {
+    font-size: 0.78rem;
+  }
+
+  /* hero body  */
+  .mfi-hero-title {
+    font-size: 1.75rem;
+    margin-top: 12px;
+  }
+
+  .mfi-hero-text {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  /* mfi stats bar  */
+  .mfi-stats-bar {
+    position: absolute;
+    bottom: -105px;
+    left: 0;
+    right: 0;
+
+    padding: 16px 10%;
+    background-color: var(--pmk-blue-dark);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    align-items: center;
+    justify-content: flex-start;
+    place-items: center;
+  }
+
+  .mfi-stat-item:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .mfi-stat-item:not(:last-child) {
+    border-right: none;
+  }
+
+  .mfi-stat-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mfi-stat-value {
+    color: var(--pmk-white);
+    font-size: 1.15rem;
+  }
+
+  .mfi-stats-quote {
+    grid-column: span 4;
+    justify-self: center;
+  }
+
+  /* mfi loan products  sections styles*/
+  #mfi-loan-products {
+    padding: 180px 0 80px;
+  }
+
+  /* mfi loan products sections styles  */
+  .loan-products-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  /* how to get a loan  */
+  .loan-process-layout {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+  }
+
+  .loan-process-layout::before {
+    display: none;
+  }
+
+  /* who-is-eligible-member */
+  .eligible-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* loan purpose  */
+  .loan-purpose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .purpose-icon {
+    font-size: 1.75rem;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* common styles  */
+  .mfi-header-title {
+    font-size: 2.25rem;
+  }
+
+  #mfi-hero {
+    padding: 0 8% 0 2%;
+  }
+
+  .mfi-hero-content {
+    max-width: 580px;
+  }
+
+  /* hero body  */
+  .mfi-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .mfi-hero-text {
+    font-size: 1.1rem;
+  }
+
+  /* mfi loan products sections styles  */
+  .loan-products-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  /* how to get a loan  */
+  .loan-process-layout {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+  }
+
+  /* who is eligible member sections styles  */
+  .eligible-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .eligible-criteria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* loan purpose  */
+  .loan-purpose-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  #mfi-hero {
+    padding: 0 9% 0 2%;
+  }
+
+  .mfi-hero-content {
+    max-width: 660px;
+  }
+
+  /* how to get a loan  */
+  .loan-process-layout {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+  }
+
+  /* who is eligible member sections styles  */
+  .eligible-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .eligible-criteria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* loan purpose  */
+  .loan-purpose-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
