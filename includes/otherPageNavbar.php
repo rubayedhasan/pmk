@@ -203,7 +203,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../pages/working_area.php">
                             <span class="nav-icon">
                                 <img src="../assets/icons/location-dot-solid-full.svg" alt="location icon">
                             </span>

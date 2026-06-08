@@ -72,12 +72,12 @@
 
                             <!-- footer nav  -->
                             <nav class="nav flex-column">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/pmk_mfi.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Microfinance Program</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/project.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>

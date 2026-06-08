@@ -216,7 +216,7 @@
                             </div>
 
                             <!-- map frame  -->
-                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13nVwgFN0pMXQivQlL2CeC7wM3VNrCng&ehbc=2E312F" class="map-frame"></iframe>
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13nVwgFN0pMXQivQlL2CeC7wM3VNrCng&ehbc=2E312F" class="map-frame" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async"></iframe>
 
                             <div class="map-footer">
                                 <div class="map-meta">
@@ -264,7 +264,7 @@
                             </div>
 
                             <!-- map frame  -->
-                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zJSzOndzsXUYqjFYL87LglkUcIfY3bA&ehbc=2E312F" class="map-frame"></iframe>
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zJSzOndzsXUYqjFYL87LglkUcIfY3bA&ehbc=2E312F" class="map-frame" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async"></iframe>
 
                             <div class="map-footer">
                                 <div class="map-meta">
