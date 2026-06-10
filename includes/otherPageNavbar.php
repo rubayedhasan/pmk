@@ -18,7 +18,7 @@
             <div class="mini-nav-container">
 
                 <div class="brand">
-                    <a class="brand-name" href="../">
+                    <a class="brand-name" href="../index.php">
                         <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
                     </a>
                 </div>

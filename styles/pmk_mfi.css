@@ -3,14 +3,15 @@
   display: block;
 }
 .no-display {
-  display: none;
+  display: none !important;
 }
 
 /* each sections  */
 #mfi-loan-products,
 #how-to-get-loan,
 #who-is-eligible-member,
-#about-loan {
+#about-loan,
+#mfi-saving-program {
   padding: 100px 0;
 }
 
@@ -618,6 +619,214 @@
   line-height: normal;
 }
 
+/* loan rules  */
+#rules-of-loan {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.loan-rules-tab-container,
+.loan-rules-display-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* loan rules tab  */
+.rule-tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.rt-head {
+  display: block;
+  color: var(--pmk-green);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.rule-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--pmk-dark);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.rule-tab:hover {
+  color: var(--pmk-green);
+  text-decoration: underline;
+  background-color: #eefaf6;
+}
+
+.rule-tab span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+
+.rule-tab-active {
+  color: var(--pmk-green);
+  background-color: #eefaf6;
+  text-decoration: underline;
+}
+
+.rule-tab span svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* rules block  */
+.rules-block {
+  width: 100%;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+  opacity: 0;
+  visibility: hidden;
+  /* transform: translate(400px, 350px); */
+  transform: translateY(-500px);
+  transition: all 0.75s ease-in-out;
+}
+
+.rules-block-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+}
+
+.guide-block-title {
+  color: var(--pmk-green);
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e9f5f1;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gbl-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.list-of-rules {
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rule {
+  color: #6b7280;
+  text-align: justify;
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  list-style: decimal;
+  margin-bottom: 8px;
+  list-style-position: inside;
+}
+
+.product-specific-loan-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.product-specific-loan {
+  background: #fff;
+  border: 1px solid #e7ecef;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.product-specific-loan:hover {
+  border-color: var(--pmk-green);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.psl-title {
+  color: var(--pmk-green);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.rule-sublist {
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+.rule-sublist-title {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.sub-rule {
+  color: #6b7280;
+  text-align: justify;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  list-style: disc;
+  margin-bottom: 8px;
+  list-style-position: inside;
+}
+
+.rule-info-block:not(:first-child) {
+  margin-top: 24px;
+}
+
+.rule-info-text {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+/* mfi saving program sections styles  */
+#mfi-saving-program {
+  background-color: var(--pmk-green-dark-sublet);
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;
@@ -633,7 +842,8 @@
   #mfi-loan-products,
   #how-to-get-loan,
   #who-is-eligible-member,
-  #about-loan {
+  #about-loan,
+  #mfi-saving-program {
     padding: 60px 0;
   }
 
@@ -772,7 +982,8 @@
   /* common styles  */
   #how-to-get-loan,
   #who-is-eligible-member,
-  #about-loan {
+  #about-loan,
+  #mfi-saving-program {
     padding: 80px 0;
   }
 

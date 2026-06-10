@@ -928,22 +928,22 @@
                 <div class="loan-guide-layout">
                     <!-- guide buttons container  -->
                     <div class="guide-group-button">
-                        <button type="button" class="guide-button guide-button-active">
+                        <button type="button" class="guide-button guide-button-active" onclick="showLoanGuideBlocks('loan-purpose')">
                             Loan Purpose
                         </button>
-                        <button type="button" class="guide-button">
+                        <button type="button" class="guide-button" onclick="showLoanGuideBlocks('rules-of-loan')">
                             Rules of Loan
                         </button>
-                        <button type="button" class="guide-button">
+                        <button type="button" class="guide-button" onclick="showLoanGuideBlocks('loan-installment-method')">
                             Installment Method
                         </button>
-                        <button type="button" class="guide-button">
+                        <button type="button" class="guide-button" onclick="showLoanGuideBlocks('loan-guide')">
                             Loan Guide
                         </button>
                     </div>
 
                     <!-- loan purpose container -->
-                    <div id="loan-purpose" class="no-display">
+                    <div id="loan-purpose" class="guide-block">
                         <p class="loan-purpose-text">
                             Explore some of our most popular loan purposes, selected from over 200 eligible activities across agriculture, business, transport, and services.
                         </p>
@@ -1154,10 +1154,331 @@
                     </div>
 
                     <!-- rules of loan container  -->
-                    <div id="rules-of-loan">
-                        <p>loan rules </p>
+                    <div id="rules-of-loan" class="guide-block no-display">
+                        <!-- display loan rules tabs  -->
+                        <aside class="loan-rules-tab-container">
+                            <ul class="rule-tabs">
+                                <span class="rt-head">
+                                    Rule Tabs
+                                </span>
+                                <li class="rule-tab rule-tab-active" onclick="showRulesBlock('general-loan-rules')">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 7h-6l4 5l-4 5h6l4 -5l-4 -5" />
+                                        </svg>
+                                    </span>
+                                    General Rules
+                                </li>
+                                <li class="rule-tab" onclick="showRulesBlock('product-specific-loan-rules')">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 7h-6l4 5l-4 5h6l4 -5l-4 -5" />
+                                        </svg>
+                                    </span>
+                                    Product Specific Rules
+                                </li>
+                                <li class="rule-tab" onclick="showRulesBlock('additional-mandatory-requirements')">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 7h-6l4 5l-4 5h6l4 -5l-4 -5" />
+                                        </svg>
+                                    </span>
+                                    Additional Requirements
+                                </li>
+                                <li class="rule-tab" onclick="showRulesBlock('interest-and-fee-structure')">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 7h-6l4 5l-4 5h6l4 -5l-4 -5" />
+                                        </svg>
+                                    </span>
+                                    Interest & Fee Structure
+                                </li>
+                                <li class="rule-tab" onclick="showRulesBlock('rules-of-waiver')">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-badge-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 7h-6l4 5l-4 5h6l4 -5l-4 -5" />
+                                        </svg>
+                                    </span>
+                                    Rules For Waiver
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <!-- display: loan rules  -->
+                        <aside class="loan-rules-display-container">
+                            <!-- general loan rules  -->
+                            <div id="general-loan-rules" class="rules-block rules-block-active">
+                                <h4 class="guide-block-title">
+                                    <img src="../assets/icons/folder.gif" alt="icon" class="gbl-icon">
+                                    <span>General Loan Rules</span>
+                                </h4>
+                                <ol class="list-of-rules">
+                                    <li class="rule">Members must be registered and active participants of the organization.</li>
+                                    <li class="rule">Loans shall be used only for legal, productive, and income-generating purposes.</li>
+                                    <li class="rule">Borrowers must provide accurate information during loan application and monitoring.</li>
+                                    <li class="rule">Loan approval depends on eligibility, repayment capacity, and compliance with organizational policies.</li>
+                                    <li class="rule">The borrower is fully responsible for repaying the loan according to the agreed schedule.</li>
+                                    <li class="rule">Loan funds cannot be transferred, lent, or assigned to another person.</li>
+                                    <li class="rule">Members must cooperate with field visits, monitoring, and verification activities.</li>
+                                    <li class="rule">Any false information or misuse of loan funds may result in loan cancellation and disqualification from future loans.</li>
+                                    <li class="rule">Members should avoid taking excessive loans that may affect their repayment capacity.</li>
+                                    <li class="rule">Late or missed installments may result in penalties and restrictions on future borrowing.</li>
+                                </ol>
+                            </div>
+
+                            <!-- product specific loan rules  -->
+                            <div id="product-specific-loan-rules" class="rules-block no-display">
+                                <h4 class="guide-block-title">
+                                    <img src="../assets/icons/box.gif" alt="icon" class="gbl-icon">
+                                    <span>Product-Specific Loan Rules</span>
+                                </h4>
+
+                                <!-- product-specific-loan grid payout  -->
+                                <div class="product-specific-loan-grid-layout">
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">1. Jagoron</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan must be used only for legal and environmentally friendly income-generating activities.</li>
+                                            <li class="sub-rule">Preference may be given to women borrowers and economically disadvantaged households.</li>
+                                            <li class="sub-rule">Borrowers must comply with the approved loan purpose and repayment schedule.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">2. Agrosor</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan shall be used only for business, trade, farming, processing, or service-sector enterprises.</li>
+                                            <li class="sub-rule">Borrowers must operate a viable microenterprise and demonstrate the ability to manage the business.</li>
+                                            <li class="sub-rule">Business expansion loans may be considered based on satisfactory repayment performance.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">3. Sufolon</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan shall be used only for agriculture-related activities, including crop cultivation, livestock, and fisheries.</li>
+                                            <li class="sub-rule">Borrowers must be engaged in farming activities and use the loan for productive agricultural purposes.</li>
+                                            <li class="sub-rule">Repayment schedules may be aligned with seasonal agricultural income.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">4. Buniad</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan is intended for ultra-poor households to improve livelihoods and generate income.</li>
+                                            <li class="sub-rule">Funds may be used for approved income-generating activities, land lease, or other productive purposes.</li>
+                                            <li class="sub-rule">Borrowers shall use the loan solely for the approved activity</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">5. Abason</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">For house construction, repair, or improvement.</li>
+                                            <li class="sub-rule">Can include sanitation and basic home facilities.</li>
+                                            <li class="sub-rule">Must be used only for family housing purposes.</li>
+                                            <li class="sub-rule">Priority for landless or poor housing families.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">6. WASH (Water, Sanitation & Hygiene)</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">For water, sanitation, and hygiene improvements.</li>
+                                            <li class="sub-rule">Includes tube-wells and sanitary latrines.</li>
+                                            <li class="sub-rule">Improves health and living standards.</li>
+                                            <li class="sub-rule">Must be used strictly for WASH purposes.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">7. SMART</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan must be used only for approved microenterprise or income-generating business activities.</li>
+                                            <li class="sub-rule">Funds can be used for business setup, expansion, working capital, or equipment.</li>
+                                            <li class="sub-rule">The borrower must actively operate and manage the financed business.</li>
+                                            <li class="sub-rule">The loan must not be used for personal or unapproved expenses.</li>
+                                            <li class="sub-rule">Regular repayment is mandatory, and the organization may verify business use at any time.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="product-specific-loan">
+                                        <h4 class="psl-title">8. RAISE</h4>
+                                        <ul class="rule-sublist">
+                                            <li class="sub-rule">The loan supports youth and micro-entrepreneurs in starting, recovering, or expanding income-generating businesses.</li>
+                                            <li class="sub-rule">Funds must be used only for approved business purposes, working capital, or productive assets.</li>
+                                            <li class="sub-rule">Borrowers must actively operate and manage the financed enterprise.</li>
+                                            <li class="sub-rule">Priority may be given to youth, women, and vulnerable entrepreneurs.</li>
+                                            <li class="sub-rule">Good repayment performance may qualify borrowers for larger loans and future support.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- additional Mandatory Requirements -->
+                            <div id="additional-mandatory-requirements" class="rules-block no-display">
+                                <h4 class="guide-block-title">
+                                    <img src="../assets/icons/process.gif" alt="icon" class="gbl-icon">
+                                    <span>Additional Mandatory Requirements</span>
+                                </h4>
+
+                                <ol class="list-of-rules">
+                                    <li class="rule">
+                                        <strong>
+                                            Compulsory Savings:
+                                        </strong> Members must maintain compulsory savings equal to 5% of the approved loan amount for their first loan cycle and 10% of the approved loan amount from the second loan cycle onwards, in accordance with the organization's savings policy
+                                    </li>
+                                    <li class="rule">
+                                        <strong>
+                                            Insurance Contribution:
+                                        </strong> Members must contribute 1% insurance fee with the loan to provide financial protection against unforeseen events.
+                                    </li>
+                                    <li class="rule">
+                                        <strong>
+                                            Compulsory Savings:
+                                        </strong> Members must maintain savings equivalent to 5% of the approved loan amount, according to organizational policy.
+                                    </li>
+                                    <li class="rule">
+                                        <strong>
+                                            Guarantor Requirement:
+                                        </strong> Each borrower must provide
+                                        1 person as Surety and 1 or 2 person as guarantor who will support the loan application and repayment commitment.
+                                    </li>
+                                    <li class="rule">
+                                        <strong>
+                                            Required Documents:
+                                        </strong> Each borrower must provide
+                                        Members must submit necessary documents including National ID (NID), recent passport-size photograph, application form, guarantor’s NID and contact details, electricity or utility bill for address verification, and any other documents required for specific loan products.
+                                    </li>
+                                    <li class="rule">
+                                        <strong>
+                                            Compliance Requirement:
+                                        </strong> Each borrower must provide
+                                        All savings, insurance, guarantor, and documentation requirements must be completed before loan disbursement. Failure to comply may delay or cancel loan approval.
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <!-- interest and fee structure -->
+                            <div id="interest-and-fee-structure" class="rules-block no-display">
+                                <!-- structure -->
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons/business.gif" alt="icon" class="gbl-icon">
+                                        <span> Daily Interest on Declining Balance</span>
+                                    </h4>
+                                    <p class="rule-info-text">
+                                        Interest is calculated on a daily basis using the declining balance method. Interest is charged only on the outstanding loan balance, not on the original loan amount. As borrowers make repayments and the outstanding balance decreases, the amount of interest charged also decreases, ensuring a fair and transparent loan calculation process.
+                                    </p>
+                                </div>
+
+                                <!-- structure -->
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons/analytics.gif" alt="icon" class="gbl-icon">
+                                        <span> Annual Interest Rate: 4% – 24%</span>
+                                    </h4>
+                                    <p class="rule-info-text">
+                                        Interest rates range from 4% to 24%, depending on the loan product. All rates are clearly communicated to borrowers before loan disbursement to ensure transparency and informed financial decision-making.
+                                    </p>
+                                </div>
+
+                                <!-- structure -->
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons/fee-receipt.gif" alt="icon" class="gbl-icon">
+                                        <span>Loan-Related Charges</span>
+                                    </h4>
+                                    <ul class="rule-sublist">
+                                        <li class="sub-rule">Passbook Fee: 10 BDT</li>
+                                        <li class="sub-rule">Loan Application Form: 5 BDT</li>
+                                        <li class="sub-rule">Membership Admission Form: 10 BDT</li>
+                                        <li class="sub-rule">CIB Verification Fee: 5 BDT</li>
+                                    </ul>
+                                </div>
+
+                                <!-- structure -->
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons//no-fee.gif" alt="icon" class="gbl-icon">
+                                        <span>No Late Payment Fee</span>
+                                    </h4>
+                                    <p class="rule-info-text">
+                                        PMK does not charge any late payment penalty. However, borrowers must maintain regular repayments to stay eligible for future loans, services, and continued financial support from the organization.
+                                    </p>
+                                </div>
+
+                                <!-- structure -->
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons/money.gif" alt="icon" class="gbl-icon">
+                                        <span>Early Repayment Allowed</span>
+                                    </h4>
+                                    <p class="rule-info-text">
+                                        Borrowers may fully repay their loan before the scheduled maturity date without any prepayment penalty, allowing flexibility and financial convenience while supporting responsible borrowing and early settlement of obligations.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- loan waiver  -->
+                            <div id="rules-of-waiver" class="rules-block no-display">
+                                <div class="rule-info-block">
+                                    <h4 class="guide-block-title">
+                                        <img src="../assets/icons/voucher.gif" alt="icon" class="gbl-icon">
+                                        <span>Loan Waiver Due to Death</span>
+                                    </h4>
+                                    <p class="rule-info-text">
+                                        In the event of the natural death of a member or the member’s loan surety person (as defined under normal circumstances), the member will be eligible for loan waiver benefits due to death, as per organizational rules. In such cases, loan recovery activities will be stopped.
+                                    </p>
+
+                                    <!-- benefit  -->
+                                    <ul class="rule-sublist">
+                                        <h6 class="rule-sublist-title">Benefits</h6>
+                                        <li class="sub-rule">The member may receive loan waiver up to a maximum of BDT 5,00,000 (Five Lakh Taka).</li>
+                                        <li class="sub-rule">The member’s deposited savings will be returned to the member or legal nominee.</li>
+                                    </ul>
+
+                                    <!-- benefit  -->
+                                    <ul class="rule-sublist">
+                                        <h6 class="rule-sublist-title">Condition</h6>
+                                        <li class="sub-rule">The death must be a natural death as recognized under organizational policy and verification procedures.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <!-- loan installment method container -->
+                    <div id="loan-installment-method" class="guide-block no-display">
+                        <p>loan installment</p>
+                    </div>
+
+                    <!-- loan guide container -->
+                    <div id="loan-guide" class="guide-block no-display">
+                        <p>loan Guide</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- section:: mfi saving program  -->
+        <section id="mfi-saving-program">
+            <div class="container-width">
+                <hgroup class="mfi-section-header">
+                    <span class="mfi-header-label">Savings Program</span>
+                    <h3 class="mfi-header-title">Build the habit of saving —
+                        <br>
+                        and watch it grow
+                    </h3>
+                    <p class="mfi-header-description">
+                        Safe and simple savings opportunities designed to help individuals grow financial resilience, achieve goals, and secure a better future.
+                    </p>
+                </hgroup>
             </div>
         </section>
 
@@ -1168,6 +1489,11 @@
     // Linked section:: Footer
     include("../includes/otherPageFooter.php");
     ?>
+
+
+
+    <!-- Linked custom script  -->
+    <script src="../js/pmk_mfi.js"></script>
 
 </body>
 

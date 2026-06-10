@@ -551,7 +551,7 @@
 
 .map-frame {
   width: 100%;
-  height: 420px;
+  height: 620px;
 
   display: flex;
   align-items: center;
@@ -561,24 +561,10 @@
 .map-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 16px 24px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   background: #fafafa;
-}
-
-.map-meta {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.85rem;
-  color: rgba(31, 41, 51, 0.65);
-  font-weight: 500;
-}
-
-.map-meta > span > svg {
-  width: 22px;
-  height: 22px;
 }
 
 .map-direct-link {
