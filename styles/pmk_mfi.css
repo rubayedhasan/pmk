@@ -866,7 +866,7 @@
 }
 
 .payment-method {
-  height: fit-content;
+  height: 100%;
   background-color: #fff;
   border: 1px solid #e6edf5;
   border-radius: 18px;
@@ -1029,6 +1029,110 @@
 }
 .bkash .pc-text {
   color: #185fa5;
+}
+
+/* loan guide sections styles*/
+.loan-guide-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px;
+}
+
+.guide-steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.guide-step-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border-bottom: 1px solid #9fe1cb;
+  background-color: var(--pmk-white);
+  transition: all 0.5s ease-in-out;
+  cursor: default;
+}
+
+.guide-step-block:hover {
+  border-color: #5dcaa5;
+  background-color: var(--pmk-green-light);
+  transform: translateX(4px);
+}
+
+.guide-step-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  color: var(--pmk-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 2px;
+  border-radius: 50%;
+  background-color: var(--pmk-green);
+  border: 1px solid var(--pmk-green);
+}
+
+.guide-step-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.guide-step-title {
+  color: var(--pmk-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.guide-step-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.guide-step-badge {
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #085041;
+  border: 0.5px solid #5dcaa5;
+  background-color: var(--pmk-green-light);
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.gsb-icon {
+  display: flex;
+  align-items: center;
+  color: var(--pmk-green-dark);
+}
+
+.gsb-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+}
+
+.gsb-label {
+  color: #085041;
+  font-size: 0.775rem;
+  font-weight: 500;
+  margin-top: 2px;
+  text-transform: capitalize;
 }
 
 /* mfi saving program sections styles  */
@@ -1307,6 +1411,55 @@
   .pc-text {
     font-size: 0.815rem;
   }
+
+  /* loan guide sections styles*/
+  .loan-guide-grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .guide-step-block {
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 8px;
+  }
+
+  .guide-step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+    margin-top: 0;
+  }
+
+  .guide-step-content {
+    gap: 4px;
+  }
+
+  .guide-step-title {
+    color: var(--pmk-blue-dark);
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .guide-step-text {
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .guide-step-badge {
+    margin-top: 4px;
+  }
+
+  .gsb-icon {
+    display: flex;
+    align-items: center;
+    color: var(--pmk-green-dark);
+  }
+
+  .gsb-label {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -1497,6 +1650,11 @@
   .bkash {
     max-width: unset;
     grid-column: span 1;
+  }
+
+  /* loan guide sections styles*/
+  .loan-guide-grid-layout {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

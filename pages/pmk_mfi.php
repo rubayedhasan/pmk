@@ -943,7 +943,7 @@
                     </div>
 
                     <!-- loan purpose container -->
-                    <div id="loan-purpose" class="guide-block">
+                    <div id="loan-purpose" class="guide-block no-display">
                         <p class="loan-purpose-text">
                             Explore some of our most popular loan purposes, selected from over 200 eligible activities across agriculture, business, transport, and services.
                         </p>
@@ -1792,8 +1792,215 @@
                     </div>
 
                     <!-- loan guide container -->
-                    <div id="loan-guide" class="guide-block no-display">
-                        <p>loan Guide</p>
+                    <div id="loan-guide" class="guide-block ">
+                        <!-- loan guide layout  -->
+                        <div class="loan-guide-grid-layout">
+                            <!-- loan guide step bu step  -->
+                            <aside class="step-by-step-loan-guide">
+                                <h4 class="guide-block-title">Step-by-Step Guide</h4>
+
+                                <!-- steps -->
+                                <div class="guide-steps-container">
+                                    <!-- 1st guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Become PMK member</h5>
+                                            <p class="guide-step-text">
+                                                Register as a PMK member to become eligible for savings services, loan programs, financial support, and other development opportunities.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Membership</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2nd guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>2</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Required Savings</h5>
+                                            <p class="guide-step-text">
+                                                Maintain savings equal to five percent of your requested loan amount to meet eligibility requirements before applying successfully.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-pig-money">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M15 11v.01" />
+                                                        <path d="M5.173 8.378a3 3 0 1 1 4.656 -1.377" />
+                                                        <path d="M16 4v3.803a6.019 6.019 0 0 1 2.658 3.197h1.341a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-1.342c-.336 .95 -.907 1.8 -1.658 2.473v2.027a1.5 1.5 0 0 1 -3 0v-.583a6.04 6.04 0 0 1 -1 .083h-4a6.04 6.04 0 0 1 -1 -.083v.583a1.5 1.5 0 0 1 -3 0v-2l0 -.027a6 6 0 0 1 4 -10.473h2.5l4.5 -3" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">5% savings</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 3rd guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>3</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Prepare Documents</h5>
+                                            <p class="guide-step-text">
+                                                Complete the loan application form and gather all required documents to ensure a smooth submission process.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-text">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+                                                        <path d="M9 9l1 0" />
+                                                        <path d="M9 13l6 0" />
+                                                        <path d="M9 17l6 0" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Documents ready</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4th guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>4</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Submit loan form</h5>
+                                            <p class="guide-step-text">
+                                                Submit your completed loan application and supporting documents to begin the official review and assessment process
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                                        <path d="M9 12l2 2l4 -4" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Application submitted</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 5th guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>5</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Verification Visit</h5>
+                                            <p class="guide-step-text">
+                                                A Branch Manager or Assistant Program Manager and Credit Officer will visit your home or business to verify information and assess your repayment capacity.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home-check">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2" />
+                                                        <path d="M19 13.488v-1.488h2l-9 -9l-9 9h2v7a2 2 0 0 0 2 2h4.525" />
+                                                        <path d="M15 19l2 2l4 -4" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Field verification</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 6th guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>6</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Loan approval</h5>
+                                            <p class="guide-step-text">
+                                                Your application is reviewed by the responsible committee, which makes the final loan approval decision.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-check">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
+                                                        <path d="M9 14l2 2l4 -4" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">approval</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 7th guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>7</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Loan Disbursement</h5>
+                                            <p class="guide-step-text">
+                                                Once approved, loan funds are released through the designated payment method for your intended purpose.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-coin-taka">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M8 8l.553 -.276a1 1 0 0 1 1.447 .894v6.382a2 2 0 0 0 2 2h.5a2.5 2.5 0 0 0 2.5 -2.5v-.5h-1" />
+                                                        <path d="M8 11h7" />
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Funds released</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 8th guide step  -->
+                                    <div class="guide-step-block">
+                                        <div class="guide-step-number">
+                                            <span>8</span>
+                                        </div>
+                                        <div class="guide-step-content">
+                                            <h5 class="guide-step-title">Repay & Grow</h5>
+                                            <p class="guide-step-text">
+                                                Make timely repayments according to schedule to build trust and qualify for larger future loan opportunities.
+                                            </p>
+                                            <div class="guide-step-badge">
+                                                <span class="gsb-icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M3 17l6 -6l4 4l8 -8" />
+                                                        <path d="M14 7l7 0l0 7" />
+                                                    </svg>
+                                                </span>
+                                                <span class="gsb-label">Credit growth</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <!-- loan guide information  -->
+                            <aside class="loan-guide-info">
+
+                                <h4 class="guide-block-title">Required Doc</h4>
+                        </div>
                     </div>
                 </div>
             </div>
