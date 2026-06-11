@@ -1451,11 +1451,344 @@
                                 </div>
                             </div>
                         </aside>
+
+                        <div class="rule-note">
+                            <div class="rn-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M12 9v4" />
+                                    <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+                                    <path d="M12 16h.01" />
+                                </svg>
+                            </div>
+
+                            <p class="rule-note-text">
+                                PMK strictly prohibits any form of coercion, harassment, or unethical conduct during loan repayment collection. If you experience any concern or wish to file a complaint, please contact our helpline: +8801709914000.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- loan installment method container -->
                     <div id="loan-installment-method" class="guide-block no-display">
-                        <p>loan installment</p>
+                        <h4 class="guide-block-title">Installment Payment Method</h4>
+                        <!-- payment grid layout -->
+                        <div class="payment-grid-layout">
+
+                            <!-- cash payment  -->
+                            <div class="payment-method">
+                                <div class="payment-head">
+                                    <img src="../assets/icons/payment.gif" alt="icon" class="ph-icon">
+                                    <div class="ph-content">
+                                        <h5 class="ph-title">Cash installment</h5>
+                                        <p class="ph-text">In-person payment <span class="payment-badge">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-flame">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M12 10.941c2.333 -3.308 .167 -7.823 -1 -8.941c0 3.395 -2.235 5.299 -3.667 6.706c-1.43 1.408 -2.333 3.294 -2.333 5.588c0 3.704 3.134 6.706 7 6.706c3.866 0 7 -3.002 7 -6.706c0 -1.712 -1.232 -4.403 -2.333 -5.588c-2.084 3.353 -3.257 3.353 -4.667 2.235" />
+                                                </svg>
+                                                Popular</span></p>
+                                    </div>
+                                </div>
+
+                                <p class="payment-step-text">Pay your loan installment in cash through any of the following methods:</p>
+
+                                <!--payment steps  -->
+                                <div class="payment-step">
+                                    <h5 class="payment-step-title">
+                                        <span class="st-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            Through Credit Officer (Field Visit):
+                                        </span>
+                                    </h5>
+                                    <p class="payment-step-text">
+                                        Hand the installment amount directly to your PMK Credit Officer during field visits. The officer will record the payment in your passbook.
+                                    </p>
+                                </div>
+                                <div class="payment-step">
+                                    <h5 class="payment-step-title">
+                                        <span class="st-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-skyscraper">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M3 21l18 0" />
+                                                <path d="M5 21v-14l8 -4v18" />
+                                                <path d="M19 21v-10l-6 -4" />
+                                                <path d="M9 9l0 .01" />
+                                                <path d="M9 12l0 .01" />
+                                                <path d="M9 15l0 .01" />
+                                                <path d="M9 18l0 .01" />
+                                            </svg>
+                                        </span>
+                                        <span>At PMK Branch Office:</span>
+                                    </h5>
+                                    <p class="payment-step-text">
+                                        Visit the branch that issued your loan and pay a Credit Officer, Accounts Officer, or Branch Manager. Payment will be recorded in your passbook.
+                                    </p>
+                                </div>
+
+                                <!-- payment confirmation -->
+                                <div class="payment-confirmation">
+                                    <span class="pc-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-mobile-message">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M11 3h10v8h-3l-4 2v-2h-3l0 -8" />
+                                            <path d="M15 16v4a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h2" />
+                                            <path d="M10 18v.01" />
+                                        </svg>
+                                    </span>
+                                    <p class="pc-text">
+                                        Confirmation SMS sent to your registered mobile within 24 hours of payment.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- bank payment  -->
+                            <div class="payment-method">
+                                <div class="payment-head">
+                                    <img src="../assets/icons/mobile-banking.gif" alt="icon" class="ph-icon">
+                                    <div class="ph-content">
+                                        <h5 class="ph-title">Bank transfer</h5>
+                                        <p class="ph-text">Transfer from your account
+                                            <span class="payment-badge">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-shield-half">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M11.998 2l.032 .002l.086 .005a1 1 0 0 1 .342 .104l.105 .062l.097 .076l.016 .015l.247 .21a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.791 -2.75l.046 -.036l.053 -.041a1 1 0 0 1 .217 -.112l.075 -.023l.036 -.01a1 1 0 0 1 .12 -.022l.086 -.005zm.002 2.296l-.176 .135a13 13 0 0 1 -7.288 2.572l-.264 .006l-.064 .31a11 11 0 0 0 1.064 7.175l.17 .314a11 11 0 0 0 6.49 5.136l.068 .019z" />
+                                                </svg>
+                                                Convenient</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- payments steps  -->
+                                <div class="payment-step">
+                                    <h5 class="payment-step-title">
+                                        <span class="st-icon" style="transform: rotate(-45deg);">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-send-2">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124" />
+                                                <path d="M6.5 12h14.5" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            Transfer the amount
+                                        </span>
+                                    </h5>
+                                    <p class="payment-step-text">
+                                        Transfer your installment from your personal bank account to the bank account of your PMK branch.
+                                    </p>
+                                </div>
+                                <div class="payment-step">
+                                    <h5 class="payment-step-title">
+                                        <span class="st-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-check">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+                                                <path d="M9 15l2 2l4 -4" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            Share proof of payment
+                                        </span>
+                                    </h5>
+                                    <p class="payment-step-text">
+                                        Send a deposit slip, transfer receipt, or transaction confirmation to your branch's Credit Officer, Accounts Officer, or Branch Manager.
+                                    </p>
+                                </div>
+
+                                <!-- passbook update  -->
+                                <div class="payment-step">
+                                    <h5 class="payment-step-title">
+                                        <span class="st-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-vocabulary">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2" />
+                                                <path d="M12 5v16" />
+                                                <path d="M7 7h1" />
+                                                <path d="M7 11h1" />
+                                                <path d="M16 7h1" />
+                                                <path d="M16 11h1" />
+                                                <path d="M16 15h1" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            Passbook update
+                                        </span>
+                                    </h5>
+                                    <p class="payment-step-text">
+                                        Visit the branch with your passbook, or hand it to your Credit Officer who will arrange updating and return it to you
+                                    </p>
+                                </div>
+
+
+                                <!-- payment confirmation -->
+                                <div class="payment-confirmation">
+                                    <span class="pc-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-mobile-message">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M11 3h10v8h-3l-4 2v-2h-3l0 -8" />
+                                            <path d="M15 16v4a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h2" />
+                                            <path d="M10 18v.01" />
+                                        </svg>
+                                    </span>
+                                    <p class="pc-text">
+                                        Confirmation SMS sent to your registered mobile within 24 hours once payment is posted.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- bikash payment  -->
+                            <div class="payment-method bkash">
+                                <div class="payment-head">
+                                    <img src="../assets/partners/development partners/bkash.png" alt="icon" class="ph-icon">
+                                    <div class="ph-content">
+                                        <h5 class="ph-title">bKash installment</h5>
+                                        <p class="ph-text">Pay anytime, from anywhere
+                                            <span class="payment-badge">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-sparkles">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6" />
+                                                </svg>
+                                                Digital</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- bkash process  -->
+                                <div class="bkash-process">
+                                    <!-- bkash process left -->
+                                    <div>
+                                        <!-- payment steps  -->
+                                        <div class="payment-step">
+                                            <h5 class="payment-step-title">
+                                                <span class="st-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-qrcode">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                                                        <path d="M7 17l0 .01" />
+                                                        <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                                                        <path d="M7 7l0 .01" />
+                                                        <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" />
+                                                        <path d="M17 7l0 .01" />
+                                                        <path d="M14 14l3 0" />
+                                                        <path d="M20 14l0 .01" />
+                                                        <path d="M14 14l0 3" />
+                                                        <path d="M14 20l3 0" />
+                                                        <path d="M17 17l3 0" />
+                                                        <path d="M20 17l0 3" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    Open bKash app
+                                                </span>
+                                            </h5>
+                                            <p class="payment-step-text">
+                                                Tab on Microfinance menu option, choose Palli Mongal Karmosuchi (PMK) from the institution list, and enter your Member Code. Then enter your loan and saving deposit amount and tab to next.
+                                            </p>
+                                        </div>
+                                        <div class="payment-step">
+                                            <h5 class="payment-step-title">
+                                                <span class="st-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-lock">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" />
+                                                        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                                                        <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    Confirm with PIN
+                                                </span>
+                                            </h5>
+                                            <p class="payment-step-text">
+                                                Verify payment details and amount, then complete the transaction using your bKash PIN.
+                                            </p>
+                                        </div>
+                                        <div class="payment-step">
+                                            <h5 class="payment-step-title">
+                                                <span class="st-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-receipt">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    Save digital receipt
+                                                </span>
+                                            </h5>
+                                            <p class="payment-step-text">
+                                                Save or download the digital receipt from bKash — it serves as proof of payment for future inquiries.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- bkash process right -->
+                                    <div>
+                                        <!-- payment step  -->
+                                        <div class="payment-step">
+                                            <h5 class="payment-step-title">
+                                                <span class="st-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-check">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    Auto-updated by PMK
+                                                </span>
+                                            </h5>
+                                            <p class="payment-step-text">
+                                                PMK receives the payment automatically and updates your installment in the system — no manual follow-up needed.
+                                            </p>
+                                        </div>
+
+                                        <!-- passbook update  -->
+                                        <div class="payment-step">
+                                            <h5 class="payment-step-title">
+                                                <span class="st-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-vocabulary">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2" />
+                                                        <path d="M12 5v16" />
+                                                        <path d="M7 7h1" />
+                                                        <path d="M7 11h1" />
+                                                        <path d="M16 7h1" />
+                                                        <path d="M16 11h1" />
+                                                        <path d="M16 15h1" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    Passbook update
+                                                </span>
+                                            </h5>
+                                            <p class="payment-step-text">
+                                                Visit your PMK branch with your passbook, or hand it to your Credit Officer to arrange updating.
+                                            </p>
+                                        </div>
+
+                                        <!-- payment confirmation -->
+                                        <div class="payment-confirmation">
+                                            <span class="pc-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-mobile-message">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M11 3h10v8h-3l-4 2v-2h-3l0 -8" />
+                                                    <path d="M15 16v4a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h2" />
+                                                    <path d="M10 18v.01" />
+                                                </svg>
+                                            </span>
+                                            <p class="pc-text">
+                                                Confirmation SMS sent within 24 hours once payment is posted to your loan account.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- loan guide container -->

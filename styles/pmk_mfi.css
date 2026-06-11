@@ -599,10 +599,11 @@
 }
 
 .about-lone-note {
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 32px;
+  margin: 32px auto 0;
   padding: 12px 16px;
   border-radius: 6px;
   background-color: var(--pmk-green-light);
@@ -826,6 +827,210 @@
   margin-top: 16px;
 }
 
+.rule-note {
+  grid-column: span 2;
+
+  width: fit-content;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #92400e;
+  background: #fffbeb;
+  border: 1px solid #fbbf24;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+}
+
+.rn-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.rule-note-text {
+  color: #92400e;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+/* installment method sections styles  */
+.payment-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.payment-method {
+  height: fit-content;
+  background-color: #fff;
+  border: 1px solid #e6edf5;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease-in-out;
+}
+
+.payment-method:hover {
+  border-color: var(--pmk-green);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bkash {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+  grid-column: span 2;
+  background: linear-gradient(
+    135deg,
+    rgba(226, 0, 116, 0.03),
+    rgba(255, 255, 255, 1)
+  );
+  border: 1px solid rgba(226, 0, 116, 0.15);
+  transition: all 0.35s ease-in-out;
+}
+
+.bkash:hover {
+  border-color: rgba(226, 0, 116, 0.3);
+}
+
+.bkash-process {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.payment-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e9f5f1;
+}
+
+.bkash .payment-head {
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.ph-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ph-content {
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.ph-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.ph-text {
+  width: 100%;
+  color: var(--pmk-green-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.payment-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.payment-badge svg {
+  margin-bottom: 2px;
+}
+
+.bkash .payment-badge svg {
+  margin-bottom: 0;
+}
+
+.payment-step {
+  margin-top: 16px;
+}
+
+.payment-step-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.st-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--pmk-green-dark);
+}
+
+.payment-step-text {
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+.payment-confirmation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--pmk-green);
+  background-color: var(--pmk-green-light);
+}
+
+.pc-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--pmk-green-dark);
+}
+
+.pc-text {
+  color: var(--pmk-green);
+  font-size: 0.825rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bkash .pc-icon svg {
+  stroke: #378add;
+}
+
+.bkash .payment-confirmation {
+  background: #e6f1fb;
+  border: 0.5px solid #85b7eb;
+}
+.bkash .pc-text {
+  color: #185fa5;
+}
+
 /* mfi saving program sections styles  */
 #mfi-saving-program {
   background-color: var(--pmk-green-dark-sublet);
@@ -1027,6 +1232,81 @@
     font-size: 0.9rem;
     text-align: justify;
   }
+
+  .rule-note {
+    grid-column: span 1;
+    align-items: flex-start;
+  }
+
+  .rn-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .rule-note-text {
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* installment method sections styles  */
+  .payment-grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .payment-method {
+    padding: 24px;
+  }
+
+  .bkash {
+    max-width: unset;
+    grid-column: span 1;
+  }
+
+  .bkash-process {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  .ph-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ph-title {
+    font-size: 1rem;
+  }
+
+  .ph-text {
+    font-size: 0.8rem;
+  }
+
+  .payment-badge {
+    font-size: 0.775rem;
+  }
+
+  .payment-step-title {
+    font-size: 0.95rem;
+    gap: 4px;
+  }
+
+  .st-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .payment-step-text {
+    font-size: 0.875rem;
+  }
+
+  .payment-confirmation {
+    align-items: flex-start;
+    padding: 8px 16px;
+  }
+
+  .pc-text {
+    font-size: 0.815rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -1188,6 +1468,36 @@
   .rule-info-text {
     text-align: justify;
   }
+
+  .rule-note {
+    grid-column: span 1;
+    align-items: flex-start;
+  }
+
+  .rn-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .rule-note-text {
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* installment method sections styles  */
+  .payment-grid-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .payment-method {
+    padding: 24px;
+  }
+
+  .bkash {
+    max-width: unset;
+    grid-column: span 1;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -1255,6 +1565,10 @@
   .guide-block-title {
     font-size: 1.225rem;
   }
+
+  .payment-grid-layout {
+    gap: 24px;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -1292,6 +1606,10 @@
   /* loan rules  */
   .guide-block-title {
     font-size: 1.3rem;
+  }
+
+  .payment-grid-layout {
+    gap: 24px;
   }
 }
 
