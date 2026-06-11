@@ -943,7 +943,7 @@
                     </div>
 
                     <!-- loan purpose container -->
-                    <div id="loan-purpose" class="guide-block no-display">
+                    <div id="loan-purpose" class="guide-block">
                         <p class="loan-purpose-text">
                             Explore some of our most popular loan purposes, selected from over 200 eligible activities across agriculture, business, transport, and services.
                         </p>
@@ -1644,7 +1644,8 @@
                             <!-- bikash payment  -->
                             <div class="payment-method bkash">
                                 <div class="payment-head">
-                                    <img src="../assets/partners/development partners/bkash.png" alt="icon" class="ph-icon">
+                                    <!-- <img src="../assets/partners/development partners/bkash.png" alt="icon" class="ph-icon"> -->
+                                    <img src="../assets/icons/bkash.svg" alt="icon" class="ph-icon">
                                     <div class="ph-content">
                                         <h5 class="ph-title">bKash installment</h5>
                                         <p class="ph-text">Pay anytime, from anywhere
@@ -1792,7 +1793,7 @@
                     </div>
 
                     <!-- loan guide container -->
-                    <div id="loan-guide" class="guide-block ">
+                    <div id="loan-guide" class="guide-block no-display">
                         <!-- loan guide layout  -->
                         <div class="loan-guide-grid-layout">
                             <!-- loan guide step bu step  -->
@@ -2035,7 +2036,7 @@
                                         <!-- check  -->
                                         <div class="document">
                                             <figure class="document-image">
-                                                <img src="../assets/icons/cheque.png" alt="cheques card">
+                                                <img src="../assets/icons/cheque.gif" alt="cheques card">
                                             </figure>
                                             <div class="document-content">
                                                 <h5 class="document-step-title">Bank cheque Page</h5>
@@ -2051,7 +2052,7 @@
                                                 <img src="../assets/icons/stamp.gif" alt="stamp">
                                             </figure>
                                             <div class="document-content">
-                                                <h5 class="document-step-title">Passport-size photographs</h5>
+                                                <h5 class="document-step-title">Stamp Paper</h5>
                                                 <p class="document-step-text">
                                                     Under 1 lakh attach 2×75 Tk stamps; 1 lakh+ attach 3×100 Tk stamps.
                                                 </p>
@@ -2091,6 +2092,79 @@
                                 <!-- faq section  -->
                                 <div class="faq-section">
                                     <h4 class="guide-block-title">Frequently Asked Questions</h4>
+
+                                    <!-- faq container  -->
+                                    <div class="accordion" id="loan-guide-faq">
+                                        <!-- 1st accordion item  -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#loan-question-one" aria-expanded="true" aria-controls="loan-question-one">
+                                                    Can I apply for more than one loan at the same time?
+                                                </button>
+                                            </h2>
+                                            <div id="loan-question-one" class="accordion-collapse collapse show" data-bs-parent="#loan-guide-faq">
+                                                <div class="accordion-body">
+                                                    No. Members can only have one active loan at a time. A new loan application can be submitted after the current loan is fully repaid.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 2nd accordion item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loan-question-two" aria-expanded="false" aria-controls="loan-question-two">
+                                                    How much can I borrow?
+                                                </button>
+                                            </h2>
+                                            <div id="loan-question-two" class="accordion-collapse collapse" data-bs-parent="#loan-guide-faq">
+                                                <div class="accordion-body">
+                                                    The loan amount depends on your eligibility, income, repayment capacity, and the type of loan requested.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 3rd accordion item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loan-question-three" aria-expanded="false" aria-controls="loan-question-three">
+                                                    Can I get a second loan while repaying the first?
+                                                </button>
+                                            </h2>
+                                            <div id="loan-question-three" class="accordion-collapse collapse" data-bs-parent="#loan-guide-faq">
+                                                <div class="accordion-body">
+                                                    No. Members are not eligible for a second loan until the existing loan has been fully repaid and closed.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 4th accordion item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loan-question-four" aria-expanded="false" aria-controls="loan-question-four">
+                                                    Are there any hidden charges?
+                                                </button>
+                                            </h2>
+                                            <div id="loan-question-four" class="accordion-collapse collapse" data-bs-parent="#loan-guide-faq">
+                                                <div class="accordion-body">
+                                                    No. All fees, charges, and applicable costs are clearly disclosed before loan approval. No hidden charges apply.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 5th accordion item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#loan-question-five" aria-expanded="false" aria-controls="loan-question-five">
+                                                    What happens if I miss a loan payment?
+                                                </button>
+                                            </h2>
+                                            <div id="loan-question-five" class="accordion-collapse collapse" data-bs-parent="#loan-guide-faq">
+                                                <div class="accordion-body">
+                                                    No fees or penalties apply. Members can adjust the missed payment by settling it with the next scheduled repayment.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                         </div>
                     </div>
