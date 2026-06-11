@@ -1264,6 +1264,18 @@
   background-color: var(--pmk-green-dark-sublet);
 }
 
+#mfi-saving-program .mfi-header-label {
+  color: #4de8b4;
+  background: rgba(0, 148, 106, 0.25);
+}
+
+#mfi-saving-program .mfi-header-title {
+  color: var(--pmk-white);
+}
+#mfi-saving-program .mfi-header-description {
+  color: rgba(255, 255, 255, 0.55);
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;

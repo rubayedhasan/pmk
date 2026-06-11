@@ -1340,11 +1340,6 @@
                                     </li>
                                     <li class="rule">
                                         <strong>
-                                            Compulsory Savings:
-                                        </strong> Members must maintain savings equivalent to 5% of the approved loan amount, according to organizational policy.
-                                    </li>
-                                    <li class="rule">
-                                        <strong>
                                             Guarantor Requirement:
                                         </strong> Each borrower must provide
                                         1 person as Surety and 1 or 2 person as guarantor who will support the loan application and repayment commitment.
@@ -1688,7 +1683,7 @@
                                                 </span>
                                             </h5>
                                             <p class="payment-step-text">
-                                                Tab on Microfinance menu option, choose Palli Mongal Karmosuchi (PMK) from the institution list, and enter your Member Code. Then enter your loan and saving deposit amount and tab to next.
+                                                Tab on Microfinance menu option, choose Palli Mongal Karmosuchi (PMK) from the institution list, and enter your 9 or 11 digit Member Code. Then enter your loan and saving deposit amount and tab to next.
                                             </p>
                                         </div>
                                         <div class="payment-step">
@@ -1859,7 +1854,7 @@
                                         <div class="guide-step-content">
                                             <h5 class="guide-step-title">Prepare Documents</h5>
                                             <p class="guide-step-text">
-                                                Complete the loan application form and gather all required documents to ensure a smooth submission process.
+                                                Complete the loan application form and prepare all required documents according to the loan ceiling to ensure a smooth submission process.
                                             </p>
                                             <div class="guide-step-badge">
                                                 <span class="gsb-icon">
@@ -1908,7 +1903,7 @@
                                         <div class="guide-step-content">
                                             <h5 class="guide-step-title">Verification Visit</h5>
                                             <p class="guide-step-text">
-                                                A Branch Manager or Assistant Program Manager and Credit Officer will visit your home or business to verify information and assess your repayment capacity.
+                                                As per the loan ceiling, the Director, DD, AD, PM, DPM, APM or BM, and Credit Officer may visit your home or business to verify information and assess your repayment capacity.
                                             </p>
                                             <div class="guide-step-badge">
                                                 <span class="gsb-icon">
@@ -1932,7 +1927,7 @@
                                         <div class="guide-step-content">
                                             <h5 class="guide-step-title">Loan approval</h5>
                                             <p class="guide-step-text">
-                                                Your application is reviewed by the responsible committee, which makes the final loan approval decision.
+                                                Your application is reviewed and approved by the organization’s authority, including the Director, DD, AD, PM, DPM, APM or BM in accordance with the loan ceiling.
                                             </p>
                                             <div class="guide-step-badge">
                                                 <span class="gsb-icon">
@@ -2173,7 +2168,7 @@
         </section>
 
         <!-- section:: mfi saving program  -->
-        <!-- <section id="mfi-saving-program">
+        <section id="mfi-saving-program">
             <div class="container-width">
                 <hgroup class="mfi-section-header">
                     <span class="mfi-header-label">Savings Program</span>
@@ -2186,7 +2181,7 @@
                     </p>
                 </hgroup>
             </div>
-        </section> -->
+        </section>
 
 
     </main>
