@@ -1998,8 +1998,100 @@
 
                             <!-- loan guide information  -->
                             <aside class="loan-guide-info">
+                                <!-- required documents  -->
+                                <div class="required-documents">
+                                    <h4 class="guide-block-title">Documents Required</h4>
 
-                                <h4 class="guide-block-title">Required Doc</h4>
+                                    <!-- document  -->
+                                    <div class="document-container">
+                                        <!-- nid  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/id-card.gif" alt="nid card">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">National ID Card (NID)</h5>
+                                                <p class="document-step-text">
+                                                    Attach clear front-back NID copies of member, surety, and grantor with loan form.
+
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- photo  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/picture.gif" alt="nid card">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">Passport-size photographs</h5>
+                                                <p class="document-step-text">
+                                                    Attach 3 passport-size joint photos of members and surety, plus grantor copy with form.
+
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- check  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/cheque.png" alt="cheques card">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">Bank cheque Page</h5>
+                                                <p class="document-step-text">
+                                                    Attach 3 pages of members’ cheques and 2 pages of surety person’s cheques.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- stamp  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/stamp.gif" alt="stamp">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">Passport-size photographs</h5>
+                                                <p class="document-step-text">
+                                                    Under 1 lakh attach 2×75 Tk stamps; 1 lakh+ attach 3×100 Tk stamps.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- proof of residence  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/proof-of-concept.gif" alt="document">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">Proof of residence</h5>
+                                                <p class="document-step-text">
+                                                    Utility bill, word member letter, or community leader confirmation of address.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- photo  -->
+                                        <div class="document">
+                                            <figure class="document-image">
+                                                <img src="../assets/icons/file-settings.gif" alt="document">
+                                            </figure>
+                                            <div class="document-content">
+                                                <h5 class="document-step-title">Other Documents</h5>
+                                                <p class="document-step-text">
+                                                    Member must also attach any additional documents required by the loan product and applicable rules.
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <!-- faq section  -->
+                                <div class="faq-section">
+                                    <h4 class="guide-block-title">Frequently Asked Questions</h4>
+                                </div>
                         </div>
                     </div>
                 </div>
