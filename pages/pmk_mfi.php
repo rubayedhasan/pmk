@@ -2180,6 +2180,109 @@
                         Safe and simple savings opportunities designed to help individuals grow financial resilience, achieve goals, and secure a better future.
                     </p>
                 </hgroup>
+
+                <!-- saving program  layout  -->
+                <div class="saving-program-layout">
+                    <!-- saving program  COM-->
+                    <div class="saving-program">
+                        <figure class="sp-icon">
+                            <img src="../assets/icons/piggy_bank.png" alt="piggy bank">
+                        </figure>
+                        <h4 class="saving-program-title">Compulsory Savings (COM)</h4>
+                        <p class="saving-program-description">
+                            Build a stronger future with PMK Compulsory Savings. Save from just 50 taka weekly, develop consistent saving habits, improve loan eligibility, and create financial security for future goals and unexpected challenges.
+                        </p>
+                        <div class="saving-program-info-container">
+                            <div class="saving-program-info">
+                                <span class="spi-label">Minimum deposit</span>
+                                <span class="spi-value">৳50/week</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Interest rate </span>
+                                <span class="spi-value">6% P.SA</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Withdrawal</span>
+                                <span class="spi-value">After loan closure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- saving program  VOL-->
+                    <div class="saving-program">
+                        <figure class="sp-icon">
+                            <img src="../assets/icons/money.png" alt="money icon coin">
+                        </figure>
+                        <h4 class="saving-program-title">Voluntary Savings (VOL)</h4>
+                        <p class="saving-program-description">
+                            PMK Voluntary Savings lets members save 50 taka or more at their convenience. Grow your savings steadily, build financial security, and stay prepared for future opportunities and unexpected needs.
+                        </p>
+                        <div class="saving-program-info-container">
+                            <div class="saving-program-info">
+                                <span class="spi-label">Minimum deposit</span>
+                                <span class="spi-value">৳50/week</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Interest rate </span>
+                                <span class="spi-value">6% P.SA</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Withdrawal</span>
+                                <span class="spi-value">Anytime (48hr notice)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- saving program  MSP-->
+                    <div class="saving-program">
+                        <figure class="sp-icon">
+                            <img src="../assets/icons/time_increse_money.png" alt="money icon coin">
+                        </figure>
+                        <h4 class="saving-program-title">Monthly Savings Project (MSP)</h4>
+                        <p class="saving-program-description">
+                            Turn monthly deposits into meaningful savings with PMK MSP. Save consistently, grow your funds over time, and prepare confidently for education, business opportunities, family needs, and future financial goals.
+                        </p>
+                        <div class="saving-program-info-container">
+                            <div class="saving-program-info">
+                                <span class="spi-label">Monthly deposit</span>
+                                <span class="spi-value">৳100–৳5,000</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Interest rate </span>
+                                <span class="spi-value">6%-12%</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Tenure</span>
+                                <span class="spi-value">5/10 years</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- saving program  FBS-->
+                    <div class="saving-program">
+                        <figure class="sp-icon">
+                            <img src="../assets/icons/safe_box.png" alt="money icon coin">
+                        </figure>
+                        <h4 class="saving-program-title">fixed beneficiary scheme (FBS)</h4>
+                        <p class="saving-program-description">
+                            A secure savings program encouraging members to deposit fixed amounts regularly, promoting financial discipline, community welfare, and long-term financial stability with assured benefits and structured, FDR-like savings growth support.
+                        </p>
+                        <div class="saving-program-info-container">
+                            <div class="saving-program-info">
+                                <span class="spi-label">Minimum Amount</span>
+                                <span class="spi-value">৳50,000</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Interest rate </span>
+                                <span class="spi-value">11.04% (MAX)</span>
+                            </div>
+                            <div class="saving-program-info">
+                                <span class="spi-label">Tenure</span>
+                                <span class="spi-value">1/3 years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
