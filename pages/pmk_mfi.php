@@ -2206,6 +2206,8 @@
                                 <span class="spi-value">After loan closure</span>
                             </div>
                         </div>
+
+                        <button onclick="slideRuleContainer('compulsory-saving-rules')" type="button" class="visit-saving-rule-button">See Saving Rule</button>
                     </div>
 
                     <!-- saving program  VOL-->
@@ -2231,6 +2233,8 @@
                                 <span class="spi-value">Anytime (48hr notice)</span>
                             </div>
                         </div>
+
+                        <button onclick="slideRuleContainer('voluntary-saving-rules')" type="button" class="visit-saving-rule-button">See Saving Rule</button>
                     </div>
 
                     <!-- saving program  MSP-->
@@ -2256,6 +2260,8 @@
                                 <span class="spi-value">5/10 years</span>
                             </div>
                         </div>
+
+                        <button onclick="slideRuleContainer('msp-saving-rules')" type="button" class="visit-saving-rule-button">See Saving Rule</button>
                     </div>
 
                     <!-- saving program  FBS-->
@@ -2281,214 +2287,801 @@
                                 <span class="spi-value">1/3 years</span>
                             </div>
                         </div>
+
+                        <button onclick="slideRuleContainer('fbs-saving-rules')" type="button" class="visit-saving-rule-button">See Saving Rule</button>
                     </div>
                 </div>
 
-                <!-- saving program rules and benefit  -->
-                <div id="compulsory-saving-rules" class="saving-program-rules-container ">
-                    <!-- saving rules  -->
-                    <aside class="saving-program-rules">
-                        <h4 class="saving-rules-title">Compulsory Savings Rules</h4>
+                <!-- rules container  -->
+                <div class="saving-rules-parent-container">
+                    <!-- compulsory saving rules and benefit  -->
+                    <div id="compulsory-saving-rules" class="saving-program-rules-container rule-container-active">
+                        <!-- saving rules  -->
+                        <aside class="saving-program-rules">
+                            <h4 class="saving-rules-title">Compulsory Savings Rules</h4>
 
-                        <!-- saving rules container -->
-                        <div class="saving-rules-cards">
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Savings Amount
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can start saving from a minimum of 50 TK and contribute any amount based on their capacity and preference.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Flexible Savings Amount
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Members can start saving from a minimum of 50 TK and contribute any amount based on their capacity and preference.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Compulsory Savings Period
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can continue saving for any duration based on their preference, with no fixed time limit.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Pre-Loan Compulsory Savings Requirement
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Before applying for a loan, members must maintain compulsory savings equal to 5% of the loan amount for the first application and 10% for the second application, fully deposited in their account.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Loan Closure via Savings Adjustment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can close their loan by adjusting and utilizing their total savings balance to fully settle the outstanding loan amount.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Compulsory Savings cannot be withdrawn during loan tenure
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Account is non-transferable
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Savings accounts are personal and non-transferable; only the nominee may withdraw funds after the member’s death, following proper verification and account closure procedures.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </aside>
 
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                        <!-- saving benefits  -->
+                        <aside class=" saving-program-benefits">
+                            <h4 class="saving-rules-title">Savings Benefits</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Savings Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members’ savings earn 6% interest rate, credited periodically as per organizational policy and applied to eligible savings accounts accordingly.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Flexible Compulsory Savings Period
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Members can continue saving for any duration based on their preference, with no fixed time limit.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Savings Interest Provision & Payment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Organization calculates monthly interest and keeps it as provision, then automatically credits 6% interest to members’ accounts every six months.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Additional Savings Benefits
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members enjoy flexible deposits, easy withdrawal options, transparent balance tracking, and eligibility advantages for future financial services and organizational support programs.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </aside>
+                    </div>
 
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                    <!-- Voluntary  saving rules and benefit  -->
+                    <div id="voluntary-saving-rules" class="saving-program-rules-container no-display">
+                        <!-- saving rules  -->
+                        <aside class="saving-program-rules">
+                            <h4 class="saving-rules-title">Voluntary Savings Rules</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Savings Amount
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can start saving from a minimum of 50 TK and contribute any amount based on their capacity and preference.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Pre-Loan Compulsory Savings Requirement
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Before applying for a loan, members must maintain compulsory savings equal to 5% of the loan amount for the first application and 10% for the second application, fully deposited in their account.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Voluntary Savings Period
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can continue saving for any duration based on their preference, with no fixed time limit.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Loan Closure via Savings Adjustment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can close their loan by adjusting and utilizing their total savings balance to fully settle the outstanding loan amount.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Voluntary Savings Withdrawal & Loan Repayment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members may withdraw voluntary savings anytime, fully or partially, and may also use savings to repay outstanding loan balances. However, withdrawal requires 48 hours’ prior notice to PMK during office hours.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                        </aside>
+
+                        <!-- saving benefits  -->
+                        <aside class=" saving-program-benefits">
+                            <h4 class="saving-rules-title">Savings Benefits</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Savings Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members’ savings earn 6% interest rate, credited periodically as per organizational policy and applied to eligible savings accounts accordingly.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Loan Closure via Savings Adjustment
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Members can close their loan by adjusting and utilizing their total savings balance to fully settle the outstanding loan amount.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Savings Interest Provision & Payment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Organization calculates monthly interest and keeps it as provision, then automatically credits 6% interest to members’ accounts every six months.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Savings Advantage
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Encourages disciplined saving habits, builds financial resilience, and provides members quick access to their own funds when needed.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </aside>
+                    </div>
 
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                    <!-- msp saving rules and benefit  -->
+                    <div id="msp-saving-rules" class="saving-program-rules-container no-display">
+                        <!-- saving rules  -->
+                        <aside class="saving-program-rules">
+                            <h4 class="saving-rules-title">MSP Rules</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Savings Plan
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can save flexible amounts from 100, 200, 300, 500 up to maximum 5000 TK according to their preference as per member choice.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Long-Term Savings Plan
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can save flexible amounts from 100 to 5000 TK over 5 or 10 years, depending on their preferred saving duration choice.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Inactivity Policy for Non-Payment
+                                        </h5>
+                                        <p class="src-content-text">
+                                            If a member does not deposit MSP for 2 consecutive months, the account will be marked inactive and MSP deposits will no longer be accepted. The savings will be transferred to general savings and will earn 6% interest.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Inactivity Due to Irregular Payments
+                                        </h5>
+                                        <p class="src-content-text">
+                                            If a member fails to deposit MSP for 3 consecutive months, the account will be marked inactive and further MSP deposits will not be accepted. The savings will be transferred to general savings and will earn 6% interest.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Withdrawal Rules
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members may withdraw their savings at any time, either before the tenure is completed or after it ends. However, any withdrawal request must be communicated to PMK at least 48 hours in advance during official office hours.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Early Closure Interest Rule
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members closing MSP before completing 1 year will not receive any interest on deposited savings amount as per policy terms and conditions.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </aside>
 
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                        <!-- saving benefits  -->
+                        <aside class=" saving-program-benefits">
+                            <h4 class="saving-rules-title">Savings Benefits</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Savings Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can earn interest on MSP deposits at a rate ranging from 7% to 12%, depending on the applicable terms and conditions of the savings plan.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Account is non-transferable
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Savings accounts are personal and non-transferable; only the nominee may withdraw funds after the member’s death, following proper verification and account closure procedures.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Interest & Maturity Benefits (1–5 Years)
+                                        </h5>
+                                        <p class="src-content-text">
+                                            If a member closes MSP after 1 year and 1 month but before 5 years, they will receive 6% interest. Upon completing 5 years, the member will receive the full maturity benefit.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Interest & Maturity Benefits (5–10 Years)
+                                        </h5>
+                                        <p class="src-content-text">
+                                            If a member closes MSP after 5 years and 1 month but before 10 years, they will receive 7% interest. Upon completing 10 years, the member will receive the maturity benefit along with 12% interest.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            MSP Maturity Benefits
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members will receive a maturity benefit upon completing 5 years of MSP. An additional maturity benefit will also be provided upon completing 10 years.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </aside>
+                        </aside>
+                    </div>
 
-                    <!-- saving benefits  -->
-                    <aside class=" saving-program-benefits">
-                        <h4 class="saving-rules-title">Savings Benefits</h4>
+                    <!-- fbs  saving rules and benefit  -->
+                    <div id="fbs-saving-rules" class="saving-program-rules-container no-display">
+                        <!-- saving rules  -->
+                        <aside class="saving-program-rules">
+                            <h4 class="saving-rules-title">FBS Rules</h4>
 
-                        <!-- saving rules container -->
-                        <div class="saving-rules-cards">
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Fixed Savings with Full Security
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can fix savings starting from 50,000 TK and above. Any amount may be deposited according to the member’s preference, with full safety and security.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Savings Interest Rate
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Members’ savings earn 6% interest rate, credited periodically as per organizational policy and applied to eligible savings accounts accordingly.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            FBS Term Options
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can fix their deposit amount in FBS for a term of 1 year or 3 years, according to their financial goals.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Flexible Interest Payment Options
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members may receive interest monthly, every three months, or at the end of the deposit term, according to their preference.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Bank Account Interest Eligibility
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can receive interest only through bank accounts, with payout options depending on selected account terms and banking policies.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Withdrawals
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members may withdraw a fixed amount anytime, provided they give at least 48 hours’ prior notice before processing.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </aside>
 
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
+                        <!-- saving benefits  -->
+                        <aside class=" saving-program-benefits">
+                            <h4 class="saving-rules-title">Savings Benefits</h4>
+
+                            <!-- saving rules container -->
+                            <div class="saving-rules-cards">
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            FBS Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members can earn up to a maximum of 11.04% interest on their fixed deposit amount, subject to account terms and conditions.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Savings Interest Provision & Payment
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Organization calculates monthly interest and keeps it as provision, then automatically credits 6% interest to members’ accounts every six months.
-                                    </p>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            Early FBS Closure Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Members closing FBS before maturity will receive interest at a reduced rate of 6% on the deposited amount.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- rule card  -->
+                                <div class="saving-rule-card">
+                                    <div class="src-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                            <path d="M16 12l-4 -4" />
+                                            <path d="M16 12h-8" />
+                                            <path d="M12 16l4 -4" />
+                                        </svg>
+                                    </div>
+                                    <div class="src-content">
+                                        <h5 class="src-content-head">
+                                            FBS Maturity Interest Rate
+                                        </h5>
+                                        <p class="src-content-text">
+                                            Upon maturity, members will receive interest at a rate of 11.04% (max) on the deposited amount as per account terms.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
-                                </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Additional Savings Benefits
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Members enjoy flexible deposits, easy withdrawal options, transparent balance tracking, and eligibility advantages for future financial services and organizational support programs.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+                        </aside>
+                    </div>
                 </div>
 
                 <!-- saving auth strip  -->

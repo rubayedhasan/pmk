@@ -1289,6 +1289,7 @@
   border: 1px solid rgba(0, 148, 106, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
 
+  position: relative;
   transition: all 0.35s ease-in-out;
 }
 
@@ -1296,6 +1297,36 @@
 .saving-program:hover {
   border-color: rgba(0, 148, 106, 0.5);
   background-color: rgba(0, 148, 106, 0.12);
+}
+
+.visit-saving-rule-button {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+  width: 200px;
+  height: 32px;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  border: 1px solid rgba(0, 148, 106, 0.25);
+  border-radius: 80px 0px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.35s ease-in-out;
+}
+
+.visit-saving-rule-button:hover,
+.saving-active-container .visit-saving-rule-button {
+  background-color: var(--pmk-green-dark);
+  border-color: rgba(0, 148, 106, 0.5);
 }
 
 .sp-icon {
@@ -1354,11 +1385,26 @@
 }
 
 /* saving program rules and benefit */
+.saving-rules-parent-container {
+  overflow-x: hidden;
+}
+
 .saving-program-rules-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 56px;
   margin-top: 56px;
+
+  opacity: 0;
+  transform: translateX(-250px);
+  width: 0;
+  transition: all 1.15s ease-in-out;
+}
+
+.rule-container-active {
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .saving-rules-title {
@@ -1808,6 +1854,7 @@
   /* mfi saving program sections styles  */
   .saving-program-layout {
     grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
   }
 
   .sp-icon {
@@ -2060,6 +2107,7 @@
   /* mfi saving program sections styles  */
   .saving-program-layout {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
   }
 
   .saving-program-title {
@@ -2203,6 +2251,7 @@
   /* mfi saving program sections styles  */
   .saving-program-layout {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
   }
 
   /* saving program rules and benefit */
@@ -2299,6 +2348,7 @@
   /* mfi saving program sections styles  */
   .saving-program-layout {
     grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
   }
 }
 

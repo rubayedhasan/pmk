@@ -51,4 +51,21 @@ function showRulesBlock(elementId) {
 
 // saving program cards
 const allSavingProgramCards = document.querySelectorAll(".saving-program");
+const allSavingRuleContainer = document.querySelectorAll(
+  ".saving-program-rules-container",
+);
 toggleButtons(allSavingProgramCards, "saving-active-container");
+
+function slideRuleContainer(elementId) {
+  allSavingRuleContainer.forEach((ruleContainer) => {
+    ruleContainer.classList.add("no-display");
+    ruleContainer.classList.remove("rule-container-active");
+  });
+
+  const targetContainer = document.getElementById(elementId);
+  targetContainer.classList.remove("no-display");
+
+  setTimeout(() => {
+    targetContainer.classList.add("rule-container-active");
+  }, 10);
+}
