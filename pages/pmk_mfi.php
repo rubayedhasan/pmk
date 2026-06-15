@@ -1434,7 +1434,7 @@
                                     <!-- benefit  -->
                                     <ul class="rule-sublist">
                                         <h6 class="rule-sublist-title">Benefits</h6>
-                                        <li class="sub-rule">The member may receive loan waiver up to a maximum of BDT 5,00,000 (Five Lakh Taka).</li>
+                                        <li class="sub-rule">The member may receive loan waiver up to a maximum of BDT 15,00,000 (Fifteen Lakh Taka).</li>
                                         <li class="sub-rule">The member’s deposited savings will be returned to the member or legal nominee.</li>
                                     </ul>
 
@@ -2283,6 +2283,218 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- saving program rules and benefit  -->
+                <div class="saving-program-rules-container">
+                    <!-- saving rules  -->
+                    <aside class="saving-program-rules">
+                        <h4 class="saving-rules-title">Savings Rules</h4>
+
+                        <!-- saving rules container -->
+                        <div class="saving-rules-cards">
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Account is non-transferable
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Savings accounts are personal and non-transferable; only the nominee may withdraw funds after the member’s death, following proper verification and account closure procedures.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- saving benefits  -->
+                    <aside class=" saving-program-benefits">
+                        <h4 class="saving-rules-title">Savings Benefits</h4>
+                    </aside>
+                </div>
+
+                <!-- saving auth strip  -->
+                <div class="saving-auth-strip">
+                    <!-- strip item  -->
+                    <div class="strip-item">
+                        <div class="st-icon">🔐</div>
+                        <h6 class="st-label">Secure Deposits</h6>
+                        <p class="st-text">
+                            Your savings are protected through regulated and audited account management under Bangladesh financial law system
+                        </p>
+                    </div>
+
+                    <!-- strip item  -->
+                    <div class="strip-item">
+                        <div class="st-icon">📱</div>
+                        <h6 class="st-label">Mobile Access</h6>
+                        <p class="st-text">
+                            Make deposits via bKash or bank transfer with instant SMS confirmations received immediately always
+                        </p>
+                    </div>
+
+                    <!-- strip item  -->
+                    <div class="strip-item">
+                        <div class="st-icon">📒</div>
+                        <h6 class="st-label">Passbook System</h6>
+                        <p class="st-text">
+                            Every transaction is recorded in your passbook providing a permanent transparent financial record always
+                        </p>
+                    </div>
+
+                    <!-- strip item  -->
+                    <div class="strip-item">
+                        <div class="st-icon">💸</div>
+                        <h6 class="st-label">Quarterly Interest</h6>
+                        <p class="st-text">
+                            Interest is calculated monthly and automatically credited to your account every six months consistently
+                        </p>
+                    </div>
+
+                    <!-- strip item  -->
+                    <div class="strip-item">
+                        <div class="st-icon">🙋‍♀️</div>
+                        <h6 class="st-label">Household Stability for Women</h6>
+                        <p class="st-text">
+                            Women-led households benefit from disciplined saving habits supporting essential daily needs consistently always
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
