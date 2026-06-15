@@ -1292,6 +1292,7 @@
   transition: all 0.35s ease-in-out;
 }
 
+.saving-active-container,
 .saving-program:hover {
   border-color: rgba(0, 148, 106, 0.5);
   background-color: rgba(0, 148, 106, 0.12);
@@ -1358,7 +1359,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 56px;
   margin-top: 56px;
-  display: none;
 }
 
 .saving-rules-title {
@@ -1832,6 +1832,34 @@
   .saving-program-info {
     font-size: 0.85rem;
   }
+
+  /* saving program rules and benefit */
+  .saving-program-rules-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .saving-rules-title {
+    font-size: 1.225rem;
+  }
+
+  .saving-rule-card {
+    padding: 18px 16px;
+  }
+
+  .src-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .src-content-head {
+    font-size: 1rem;
+  }
+
+  .src-content-text {
+    font-size: 0.9rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -2051,6 +2079,36 @@
   .saving-program-info {
     font-size: 0.85rem;
   }
+
+  /* saving program rules and benefit */
+  .saving-program-rules-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .saving-rules-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .saving-rules-title {
+    font-size: 1.225rem;
+  }
+
+  .saving-rule-card {
+    padding: 18px 16px;
+  }
+
+  .src-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .src-content-head {
+    font-size: 1rem;
+  }
+
+  .src-content-text {
+    font-size: 0.9rem;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -2146,6 +2204,36 @@
   .saving-program-layout {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* saving program rules and benefit */
+  .saving-program-rules-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .saving-rules-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .saving-rules-title {
+    font-size: 1.225rem;
+  }
+
+  .saving-rule-card {
+    padding: 18px 16px;
+  }
+
+  .src-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .src-content-head {
+    font-size: 1rem;
+  }
+
+  .src-content-text {
+    font-size: 0.9rem;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -2216,4 +2304,7 @@
 
 /* responsive styles:: extra extra large devices  */
 @media (min-width: 1400px) {
+  .saving-auth-strip {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

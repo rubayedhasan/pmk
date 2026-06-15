@@ -48,3 +48,7 @@ function showRulesBlock(elementId) {
     targetBlock.classList.add("rules-block-active");
   }, 50);
 }
+
+// saving program cards
+const allSavingProgramCards = document.querySelectorAll(".saving-program");
+toggleButtons(allSavingProgramCards, "saving-active-container");

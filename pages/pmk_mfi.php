@@ -2184,7 +2184,7 @@
                 <!-- saving program  layout  -->
                 <div class="saving-program-layout">
                     <!-- saving program  COM-->
-                    <div class="saving-program">
+                    <div class="saving-program saving-active-container">
                         <figure class="sp-icon">
                             <img src="../assets/icons/piggy_bank.png" alt="piggy bank">
                         </figure>
@@ -2285,10 +2285,10 @@
                 </div>
 
                 <!-- saving program rules and benefit  -->
-                <div class="saving-program-rules-container">
+                <div id="compulsory-saving-rules" class="saving-program-rules-container ">
                     <!-- saving rules  -->
                     <aside class="saving-program-rules">
-                        <h4 class="saving-rules-title">Savings Rules</h4>
+                        <h4 class="saving-rules-title">Compulsory Savings Rules</h4>
 
                         <!-- saving rules container -->
                         <div class="saving-rules-cards">
@@ -2305,10 +2305,10 @@
                                 </div>
                                 <div class="src-content">
                                     <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                        Flexible Savings Amount
                                     </h5>
                                     <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                        Members can start saving from a minimum of 50 TK and contribute any amount based on their capacity and preference.
                                     </p>
                                 </div>
                             </div>
@@ -2326,10 +2326,10 @@
                                 </div>
                                 <div class="src-content">
                                     <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                        Flexible Compulsory Savings Period
                                     </h5>
                                     <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                        Members can continue saving for any duration based on their preference, with no fixed time limit.
                                     </p>
                                 </div>
                             </div>
@@ -2347,14 +2347,13 @@
                                 </div>
                                 <div class="src-content">
                                     <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                        Pre-Loan Compulsory Savings Requirement
                                     </h5>
                                     <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                        Before applying for a loan, members must maintain compulsory savings equal to 5% of the loan amount for the first application and 10% for the second application, fully deposited in their account.
                                     </p>
                                 </div>
                             </div>
-
                             <!-- rule card  -->
                             <div class="saving-rule-card">
                                 <div class="src-icon">
@@ -2368,31 +2367,10 @@
                                 </div>
                                 <div class="src-content">
                                     <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
+                                        Loan Closure via Savings Adjustment
                                     </h5>
                                     <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- rule card  -->
-                            <div class="saving-rule-card">
-                                <div class="src-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
-                                        <path d="M16 12l-4 -4" />
-                                        <path d="M16 12h-8" />
-                                        <path d="M12 16l4 -4" />
-                                    </svg>
-                                </div>
-                                <div class="src-content">
-                                    <h5 class="src-content-head">
-                                        Compulsory Savings cannot be withdrawn during loan tenure
-                                    </h5>
-                                    <p class="src-content-text">
-                                        Compulsory savings act as a security buffer during loan Full withdrawal allowed after loan repayment; member may withdraw remaining after keeping 10 TK.
+                                        Members can close their loan by adjusting and utilizing their total savings balance to fully settle the outstanding loan amount.
                                     </p>
                                 </div>
                             </div>
@@ -2444,6 +2422,72 @@
                     <!-- saving benefits  -->
                     <aside class=" saving-program-benefits">
                         <h4 class="saving-rules-title">Savings Benefits</h4>
+
+                        <!-- saving rules container -->
+                        <div class="saving-rules-cards">
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Savings Interest Rate
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Members’ savings earn 6% interest rate, credited periodically as per organizational policy and applied to eligible savings accounts accordingly.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Savings Interest Provision & Payment
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Organization calculates monthly interest and keeps it as provision, then automatically credits 6% interest to members’ accounts every six months.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- rule card  -->
+                            <div class="saving-rule-card">
+                                <div class="src-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
+                                        <path d="M16 12l-4 -4" />
+                                        <path d="M16 12h-8" />
+                                        <path d="M12 16l4 -4" />
+                                    </svg>
+                                </div>
+                                <div class="src-content">
+                                    <h5 class="src-content-head">
+                                        Additional Savings Benefits
+                                    </h5>
+                                    <p class="src-content-text">
+                                        Members enjoy flexible deposits, easy withdrawal options, transparent balance tracking, and eligibility advantages for future financial services and organizational support programs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
 
@@ -2499,6 +2543,16 @@
         </section>
 
 
+
+        <!-- back to top button  -->
+        <button type="button" id="backToTop" class="back-to-top-button" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-up-dashed">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 5v6m0 3v1.5m0 3v.5" />
+                <path d="M16 9l-4 -4" />
+                <path d="M8 9l4 -4" />
+            </svg>
+        </button>
     </main>
 
     <?php
@@ -2510,6 +2564,7 @@
 
     <!-- Linked custom script  -->
     <script src="../js/pmk_mfi.js"></script>
+
 
 </body>
 
