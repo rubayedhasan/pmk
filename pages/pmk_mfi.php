@@ -3135,6 +3135,137 @@
             </div>
         </section>
 
+        <!-- section:: mfi-activity  -->
+        <section id="mfi-activity">
+            <div class="container-width">
+                <!-- activity impact layout  -->
+                <div class="mfi-activity-impact-layout">
+                    <aside class="activity-module">
+                        <hgroup class="mfi-section-header">
+                            <span class="mfi-header-label">MFI Activities</span>
+                            <h3 class="mfi-header-title">Inside PMK MFI’s
+                                <br>
+                                Field-Level Activities
+                            </h3>
+                            <p class="mfi-header-description">
+                                PMK MFI delivers microfinance services, supports savings and loans, conducts field visits, and empowers underserved communities through inclusive financial development and guidance.
+                            </p>
+                        </hgroup>
+
+
+                        <!-- key Field activities  -->
+                        <div class="mfi-key-field-activities">
+                            <h5 class="key-field-activity-title">Our Key Field Activities</h5>
+
+                            <!-- activities  -->
+                            <div class="activity-pillars">
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">01</span>
+                                    <p class="ap-text">
+                                        Providing Microfinance & Savings Services
+                                    </p>
+                                    <span class="ap-icon">💰</span>
+                                </div>
+
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">02</span>
+                                    <p class="ap-text">
+                                        Supporting Livelihood Development
+                                    </p>
+                                    <span class="ap-icon">🌾</span>
+                                </div>
+
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">03</span>
+                                    <p class="ap-text">
+                                        Conducting Financial Literacy Training
+                                    </p>
+                                    <span class="ap-icon">🎓</span>
+                                </div>
+
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">04</span>
+                                    <p class="ap-text">
+                                        Promoting Health & Social Awareness
+                                    </p>
+                                    <span class="ap-icon">👩‍⚕️</span>
+                                </div>
+
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">05</span>
+                                    <p class="ap-text">
+                                        Empowering Women Through SHGs
+                                    </p>
+                                    <span class="ap-icon">👩‍👩‍👧</span>
+                                </div>
+
+                                <!-- item  -->
+                                <div class="activity-pillar">
+                                    <span class="ap-num">06</span>
+                                    <p class="ap-text">
+                                        Monitoring Progress & Measuring Impact
+                                    </p>
+                                    <span class="ap-icon">📊</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- activity impact  -->
+                    <aside id="activity-impact-board">
+                        <div class="mfi-impact-field two-cell">
+                            <h3 class="mfi-impact-head">
+                                <span id="impact-year">38</span>
+                                Years
+                            </h3>
+                            <p class="impact-label">
+                                of community microfinance work across Bangladesh
+                            </p>
+                        </div>
+                        <div class="mfi-impact-field">
+                            <h3 class="mfi-impact-head">
+                                ৳
+                                <span id="impact-loan">40,000</span>
+                                M
+                            </h3>
+                            <p class="impact-label">
+                                Loan Disbursed across Bangladesh
+                            </p>
+                        </div>
+                        <div class="mfi-impact-field">
+                            <h3 class="mfi-impact-head">
+                                <span id="impact-borrower">313,219</span>
+                            </h3>
+                            <p class="impact-label">
+                                Active Borrower across Bangladesh
+                            </p>
+                        </div>
+                        <div class="mfi-impact-field">
+                            <h3 class="mfi-impact-head">
+                                <span id="impact-district">36</span>
+                            </h3>
+                            <p class="impact-label">
+                                Active districts with field offices
+                            </p>
+                        </div>
+                        <div class="mfi-impact-field">
+                            <h3 class="mfi-impact-head">
+                                <span id="impact-village">46,003</span>
+                            </h3>
+                            <p class="impact-label">
+                                Villages directly served by PMK officers
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
 
 
         <!-- back to top button  -->

@@ -11,7 +11,8 @@
 #how-to-get-loan,
 #who-is-eligible-member,
 #about-loan,
-#mfi-saving-program {
+#mfi-saving-program,
+#mfi-activity {
   padding: 100px 0;
 }
 
@@ -1498,6 +1499,145 @@
   margin-top: 4px;
 }
 
+/* mfi activity sections styles  */
+#mfi-activity {
+  background-color: #f0f7f4;
+}
+
+.mfi-activity-impact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+/* key Field activities  */
+.mfi-key-field-activities {
+  width: 95%;
+  padding: 24px 32px;
+  margin-top: 22px;
+  border-radius: 16px;
+  background-color: var(--pmk-white);
+}
+
+.key-field-activity-title {
+  color: var(--pmk-green-dark);
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.activity-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin-top: 8px;
+}
+
+.activity-pillar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0, 148, 106, 0.18);
+}
+
+.ap-num {
+  font-style: italic;
+  display: block;
+  min-width: 18px;
+  color: rgba(0, 148, 106, 0.5);
+  font-size: 0.825rem;
+  font-weight: 500;
+  padding-top: 1px;
+  letter-spacing: 0.44px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ap-text {
+  flex: 1;
+
+  font-style: italic;
+  color: var(--pmk-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.14px;
+  line-height: normal;
+}
+
+.ap-icon {
+  display: block;
+  font-size: 1.05rem;
+  opacity: 0.55;
+  line-height: 1;
+}
+
+/* mfi impact  */
+#activity-impact-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--pmk-dark);
+  background-color: var(--pmk-dark);
+}
+
+.mfi-impact-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 24px 16px;
+  text-align: center;
+
+  transition: all 0.35s ease-in-out;
+}
+
+.mfi-impact-field:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.two-cell {
+  grid-column: span 2;
+}
+
+.mfi-impact-field:nth-child(1) {
+  border-radius: 16px 16px 0 0;
+}
+
+.mfi-impact-field:nth-child(4) {
+  border-radius: 0 0 0 16px;
+}
+
+.mfi-impact-field:nth-child(5) {
+  border-radius: 0 0 16px 0;
+}
+
+.mfi-impact-head {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, #4de8b4, #00b87f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;
@@ -1514,7 +1654,8 @@
   #how-to-get-loan,
   #who-is-eligible-member,
   #about-loan,
-  #mfi-saving-program {
+  #mfi-saving-program,
+  #mfi-activity {
     padding: 60px 0;
   }
 
@@ -1907,6 +2048,61 @@
   .src-content-text {
     font-size: 0.9rem;
   }
+
+  /* mfi activity  */
+  .mfi-activity-impact-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* key Field activities  */
+  .mfi-key-field-activities {
+    width: 100%;
+  }
+
+  .key-field-activity-title {
+    font-size: 1rem;
+  }
+
+  .ap-text {
+    font-size: 0.85rem;
+  }
+
+  .ap-icon {
+    display: block;
+    font-size: 1rem;
+  }
+
+  /* mfi impact  */
+  #activity-impact-board {
+    padding: 18px;
+    border-radius: 8px;
+  }
+
+  .mfi-impact-field {
+    gap: 4px;
+    padding: 18px 12px;
+  }
+
+  .mfi-impact-field:nth-child(1) {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .mfi-impact-field:nth-child(4) {
+    border-radius: 0 0 0 8px;
+  }
+
+  .mfi-impact-field:nth-child(5) {
+    border-radius: 0 0 8px 0;
+  }
+
+  .mfi-impact-head {
+    font-size: 1.35rem;
+  }
+
+  .impact-label {
+    font-size: 0.7rem;
+    line-height: normal;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -1915,7 +2111,8 @@
   #how-to-get-loan,
   #who-is-eligible-member,
   #about-loan,
-  #mfi-saving-program {
+  #mfi-saving-program,
+  #mfi-activity {
     padding: 80px 0;
   }
 
@@ -2157,6 +2354,26 @@
   .src-content-text {
     font-size: 0.9rem;
   }
+
+  /* mfi activity  */
+  .mfi-activity-impact-layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* key Field activities  */
+  .mfi-key-field-activities {
+    width: 100%;
+  }
+
+  /* mfi impact  */
+  .mfi-impact-head {
+    font-size: 1.55rem;
+  }
+
+  .impact-label {
+    font-size: 0.75rem;
+    line-height: normal;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -2283,6 +2500,21 @@
   .src-content-text {
     font-size: 0.9rem;
   }
+
+  /* key Field activities  */
+  .mfi-key-field-activities {
+    width: 100%;
+  }
+
+  /* mfi impact  */
+  .mfi-impact-head {
+    font-size: 1.525rem;
+  }
+
+  .impact-label {
+    font-size: 0.725rem;
+    line-height: normal;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -2349,6 +2581,11 @@
   .saving-program-layout {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px 24px;
+  }
+
+  /* key Field activities  */
+  .mfi-key-field-activities {
+    width: 100%;
   }
 }
 

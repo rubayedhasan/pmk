@@ -69,3 +69,83 @@ function slideRuleContainer(elementId) {
     targetContainer.classList.add("rule-container-active");
   }, 10);
 }
+
+/**
+ * script for count down the mfi activity impact
+ */
+// get the element
+const mfiActivityBoard = document.getElementById("activity-impact-board");
+
+// data of the glance field
+const mfiImpactData = {
+  "impact-year": 38,
+  "impact-loan": 40000,
+  "impact-borrower": 313219,
+  "impact-district": 36,
+  "impact-village": 46003,
+};
+
+// function:: calculate the number
+function countAnimation(element, target, duration = 2000) {
+  // starting time
+  let startTime = null;
+
+  //   function:: control the calculating speed
+  function animation(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+
+    // animate time
+    const progress = timestamp - startTime;
+
+    // animation steps
+    const parentage = Math.min(progress / duration, 1);
+    const eased = 1 - Math.pow(1 - parentage, 3);
+
+    // value
+    const value = Math.floor(eased * target);
+
+    // set the value in the element
+    element.innerText = value.toLocaleString();
+
+    // validation::animation running
+    if (parentage < 1) {
+      requestAnimationFrame(animation);
+    } else {
+      element.innerText = target.toLocaleString();
+    }
+  }
+
+  //   recall the animation
+  requestAnimationFrame(animation);
+}
+
+// observer method
+const observeContainer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // start counting
+        Object.keys(mfiImpactData).forEach((keyName) => {
+          const element = document.getElementById(keyName);
+          if (element) {
+            // reset
+            element.innerText = "0";
+
+            // count start
+            countAnimation(element, mfiImpactData[keyName]);
+          }
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
+);
+
+// observed parent only
+if (mfiActivityBoard) {
+  observeContainer.observe(mfiActivityBoard);
+}
