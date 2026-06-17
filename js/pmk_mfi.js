@@ -149,3 +149,22 @@ const observeContainer = new IntersectionObserver(
 if (mfiActivityBoard) {
   observeContainer.observe(mfiActivityBoard);
 }
+
+// activity slider script
+const activitySwiper = new Swiper(".activity-slider", {
+  effect: "Cube",
+  fadeEffect: {
+    crossFade: true,
+  },
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".activity-slider .swiper-pagination",
+    clickable: true,
+  },
+});

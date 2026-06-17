@@ -216,7 +216,7 @@
                             </div>
 
                             <!-- map frame  -->
-                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13nVwgFN0pMXQivQlL2CeC7wM3VNrCng&ehbc=2E312F" class="map-frame" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14589.461116750512!2d90.315068!3d23.912116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c30014ffcaaf%3A0x5b6a4b1db7b46cfb!2sPMK%20HQ!5e0!3m2!1sen!2sbd!4v1781673611097!5m2!1sen!2sbd" class="map-frame" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                             <div class="map-footer">
                                 <a href="https://www.google.com/maps/d/u/0/embed?mid=13nVwgFN0pMXQivQlL2CeC7wM3VNrCng&ehbc=2E312F" target="_blank" class="map-direct-link">

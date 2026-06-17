@@ -11,6 +11,11 @@
     <!-- Linked to shared stylesheet.php" -->
     <?php include("../includes/otherPageSharedLinks.php") ?>
 
+    <!-- Linked swiper js stylesheet  -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <!-- Linked custom stylesheet  -->
     <link rel="stylesheet" href="../styles/pmk_mfi.css">
 </head>
@@ -3263,7 +3268,382 @@
                         </div>
                     </aside>
                 </div>
+
+                <!-- activity slider  -->
+                <div class="activity-slider-container">
+                    <h4 class="asc-title">Impact Stories from the Field</h4>
+
+                    <div class="activity-slider swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="activity-slider-wrapper swiper-wrapper">
+                            <!-- 1st Slides -->
+                            <div class="swiper-slide activity-microfinance">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/images/mfi_1.png" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Empowering Communities Through Microfinance & Savings
+                                            </h4>
+
+                                            <p class="content-text">
+                                                Our work is focused on bringing real financial solutions directly to the grassroots level. Through microfinance and savings services, we have worked closely with communities to create meaningful and measurable impact in their daily lives.
+                                            </p>
+                                            <p class="content-text">
+                                                This is not just a service—it is field-based development work that has changed lives.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Delivered microloans to support small businesses, farming, and self-employment
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Helped rural families increase income through productive investment
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Built a safe system for savings to improve financial security
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Supported households in managing emergencies without falling into debt traps
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Promoted financial discipline through continuous field follow-up
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through consistent field engagement, we have created real change in people’s lives. Families are now able to generate income, save regularly, and improve their living conditions. Many have moved from financial vulnerability to stability and confidence.
+                                                </p>
+                                                <p class="content-text">
+                                                    This work reflects our core achievement—we have not only provided services, but we have created impact at the community level by empowering people to become financially independent and self-reliant.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd Slides -->
+                            <div class="swiper-slide activity-livelihood">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/images/mfi_2.jpg" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Strengthening Rural Livelihoods Through Financial Support
+                                            </h4>
+
+                                            <p class="content-text">
+                                                We is committed to strengthening the economic foundation of rural and low-income communities by supporting sustainable livelihood development through financial inclusion.
+                                            </p>
+                                            <p class="content-text">
+                                                Our focus is to ensure that people not only receive financial services, but also use them to build stable and long-term income sources.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Provide microloans for agriculture, livestock, small trade, and rural enterprises
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Support individuals in starting new income-generating activities
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Help existing small businesses expand and increase productivity
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Encourage savings to build financial security for households
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Offer continuous field-level guidance on effective loan utilization
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through consistent engagement with communities, we have helped families create reliable sources of income and reduce financial uncertainty. Many households have moved from irregular earnings to more stable livelihoods.
+                                                </p>
+                                                <p class="content-text">
+                                                    This work has contributed to improved living standards, stronger rural economies, and greater self-reliance among community members.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd Slides -->
+                            <div class="swiper-slide activity-financial-raining">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/images/mfi_3.png" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Strengthening Financial Skills for Sustainable Growth
+                                            </h4>
+
+                                            <p class="content-text">
+                                                Our work is committed to strengthening community capacity by delivering financial literacy training and skill-building programs at the grassroots level. The aim is to empower clients not only with access to financial services, but also with the knowledge and confidence to use them effectively.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Conduct financial literacy sessions on savings, budgeting, and credit management
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Train clients on responsible borrowing and productive loan use
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Strengthen household financial planning and cash-flow management skills
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Build awareness on risk management and avoiding over-indebtedness
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Support capacity building for small entrepreneurs and rural households
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through continuous training and field engagement, PMK has improved financial understanding among clients, enabling better decision-making and stronger financial discipline. Communities are now more capable of managing resources, growing small enterprises, and maintaining stable household economies.
+                                                </p>
+                                                <p class="content-text">
+                                                    This capacity-building approach has resulted in improved repayment behavior, increased savings culture, and long-term financial resilience at the community level.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4th Slides -->
+                            <div class="swiper-slide activity-microfinance">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/slider/medical_team_pmk.jpg" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Community Health & Social Development Awareness
+                                            </h4>
+
+                                            <p class="content-text">
+                                                We extends our development work beyond financial services by actively promoting health and social awareness at the grassroots level. The objective is to improve overall well-being and create more informed, resilient communities.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Conduct awareness sessions on basic health, hygiene, and sanitation
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Educate families on preventive healthcare practices and nutrition
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Promote safe drinking water and clean living environments
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Raise awareness on social issues such as child welfare and gender equality
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Encourage community participation in health and social development activities
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through continuous field engagement, PMK MFI has helped communities adopt healthier lifestyles and improved awareness of essential social and health practices. Families are now more informed about prevention, hygiene, and well-being, leading to healthier households and stronger communities.
+                                                </p>
+                                                <p class="content-text">
+                                                    This initiative has contributed to improved quality of life, reduced health risks, and greater social responsibility at the community level.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th Slides -->
+                            <div class="swiper-slide activity-livelihood">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/slider/various_project.JPG" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Empowering Women Through Collective SHG Action
+                                            </h4>
+
+                                            <p class="content-text">
+                                                PMK MFI is committed to strengthening women’s empowerment by organizing and supporting Self-Help Groups (SHGs) at the grassroots level. These groups serve as a platform for financial inclusion, collective growth, and social empowerment.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Form and support women-led SHGs in rural and semi-urban areas
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Provide microfinance access through group-based lending models
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Encourage regular savings and internal group fund management
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Conduct training on leadership, financial literacy, and entrepreneurship
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Strengthen decision-making and participation in household income activities
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through SHGs, women have gained greater financial independence and confidence in managing economic activities. Many members have started or expanded small businesses, contributing to household income and community development.
+                                                </p>
+                                                <p class="content-text">
+                                                    This initiative has enhanced women’s leadership, improved financial stability, and strengthened social empowerment at the community level.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6th Slides -->
+                            <div class="swiper-slide activity-financial-raining">
+                                <div class="activity-cards">
+                                    <figure class="activity-card-image">
+                                        <img src="../assets/images/mfi_4.png" class="ac-image" alt="mfi activity image">
+
+                                        <!-- overlay logo -->
+                                        <div class="overlay-logo">
+                                            <img src="../assets/logo/main-logo.png" class="over-img" alt="pmk logo">
+                                        </div>
+
+                                        <!-- overlay wave  -->
+                                        <div class="overlay-wave"></div>
+                                    </figure>
+                                    <div class="activity-content-container">
+                                        <div class="activity-content">
+                                            <h4 class="content-title">
+                                                Emergency Relief & Disaster Recovery Support
+                                            </h4>
+
+                                            <p class="content-text">
+                                                PMK MFI plays an active role in supporting communities during times of natural disasters and emergencies, ensuring quick assistance and financial resilience for affected families.
+                                            </p>
+
+                                            <ul class="content-lists">
+                                                <h5 class="content-sub-title">What we have done in the field:</h5>
+
+                                                <li class="content-sub-text">
+                                                    Provide emergency financial support to affected households
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Assist clients in rebuilding livelihoods after disasters
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Support recovery of small businesses and agricultural activities
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Offer flexible repayment arrangements during crisis periods
+                                                </li>
+                                                <li class="content-sub-text">
+                                                    Coordinate with local communities for rapid response and assistance
+                                                </li>
+                                            </ul>
+
+                                            <!-- ground impact  -->
+                                            <div class="ground-impact">
+                                                <h5 class="content-sub-title">Our impact on the ground:</h5>
+                                                <p class="content-text">
+                                                    Through timely intervention and field-level engagement, PMK MFI has helped vulnerable families recover faster from disasters and financial shocks. Many households have been able to restart their income activities and stabilize their living conditions.
+                                                </p>
+                                                <p class="content-text">
+                                                    This response approach has strengthened community resilience, reduced long-term economic damage, and supported faster recovery in affected areas.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
+
+
+
         </section>
 
 
@@ -3284,6 +3664,9 @@
     include("../includes/otherPageFooter.php");
     ?>
 
+
+    <!-- Linked swiperjs script  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 
     <!-- Linked custom script  -->
