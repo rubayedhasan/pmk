@@ -1,0 +1,235 @@
+/* product directory hero section styles  */
+#product-directory-hero {
+  background: linear-gradient(
+    140deg,
+    var(--pmk-dark-sublet) 0%,
+    var(--pmk-green-dark) 55%,
+    var(--pmk-green) 100%
+  );
+  padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#product-directory-hero::before,
+#product-directory-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#product-directory-hero::before {
+  width: 360px;
+  height: 360px;
+  right: -80px;
+  top: -80px;
+}
+
+#product-directory-hero::after {
+  width: 200px;
+  height: 200px;
+  right: 180px;
+  bottom: -80px;
+}
+
+.pdh-tag {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+}
+.pdh-title {
+  color: var(--pmk-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.18;
+  margin-bottom: 10px;
+}
+.pdh-text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  max-width: 500px;
+}
+
+/* loan product directory sections styles  */
+#loan-product-directory {
+  background-color: #f3faf7;
+  padding: 60px 0;
+}
+
+/* controller menu  */
+.directory-controller-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.directory-search-container {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  position: relative;
+}
+
+.directory-search-container svg {
+  color: #4d7a68;
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-search {
+  width: 100%;
+  outline: none;
+  color: var(--pmk-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 10px 14px 10px 40px;
+  border-radius: 8px;
+  border: 1px solid #b3d9cc;
+  background-color: var(--pmk-white);
+
+  transition: all 0.35s ease-in-out;
+}
+
+.input-search:focus {
+  border-color: var(--pmk-green);
+  box-shadow: 0 0 0 3px rgba(0, 148, 106, 0.13);
+}
+
+.directory-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.directory-tab {
+  color: var(--pmk-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #b3d9cc;
+  background-color: var(--pmk-white);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.35s ease-in-out;
+  text-transform: capitalize;
+}
+
+.directory-tab:hover {
+  border-color: var(--pmk-green);
+}
+
+.directory-tab-active {
+  color: var(--pmk-white);
+  border-color: var(--pmk-green);
+  background-color: var(--pmk-green);
+}
+
+/* reset footer  */
+.footer-main {
+  margin-top: 0 !important;
+}
+
+.copyright {
+  background-color: #fff !important;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  #product-directory-hero {
+    padding: 56px 0;
+  }
+
+  .pdh-tag {
+    font-size: 0.7rem;
+  }
+  .pdh-title {
+    font-size: 2rem;
+  }
+  .pdh-text {
+    font-size: 0.875rem;
+  }
+
+  /* loan product directory sections styles  */
+  #loan-product-directory {
+    padding: 32px 0 40px;
+  }
+
+  /* controller menu  */
+  .directory-controller-menu {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .directory-search-container {
+    max-width: 100%;
+  }
+
+  .input-search {
+    font-size: 0.825rem;
+  }
+
+  .directory-tab {
+    font-size: 0.825rem;
+    padding: 6px 14px;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* loan product directory sections styles  */
+  #loan-product-directory {
+    background-color: #f3faf7;
+    padding: 24px 0 40px;
+  }
+
+  /* controller menu  */
+  .directory-controller-menu {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .directory-search-container {
+    max-width: 100%;
+  }
+
+  .input-search {
+    width: 100%;
+    font-size: 0.825rem;
+  }
+
+  .directory-tabs {
+    justify-content: center;
+  }
+
+  .directory-tab {
+    font-size: 0.825rem;
+    padding: 6px 14px;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
