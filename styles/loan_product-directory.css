@@ -138,6 +138,210 @@
   background-color: var(--pmk-green);
 }
 
+/* product label  */
+.product-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 32px 0;
+}
+
+.product-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #d5ede5;
+}
+
+.label {
+  width: fit-content;
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+
+  background: #e8f3f9;
+  color: var(--pmk-blue-dark);
+  border: 1px solid #b8d5e4;
+  z-index: 1;
+}
+
+.label-main {
+  background: var(--pmk-green-light);
+  color: var(--pmk-green-dark);
+  border: 1px solid var(--border);
+}
+
+.label-other {
+  background: #e8f3f9;
+  color: var(--pmk-blue-dark);
+  border: 1px solid #b8d5e4;
+}
+
+/* table wrapper  */
+.product-table-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #d5ede5;
+  background-color: var(--pmk-white);
+  box-shadow: 0 2px 14px rgba(0, 100, 70, 0.07);
+}
+
+.scroll-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 760px;
+}
+
+thead tr {
+  background-color: var(--pmk-green-dark);
+}
+
+thead th {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+  padding: 13px 14px;
+}
+
+thead th:first-child {
+  padding-left: 20px;
+  border-radius: 0;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--pmk-green-light);
+  transition: all 0.35s ease-in-out;
+}
+
+tbody tr:hover {
+  background-color: var(--pmk-green-light);
+}
+
+tbody tr.hidden-row {
+  display: none;
+}
+
+td {
+  color: var(--pmk-dark);
+  padding: 13px 14px;
+  vertical-align: middle;
+}
+
+td:first-child {
+  padding-left: 20px;
+}
+
+.row-no {
+  color: #4d7a68;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 0.825rem;
+  color: var(--pmk-blue-dark);
+}
+
+.product-code {
+  color: #4d7a68;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.category {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--pmk-green-light);
+  color: var(--pmk-green-dark);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #e6faf4;
+  color: var(--pmk-green);
+  border: 1px solid #9fd9c6;
+  white-space: nowrap;
+}
+
+.interest-cell {
+  font-weight: 700;
+  color: var(--pmk-green-dark);
+  font-size: 14px;
+}
+
+.loan-amount-amount {
+  color: #2c4a3e;
+  font-size: 0.825rem;
+  white-space: nowrap;
+}
+
+.sep {
+  color: #4d7a68;
+  margin: 0 3px;
+}
+
+.repayment-frequency {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.frequency-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background: var(--pmk-blue-dark);
+  color: var(--pmk-white);
+  white-space: nowrap;
+}
+
+.installment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.installment-badge {
+  font-size: 0.8rem;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: var(--pmk-green-light);
+  color: var(--pmk-green-dark);
+  border: 1px solid var(--border);
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;
