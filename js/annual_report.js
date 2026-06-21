@@ -1,7 +1,10 @@
-// get the elements
-// container
+// get all needed container elements
+// inside: sidebar view panel
 const panelReportList = document.getElementById("panel-report-list");
 const reportSearchBox = document.getElementById("search-field");
+const noReportFound = document.getElementById("no-report-found");
+
+// inside: report-board
 const reportIntroTitle = document.getElementById("introTitle");
 const reportIntroText = document.getElementById("introText");
 const reportOpenButton = document.getElementById("open-report");
@@ -152,6 +155,7 @@ function selectedReport(reportIndex) {
 // report search functionality
 function searchReport(searchQuery) {
   const searchText = searchQuery.toLowerCase().trim();
+  let match = 0;
 
   //get the  report item element
   const allReportItems = document.querySelectorAll(".report");
@@ -160,10 +164,19 @@ function searchReport(searchQuery) {
       .querySelector(".report-year")
       .textContent.toLowerCase();
 
+    //   validation:: search report display
     if (!reportYear.includes(searchText)) {
       reportItem.classList.add("no-display");
     } else {
       reportItem.classList.remove("no-display");
+      match++;
+    }
+
+    // validation:: if not match then display not found
+    if (match <= 0) {
+      noReportFound.classList.remove("no-display");
+    } else {
+      noReportFound.classList.add("no-display");
     }
   });
 }

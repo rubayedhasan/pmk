@@ -48,6 +48,78 @@
             </div>
         </section>
 
+        <!-- section:: mobile report list panel -->
+        <section class="mobile-panel-report-list">
+            <button type="button" class="report-menu-button" id="reportDrawerButton" aria-label="Open report list">
+                <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+            <span class="mobile-panel-label" id="mobile-report-panel-label">
+                Select a report
+            </span>
+        </section>
+
+        <!-- section:: report drawer Mask -->
+        <section class="report-panel-mask" id="report-drawer-mask"></section>
+
+        <!-- section:: report drawer  -->
+        <section class="report-drawer" id="report-drawer">
+            <div class="report-drawer-header">
+                <h5 class="report-drawer-header-title">Annual Report</h5>
+                <button type="button" class="report-drawer-close-button" id="drawer-close-button" aria-label="Close">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- search report container  -->
+            <div class="report-searchBox-container">
+                <div class="searchBox">
+                    <span class="searching-icon">
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </span>
+                    <input type="text" name="report_search_field" id="drawer-search-field" placeholder="Search financial year…">
+                </div>
+            </div>
+
+            <!-- not found  -->
+            <div class="no-match no-display" id="no-report-found">No reports found.</div>
+
+            <!-- report view list  -->
+            <div id="drawer-report-list" class="reports"></div>
+        </section>
+
         <!-- section:: annual report display area  -->
         <section id="report-area">
             <div class="container-width">
@@ -84,11 +156,12 @@
                             </div>
                         </div>
 
+                        <!-- not found  -->
+                        <div class="no-match no-display" id="no-report-found">No reports found.</div>
+
                         <!-- report view list  -->
                         <div id="panel-report-list" class="reports"></div>
 
-                        <!-- not found  -->
-                        <div class="no-match no-display" id="no-report-found">No reports found.</div>
                     </aside>
 
 
@@ -121,7 +194,7 @@
                                         <polyline points="15 3 21 3 21 9" />
                                         <line x1="10" y1="14" x2="21" y2="3" />
                                     </svg>
-                                    <span>Open</span>
+                                    <span class="intro-btn-text">Open</span>
                                 </a>
 
                                 <!-- download button  -->
@@ -140,7 +213,7 @@
                                         <polyline points="7 10 12 15 17 10" />
                                         <line x1="12" y1="15" x2="12" y2="3" />
                                     </svg>
-                                    <span>Download PDF</span>
+                                    <span class="intro-btn-text">Download PDF</span>
                                 </a>
                             </div>
 
