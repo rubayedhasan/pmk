@@ -197,8 +197,8 @@
                             <span>Reports</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Annual Reports</a></li>
-                            <li><a class="dropdown-item" href="#">Audit Reports</a></li>
+                            <li><a class="dropdown-item" href="./pages/annual_report.php">Annual Reports</a></li>
+                            <li><a class="dropdown-item" href="./pages/audit_report.php">Audit Reports</a></li>
                         </ul>
                     </li>
 

@@ -1,3 +1,9 @@
+/* override style  */
+#product-directory-hero .container-width,
+#loan-product-directory .container-width {
+  width: 95%;
+}
+
 /* product directory hero section styles  */
 #product-directory-hero {
   background: linear-gradient(
@@ -386,6 +392,10 @@ td:first-child {
     font-size: 0.825rem;
   }
 
+  .directory-tabs {
+    gap: 8px;
+  }
+
   .directory-tab {
     font-size: 0.825rem;
     padding: 6px 14px;
@@ -436,4 +446,8 @@ td:first-child {
 
 /* responsive styles:: extra extra large devices  */
 @media (min-width: 1400px) {
+  #product-directory-hero .container-width,
+  #loan-product-directory .container-width {
+    width: 80%;
+  }
 }
