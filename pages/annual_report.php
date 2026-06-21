@@ -85,267 +85,10 @@
                         </div>
 
                         <!-- report view list  -->
-                        <div id="panel-report-list" class="reports">
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                            <div class="report ">
-                                <div class="report-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-text">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
-                                        <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
-                                        <path d="M9 12h6" />
-                                        <path d="M9 16h6" />
-                                    </svg>
-                                </div>
-                                <div class="report-body">
-                                    <div class="report-year">FY 2022-23</div>
-                                    <div class="report-size">68 pages · 4.2 MB</div>
-                                </div>
-                                <span class="report-badge latest">latest</span>
-                            </div>
-                        </div>
+                        <div id="panel-report-list" class="reports"></div>
 
                         <!-- not found  -->
-                        <div class="no-match" id="no-report-found">No reports found.</div>
+                        <div class="no-match no-display" id="no-report-found">No reports found.</div>
                     </aside>
 
 
@@ -354,7 +97,7 @@
                         <!-- report top view bar  -->
                         <div class="report-intro-bar">
                             <div class="intro-bar">
-                                <h5 class="report-intro-title" id="intro-title">Select a report to preview</h5>
+                                <h5 class="report-intro-title" id="introTitle">Select a report to preview</h5>
                                 <p class="report-intro-text" id="introText">
                                     Choose a financial year from the left panel
                                 </p>
@@ -406,10 +149,10 @@
                         <!-- report frame board  -->
                         <div class="report-frame-board">
                             <!-- report pdf iframe  -->
-                            <iframe src="../assets/annual_report/annual_report_2022-23.pdf" id="report-frame" frameborder="0" title="Annual Report PDF" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="../assets/annual_report/annual_report_2022-23.pdf" id="report-frame" class="no-display" frameborder="0" title="Annual Report PDF" allowfullscreen="" loading="lazy" fetchpriority="high" decoding="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                             <!-- loading state  -->
-                            <div class="loading-state" id="report-loading-state">
+                            <div class="loading-state no-display" id="report-loading-state">
                                 <div class="loading-spinner"></div>
                                 <h5 class="spinner-text">Loading report…</h5>
                             </div>

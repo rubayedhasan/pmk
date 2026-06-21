@@ -1,3 +1,8 @@
+/* common styles  */
+.no-display {
+  display: none !important;
+}
+
 /* override style  */
 #report-hero .container-width,
 #report-area .container-width {
@@ -233,7 +238,6 @@
   text-align: center;
   font-size: 13px;
   color: #6b7c74;
-  display: none;
 }
 
 /* report board(display box ) sections styles  */
@@ -330,24 +334,21 @@
 #report-frame {
   height: 100%;
   width: 100%;
-  display: none;
 }
 
 /* spinner  */
 .loading-state {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   text-align: center;
 
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
-  display: none;
 }
 
 .loading-spinner {
@@ -380,17 +381,15 @@
 /* empty report board container  */
 .report-board-empty {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   text-align: center;
 
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  display: none;
 }
 
 .empty-board-icon {
