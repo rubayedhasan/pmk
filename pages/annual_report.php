@@ -70,10 +70,8 @@
             </span>
         </section>
 
-        <!-- section:: report drawer Mask -->
+        <!-- section:: report drawer Mask & report drawer-->
         <section class="report-panel-mask" id="report-drawer-mask"></section>
-
-        <!-- section:: report drawer  -->
         <section class="report-drawer" id="report-drawer">
             <div class="report-drawer-header">
                 <h5 class="report-drawer-header-title">Annual Report</h5>
@@ -179,7 +177,7 @@
                             <!-- meta button  -->
                             <div class="report-meta-buttons">
                                 <!-- open button  -->
-                                <a href="" class="intro-btn intro-btn-ghost" id="open-report"
+                                <a href="" class="intro-btn intro-btn-ghost no-display" id="open-report"
                                     target="_blank">
                                     <svg
                                         width="13"
@@ -198,7 +196,7 @@
                                 </a>
 
                                 <!-- download button  -->
-                                <a href="" class="intro-btn intro-btn-solid" id="download-report"
+                                <a href="" class="intro-btn intro-btn-solid no-display" id="download-report"
                                     target="_blank" download>
                                     <svg
                                         width="13"

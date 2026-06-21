@@ -13,6 +13,16 @@ const reportFrame = document.getElementById("report-frame");
 const reportLoadingState = document.getElementById("report-loading-state");
 const emptyReportBoard = document.getElementById("empty-report-board");
 
+// inside:mobile report list panel
+const openDrawerButton = document.getElementById("reportDrawerButton");
+// inside: report drawer mask
+const reportDrawerMask = document.getElementById("report-drawer-mask");
+// inside:report drawer
+const reportDrawer = document.getElementById("report-drawer");
+const closeDrawerButton = document.getElementById("drawer-close-button");
+const drawerReportList = document.getElementById("drawer-report-list");
+const drawerSearchBox = document.getElementById("drawer-search-field");
+
 // annual report data
 const annualReport = [
   {
@@ -22,13 +32,13 @@ const annualReport = [
     badge: "latest",
     url: "../assets/annual_report/annual_report_2022-23.pdf",
   },
-  {
-    financialYear: "FY 2021-22",
-    pages: 45,
-    size: "10 MB",
-    badge: "archived",
-    url: "../assets/annual_report/po-application-form-guidelines.pdf",
-  },
+  //   {
+  //     financialYear: "FY 2021-22",
+  //     pages: 45,
+  //     size: "10 MB",
+  //     badge: "archived",
+  //     url: "../assets/annual_report/po-application-form-guidelines.pdf",
+  //   },
 ];
 
 // pdf file icon
@@ -83,7 +93,14 @@ function reportListItem(report, reportIndex) {
 // insert the html
 // insert the report list item to the sidebar: panel-report-list
 annualReport.forEach((report, index) => {
+  // insert main report list panel
   panelReportList.insertAdjacentHTML(
+    "beforeend",
+    reportListItem(report, index),
+  );
+
+  // insert drawer report list panel
+  drawerReportList.insertAdjacentHTML(
     "beforeend",
     reportListItem(report, index),
   );
@@ -140,10 +157,17 @@ function selectedReport(reportIndex) {
     reportLoadingState.classList.add("no-display");
     reportFrame.classList.remove("no-display");
   }, 500);
+
+  //   show report meta buttons
+  reportOpenButton.classList.remove("no-display");
+  reportDownloadButton.classList.remove("no-display");
+
+  //   close drawer
+  closeReportDrawer();
 }
 
 // active the report on clicking
-[panelReportList].forEach((listItem) => {
+[panelReportList, drawerReportList].forEach((listItem) => {
   listItem.addEventListener("click", (e) => {
     const reportItem = e.target.closest(".report");
     if (reportItem) {
@@ -181,6 +205,39 @@ function searchReport(searchQuery) {
   });
 }
 
+// main panel search box
 reportSearchBox.addEventListener("input", (e) => {
   searchReport(e.target.value);
+});
+
+// drawer search box
+drawerSearchBox.addEventListener("input", (e) => {
+  searchReport(e.target.value);
+});
+
+// open drawer
+function openReportDrawer() {
+  reportDrawerMask.classList.add("open");
+  reportDrawer.classList.add("open");
+}
+
+// close drawer
+function closeReportDrawer() {
+  reportDrawerMask.classList.remove("open");
+  reportDrawer.classList.remove("open");
+}
+
+// click handler open drawer
+openDrawerButton.addEventListener("click", () => {
+  openReportDrawer();
+});
+
+// click handler close drawer by close button
+closeDrawerButton.addEventListener("click", () => {
+  closeReportDrawer();
+});
+
+// click handler close drawer by mask
+reportDrawerMask.addEventListener("click", () => {
+  closeReportDrawer();
 });
