@@ -12,7 +12,7 @@
     <?php include("../includes/otherPageSharedLinks.php") ?>
 
     <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/annual_report.css">
+    <link rel="stylesheet" href="../styles/report_page.css">
 </head>
 
 
