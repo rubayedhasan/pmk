@@ -115,7 +115,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#">Governance Body</a></li>
                             <li><a class="dropdown-item" href="#">Executive Body</a></li>
-                            <li><a class="dropdown-item" href="#">Legal & Registration</a></li>
+                            <li><a class="dropdown-item" href="./pages/legal_status.php">Legal & Registration</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

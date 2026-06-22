@@ -73,7 +73,7 @@
     <nav id="navigation" class="navbar navbar-expand-lg">
         <div class="container-fluid container-width">
             <!-- brand name  -->
-            <a class="brand-name d-inline-block d-lg-none" href="./index.php">
+            <a class="brand-name d-inline-block d-lg-none" href="../index.php">
                 <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
             </a>
 
@@ -115,7 +115,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#">Governance Body</a></li>
                             <li><a class="dropdown-item" href="#">Executive Body</a></li>
-                            <li><a class="dropdown-item" href="#">Legal & Registration</a></li>
+                            <li><a class="dropdown-item" href="../pages/legal_status.php">Legal & Registration</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
