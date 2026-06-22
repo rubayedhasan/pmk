@@ -149,7 +149,8 @@
                     <!-- about aside  -->
                     <div class="about-project-aside">
                         <figure class="aside-photo">
-                            <img src="../assets/images/pj_sample_picture_1.jpg" alt="project feature image">
+                            <!-- <img src="../assets/images/pj_sample_picture_1.jpg" alt="project feature image"> -->
+                            <img src="../assets/raise/group-together.jpg" alt="project feature image">
                         </figure>
 
                         <div class="project-aside-cards">
@@ -261,7 +262,8 @@
                 <div class="beneficiaries-cards-layout">
                     <!-- 1st card  -->
                     <figure class="beneficiary-card">
-                        <img src="../assets/images/youth.jpg" alt="youth">
+                        <!-- <img src="../assets/images/youth.jpg" alt="youth"> -->
+                        <img src="../assets/raise/youth-group-2.jpg" alt="youth">
                         <figcaption class="beneficiary-card-body">
                             <span class="beneficiary-card-label">PRIMARY GROUP</span>
                             <h4 class="beneficiary-card-title">Youth & Informal Workers</h4>
@@ -276,7 +278,8 @@
 
                     <!-- 2nd card  -->
                     <figure class="beneficiary-card">
-                        <img src="../assets/images/youth_girl.jpg" alt="youth">
+                        <!-- <img src="../assets/images/youth_girl.jpg" alt="youth"> -->
+                        <img src="../assets/raise/group-learning.jpg" alt="youth">
                         <figcaption class="beneficiary-card-body">
                             <span class="beneficiary-card-label">CORE FOCUS</span>
                             <h4 class="beneficiary-card-title">Women & Girls</h4>
@@ -291,7 +294,8 @@
 
                     <!-- 3rd card  -->
                     <figure class="beneficiary-card">
-                        <img src="../assets/images/families.jpg" alt="families">
+                        <!-- <img src="../assets/images/families.jpg" alt="families"> -->
+                        <img src="../assets/raise/women.jpg" alt="families">
                         <figcaption class="beneficiary-card-body">
                             <span class="beneficiary-card-label">EXTENDED REACH</span>
                             <h4 class="beneficiary-card-title">Families & Communities</h4>
@@ -312,7 +316,8 @@
             <div class="container-width">
                 <div class="project-purpose-layout">
                     <figure class="pp-feature-image">
-                        <img src="../assets/slider/various_project.JPG" alt="training">
+                        <!-- <img src="../assets/slider/various_project.JPG" alt="training"> -->
+                        <img src="../assets/raise/youth_group.jpeg" alt=" training">
                     </figure>
 
                     <div class="pp-content-container">
@@ -556,8 +561,9 @@
 
                         <!-- card-1  -->
                         <div class="pb-feature-card card-horizon-1">
-                            <figure class="pb-feature-image">
-                                <img src="../assets/images/entrepreneur.png" alt="feature image">
+                            <figure class="pb-feature-image pb-feature-short-image">
+                                <!-- <img src="../assets/images/entrepreneur.png" alt="feature image"> -->
+                                <img src="../assets/raise/youth-entrepreneurs.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Youth Entrepreneurs</h5>
@@ -570,7 +576,8 @@
                         <!-- card-2  -->
                         <div class="pb-feature-card card-horizon-2">
                             <figure class="pb-feature-image">
-                                <img src="../assets/images/affected-shop.png" alt="feature image">
+                                <!-- <img src="../assets/images/affected-shop.png" alt="feature image"> -->
+                                <img src="../assets/raise/covid_affected_entrepreneurs.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">COVID-19 Affected Entrepreneurs</h5>
@@ -583,7 +590,8 @@
                         <!-- card-3  -->
                         <div class="pb-feature-card card-horizon-3">
                             <figure class="pb-feature-image">
-                                <img src="../assets/images/women_entrepreneurs.png" alt="feature image">
+                                <!-- <img src="../assets/images/women_entrepreneurs.png" alt="feature image"> -->
+                                <img src="../assets/raise/group-learning.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Women Entrepreneurs</h5>
@@ -595,8 +603,9 @@
 
                         <!-- card-4  -->
                         <div class="pb-feature-card card-horizon-4">
-                            <figure class="pb-feature-image">
-                                <img src="../assets/images/youth-work.png" alt="feature image">
+                            <figure class="pb-feature-image pb-feature-short-image">
+                                <!-- <img src="../assets/images/youth-work.png" alt="feature image"> -->
+                                <img src="../assets/raise/informal.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Informal Sector Workers</h5>
@@ -611,8 +620,9 @@
                     <div class="layout-bottom">
                         <!-- card-5  -->
                         <div class="pb-feature-card card-horizon-5">
-                            <figure class="pb-feature-image">
-                                <img src="../assets/images/technical_trade.jpg" alt="feature image">
+                            <figure class="pb-feature-image pb-feature-short-image">
+                                <!-- <img src="../assets/images/technical_trade.jpg" alt="feature image"> -->
+                                <img src="../assets/raise/digital.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Technical Trade Youth</h5>
@@ -625,7 +635,8 @@
                         <!-- card-6  -->
                         <div class="pb-feature-card card-horizon-6">
                             <figure class="pb-feature-image">
-                                <img src="../assets/images/digital_youth_work.jpg" alt="feature image">
+                                <!-- <img src="../assets/images/digital_youth_work.jpg" alt="feature image"> -->
+                                <img src="../assets/raise/youth-entrepreneurs.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Digital & Service Sector Youth</h5>
@@ -637,8 +648,9 @@
 
                         <!-- card-7  -->
                         <div class="pb-feature-card card-horizon-7">
-                            <figure class="pb-feature-image">
-                                <img src="../assets/images/small-shop.webp" alt="feature image">
+                            <figure class="pb-feature-image pb-feature-short-image">
+                                <!-- <img src="../assets/images/small-shop.webp" alt="feature image"> -->
+                                <img src="../assets/raise/small_business.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Small Business Owners</h5>
@@ -650,8 +662,9 @@
 
                         <!-- card-8  -->
                         <div class="pb-feature-card card-horizon-8">
-                            <figure class="pb-feature-image">
-                                <img src="../assets/images/agriculture_work.png" alt="feature image">
+                            <figure class="pb-feature-image pb-feature-short-image">
+                                <!-- <img src="../assets/images/agriculture_work.png" alt="feature image"> -->
+                                <img src="../assets/raise/agriculture.jpg" alt="feature image">
                             </figure>
                             <div>
                                 <h5 class="pb-feature-card-title">Agriculture & Livestock Workers</h5>
@@ -673,22 +686,34 @@
                     <div class="impact-grid-layout">
                         <!-- 1st item  -->
                         <div class="igl-item">
-                            <span class="igl-item-value">1200+</span>
+                            <span class="igl-item-value">
+                                <span id="project-empowered">1200</span>
+                                +
+                            </span>
                             <span class="igl-item-label">Women Empowered</span>
                         </div>
                         <!-- 2nd item  -->
                         <div class="igl-item">
-                            <span class="igl-item-value">3500+</span>
+                            <span class="igl-item-value">
+                                <span id="project-employed">3500</span>
+                                +
+                            </span>
                             <span class="igl-item-label">Youth Trained & Employed</span>
                         </div>
                         <!-- 3rd item  -->
                         <div class="igl-item">
-                            <span class="igl-item-value">100+</span>
+                            <span class="igl-item-value">
+                                <span id="project-training">100</span>
+                                +
+                            </span>
                             <span class="igl-item-label">Training & Awareness Programs Held</span>
                         </div>
                         <!-- 4th item  -->
                         <div class="igl-item">
-                            <span class="igl-item-value">59</span>
+                            <span class="igl-item-value">
+                                <span id="project-district">59</span>
+                                +
+                            </span>
                             <span class="igl-item-label">Districts Covered</span>
                         </div>
                     </div>
@@ -711,7 +736,8 @@
                         <div class="gallery-grid-layout">
                             <!-- 1st item  -->
                             <figure class="ggl-item long">
-                                <img src="../assets/images/agriculture_work.png" alt="gallery image">
+                                <!-- <img src="../assets/images/agriculture_work.png" alt="gallery image"> -->
+                                <img src="../assets/raise/gallery-1.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -724,7 +750,8 @@
 
                             <!-- 2nd item  -->
                             <figure class="ggl-item wide">
-                                <img src="../assets/images/affected-shop.png" alt="gallery image">
+                                <!-- <img src="../assets/images/affected-shop.png" alt="gallery image"> -->
+                                <img src="../assets/raise/gallery-2.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -737,7 +764,8 @@
 
                             <!-- 3rd item  -->
                             <figure class="ggl-item">
-                                <img src="../assets/images/technical_training.jpg" alt="gallery image">
+                                <!-- <img src="../assets/images/technical_training.jpg" alt="gallery image"> -->
+                                <img src="../assets/raise/digital.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -750,7 +778,8 @@
 
                             <!-- 4th item  -->
                             <figure class="ggl-item ">
-                                <img src="../assets/images/digital_youth_work.jpg" alt="gallery image">
+                                <!-- <img src="../assets/images/digital_youth_work.jpg" alt="gallery image"> -->
+                                <img src="../assets/raise/gallery-4.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -763,7 +792,8 @@
 
                             <!-- 5th item  -->
                             <figure class="ggl-item wide">
-                                <img src="../assets/images/youth-work.png" alt="gallery image">
+                                <!-- <img src="../assets/images/youth-work.png" alt="gallery image"> -->
+                                <img src="../assets/raise/group-together.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -776,7 +806,8 @@
 
                             <!-- 6th item  -->
                             <figure class="ggl-item long">
-                                <img src="../assets/images/women_entrepreneurs.png" alt="gallery image">
+                                <!-- <img src="../assets/images/women_entrepreneurs.png" alt="gallery image"> -->
+                                <img src="../assets/raise/gallery-6.jpg" alt="gallery image">
                                 <div class="ggl-overlay">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-octagon-plus">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -786,6 +817,12 @@
                                     </svg>
                                 </div>
                             </figure>
+                        </div>
+
+                        <!-- image popover container  -->
+                        <div class="image-popover">
+                            <span class="close-popover">&times;</span>
+                            <img loading="lazy" decoding="async" fetchpriority="high" src="" alt="">
                         </div>
 
                         <!-- button -->
@@ -869,6 +906,8 @@
     include("../includes/otherPageFooter.php");
     ?>
 
+    <!-- Linked custom script  -->
+    <script src="../js/project.js"></script>
 </body>
 
 </html>
