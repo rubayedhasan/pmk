@@ -1,3 +1,158 @@
+/* shared styles  */
+.exe-body-sec-header {
+  position: relative;
+  margin-bottom: 72px;
+}
+
+.exe-body-sec-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  width: 85px;
+  height: 2.5px;
+  border-radius: 50%;
+  background-color: var(--pmk-green);
+}
+
+.exe-sec-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec-lbl-eyebrow {
+  width: 35px;
+  height: 2px;
+  background-color: var(--pmk-green);
+}
+
+.sec-lbl-text {
+  color: var(--pmk-green);
+  font-size: 0.825rem;
+  font-weight: 500;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+.exe-sec-title {
+  color: var(--pmk-blue-dark);
+  font-size: 2.15rem;
+  font-weight: 700;
+  list-style: 1.2;
+  margin-top: 10px;
+}
+
+.exe-sec-description {
+  width: 100%;
+  max-width: 620px;
+  color: #5a7a6e;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-top: 6px;
+  padding-bottom: 16px;
+}
+
+/* board member card */
+.founder-card {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+
+  max-width: 70%;
+  background: var(--pmk-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border: 1px solid #e8f0ec;
+}
+
+.founder-picture {
+  flex-shrink: 0;
+  width: 240px;
+  position: relative;
+  overflow: hidden;
+  background: var(--pmk-green);
+  margin: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.founder-picture:hover {
+  background: var(--pmk-green-dark);
+}
+
+.founder-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.founder-picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(23, 111, 78, 0.55) 100%
+  );
+}
+
+/* board member details  */
+.founder-details {
+  flex: 1;
+  margin-top: 0;
+  padding: 0 24px;
+  background-color: var(--pmk-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+}
+.founder-name {
+  color: var(--pmk-blue-dark);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.founder-badge {
+  color: var(--pmk-green);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-line {
+  display: inline-block;
+  width: 48px;
+  height: 1.5px;
+  background-color: var(--pmk-green);
+}
+
+.org-name {
+  color: #5a7a6e;
+  font-size: 0.725rem;
+  font-weight: 500;
+}
+
+.founder-message {
+  color: #5a7a6e;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
 /* executive body hero section styles  */
 #executive-body-hero {
   padding: 160px 0;
@@ -128,6 +283,12 @@
   text-transform: uppercase;
 }
 
+/* org founder section  */
+#org-founder {
+  padding: 100px 0;
+  background-color: #ffffff99;
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;
@@ -141,7 +302,7 @@
 @media (max-width: 767.98px) {
   /* executive body hero section styles  */
   #executive-body-hero {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   #executive-body-hero::after {
@@ -187,7 +348,7 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* executive body hero section styles  */
   #executive-body-hero {
-    padding: 120px 0;
+    padding: 100px 0;
   }
 
   #executive-body-hero::after {
@@ -226,7 +387,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* executive body hero section styles  */
   #executive-body-hero {
-    padding: 135px 0;
+    padding: 120px 0;
   }
 }
 
@@ -234,7 +395,7 @@
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* executive body hero section styles  */
   #executive-body-hero {
-    padding: 145px 0;
+    padding: 140px 0;
   }
 }
 

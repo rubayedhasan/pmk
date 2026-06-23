@@ -70,6 +70,44 @@
                 </div>
             </div>
         </section>
+
+        <!-- section:: org founder -->
+        <section id="org-founder">
+            <div class="container-width">
+                <hgroup class="exe-body-sec-header">
+                    <!-- label -->
+                    <div class="exe-sec-label">
+                        <span class="sec-lbl-eyebrow"></span>
+                        <span class="sec-lbl-text">Inspirational Leadership</span>
+                    </div>
+                    <h3 class="exe-sec-title">Our Founder</h3>
+                    <p class="exe-sec-description">
+                        Meet the visionary whose dedication, leadership, and commitment laid the foundation for PMK’s mission and inspired lasting community impact.
+                    </p>
+                </hgroup>
+
+                <!-- founder details container  -->
+                <div class="founder-card">
+                    <figure class="founder-picture">
+                        <img src="../assets/photos/dewan_mannan_sir.png" alt="dewan mannan sir">
+                    </figure>
+                    <div class="founder-details">
+                        <h3 class="founder-name">Late. Dewan Abdul Mannan</h3>
+                        <p class="founder-badge">
+                            <span class="badge-line"></span>
+                            <span class="badge-text">Founder</span>
+                        </p>
+                        <p class="org-name">Palli Mongal Karmosuchi (PMK)</p>
+                        <p class="founder-message">
+                            Though Late. Dewan Abdul Mannan is no longer with us, his vision and values remain our guiding light. He dreamed of a compassionate and empowered society. In honoring his legacy, PMK will continue serving humanity with integrity, unity, and hope, creating lasting change for generations to come.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
     </main>
 
     <?php
