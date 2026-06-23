@@ -1,4 +1,9 @@
 /* shared styles  */
+/* org founder section  */
+#org-founder {
+  padding: 100px 0;
+}
+
 .exe-body-sec-header {
   position: relative;
   margin-bottom: 72px;
@@ -52,105 +57,6 @@
   line-height: 1.35;
   margin-top: 6px;
   padding-bottom: 16px;
-}
-
-/* board member card */
-.founder-card {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-
-  max-width: 70%;
-  background: var(--pmk-white);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  border: 1px solid #e8f0ec;
-}
-
-.founder-picture {
-  flex-shrink: 0;
-  width: 240px;
-  position: relative;
-  overflow: hidden;
-  background: var(--pmk-green);
-  margin: 0;
-  transition: all 0.35s ease-in-out;
-}
-
-.founder-picture:hover {
-  background: var(--pmk-green-dark);
-}
-
-.founder-picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-
-.founder-picture::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 60%,
-    rgba(23, 111, 78, 0.55) 100%
-  );
-}
-
-/* board member details  */
-.founder-details {
-  flex: 1;
-  margin-top: 0;
-  padding: 0 24px;
-  background-color: var(--pmk-white);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  position: relative;
-}
-.founder-name {
-  color: var(--pmk-blue-dark);
-  font-size: 1.65rem;
-  font-weight: 700;
-}
-
-.founder-badge {
-  color: var(--pmk-green);
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 6px;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.badge-line {
-  display: inline-block;
-  width: 48px;
-  height: 1.5px;
-  background-color: var(--pmk-green);
-}
-
-.org-name {
-  color: #5a7a6e;
-  font-size: 0.725rem;
-  font-weight: 500;
-}
-
-.founder-message {
-  color: #5a7a6e;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  margin-top: 16px;
 }
 
 /* executive body hero section styles  */
@@ -285,8 +191,107 @@
 
 /* org founder section  */
 #org-founder {
-  padding: 100px 0;
   background-color: #ffffff99;
+}
+
+/*  card */
+.founder-card {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+
+  max-width: 70%;
+  background: var(--pmk-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border: 1px solid #e8f0ec;
+}
+
+.founder-picture {
+  flex-shrink: 0;
+  width: 240px;
+  position: relative;
+  overflow: hidden;
+  background: var(--pmk-green);
+  margin: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.founder-picture:hover {
+  background: var(--pmk-green-dark);
+}
+
+.founder-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.founder-picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(23, 111, 78, 0.55) 100%
+  );
+}
+
+/* founder details  */
+.founder-details {
+  flex: 1;
+  margin-top: 0;
+  padding: 0 24px;
+  background-color: var(--pmk-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+}
+.founder-name {
+  color: var(--pmk-blue-dark);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.founder-badge {
+  color: var(--pmk-green);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-line {
+  display: inline-block;
+  width: 48px;
+  height: 1.5px;
+  background-color: var(--pmk-green);
+}
+
+.org-name {
+  color: #5a7a6e;
+  font-size: 0.725rem;
+  font-weight: 500;
+}
+
+.founder-message {
+  color: #5a7a6e;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 16px;
+  text-align: justify;
 }
 
 /* reset footer  */
@@ -300,9 +305,28 @@
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  /* shared styles  */
+  #org-founder {
+    padding: 80px 0;
+  }
+
+  .sec-lbl-text {
+    font-size: 0.8rem;
+  }
+
+  .exe-sec-title {
+    font-size: 1.75rem;
+  }
+
+  .exe-sec-description {
+    max-width: unset;
+    font-size: 0.9rem;
+    padding-bottom: 8px;
+  }
+
   /* executive body hero section styles  */
   #executive-body-hero {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   #executive-body-hero::after {
@@ -342,10 +366,83 @@
   .exe-meta-label {
     font-size: 0.6rem;
   }
+
+  /* founder section  */
+  /*  card */
+  .founder-card {
+    flex-direction: column;
+
+    max-width: unset;
+    border: 1px solid var(--pmk-green);
+    padding-bottom: 24px;
+  }
+
+  .founder-picture {
+    width: 200px;
+    border: 2px solid var(--pmk-green);
+    margin: 0 auto;
+  }
+
+  .founder-picture:hover {
+    border-color: var(--pmk-green-dark);
+  }
+
+  /* founder details  */
+  .founder-details {
+    margin-top: 18px;
+  }
+
+  .founder-name {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .founder-badge {
+    font-size: 0.95rem;
+    margin-top: 4px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .badge-line {
+    display: inline-block;
+    width: 48px;
+    height: 1.5px;
+    background-color: var(--pmk-green);
+  }
+
+  .org-name {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .founder-message {
+    font-size: 0.95rem;
+    margin-top: 16px;
+    text-align: justify;
+  }
 }
 
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* shared styles  */
+  #org-founder {
+    padding: 80px 0;
+  }
+
+  .exe-sec-title {
+    font-size: 1.95rem;
+  }
+
+  .exe-sec-description {
+    max-width: unset;
+    font-size: 0.95rem;
+    padding-bottom: 8px;
+  }
+
   /* executive body hero section styles  */
   #executive-body-hero {
     padding: 100px 0;
@@ -381,6 +478,64 @@
   .exe-meta-label {
     font-size: 0.6rem;
   }
+
+  /* founder section  */
+  /*  card */
+  .founder-card {
+    flex-direction: column;
+
+    max-width: unset;
+    border: 1px solid var(--pmk-green);
+    padding-bottom: 24px;
+  }
+
+  .founder-picture {
+    width: 200px;
+    border: 2px solid var(--pmk-green);
+    margin: 0 auto;
+  }
+
+  .founder-picture:hover {
+    border-color: var(--pmk-green-dark);
+  }
+
+  /* founder details  */
+  .founder-details {
+    margin-top: 18px;
+  }
+
+  .founder-name {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .founder-badge {
+    font-size: 0.95rem;
+    margin-top: 4px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .badge-line {
+    display: inline-block;
+    width: 48px;
+    height: 1.5px;
+    background-color: var(--pmk-green);
+  }
+
+  .org-name {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .founder-message {
+    font-size: 0.95rem;
+    margin-top: 16px;
+    text-align: justify;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -389,6 +544,29 @@
   #executive-body-hero {
     padding: 120px 0;
   }
+
+  /*  founder card */
+  .founder-card {
+    max-width: 80%;
+  }
+
+  .founder-name {
+    font-size: 1.45rem;
+  }
+
+  .founder-badge {
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+
+  .org-name {
+    font-size: 0.7rem;
+  }
+
+  .founder-message {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -396,6 +574,29 @@
   /* executive body hero section styles  */
   #executive-body-hero {
     padding: 140px 0;
+  }
+
+  /*  founder card */
+  .founder-card {
+    max-width: 80%;
+  }
+
+  .founder-name {
+    font-size: 1.5rem;
+  }
+
+  .founder-badge {
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+
+  .org-name {
+    font-size: 0.7rem;
+  }
+
+  .founder-message {
+    font-size: 0.9rem;
+    text-align: justify;
   }
 }
 
