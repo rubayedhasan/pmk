@@ -1,0 +1,157 @@
+/* executive body hero section styles  */
+#executive-body-hero {
+  padding: 160px 0;
+  background: url("../assets/images/board_of_directors.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  position: relative;
+  z-index: 3;
+}
+
+#executive-body-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(23, 111, 78, 0.92) 0%,
+    rgba(30, 45, 38, 0.88) 35%,
+    rgba(30, 45, 38, 0.65) 65%,
+    rgba(23, 111, 78, 0.28) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+#executive-body-hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 38px,
+    rgba(0, 148, 106, 0.09) 38px,
+    rgba(0, 148, 106, 0.09) 40px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* hero header  */
+.exe-hero-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.exe-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exe-hero-lbl-eyebrow {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--pmk-green);
+  flex-shrink: 0;
+}
+
+.exe-hero-lbl-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.775rem;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.exe-hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--pmk-white);
+  line-height: 1.25;
+  margin-top: 18px;
+}
+
+.exe-hero-text {
+  width: 100%;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+.exe-hero-meta-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 24px;
+}
+
+.exe-hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 32px;
+  margin-right: 32px;
+}
+
+.exe-hero-meta:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.exe-meta-value {
+  color: var(--pmk-white);
+  font-size: 1.65rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+}
+
+.exe-meta-label {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* reset footer  */
+.footer-main {
+  margin-top: 0 !important;
+}
+
+.copyright {
+  background-color: #fff !important;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

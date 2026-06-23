@@ -114,7 +114,7 @@
                                 <a class="dropdown-item" href="#">Success Stories & Achievements</a>
                             </li>
                             <li><a class="dropdown-item" href="#">Governance Body</a></li>
-                            <li><a class="dropdown-item" href="#">Executive Body</a></li>
+                            <li><a class="dropdown-item" href="./pages/executive_body.php">Executive Body</a></li>
                             <li><a class="dropdown-item" href="./pages/legal_status.php">Legal & Registration</a></li>
                         </ul>
                     </li>
