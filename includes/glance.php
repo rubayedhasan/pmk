@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK | At A Glance</title>
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/glance.css">
+    <link rel="stylesheet" href="../styles/glance.css">
 </head>
 
 <body>
@@ -90,8 +90,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Linked custom script  -->
-    <script src="./js/glance.js"></script>
-    <script src="./js/chart.js"></script>
+    <script src="../js/glance.js"></script>
+    <script src="../js/chart.js"></script>
 </body>
 
 </html>

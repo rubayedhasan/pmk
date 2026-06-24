@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK video Gallery</title>
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/video-gallery.css">
+    <link rel="stylesheet" href="../styles/video-gallery.css">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
 
                     <!-- main container  -->
                     <div class="main-video-container">
-                        <video src="./assets/videos/pmk_documentary_final.mp4" class="main-video" controls></video>
+                        <video src="../assets/videos/pmk_documentary_final.mp4" class="main-video" controls></video>
                         <h4 class="main-video-title">
                             <span><i class="fa-brands fa-bilibili"></i></span>
                             <span class="main-video-title-text">
@@ -54,25 +54,25 @@
 
                             <!-- 1st list  -->
                             <div class="list list-active">
-                                <video src="./assets/videos/pmk_documentary_final.mp4" class="list-video"></video>
+                                <video src="../assets/videos/pmk_documentary_final.mp4" class="list-video"></video>
                                 <h4 class="list-video-title">Documentary of PMK</h4>
                             </div>
 
                             <!-- 2nd list  -->
                             <div class="list">
-                                <video src="./assets/videos/chqanel-i_broadcast_pmk.mp4" class="list-video"></video>
+                                <video src="../assets/videos/chqanel-i_broadcast_pmk.mp4" class="list-video"></video>
                                 <h4 class="list-video-title">PMK Executive Director Featured on Channel i</h4>
                             </div>
 
                             <!-- 3rd list  -->
                             <div class="list">
-                                <video src="./assets/videos/channel-i_visit_pmk.mp4" class="list-video"></video>
+                                <video src="../assets/videos/channel-i_visit_pmk.mp4" class="list-video"></video>
                                 <h4 class="list-video-title">Documentary on PMK by Channel i</h4>
                             </div>
 
                             <!-- 4th list  -->
                             <div class="list">
-                                <video src="./assets/videos/pmk_free_medical_camp_documentary.mp4" class="list-video"></video>
+                                <video src="../assets/videos/pmk_free_medical_camp_documentary.mp4" class="list-video"></video>
                                 <h4 class="list-video-title">PMK Free Healthcare Initiative</h4>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
 
 
     <!-- Linked custom script  -->
-    <script src="./js/video.js"></script>
+    <script src="../js/video.js"></script>
 </body>
 
 </html>

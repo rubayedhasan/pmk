@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chief Executive | PMK</title>
-    <link rel="shortcut icon" href="../assets/logo/main-logo.png" type="image/x-icon">
 
     <!-- Linked to shared stylesheet.php" -->
-    <?php include("../includes/otherPageSharedLinks.php") ?>
+    <?php include("../includes/sharedLinks.php") ?>
 
     <!-- Linked custom stylesheet  -->
     <link rel="stylesheet" href="../styles/chief-executive.css">
@@ -18,7 +17,7 @@
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/otherPageNavbar.php");
+    include("../includes/navbar.php");
     ?>
 
     <!-- section::Main  -->
@@ -748,7 +747,7 @@
 
     <?php
     // Linked section:: Footer
-    include("../includes/otherPageFooter.php");
+    include("../includes/footer.php");
     ?>
 
     <!-- Linked custom script  -->

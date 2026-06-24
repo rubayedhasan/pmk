@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK Perspective</title>
     <!-- Linked custom styles  -->
-    <link rel="stylesheet" href="./styles/perspective.css">
+    <link rel="stylesheet" href="../styles/perspective.css">
 </head>
 
 <body>
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Linked custom script  -->
-    <script src="./js/perspective.js"></script>
+    <script src="../js/perspective.js"></script>
 </body>
 
 </html>

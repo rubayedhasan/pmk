@@ -2,286 +2,294 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMK MFI Field Activities</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Founder Tribute</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --pmk-green: #00946a;
+            --pmk-green-dark: #176f4e;
+            --pmk-green-dark-sublet: #1e2d26;
+            --pmk-green-light: #e6f4ef;
+
+            --pmk-blue-dark: #083d56;
+
+            --pmk-dark: #1f2933;
+            --pmk-dark-sublet: #1d2a24;
+            --pmk-white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
         }
 
         body {
-            background: #f2f2f2;
-            padding: 20px;
+            font-family: "Google Sans",
+                "Product Sans",
+                system-ui,
+                sans-serif;
+            background: #f6f9f8;
+            color: var(--pmk-dark);
         }
 
-        .slide {
-            width: 1400px;
-            height: 900px;
-            background: #faf9f4;
+        .founder-section {
+            padding: 80px 20px;
+        }
+
+        .founder-card {
+            max-width: 1300px;
             margin: auto;
-            display: flex;
-            border-radius: 10px;
+
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 70px;
+
+            background: var(--pmk-white);
+
+            border-radius: 32px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
 
-        /* LEFT SIDE */
+            padding: 60px;
 
-        .left-panel {
-            width: 48%;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, .08);
+
             position: relative;
-            padding: 25px;
-            background: #f6f5ee;
         }
 
-        .logo-section img {
-            width: 230px;
-        }
-
-        .image-wrapper {
+        .founder-card::before {
+            content: "";
             position: absolute;
-            left: 30px;
-            top: 120px;
-            width: 720px;
-            height: 650px;
-            overflow: hidden;
-            border-top-right-radius: 280px;
-            border-bottom-right-radius: 280px;
+            inset: 0;
+
+            background:
+                radial-gradient(circle at top left,
+                    rgba(0, 148, 106, .10),
+                    transparent 35%);
+
+            pointer-events: none;
         }
 
-        .image-wrapper img {
+        .founder-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-ring {
+            width: 340px;
+            height: 340px;
+            padding: 8px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(135deg,
+                    var(--pmk-green),
+                    var(--pmk-blue-dark));
+
+            box-shadow:
+                0 20px 40px rgba(0, 148, 106, .20);
+        }
+
+        .image-ring img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .orange-shape {
-            position: absolute;
-            bottom: -120px;
-            left: -100px;
-            width: 600px;
-            height: 280px;
-            background: #ef7d19;
             border-radius: 50%;
+            border: 8px solid white;
         }
 
-        /* RIGHT SIDE */
-
-        .right-panel {
-            width: 52%;
-            padding: 60px 60px 40px;
-        }
-
-        .right-panel h3 {
-            color: #0d4f44;
-            font-size: 34px;
-            font-weight: 500;
-        }
-
-        .right-panel h1 {
-            color: #0d4f44;
-            font-size: 72px;
-            line-height: 1.1;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .line {
-            width: 70px;
-            height: 4px;
-            background: #ef7d19;
-            margin-bottom: 25px;
-        }
-
-        .intro {
-            font-size: 30px;
-            line-height: 1.5;
-            color: #333;
-            margin-bottom: 35px;
-        }
-
-        .activity-card {
-            border: 1px solid #ece4d5;
-            border-radius: 18px;
-            overflow: hidden;
-            background: white;
-        }
-
-        .activity {
-            display: grid;
-            grid-template-columns: 90px 80px 1fr;
+        .section-tag {
+            display: inline-flex;
             align-items: center;
-            gap: 15px;
-            padding: 22px 25px;
-            border-bottom: 1px solid #f0eadf;
+
+            padding: 10px 18px;
+
+            border-radius: 100px;
+
+            background: var(--pmk-green-light);
+
+            color: var(--pmk-green-dark);
+
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
         }
 
-        .activity:last-child {
-            border-bottom: none;
-        }
+        .founder-content h1 {
+            margin-top: 22px;
 
-        .number {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 34px;
+            font-size: 58px;
+            line-height: 1.05;
+
+            color: var(--pmk-blue-dark);
+
             font-weight: 700;
         }
 
-        .icon {
-            font-size: 42px;
+        .designation {
+            margin-top: 20px;
+
+            color: var(--pmk-green-dark);
+
+            font-size: 20px;
+            font-weight: 500;
         }
 
-        .text {
-            font-size: 34px;
-            color: #222;
-            line-height: 1.3;
+        .divider {
+            width: 120px;
+            height: 4px;
+
+            background: var(--pmk-green);
+
+            border-radius: 50px;
+
+            margin: 30px 0;
         }
 
-        /* Colors */
+        blockquote {
+            font-size: 20px;
+            line-height: 1.9;
 
-        .orange .number,
-        .orange .icon {
-            color: #ef7d19;
+            color: var(--pmk-dark-sublet);
+
+            padding-left: 24px;
+
+            border-left: 4px solid var(--pmk-green);
         }
 
-        .orange .number {
-            border: 2px solid #f5c18d;
+        .stats {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .green .number,
-        .green .icon {
-            color: #77a93c;
+        .stat {
+            background: var(--pmk-green-light);
+
+            padding: 25px;
+
+            border-radius: 20px;
         }
 
-        .green .number {
-            border: 2px solid #c7deb0;
+        .stat h3 {
+            color: var(--pmk-blue-dark);
+            margin-bottom: 10px;
         }
 
-        .blue .number,
-        .blue .icon {
-            color: #2e86cf;
+        .stat p {
+            color: var(--pmk-dark);
+            line-height: 1.7;
         }
 
-        .blue .number {
-            border: 2px solid #c7dff5;
-        }
+        @media(max-width:992px) {
 
-        .teal .number,
-        .teal .icon {
-            color: #20a4a0;
-        }
+            .founder-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-        .teal .number {
-            border: 2px solid #bde7e5;
-        }
+            blockquote {
+                border-left: none;
+                border-top: 4px solid var(--pmk-green);
 
-        .yellow .number,
-        .yellow .icon {
-            color: #f3a006;
-        }
+                padding-left: 0;
+                padding-top: 20px;
+            }
 
-        .yellow .number {
-            border: 2px solid #f7ddb0;
-        }
+            .divider {
+                margin: 25px auto;
+            }
 
-        .purple .number,
-        .purple .icon {
-            color: #9155b5;
-        }
+            .stats {
+                grid-template-columns: 1fr;
+            }
 
-        .purple .number {
-            border: 2px solid #dcc7ea;
+            .founder-content h1 {
+                font-size: 42px;
+            }
+
+            .image-ring {
+                width: 280px;
+                height: 280px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="slide">
+    <section class="founder-section">
 
-        <!-- Left Section -->
-        <div class="left-panel">
+        <div class="founder-card">
 
-            <div class="logo-section">
-                <img src="pmk-logo.png" alt="PMK MFI Logo">
+            <div class="founder-image">
+                <div class="image-ring">
+                    <img
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
+                        alt="Founder" />
+                </div>
             </div>
 
-            <div class="image-wrapper">
-                <img src="field-activity.jpg" alt="Field Activity">
-            </div>
+            <div class="founder-content">
 
-            <div class="orange-shape"></div>
+                <span class="section-tag">
+                    Founder
+                </span>
 
-        </div>
+                <h1>
+                    Late. Dewan Abdul Mannan
+                </h1>
 
-        <!-- Right Section -->
-        <div class="right-panel">
-
-            <h3>Inside PMK MFI’s</h3>
-            <h1>Field-Level Activities</h1>
-
-            <div class="line"></div>
-
-            <p class="intro">
-                We work at the grassroots to empower communities
-                and build a better tomorrow.
-            </p>
-
-            <div class="activity-card">
-
-                <div class="activity orange">
-                    <div class="number">01</div>
-                    <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
-                    <div class="text">Providing Microfinance & Savings Services</div>
+                <div class="designation">
+                    Founder • Palli Mongal Karmosuchi (PMK)
                 </div>
 
-                <div class="activity green">
-                    <div class="number">02</div>
-                    <div class="icon"><i class="fa-solid fa-seedling"></i></div>
-                    <div class="text">Supporting Livelihood Development</div>
-                </div>
+                <div class="divider"></div>
 
-                <div class="activity blue">
-                    <div class="number">03</div>
-                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="text">Conducting Financial Literacy Training</div>
-                </div>
+                <blockquote>
+                    Though Late. Dewan Abdul Mannan is no longer with us,
+                    his vision and values remain our guiding light.
+                    He dreamed of a compassionate and empowered society.
+                    PMK continues serving humanity with integrity,
+                    unity and hope for generations to come.
+                </blockquote>
 
-                <div class="activity teal">
-                    <div class="number">04</div>
-                    <div class="icon"><i class="fa-solid fa-stethoscope"></i></div>
-                    <div class="text">Promoting Health & Social Awareness</div>
-                </div>
+                <div class="stats">
 
-                <div class="activity yellow">
-                    <div class="number">05</div>
-                    <div class="icon"><i class="fa-solid fa-users"></i></div>
-                    <div class="text">Empowering Women Through SHGs</div>
-                </div>
+                    <div class="stat">
+                        <h3>Integrity</h3>
+                        <p>Leading with honesty and responsibility.</p>
+                    </div>
 
-                <div class="activity purple">
-                    <div class="number">06</div>
-                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="text">Monitoring Progress & Measuring Impact</div>
+                    <div class="stat">
+                        <h3>Unity</h3>
+                        <p>Building stronger communities together.</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>Hope</h3>
+                        <p>Creating opportunities for future generations.</p>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 </body>
 

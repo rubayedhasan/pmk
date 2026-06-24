@@ -170,7 +170,7 @@
             <article class="activity-card">
                 <figure class="news-feature-image">
                     <a href="" class="news-feature-image-linked">
-                        <video src="./assets/videos/channel_i_feature_pmk_news update.mp4" controls></video>
+                        <video src="../assets/videos/channel_i_feature_pmk_news update.mp4" controls></video>
                     </a>
                     <figcaption class="news-posted-date">
                         May 13, 2026
@@ -200,7 +200,7 @@
             <article class="activity-card">
                 <figure class="news-feature-image">
                     <a href="" class="news-feature-image-linked">
-                        <img src="./assets/images/dummy-img-1.png" alt="news feature image">
+                        <img src="../assets/images/dummy-img-1.png" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
                         April 18, 2026
@@ -230,7 +230,7 @@
             <article class="activity-card">
                 <figure class="news-feature-image">
                     <a href="" class="news-feature-image-linked">
-                        <img src="./assets/images/dummy-img-1.png" alt="news feature image">
+                        <img src="../assets/images/dummy-img-1.png" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
                         April 18, 2026

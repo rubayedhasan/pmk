@@ -7,7 +7,7 @@
     <title>PMK | Header</title>
 
     <!-- Linked favicon -->
-    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
 
     <!-- Linked swiper-js stylesheet  -->
     <link
@@ -15,7 +15,7 @@
         href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <!-- Linked my custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/banner.css">
+    <link rel="stylesheet" href="../styles/banner.css">
 </head>
 
 <body>
@@ -29,8 +29,8 @@
                 <!-- 1st:: slide item(pmk)  -->
                 <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/Banner-1_1920by950.jpg" alt="">
-                        <!-- <img src="./assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
+                        <img src="../assets/slider/Banner-1_1920by950.jpg" alt="">
+                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
                             <!-- slider buttons  -->
@@ -42,8 +42,8 @@
                 <!-- 2nd:: slide item(hospital)  -->
                 <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/Banner-3_1920by950.jpg" alt="">
-                        <!-- <img src="./assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
+                        <img src="../assets/slider/Banner-3_1920by950.jpg" alt="">
+                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
                             <!-- slider buttons  -->
@@ -55,8 +55,8 @@
                 <!-- 3rd:: slide item(nursing)  -->
                 <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/Banner-5_1920by950.jpg" alt="">
-                        <!-- <img src="./assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
+                        <img src="../assets/slider/Banner-5_1920by950.jpg" alt="">
+                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
                             <!-- slider buttons  -->
@@ -68,8 +68,8 @@
                 <!-- 4th:: slide item(various project)  -->
                 <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/Banner-6_1920by950.jpg" alt="">
-                        <!-- <img src="./assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
+                        <img src="../assets/slider/Banner-6_1920by950.jpg" alt="">
+                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
                             <!-- slider buttons  -->
@@ -81,7 +81,7 @@
                 <!-- 5th:: slide item(wash)  -->
                 <!-- <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/wash_project.JPG" alt="">
+                        <img src="../assets/slider/wash_project.JPG" alt="">
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
 
@@ -93,7 +93,7 @@
                 <!-- 6th:: slide item(world bank)  -->
                 <!-- <div class="slider-item swiper-slide">
                     <figure class="slider-image">
-                        <img src="./assets/slider/world_bank_visitor_at_pmk.JPG" alt="">
+                        <img src="../assets/slider/world_bank_visitor_at_pmk.JPG" alt="">
                         <figcaption class="slider-content">
                             <h2 class="slider-title font-playfair">PMK Project Headline</h2>
                             <a href="" class="slider-button"><span>Read More</span></a>
@@ -120,7 +120,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- Linked my custom script  -->
-    <script src="./js/banner.js"></script>
+    <script src="../js/banner.js"></script>
 </body>
 
 </html>

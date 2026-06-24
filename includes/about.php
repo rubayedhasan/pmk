@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK | Our Story</title>
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="../styles/about.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <!-- 1st: image  -->
             <div class="image-wrapper">
                 <figure class="long-img-container shinny-effect">
-                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="./assets/images/dummy-img-3.png" alt="dummy">
+                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/images/dummy-img-3.png" alt="dummy">
                 </figure>
                 <!-- experience year -->
                 <div class="experience">
@@ -28,7 +28,7 @@
 
             <!-- 2nd: image  -->
             <figure class="wider-img-container shinny-effect">
-                <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="./assets/images/dummy-img-1.png" alt="dummy">
+                <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/images/dummy-img-1.png" alt="dummy">
             </figure>
         </section>
     </div>
@@ -53,7 +53,7 @@
                 </hgroup>
 
                 <!-- Linked vmo (vision, mission, objective) section  -->
-                <?php include_once("./includes/perspective.php") ?>
+                <?php include_once("../includes/perspective.php") ?>
 
                 <!-- about visit button  -->
                 <div class="button-container">

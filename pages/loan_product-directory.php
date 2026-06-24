@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK | Loan Products</title>
-    <link rel="shortcut icon" href="../assets/logo/main-logo.png" type="image/x-icon">
-
 
     <!-- Linked to shared stylesheet.php" -->
-    <?php include("../includes/otherPageSharedLinks.php") ?>
+    <?php include("../includes/sharedLinks.php") ?>
 
-    <link rel="stylesheet" href="../styles/index.css">
+    <!-- Linked custom stylesheet  -->
     <link rel="stylesheet" href="../styles/loan_product-directory.css">
 </head>
 
@@ -19,7 +17,7 @@
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/otherPageNavbar.php");
+    include("../includes/navbar.php");
     ?>
 
     <!-- section::Main  -->
@@ -943,7 +941,7 @@
 
     <?php
     // Linked section:: Footer
-    include("../includes/otherPageFooter.php");
+    include("../includes/footer.php");
     ?>
 
 

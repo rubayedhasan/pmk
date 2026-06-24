@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Executive of PMK</title>
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/executive.css">
+    <link rel="stylesheet" href="../styles/executive.css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                 <div class="exe-col exe-ed">
                     <!-- executive image  -->
                     <figure class="profile shinny-effect">
-                        <img src="./assets/photos/kamrun_nahar_executive_of_pmk.png" alt="ED of PMK">
+                        <img src="../assets/photos/kamrun_nahar_executive_of_pmk.png" alt="ED of PMK">
 
                         <!-- caption  -->
                         <figcaption class="info">
@@ -80,7 +80,7 @@
 
                     <!-- executive photo  -->
                     <figure class="profile shinny-effect">
-                        <img src="./assets/photos/dewan_faisal_deputy_of_pmk.png" alt="DED of PMK">
+                        <img src="../assets/photos/dewan_faisal_deputy_of_pmk.png" alt="DED of PMK">
 
                         <figcaption class="info">
                             <h4>Dewan Faisal</h4>

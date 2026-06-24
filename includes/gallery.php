@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK Gallery </title>
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/gallery.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="field">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="./assets/images/filed_operation_1.png" alt="field monitoring">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/images/filed_operation_1.png" alt="field monitoring">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -71,7 +71,7 @@
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="mfi-program">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="./assets//images/mfi_program_1.png" alt="microfinance program">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets//images/mfi_program_1.png" alt="microfinance program">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -84,7 +84,7 @@
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="training">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="./assets/slider/various_project.JPG" alt="">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/slider/various_project.JPG" alt="">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -96,7 +96,7 @@
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="field">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="./assets//images/filed_operation_2.png" alt="field operation">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets//images/filed_operation_2.png" alt="field operation">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -109,7 +109,7 @@
                         <!-- gallery item  -->
                         <div class="gallery-item" data-category="community">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="./assets/slider/medical_team_pmk.jpg" alt="">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/slider/medical_team_pmk.jpg" alt="">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -123,7 +123,7 @@
                     <!-- image popover container  -->
                     <div class="image-popover">
                         <span class="close-popover">&times;</span>
-                        <img loading="lazy" decoding="async" fetchpriority="high" src="./assets/slider/various_project.JPG" alt="">
+                        <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/slider/various_project.JPG" alt="">
                     </div>
 
                     <!-- view more button  -->
@@ -140,7 +140,7 @@
 
 
     <!-- Liked custom script  -->
-    <script src="./js/gallery.js"></script>
+    <script src="../js/gallery.js"></script>
 </body>
 
 </html>

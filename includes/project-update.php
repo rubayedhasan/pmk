@@ -173,7 +173,7 @@
             <article class="project-update-card">
                 <figure class="project-feature-image">
                     <a href="" class="project-feature-image-linked">
-                        <img src="./assets/images/project-update.png" alt="project feature image">
+                        <img src="../assets/images/project-update.png" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
                         April 20, 2026
@@ -203,7 +203,7 @@
             <article class="project-update-card">
                 <figure class="project-feature-image">
                     <a href="" class="project-feature-image-linked">
-                        <img src="./assets/images/project-update.png" alt="project feature image">
+                        <img src="../assets/images/project-update.png" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
                         April 20, 2026
@@ -233,7 +233,7 @@
             <article class="project-update-card">
                 <figure class="project-feature-image">
                     <a href="" class="project-feature-image-linked">
-                        <img src="./assets/images/project-update.png" alt="project feature image">
+                        <img src="../assets/images/project-update.png" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
                         April 20, 2026

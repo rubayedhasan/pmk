@@ -7,7 +7,7 @@
     <title>PMK Latest news </title>
 
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/recent-activities.css">
+    <link rel="stylesheet" href="../styles/recent-activities.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 </hgroup>
 
                 <!--project update container  -->
-                <?php include_once("./includes/project-update.php"); ?>
+                <?php include_once("../includes/project-update.php"); ?>
 
             </div>
         </section>
@@ -37,7 +37,7 @@
                 </hgroup>
 
                 <!-- recent activity container  -->
-                <?php include_once("./includes/latest-news.php") ?>
+                <?php include_once("../includes/latest-news.php") ?>
 
             </div>
         </section>

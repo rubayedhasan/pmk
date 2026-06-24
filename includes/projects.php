@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="../styles/projects.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/microfinance.png" alt="microfinance">
+                                    <img src="../assets/images/microfinance.png" alt="microfinance">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-coins"></i>
@@ -58,7 +58,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/raise_project.png" alt="raise project">
+                                    <img src="../assets/images/raise_project.png" alt="raise project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-people-line"></i>
@@ -76,7 +76,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/enrich_project.png" alt="enrich project">
+                                    <img src="../assets/images/enrich_project.png" alt="enrich project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-book-open-reader"></i>
@@ -94,7 +94,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/wash_project.png" alt="wash Project">
+                                    <img src="../assets/images/wash_project.png" alt="wash Project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-droplet"></i>
@@ -112,7 +112,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/adolescents_program.png" alt="Adolescent">
+                                    <img src="../assets/images/adolescents_program.png" alt="Adolescent">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-people-group"></i>
@@ -130,7 +130,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/tissue_culture_lab.png" alt="Tissue Culture Lab">
+                                    <img src="../assets/images/tissue_culture_lab.png" alt="Tissue Culture Lab">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-seedling"></i>
@@ -148,7 +148,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/community_health.png" alt="Community Health Program">
+                                    <img src="../assets/images/community_health.png" alt="Community Health Program">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-square-plus"></i>
@@ -166,7 +166,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/caregiver_project.png" alt="Caregiving Program">
+                                    <img src="../assets/images/caregiver_project.png" alt="Caregiving Program">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-heart-circle-plus"></i>
@@ -184,7 +184,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="./assets/images/smart_project_mini-garments.png" alt="SMART Project">
+                                    <img src="../assets/images/smart_project_mini-garments.png" alt="SMART Project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-lightbulb"></i>
@@ -209,7 +209,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- Linked custom script  -->
-    <script src="./js/projects.js"></script>
+    <script src="../js/projects.js"></script>
 </body>
 
 </html>

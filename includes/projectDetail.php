@@ -12,13 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="./styles/shinny-effect.css">
-    <link rel="stylesheet" href="./styles/button.css">
+    <link rel="stylesheet" href="../styles/shinny-effect.css">
+    <link rel="stylesheet" href="../styles/button.css">
 </head>
 
 <body>
     <!-- Linked section: Navbar  -->
-    <?php include_once("./navbar.php") ?>
+    <?php include_once("../navbar.php") ?>
 
     <!-- section:: Main  -->
     <main>
@@ -26,7 +26,7 @@
     </main>
 
     <!-- Linked section:: Footer  -->
-    <?php include_once("./footer.php") ?>
+    <?php include_once("../footer.php") ?>
 
 
     <!-- Linked font awesome script  -->
@@ -38,8 +38,8 @@
 
     <!-- Linked custom script  -->
 
-    <script src="./js/observer.js"></script>
-    <script src="./js/button.js"></script>
+    <script src="../js/observer.js"></script>
+    <script src="../js/button.js"></script>
 </body>
 
 </html>
