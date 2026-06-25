@@ -219,7 +219,7 @@
         </section>
 
         <!-- section:: board of directors  -->
-        <section id="board-of-directors">
+        <section id="board-of-directors" style="display: none;">
             <div class="container-width">
                 <hgroup class="exe-body-sec-header">
                     <!-- label -->

@@ -198,7 +198,6 @@
 
 /* founder card  */
 .founder-card {
-  max-width: 85%;
   margin: 0 auto;
   border-radius: 20px;
   border: 1px solid var(--pmk-green-light);
@@ -285,6 +284,8 @@
 }
 
 .fb-icon svg {
+  width: 20px;
+  height: 20px;
   stroke: var(--pmk-white);
 }
 
@@ -363,7 +364,6 @@
 .founder-picture {
   width: 240px;
   height: 240px;
-  /* background: linear-gradient(135deg, #00946a, #176f4e); */
   background-color: var(--pmk-green);
   border: 2px solid var(--pmk-green);
   border-radius: 50%;
@@ -427,7 +427,6 @@
 .founder-card-bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
 
   /* border-radius: 14px; */
   background-color: var(--pmk-green-light);
@@ -680,61 +679,110 @@
   }
 
   /* founder section  */
-  /*  card */
+  /* founder card  */
   .founder-card {
-    flex-direction: column;
-
-    max-width: unset;
-    border: 1px solid var(--pmk-green);
-    padding-bottom: 24px;
+    border-radius: 8px;
   }
 
-  .founder-picture {
-    width: 200px;
-    border: 2px solid var(--pmk-green);
-    margin: 0 auto;
+  /* founder card top  */
+  .founder-card-top {
+    flex-direction: column-reverse;
+    padding: 24px 24px 16px;
   }
 
-  .founder-picture:hover {
-    border-color: var(--pmk-green-dark);
-  }
-
-  /* founder details  */
   .founder-details {
-    margin-top: 18px;
+    flex: 1;
+    padding: 24px 0;
+    border-top: 1.5px solid var(--pmk-green);
+    border-right: none;
+  }
+
+  .founder-card-label {
+    font-size: 0.875rem;
   }
 
   .founder-name {
-    font-size: 1.35rem;
-    text-align: center;
+    font-size: 1.65rem;
+    margin-top: 16px;
   }
 
   .founder-badge {
-    font-size: 0.95rem;
-    margin-top: 4px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    gap: 4px;
+    margin-top: 8px;
   }
 
-  .badge-line {
-    display: inline-block;
-    width: 48px;
-    height: 1.5px;
-    background-color: var(--pmk-green);
+  .fb-icon {
+    padding: 3px 4px;
   }
 
-  .org-name {
-    font-size: 0.7rem;
-    text-align: center;
+  .fb-icon svg {
+    width: 15px;
+    height: 15px;
   }
 
-  .founder-message {
-    font-size: 0.95rem;
-    margin-top: 16px;
+  .fb-post {
+    font-size: 0.875rem;
+  }
+
+  .fb-org {
+    font-size: 0.725rem;
+  }
+
+  .message {
+    font-size: 0.875rem;
+    line-height: 1.5;
     text-align: justify;
+  }
+
+  /* image  */
+  .founder-picture-container {
+    flex: 1;
+  }
+
+  .outer-ring {
+    width: 220px;
+    height: 210px;
+  }
+
+  .founder-picture {
+    width: 180px;
+    height: 180px;
+  }
+
+  .founder-quote {
+    width: 100%;
+  }
+
+  /* founder card bottom  */
+  .founder-card-bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .founder-values:not(:last-child) {
+    border-right: none;
+    border-bottom: 1.5px solid #a6a7a652;
+  }
+
+  .values-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .values-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .values-content {
+    margin-top: 8px;
+  }
+
+  .values-content-title {
+    font-size: 0.95rem;
+  }
+
+  .values-content-text {
+    font-size: 0.875rem;
   }
 
   /* executive framework  */
@@ -812,61 +860,102 @@
   }
 
   /* founder section  */
-  /*  card */
-  .founder-card {
-    flex-direction: column;
-
-    max-width: unset;
-    border: 1px solid var(--pmk-green);
-    padding-bottom: 24px;
+  /* founder card top  */
+  .founder-card-top {
+    flex-direction: column-reverse;
+    padding: 24px 24px 16px;
   }
 
-  .founder-picture {
-    width: 200px;
-    border: 2px solid var(--pmk-green);
-    margin: 0 auto;
-  }
-
-  .founder-picture:hover {
-    border-color: var(--pmk-green-dark);
-  }
-
-  /* founder details  */
   .founder-details {
-    margin-top: 18px;
+    flex: 1;
+    padding: 32px 0;
+    border-top: 1.5px solid var(--pmk-green);
+    border-right: none;
   }
 
   .founder-name {
-    font-size: 1.35rem;
-    text-align: center;
+    font-size: 1.95rem;
+    margin-top: 18px;
   }
 
   .founder-badge {
-    font-size: 0.95rem;
-    margin-top: 4px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     gap: 6px;
+    margin-top: 4px;
   }
 
-  .badge-line {
-    display: inline-block;
-    width: 48px;
-    height: 1.5px;
-    background-color: var(--pmk-green);
+  .fb-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .org-name {
-    font-size: 0.7rem;
-    text-align: center;
+  .fb-post {
+    font-size: 0.875rem;
   }
 
-  .founder-message {
-    font-size: 0.95rem;
-    margin-top: 16px;
+  .fb-org {
+    font-size: 0.725rem;
+  }
+
+  .message {
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-align: justify;
+  }
+
+  /* image  */
+  .founder-picture-container {
+    flex: 1;
+  }
+
+  .outer-ring {
+    width: 220px;
+    height: 210px;
+  }
+
+  .founder-picture {
+    width: 180px;
+    height: 180px;
+  }
+
+  .founder-quote {
+    width: 100%;
+  }
+
+  /* founder card bottom  */
+  .founder-card-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founder-values:not(:last-child) {
+    border: none;
+  }
+
+  .founder-values:nth-child(2n + 1) {
+    border-right: 1.5px solid #a6a7a652;
+  }
+
+  .founder-values:nth-child(3),
+  .founder-values:last-child {
+    border-top: 1.5px solid #a6a7a652;
+  }
+
+  .values-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .values-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .values-content-title {
+    font-size: 0.98rem;
+  }
+
+  .values-content-text {
+    font-size: 0.9rem;
+    margin-top: 2px;
   }
 
   /* executive framework  */
@@ -884,25 +973,75 @@
   }
 
   /*  founder card */
-  .founder-card {
-    max-width: 80%;
+  .founder-card-top {
+    gap: 18px;
+    padding: 24px 24px 16px;
   }
 
   .founder-name {
-    font-size: 1.45rem;
+    font-size: 2rem;
+    margin-top: 16px;
   }
 
-  .founder-badge {
-    font-size: 1rem;
-    margin-top: 4px;
+  .fb-icon {
+    padding: 3px 4px;
   }
 
-  .org-name {
-    font-size: 0.7rem;
+  .fb-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .founder-message {
+  .fb-post {
+    font-size: 0.925rem;
+  }
+
+  .fb-org {
+    font-size: 0.8rem;
+  }
+
+  .message {
     font-size: 0.9rem;
+  }
+
+  .outer-ring {
+    width: 210px;
+    height: 210px;
+  }
+
+  .founder-picture {
+    width: 180px;
+    height: 180px;
+  }
+
+  .founder-quote {
+    width: 100%;
+  }
+
+  .quote {
+    font-size: 0.85rem;
+  }
+
+  .founder-values {
+    padding: 16px;
+  }
+
+  .values-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .values-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .values-content-title {
+    font-size: 0.95rem;
+  }
+
+  .values-content-text {
+    font-size: 0.875rem;
   }
 
   /* executive framework  */
@@ -920,25 +1059,14 @@
   }
 
   /*  founder card */
-  .founder-card {
-    max-width: 80%;
+  .outer-ring {
+    width: 250px;
+    height: 250px;
   }
 
-  .founder-name {
-    font-size: 1.5rem;
-  }
-
-  .founder-badge {
-    font-size: 1rem;
-    margin-top: 4px;
-  }
-
-  .org-name {
-    font-size: 0.7rem;
-  }
-
-  .founder-message {
-    font-size: 0.9rem;
+  .founder-picture {
+    width: 210px;
+    height: 210px;
   }
 
   /* executive framework  */
