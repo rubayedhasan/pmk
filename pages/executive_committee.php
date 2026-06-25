@@ -10,7 +10,7 @@
     <?php include("../includes/sharedLinks.php") ?>
 
     <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="../styles/executive_body.css">
+    <link rel="stylesheet" href="../styles/executive_committee.css">
 </head>
 
 
@@ -86,20 +86,131 @@
 
                 <!-- founder details container  -->
                 <div class="founder-card">
-                    <figure class="founder-picture">
-                        <img src="../assets/photos/dewan_mannan_sir.png" alt="dewan mannan sir">
-                    </figure>
-                    <div class="founder-details">
-                        <h3 class="founder-name">Late. Dewan Abdul Mannan</h3>
-                        <p class="founder-badge">
-                            <span class="badge-line"></span>
-                            <span class="badge-text">Founder</span>
-                        </p>
-                        <p class="org-name">Palli Mongal Karmosuchi (PMK)</p>
-                        <p class="founder-message">
-                            Though Late. Dewan Abdul Mannan is no longer with us, his vision and values remain our guiding light. He dreamed of a compassionate and empowered society. In honoring his legacy, PMK will continue serving humanity with integrity, unity, and hope, creating lasting change for generations to come.
-                        </p>
+                    <div class="founder-card-top">
+                        <!-- details -->
+                        <div class="founder-details">
+                            <span class="founder-card-label">Founder's Legacy</span>
+                            <h3 class="founder-name">
+                                Late. Dewan
+                                <br>
+                                Abdul Mannan
+                            </h3>
+                            <div class="founder-badge">
+                                <span class="fb-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        <path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                                    </svg>
+                                    </svg>
+                                </span>
+                                <span class="fb-post">Founder</span>
+                                <span class="fb-org">— Palli Mongal Karmosuchi (PMK)</span>
+                            </div>
+
+                            <div class="founder-message">
+                                <span class="quote-mark">"</span>
+                                <p class="message">Though Late. Dewan Abdul Mannan is no longer with us, his vision and values remain our guiding light. He dreamed of a compassionate and empowered society. In honoring his legacy, PMK will continue serving humanity with integrity, unity, and hope, creating lasting change for generations to come.</p>
+                            </div>
+
+                            <div class="contact-button-container">
+                                <a href="" class="contact-button">
+                                    <span class="btn-text">Read Biography</span>
+                                    <span class="btn-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right-dashed">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M5 12h.5m3 0h1.5m3 0h6" />
+                                            <path d="M15 16l4 -4" />
+                                            <path d="M15 8l4 4" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- image  -->
+                        <div class="founder-picture-container">
+                            <div class="outer-ring">
+                                <figure class="founder-picture">
+                                    <img src="../assets/photos/dewan_mannan_sir.png" alt="Late. Dewan Abdul Mannan">
+                                </figure>
+                            </div>
+                            <div class="founder-quote">
+                                <span class="quote-mark">"</span>
+                                <p class="quote">Service to humanity is the highest form of leadership.</p>
+                                <span class="quote-owner">— Dewan Abdul Mannan</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- founder card bottom  -->
+                    <div class="founder-card-bottom">
+                        <!-- values  -->
+                        <div class="founder-values">
+                            <div class="values-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                </svg>
+                            </div>
+                            <div class="values-content">
+                                <h6 class="values-content-title">Compassion</h6>
+                                <p class="values-content-text">Service to humanity with empathy and care.</p>
+                            </div>
+                        </div>
+
+                        <!-- values  -->
+                        <div class="founder-values">
+                            <div class="values-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                </svg>
+                            </div>
+                            <div class="values-content">
+                                <h6 class="values-content-title">Integrity</h6>
+                                <p class="values-content-text">
+                                    Upholding honesty, transparency and responsibility.</p>
+                            </div>
+                        </div>
+
+                        <!-- values  -->
+                        <div class="founder-values">
+                            <div class="values-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-webhook">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M4.876 13.61a4 4 0 1 0 6.124 3.39h6" />
+                                    <path d="M15.066 20.502a4 4 0 1 0 1.934 -7.502c-.706 0 -1.424 .179 -2 .5l-3 -5.5" />
+                                    <path d="M16 8a4 4 0 1 0 -8 0c0 1.506 .77 2.818 2 3.5l-3 5.5" />
+                                </svg>
+                            </div>
+                            <div class="values-content">
+                                <h6 class="values-content-title">Unity</h6>
+                                <p class="values-content-text">Working together for stronger communities.</p>
+                            </div>
+                        </div>
+
+                        <!-- values  -->
+                        <div class="founder-values">
+                            <div class="values-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-seedling">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M12 10a6 6 0 0 0 -6 -6h-3v2a6 6 0 0 0 6 6h3" />
+                                    <path d="M12 14a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3" />
+                                    <path d="M12 20l0 -10" />
+                                </svg>
+                            </div>
+                            <div class="values-content">
+                                <h6 class="values-content-title">Hope</h6>
+                                <p class="values-content-text">Creating opportunities for a better tomorrow.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

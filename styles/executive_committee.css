@@ -193,109 +193,299 @@
 
 /* org founder section  */
 #org-founder {
-  background-color: #ffffff99;
+  background-color: #ffffff;
 }
 
-/*  card */
+/* founder card  */
 .founder-card {
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-
-  max-width: 70%;
-  background: var(--pmk-white);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
   margin: 0 auto;
-  border: 1px solid #e8f0ec;
+  border-radius: 20px;
+  border: 1px solid var(--pmk-green-light);
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.founder-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background: url("../assets/images/leaf_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.45;
+}
+
+/* founder card top  */
+.founder-card-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 32px 24px;
+}
+
+.founder-details {
+  flex: 1.25;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  border-right: 1.5px solid var(--pmk-green);
+}
+
+.founder-card-label {
+  color: var(--pmk-green);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  position: relative;
+}
+
+.founder-card-label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--pmk-green);
+}
+
+.founder-name {
+  color: var(--pmk-blue-dark);
+  font-size: 2.35rem;
+  font-weight: 700;
+  margin-top: 24px;
+  line-height: 1.3;
+}
+
+.founder-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fb-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 5px;
+  border-radius: 50%;
+  background-color: var(--pmk-green);
+}
+
+.fb-icon svg {
+  stroke: var(--pmk-white);
+}
+
+.fb-post {
+  color: var(--pmk-green);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fb-org {
+  color: #5a7a6e;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.founder-message {
+  padding: 10px 0 10px 16px;
+  margin-top: 24px;
+  border-left: 3px solid var(--pmk-green);
+  margin-bottom: 20px;
+}
+
+.founder-message .quote-mark {
+  position: static;
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.message {
+  color: #5a7a6e;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.founder-details .contact-button {
+  gap: 5px;
+  color: var(--pmk-white);
+  font-size: 0.875rem;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: var(--pmk-green);
+}
+
+.founder-details .contact-button .btn-icon {
+  transition: all 0.35s ease-in-out;
+}
+
+.founder-details .contact-button:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* image  */
+.founder-picture-container {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-ring {
+  width: 280px;
+  height: 280px;
+  background: transparent;
+  border-bottom: 4px solid var(--pmk-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
 }
 
 .founder-picture {
-  flex-shrink: 0;
   width: 240px;
-  position: relative;
+  height: 240px;
+  /* background: linear-gradient(135deg, #00946a, #176f4e); */
+  background-color: var(--pmk-green);
+  border: 2px solid var(--pmk-green);
+  border-radius: 50%;
   overflow: hidden;
-  background: var(--pmk-green);
-  margin: 0;
+
   transition: all 0.35s ease-in-out;
 }
 
 .founder-picture:hover {
-  background: var(--pmk-green-dark);
+  background-color: var(--pmk-green-dark);
+  border-color: var(--pmk-green-dark);
 }
 
 .founder-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
+  object-fit: contain;
 }
 
-.founder-picture::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 60%,
-    rgba(23, 111, 78, 0.55) 100%
-  );
-}
-
-/* founder details  */
-.founder-details {
-  flex: 1;
-  margin-top: 0;
-  padding: 0 24px;
-  background-color: var(--pmk-white);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.founder-quote {
+  width: 370px;
+  padding: 14px;
+  border-radius: 4px;
+  margin: 12px auto 0;
+  border: 0.5px solid rgba(0, 148, 106, 0.09);
+  box-shadow: 0 2px 4px rgba(0, 148, 106, 0.09);
 
   position: relative;
 }
-.founder-name {
-  color: var(--pmk-blue-dark);
-  font-size: 1.65rem;
-  font-weight: 700;
-  text-transform: capitalize;
+
+.quote-mark {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  color: #00946a;
+  font-size: 1.5rem;
+  line-height: 0.5;
+  font-family: Georgia, serif;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.founder-badge {
-  color: var(--pmk-green);
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 6px;
-  text-transform: capitalize;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.badge-line {
-  display: inline-block;
-  width: 48px;
-  height: 1.5px;
-  background-color: var(--pmk-green);
-}
-
-.org-name {
+.quote {
   color: #5a7a6e;
-  font-size: 0.725rem;
-  font-weight: 500;
-}
-
-.founder-message {
-  color: #5a7a6e;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.4;
-  margin-top: 16px;
+  line-height: normal;
   text-align: justify;
+}
+
+.quote-owner {
+  display: block;
+  color: var(--pmk-green);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* founder card bottom  */
+.founder-card-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  /* border-radius: 14px; */
+  background-color: var(--pmk-green-light);
+  overflow: hidden;
+}
+
+.founder-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  transition: all 0.35s ease-in-out;
+}
+
+.founder-values:not(:last-child) {
+  border-right: 1.5px solid #a6a7a652;
+}
+
+.founder-values:hover {
+  background-color: #dff5ed;
+}
+
+.values-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  color: var(--pmk-green-dark);
+  border-radius: 50%;
+  background-color: #b6d9c82c;
+  box-shadow: 0 0 4px rgba(0, 148, 106, 0.466);
+}
+
+.values-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.values-content {
+  margin-top: 12px;
+}
+
+.values-content-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.values-content-text {
+  color: #5a7a6e;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* board of directors  */
