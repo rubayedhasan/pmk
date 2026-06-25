@@ -494,7 +494,7 @@
 .board-members-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 24px;
   max-width: 92%;
   margin: 0 auto;
 }
@@ -874,6 +874,63 @@
     font-size: 0.875rem;
   }
 
+  /* board of directors  */
+  .board-members-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+    max-width: unset;
+  }
+
+  .board-member-card {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .board-member-card:last-child {
+    width: unset;
+    grid-column: unset;
+  }
+
+  .member-card-header {
+    height: 220px;
+  }
+
+  .board-member-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card-header-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .member-card-body {
+    flex: 1;
+    padding: 18px 24px;
+    text-align: center;
+  }
+
+  .member-name {
+    font-size: 1.05rem;
+  }
+
+  .member-role-label {
+    margin-top: 8px;
+  }
+
+  .member-role-text {
+    font-size: 0.75rem;
+  }
+
+  .card-quote-mark {
+    font-size: 1.75rem;
+  }
+
+  .member-quote {
+    font-size: 0.875rem;
+  }
+
   /* executive framework  */
   .framework-layout {
     grid-template-columns: repeat(1, 1fr);
@@ -890,6 +947,12 @@
 
   .wp-text {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .board-member-card {
+    max-width: 100%;
   }
 }
 
@@ -1047,6 +1110,56 @@
     margin-top: 2px;
   }
 
+  /* board of directors  */
+  .board-members-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .board-member-card:last-child {
+    width: 50%;
+    grid-column: span 2;
+  }
+
+  .member-card-header {
+    height: 230px;
+  }
+
+  .board-member-picture {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card-header-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .member-card-body {
+    padding: 18px 24px;
+  }
+
+  .member-name {
+    font-size: 1.1rem;
+  }
+
+  .member-role-label {
+    margin-top: 6px;
+  }
+
+  .member-role-text {
+    font-size: 0.775rem;
+  }
+
+  .card-quote-mark {
+    font-size: 1.85rem;
+  }
+
+  .member-quote {
+    font-size: 0.875rem;
+  }
+
   /* executive framework  */
   .framework-layout {
     grid-template-columns: repeat(2, 1fr);
@@ -1133,6 +1246,17 @@
     font-size: 0.875rem;
   }
 
+  /* board of directors  */
+  .board-members-layout {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .board-member-card:last-child {
+    width: 50%;
+    grid-column: span 2;
+  }
+
   /* executive framework  */
   .framework-layout {
     grid-template-columns: repeat(3, 1fr);
@@ -1156,6 +1280,17 @@
   .founder-picture {
     width: 210px;
     height: 210px;
+  }
+
+  /* board of directors  */
+  .board-members-layout {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .board-member-card:last-child {
+    width: 50%;
+    grid-column: span 2;
   }
 
   /* executive framework  */
