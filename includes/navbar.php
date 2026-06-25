@@ -111,7 +111,7 @@
                             <li><a class="dropdown-item" href="">Strategic Objectives</a></li>
                             <li><a class="dropdown-item" href="">Our Founder</a></li>
                             <li><a class="dropdown-item" href="../pages/executive_committee.php">Executive Committee</a></li>
-                            <li><a class="dropdown-item" href="">General Committee</a></li>
+                            <li><a class="dropdown-item" href="../pages/general_committee.php">General Committee</a></li>
                             <li><a class="dropdown-item" href="../pages/legal_status.php">Legal & Registration</a></li>
                             <li><a class="dropdown-item" href="">Success Stories & Achievements</a></li>
                         </ul>

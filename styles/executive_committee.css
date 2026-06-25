@@ -364,17 +364,15 @@
 .founder-picture {
   width: 240px;
   height: 240px;
-  background-color: var(--pmk-green);
-  border: 2px solid var(--pmk-green);
+  background-color: #b5cfc5;
+  border: 1px solid #716c6c;
   border-radius: 50%;
   overflow: hidden;
-
   transition: all 0.35s ease-in-out;
 }
 
 .founder-picture:hover {
-  background-color: var(--pmk-green-dark);
-  border-color: var(--pmk-green-dark);
+  background-color: var(--pmk-green-light);
 }
 
 .founder-picture img {
@@ -491,6 +489,7 @@
 #board-of-directors {
   background-color: #f6f9f7;
 }
+
 .board-members-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -505,6 +504,7 @@
 
   border-radius: 20px;
   background-color: var(--pmk-white);
+  border: 0.5px solid var(--pmk-green-dark);
   box-shadow: 0 8px 32px rgba(0, 80, 50, 0.1);
 
   overflow: hidden;
@@ -551,6 +551,11 @@
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   overflow: hidden;
   z-index: 2;
+  transition: all 0.35s ease-in-out;
+}
+
+.board-member-card:hover .board-member-picture {
+  background-color: var(--pmk-green-light);
 }
 
 .board-member-picture img {
@@ -690,6 +695,44 @@
   line-height: 1.3;
   margin-top: 6px;
   text-align: justify;
+}
+
+/* general committee page styles  */
+.general-committee {
+  background-color: #fcfcfc !important;
+}
+
+.general-committee-layout {
+  max-width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.general-committee-layout .board-member-card:last-child {
+  width: 25%;
+  margin: 0 auto;
+  grid-column: span 4;
+}
+
+.general-committee-layout .member-card-header {
+  height: 230px;
+}
+
+.general-committee-layout .board-member-picture {
+  width: 160px;
+  height: 160px;
+}
+
+.general-committee-layout .member-card-body {
+  padding: 16px 24px;
+}
+
+.general-committee-layout .member-role-label {
+  margin-top: 0;
+}
+
+.general-committee-layout .member-name {
+  margin-top: 8px;
 }
 
 /* reset footer  */
@@ -948,11 +991,46 @@
   .wp-text {
     font-size: 0.9rem;
   }
+
+  /* general committee page styles  */
+  .general-committee-layout {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .general-committee-layout .board-member-card {
+    width: 80%;
+  }
+
+  .general-committee-layout .board-member-card:last-child {
+    width: 80%;
+    grid-column: unset;
+  }
+
+  .general-committee-layout .member-card-header {
+    height: 220px;
+  }
+
+  .general-committee-layout .board-member-picture {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media (max-width: 575.98px) {
   .board-member-card {
     max-width: 100%;
+  }
+
+  /* general committee page styles  */
+  .general-committee-layout .board-member-card {
+    width: 100%;
+  }
+
+  .general-committee-layout .board-member-card:last-child {
+    width: 100%;
+    grid-column: unset;
   }
 }
 
@@ -1165,6 +1243,27 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+
+  /* general committee page styles  */
+  .general-committee-layout {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .general-committee-layout .board-member-card:last-child {
+    width: 50%;
+    grid-column: span 2;
+  }
+
+  .general-committee-layout .member-card-header {
+    height: 220px;
+  }
+
+  .general-committee-layout .board-member-picture {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -1262,6 +1361,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+
+  /* general committee page styles  */
+  .general-committee-layout {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .general-committee-layout .board-member-card:last-child {
+    width: unset;
+    grid-column: unset;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -1297,6 +1408,18 @@
   .framework-layout {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+
+  /* general committee page styles  */
+  .general-committee-layout {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .general-committee-layout .board-member-card:last-child {
+    width: unset;
+    grid-column: unset;
   }
 }
 

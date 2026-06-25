@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMK | Executive Body</title>
+    <title>PMK | Executive Committee</title>
 
     <!-- Linked to shared stylesheet.php" -->
     <?php include("../includes/sharedLinks.php") ?>
