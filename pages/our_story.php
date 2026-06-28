@@ -86,6 +86,8 @@
                         </span>
                     </h4>
                 </hgroup>
+
+                <!-- pmk history description content  -->
                 <div class="pmk-journey-content">
                     <p class="pmk-journey-text">
                         Palli Mongal Karmosuchi (PMK) is a national-level development organization headquartered in Zirabo, Ashulia, approximately 20 kilometers from Dhaka. Founded in 1988 through the voluntary efforts of socially conscious youth, PMK was established with the inspiration of Dewan Abdul Mannan and under the visionary leadership of Ms. Kamrun Nahar, who continues to serve as the Chief Executive.
@@ -110,6 +112,28 @@
                     <p class="pmk-journey-text">
                         PMK MF program is being operated on a medium scale, as an independent program. Presently PMK operating 364 branches in 36 districts and 7 divisions. In order to create more employment opportunities PMK has initiated support to small entrepreneurs, so that they can expand their business and increase employments opportunities in their enterprises.
                     </p>
+                </div>
+
+                <!-- pmk mission and vision and objective  -->
+                <div class="inshort-vmo-layout">
+                    <div class="inshort-vmo">
+                        <h4 class="inshort-vmo-title">Vision</h4>
+                        <p class="inshort-vmo-text">
+                            A society which is economically productive and equitable, socially just, environmentally sound, and effectively democratic.
+                        </p>
+                    </div>
+                    <div class="inshort-vmo">
+                        <h4 class="inshort-vmo-title">Mission</h4>
+                        <p class="inshort-vmo-text">
+                            Participatory sustainable development provided institutional support to the poor (Particularly women)
+                        </p>
+                    </div>
+                    <div class="inshort-vmo">
+                        <h4 class="inshort-vmo-title">Objective </h4>
+                        <p class="inshort-vmo-text">
+                            The overall objective of PMK is to alleviate the poverty of poor families and empower women and men in social and economic aspects.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
