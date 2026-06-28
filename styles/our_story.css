@@ -69,7 +69,7 @@
 
 .story-hero-title {
   color: var(--pmk-white);
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 16px;
   line-height: 1.15;
@@ -181,4 +181,132 @@
   50% {
     transform: translateY(5px);
   }
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  /* hero  */
+  #story-hero {
+    height: 380px;
+    padding: 0px 5%;
+  }
+
+  .story-hero-content {
+    gap: 8px;
+  }
+
+  .story-hero-label {
+    font-size: 0.875rem;
+  }
+
+  .story-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .story-hero-description {
+    max-width: unset;
+    font-size: 0.875rem;
+    list-style: 1.2;
+  }
+
+  .tagline-text {
+    font-size: 1.35rem;
+  }
+
+  .story-hero-content .contact-button-container {
+    margin-top: 20px;
+  }
+
+  .story-hero-content .contact-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .scroll-down-indicator {
+    display: none;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* hero  */
+  #story-hero {
+    height: 450px;
+    padding: 0px 7%;
+  }
+
+  .story-hero-content {
+    gap: 10px;
+  }
+
+  .story-hero-label {
+    font-size: 0.875rem;
+  }
+
+  .story-hero-title {
+    font-size: 2rem;
+  }
+
+  .story-hero-description {
+    max-width: 460px;
+    font-size: 0.9rem;
+    list-style: 1.2;
+  }
+
+  .tagline-text {
+    font-size: 1.35rem;
+  }
+
+  .story-hero-content .contact-button-container {
+    margin-top: 22px;
+  }
+
+  .story-hero-content .contact-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .scroll-down-indicator {
+    display: none;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* hero  */
+  #story-hero {
+    padding: 0px 8%;
+  }
+
+  .story-hero-title {
+    font-size: 2.15rem;
+  }
+
+  .story-hero-description {
+    max-width: 520px;
+  }
+
+  .tagline-text {
+    font-family: "Caveat", cursive;
+    color: var(--pmk-green);
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* hero  */
+  #story-hero {
+    padding: 0px 9%;
+  }
+
+  .story-hero-title {
+    font-size: 2.35rem;
+  }
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
 }
