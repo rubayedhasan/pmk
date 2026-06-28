@@ -71,6 +71,48 @@
                 </span>
             </div>
         </section>
+
+        <!-- section:: who we are -->
+        <section id="who-we-are">
+            <div class="container-width">
+                <!-- section header -->
+                <hgroup class="who-we-are-header">
+                    <span class="who-we-are-label">Who We Are</span>
+                    <h4 class="who-we-are-title">
+                        From a Small Initiative to
+                        <br>
+                        <span style="color: var(--pmk-green);">
+                            A National Development Organization
+                        </span>
+                    </h4>
+                </hgroup>
+                <div class="pmk-journey-content">
+                    <p class="pmk-journey-text">
+                        Palli Mongal Karmosuchi (PMK) is a national-level development organization headquartered in Zirabo, Ashulia, approximately 20 kilometers from Dhaka. Founded in 1988 through the voluntary efforts of socially conscious youth, PMK was established with the inspiration of Dewan Abdul Mannan and under the visionary leadership of Ms. Kamrun Nahar, who continues to serve as the Chief Executive.
+                    </p>
+                    <p class="pmk-journey-text">
+                        Initially focused on providing humanitarian relief to disaster-affected communities, PMK quickly gained recognition for its effective emergency response. It was formally registered with the Directorate of Social Services in 1988 and with the NGO Affairs Bureau in 1993 to facilitate foreign funding. Over time, PMK expanded its focus to long-term development, addressing poverty and inequality through programs in education, healthcare, microfinance, skill development, and community empowerment. Now in its 38th year, PMK stands as a trusted organization committed to sustainable development, social justice, and improving the lives of marginalized populations across rural Bangladesh
+                    </p>
+
+                    <div class="pmk-sub-content">
+                        <h5 class="sub-content-label">Major Activities:</h5>
+                        <p class="pmk-journey-text">
+                            To bring self-reliance among the powerless poor women for promoting socio-economic and facilitating in establishing their human rights in the society so that they themselves can plan and implement different socio economic and environmental activities with a view to setting up an institutional framework to establish a balanced society. PMK provides the following broad services:
+                        </p>
+                        <ul class="sub-content-list">
+                            <li class="list-text">Financial intermediation through microfinance</li>
+                            <li class="list-text">Social development service</li>
+                            <li class="list-text">Micro enterprises</li>
+                            <li class="list-text">Necessity of Enterprise of Enhance Development (NEED)</li>
+                        </ul>
+                    </div>
+
+                    <p class="pmk-journey-text">
+                        PMK MF program is being operated on a medium scale, as an independent program. Presently PMK operating 364 branches in 36 districts and 7 divisions. In order to create more employment opportunities PMK has initiated support to small entrepreneurs, so that they can expand their business and increase employments opportunities in their enterprises.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php
