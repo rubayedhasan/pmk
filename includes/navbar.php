@@ -106,7 +106,7 @@
                             <span>About PMK</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Our Story</a></li>
+                            <li><a class="dropdown-item" href="../pages/our_story.php">Our Story</a></li>
                             <li><a class="dropdown-item" href="">What We Aim For</a></li>
                             <li><a class="dropdown-item" href="">Strategic Objectives</a></li>
                             <li><a class="dropdown-item" href="">Our Founder</a></li>

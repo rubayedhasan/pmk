@@ -18,7 +18,7 @@
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/otherPageNavbar.php");
+    include("../includes/navbar.php");
     ?>
 
     <!-- section::Main  -->
@@ -28,7 +28,7 @@
 
     <?php
     // Linked section:: Footer
-    include("../includes/otherPageFooter.php");
+    include("../includes/footer.php");
     ?>
 
 </body>
