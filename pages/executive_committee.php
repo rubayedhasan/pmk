@@ -264,7 +264,7 @@
                             </svg>
                             <!-- picture  -->
                             <figure class="board-member-picture">
-                                <img src="../assets/photos/sample_profile_man.png" alt="Mr. A.K.M Shirajul Islam">
+                                <img src="../assets/photos/president_shirajul_islam.png" alt="Mr. A.K.M Shirajul Islam">
                             </figure>
 
                             <div class="card-header-badge">
@@ -339,7 +339,7 @@
                             </svg>
                             <!-- picture  -->
                             <figure class="board-member-picture">
-                                <img src="../assets/photos/sample_profile_girl.png" alt="Mrs. Shaheda Hossain Chowdhury">
+                                <img src="../assets/photos/shahida.png" alt="Mrs. Shaheda Hossain Chowdhury">
                             </figure>
 
                             <div class="card-header-badge">
@@ -495,7 +495,7 @@
                             </svg>
                             <!-- picture  -->
                             <figure class="board-member-picture">
-                                <img src="../assets/photos/sample_profile_girl.png" alt="Mrs. Bilkis Bari">
+                                <img src="../assets/photos/bilkisbari.png" alt="Mrs. Bilkis Bari">
                             </figure>
 
                             <div class="card-header-badge">
@@ -646,7 +646,7 @@
                             </svg>
                             <!-- picture  -->
                             <figure class="board-member-picture">
-                                <img src="../assets/photos/sample_profile_girl.png" alt="Mrs. Suriya Shoaib">
+                                <img src="../assets/photos/suraya.png" alt="Mrs. Suriya Shoaib">
                             </figure>
 
                             <div class="card-header-badge">
@@ -722,7 +722,7 @@
                             </svg>
                             <!-- picture  -->
                             <figure class="board-member-picture">
-                                <img src="../assets/photos/sample_profile_girl.png" alt="Mrs. Afjalun Nessa Chowdhury">
+                                <img src="../assets/photos/Afzalun.png" alt="Mrs. Afjalun Nessa Chowdhury">
                             </figure>
 
                             <div class="card-header-badge">
