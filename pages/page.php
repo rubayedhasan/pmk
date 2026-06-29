@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK | Page</title>
-    <link rel="shortcut icon" href="../assets/logo/main-logo.png" type="image/x-icon">
 
 
     <!-- Linked to shared stylesheet.php" -->
-    <?php include("../includes/otherPageSharedLinks.php") ?>
-
-    <link rel="stylesheet" href="../styles/index.css">
+    <?php include("../includes/sharedLinks.php") ?>
 </head>
 
 
@@ -22,8 +19,8 @@
     ?>
 
     <!-- section::Main  -->
-    <main>
-
+    <main style="padding: 100px 10%;">
+        <p>This Page is Coming Soon...</p>
     </main>
 
     <?php

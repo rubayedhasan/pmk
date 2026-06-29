@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="contact-button-container">
-                    <a href="" class="contact-button">
+                    <a href="#story-timeline" class="contact-button">
                         <span>Explore Our Journey</span>
                         <span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right-dashed">
@@ -76,9 +76,9 @@
         <section id="who-we-are">
             <div class="container-width">
                 <!-- section header -->
-                <hgroup class="who-we-are-header">
-                    <span class="who-we-are-label">Who We Are</span>
-                    <h4 class="who-we-are-title">
+                <hgroup class="story-common-header">
+                    <span class="common-header-label">Who We Are</span>
+                    <h4 class="common-header-title">
                         From a Small Initiative to
                         <br>
                         <span style="color: var(--pmk-green);">
@@ -118,51 +118,51 @@
                 <div class="story-board-layout">
                     <!-- 1st story  -->
                     <figure class="story-figure story-figure-1">
-                        <img src="../assets/story-board/medical_team_pmk.png" alt="pmk hospital">
+                        <img src="../assets/story-board/medical_team_pmk.png" alt="pmk hospital" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Healing Lives, Restoring Hope</figcaption>
                     </figure>
                     <!-- 2nd story  -->
                     <figure class="story-figure story-figure-2">
-                        <img src="../assets/story-board/various_project.png" alt="pmk hospital">
+                        <img src="../assets/story-board/various_project.png" alt="pmk hospital" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Women Leading Change</figcaption>
                     </figure>
                     <!-- 3rd story  -->
                     <figure class="story-figure story-figure-3">
-                        <img src="../assets/story-board//smart.png" alt="smart project" style="object-position: top;">
+                        <img src="../assets/story-board//smart.png" alt="smart project" loading="lazy" fetchpriority="high" decoding="async" style="object-position: top;">
                         <figcaption class="story-text">Work with Dignity, Live with Pride</figcaption>
                     </figure>
                     <!-- 4th story  -->
                     <figure class="story-figure story-figure-4">
-                        <img src="../assets/story-board/pmk-promo-card-whiteBg.png" alt="pmk" style="object-fit: scale-down; object-position: center;">
+                        <img src="../assets/story-board/pmk-promo-card-whiteBg.png" alt="pmk" loading="lazy" fetchpriority="high" decoding="async" style="object-fit: scale-down; object-position: center;">
                     </figure>
                     <!-- 5th story  -->
                     <figure class="story-figure story-figure-5">
-                        <img src="../assets/story-board/tissue.png" alt="tissue culture lab" style="object-position: top;">
+                        <img src="../assets/story-board/tissue.png" alt="tissue culture lab" loading="lazy" fetchpriority="high" decoding="async" style="object-position: top;">
                         <figcaption class="story-text">Cultivating a Greener Tomorrow</figcaption>
                     </figure>
                     <!-- 6th story  -->
                     <figure class="story-figure story-figure-6">
-                        <img src="../assets/story-board/infont_of_pmk.png" alt="infont_of_pmk">
+                        <img src="../assets/story-board/infont_of_pmk.png" alt="infont_of_pmk" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Standing With Communities</figcaption>
                     </figure>
                     <!-- 7th story  -->
                     <figure class="story-figure story-figure-7">
-                        <img src="../assets/story-board/youth-group-2.png" alt="raise project">
+                        <img src="../assets/story-board/youth-group-2.png" alt="raise project" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Creating Opportunities, Changing Lives</figcaption>
                     </figure>
 
 
                     <!-- extra  -->
                     <figure class="story-figure story-figure-8">
-                        <img src="../assets/story-board/agriculture.jpg" alt="raise project">
+                        <img src="../assets/story-board/agriculture.jpg" alt="raise project" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Empowering Families Through Livelihoods</figcaption>
                     </figure>
                     <figure class="story-figure story-figure-9">
-                        <img src="../assets/story-board/group-together.jpg" alt="raise project" style=" object-position: center;">
+                        <img src="../assets/story-board/group-together.jpg" alt="raise project" loading="lazy" fetchpriority="high" decoding="async" style=" object-position: center;">
                         <figcaption class="story-text">Where Hope Meets Action</figcaption>
                     </figure>
                     <figure class="story-figure story-figure-10">
-                        <img src="../assets/story-board/women.jpg" alt="raise project">
+                        <img src="../assets/story-board/women.jpg" alt="raise project" loading="lazy" fetchpriority="high" decoding="async">
                         <figcaption class="story-text">Empowering Every Dream</figcaption>
                     </figure>
                 </div>
@@ -190,6 +190,629 @@
                 </div>
             </div>
         </section>
+
+        <!-- section::pmk timeline  -->
+        <section id="story-timeline">
+            <div class="container-width">
+                <!-- section header -->
+                <hgroup class="story-common-header">
+                    <span class="common-header-label">Our Journey</span>
+                    <h4 class="common-header-title">
+                        A Journey of Hope,
+                        <br>
+                        <span style="color: var(--pmk-green);">
+                            Growth & Impact
+                        </span>
+                    </h4>
+                    <p class="common-header-text">
+                        Since our beginning, every milestone reflects our commitment to empowering communities, transforming lives, and creating lasting change through compassion, innovation, and partnership.
+                    </p>
+                </hgroup>
+
+                <!-- timeline  -->
+                <div class="timeline-layout">
+
+                    <!-- 1st timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">1988 · The Beginning</span>
+                                <h4 class="timeline-card-title">A Foundation Built on Service</h4>
+                                <p class="timeline-card-text">
+                                    PMK was officially registered with the Department of Social Welfare, marking the beginning of a lifelong commitment to empowering vulnerable communities through sustainable development, social inclusion, and compassionate service across Bangladesh.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="timeline-hex">1988</div>
+                            <span class="timeline-step-label">01</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--2nd timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">1993</div>
+                            <span class="timeline-step-label">02</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">1993 · Building Partnerships</span>
+                                <h4 class="timeline-card-title">Expanding Opportunities Through Collaboration</h4>
+                                <p class="timeline-card-text">
+                                    PMK became a partner organization of PKSF, registered with the NGO Affairs Bureau, and secured international support from Asia Partnership for Human Development to strengthen women’s empowerment and community development initiatives.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">1994 · Global Support</span>
+                                <h4 class="timeline-card-title">Investing in Women's Empowerment</h4>
+                                <p class="timeline-card-text">
+                                    Financial assistance from BILANCE, The Netherlands, enabled PMK to expand women-focused development programs, creating greater opportunities for economic independence, social participation, and improved quality of life.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">1994</div>
+                            <span class="timeline-step-label">03</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--4th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">1998</div>
+                            <span class="timeline-step-label">04</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">1998 · Economic Empowerment</span>
+                                <h4 class="timeline-card-title">Supporting Entrepreneurs and Families</h4>
+                                <p class="timeline-card-text">
+                                    PMK introduced Micro-enterprise Financing to help small entrepreneurs grow sustainable businesses while launching a housing project with Bangladesh Bank support to improve safe and secure living conditions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2001 · Strategic Partnership</span>
+                                <h4 class="timeline-card-title">PMK joined CARE Bangladesh's INCOME III Project, strengthening</h4>
+                                <p class="timeline-card-text">
+                                    PMK joined CARE Bangladesh's INCOME III Project, strengthening livelihood programs, reducing poverty, and expanding opportunities for disadvantaged families through collaborative and sustainable development initiatives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2001</div>
+                            <span class="timeline-step-label">05</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--6th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2005</div>
+                            <span class="timeline-step-label">06</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2005 · Rapid Expansion</span>
+                                <h4 class="timeline-card-title">Reaching More Communities</h4>
+                                <p class="timeline-card-text">
+                                    PMK launched the PLDP-IF Project across Mymensingh with PKSF funding while expanding its branch network, enabling more underserved families to access financial services, development programs, and community support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2006 · A Permanent Home</span>
+                                <h4 class="timeline-card-title">Establishing Our Own Headquarters</h4>
+                                <p class="timeline-card-text">
+                                    PMK established its own office premises in Zirabo, Savar, creating a permanent foundation for organizational growth, improved operations, and expanded services for communities nationwide.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2006</div>
+                            <span class="timeline-step-label">07</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--8th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2007</div>
+                            <span class="timeline-step-label">08</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2007 · Strengthening Networks</span>
+                                <h4 class="timeline-card-title">New Partnerships, Greater Impact</h4>
+                                <p class="timeline-card-text">
+                                    PMK partnered with Anukul Foundation and CARE Bangladesh while completing Joint Stock Company registration, enhancing organizational capacity, transparency, and long-term sustainability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2008 · Building Capacity</span>
+                                <h4 class="timeline-card-title">Training, Recognition & Growth</h4>
+                                <p class="timeline-card-text">
+                                    PMK established a modern training center, completed registration under the Society's Act, and obtained the Microcredit Regulatory Authority license, strengthening institutional excellence and professional development.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2008</div>
+                            <span class="timeline-step-label">09</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--10th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2011</div>
+                            <span class="timeline-step-label">10</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2011 · A Proud Achievement</span>
+                                <h4 class="timeline-card-title">Recognized for Excellence</h4>
+                                <p class="timeline-card-text">
+                                    PMK earned the prestigious 'A' Category status from PKSF, recognizing years of outstanding performance, accountability, effective management, and commitment to serving communities with excellence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2012 · Caring for Women</span>
+                                <h4 class="timeline-card-title">A Safe Place to Thrive</h4>
+                                <p class="timeline-card-text">
+                                    PMK established a women's hostel accommodating 2,000 garment workers and low-income women, providing safe housing, dignity, security, and improved living conditions near their workplaces.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2012</div>
+                            <span class="timeline-step-label">11</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--12th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2013</div>
+                            <span class="timeline-step-label">12</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2013 · Digital Transformation</span>
+                                <h4 class="timeline-card-title">Smarter Systems, Better Services</h4>
+                                <p class="timeline-card-text">
+                                    PMK automated all branches and implemented software-based MIS and FIS systems, improving efficiency, transparency, faster decision-making, and enhanced service delivery for members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2014 · Preparing for Growth</span>
+                                <h4 class="timeline-card-title">Expanding Our Infrastructure</h4>
+                                <p class="timeline-card-text">
+                                    Construction began on a new multi-story building at PMK's own premises, creating additional capacity to support expanding programs, operations, and community-focused services.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2014</div>
+                            <span class="timeline-step-label">13</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--14th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2015</div>
+                            <span class="timeline-step-label">12</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2015 · Better Healthcare</span>
+                                <h4 class="timeline-card-title">Caring Beyond Development</h4>
+                                <p class="timeline-card-text">
+                                    PMK established a hospital and diagnostic center to provide affordable, quality healthcare services, ensuring members and surrounding communities received accessible medical care close to home.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 15th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2016 · Growing Reach</span>
+                                <h4 class="timeline-card-title">Expanding Our Working Areas</h4>
+                                <p class="timeline-card-text">
+                                    PMK extended its operational coverage into new regions, bringing financial inclusion, healthcare, livelihood support, and development opportunities to more underserved communities across Bangladesh.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2016</div>
+                            <span class="timeline-step-label">15</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--16th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2017</div>
+                            <span class="timeline-step-label">16</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2017 · Serving More People</span>
+                                <h4 class="timeline-card-title">Continuing Nationwide Expansion</h4>
+                                <p class="timeline-card-text">
+                                    Building on previous success, PMK further expanded its working areas, increasing access to sustainable development programs and improving the lives of thousands of families.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 17th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2018 · Celebrating Success</span>
+                                <h4 class="timeline-card-title">30 Years of Impact</h4>
+                                <p class="timeline-card-text">
+                                    PMK celebrated its 30th anniversary with Kormi Sommelon, honoring employees, partners, and communities whose dedication helped create lasting social and economic transformation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2018</div>
+                            <span class="timeline-step-label">17</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--18th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2019</div>
+                            <span class="timeline-step-label">18</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2019 · Investing in Healthcare Education</span>
+                                <h4 class="timeline-card-title">PMK Nursing College Opens</h4>
+                                <p class="timeline-card-text">
+                                    PMK inaugurated its Nursing College to prepare skilled healthcare professionals, strengthening Bangladesh's healthcare workforce while creating meaningful educational and career opportunities for young people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 19th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2020 · New Initiatives</span>
+                                <h4 class="timeline-card-title">Launching the SEP Project</h4>
+                                <p class="timeline-card-text">
+                                    PMK introduced the SEP Project, expanding its commitment to sustainable development through innovative programs designed to improve livelihoods and strengthen community resilience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2020</div>
+                            <span class="timeline-step-label">19</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--20th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2021</div>
+                            <span class="timeline-step-label">21</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2021 · Community Hospitality</span>
+                                <h4 class="timeline-card-title">Mamata Palli Resort Opens</h4>
+                                <p class="timeline-card-text">
+                                    PMK inaugurated Mamata Palli Resort, creating new opportunities for tourism, employment generation, and sustainable community-based economic development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 21th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2022 · Innovation & Technology</span>
+                                <h4 class="timeline-card-title">A New Digital Experience</h4>
+                                <p class="timeline-card-text">
+                                    PMK upgraded its Management Information System and launched a modern website, enhancing digital services, operational efficiency, transparency, and stakeholder engagement.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2022</div>
+                            <span class="timeline-step-label">21</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--22th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2023</div>
+                            <span class="timeline-step-label">22</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2023 · Expanding Impact</span>
+                                <h4 class="timeline-card-title">Launching RMTP & KGF-Sufolon</h4>
+                                <p class="timeline-card-text">
+                                    PMK introduced the RMTP and KGF-Sufolon projects, expanding support for sustainable livelihoods, economic resilience, and community development through innovative partnerships.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 23th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2024 · Empowering the Future</span>
+                                <h4 class="timeline-card-title">New Projects, New Possibilities</h4>
+                                <p class="timeline-card-text">
+                                    PMK launched the RAISE-MCP&APT and YOUTH projects, empowering young people and communities through skills development, employment opportunities, and inclusive growth initiatives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2024</div>
+                            <span class="timeline-step-label">23</span>
+                            <div class="hex-bar-line"></div>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container"></div>
+                    </div>
+
+                    <!--24th timeline item -->
+                    <div class="timeline-item">
+                        <!-- left  -->
+                        <div class="timeline-left-container"></div>
+
+                        <!-- center  -->
+                        <div class="timeline-center-container">
+                            <div class="hex-bar-line"></div>
+                            <div class="timeline-hex">2025</div>
+                            <span class="timeline-step-label">24</span>
+                        </div>
+
+                        <!-- right  -->
+                        <div class="timeline-right-container">
+                            <div class="timeline-card">
+                                <span class="timeline-card-subtitle">2025 · Smart Agriculture
+                                </span>
+                                <h4 class="timeline-card-title">Agroshor-SMART Begins Its Journey</h4>
+                                <p class="timeline-card-text">
+                                    PMK launched the Agroshor-SMART project to promote sustainable agriculture, improve farmer resilience, encourage innovation, and strengthen food security for rural communities across Bangladesh.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php
@@ -197,6 +820,9 @@
     include("../includes/footer.php");
     ?>
 
+
+    <!-- Linked custom script  -->
+    <script src="../js/our_story.js"></script>
 </body>
 
 </html>

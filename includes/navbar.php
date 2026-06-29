@@ -107,13 +107,13 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../pages/our_story.php">Our Story</a></li>
-                            <li><a class="dropdown-item" href="">What We Aim For</a></li>
-                            <li><a class="dropdown-item" href="">Strategic Objectives</a></li>
-                            <li><a class="dropdown-item" href="">Our Founder</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">What We Aim For</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Strategic Objectives</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Our Founder</a></li>
                             <li><a class="dropdown-item" href="../pages/executive_committee.php">Executive Committee</a></li>
                             <li><a class="dropdown-item" href="../pages/general_committee.php">General Committee</a></li>
                             <li><a class="dropdown-item" href="../pages/legal_status.php">Legal & Registration</a></li>
-                            <li><a class="dropdown-item" href="">Success Stories & Achievements</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Success Stories & Achievements</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -138,11 +138,11 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../pages/project.php">RAISE Project</a></li>
-                            <li><a class="dropdown-item" href="">ENRICH Project</a></li>
-                            <li><a class="dropdown-item" href="">Wash Project</a></li>
-                            <li><a class="dropdown-item" href="">SMART Project</a></li>
-                            <li><a class="dropdown-item" href="">Caregiver Program</a></li>
-                            <li><a class="dropdown-item" href="">Adolescents Program</a></li>
+                            <li><a class="dropdown-item" href="../pages/project.php">ENRICH Project</a></li>
+                            <li><a class="dropdown-item" href="../pages/project.php">Wash Project</a></li>
+                            <li><a class="dropdown-item" href="../pages/project.php">SMART Project</a></li>
+                            <li><a class="dropdown-item" href="../pages/project.php">Caregiver Program</a></li>
+                            <li><a class="dropdown-item" href="../pages/project.php">Adolescents Program</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -158,9 +158,9 @@
                             <span>Our Initiatives</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Technical Training</a></li>
-                            <li><a class="dropdown-item" href="">Tissue Culture Lab</a></li>
-                            <li><a class="dropdown-item" href="">PMK Community Health</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Technical Training</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Tissue Culture Lab</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">PMK Community Health</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -176,10 +176,10 @@
                             <span>Case Studies</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Case Study-1</a></li>
-                            <li><a class="dropdown-item" href="">Case Study-2</a></li>
-                            <li><a class="dropdown-item" href="">Case Study-3</a></li>
-                            <li><a class="dropdown-item" href="">Case Study-4</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Case Study-1</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Case Study-2</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Case Study-3</a></li>
+                            <li><a class="dropdown-item" href="../pages/page.php">Case Study-4</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
