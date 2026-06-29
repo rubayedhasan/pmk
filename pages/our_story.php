@@ -114,6 +114,59 @@
                     </p>
                 </div>
 
+                <!-- sub-section: story board  -->
+                <div class="story-board-layout">
+                    <!-- 1st story  -->
+                    <figure class="story-figure story-figure-1">
+                        <img src="../assets/story-board/medical_team_pmk.png" alt="pmk hospital">
+                        <figcaption class="story-text">Healing Lives, Restoring Hope</figcaption>
+                    </figure>
+                    <!-- 2nd story  -->
+                    <figure class="story-figure story-figure-2">
+                        <img src="../assets/story-board/various_project.png" alt="pmk hospital">
+                        <figcaption class="story-text">Women Leading Change</figcaption>
+                    </figure>
+                    <!-- 3rd story  -->
+                    <figure class="story-figure story-figure-3">
+                        <img src="../assets/story-board//smart.png" alt="smart project" style="object-position: top;">
+                        <figcaption class="story-text">Work with Dignity, Live with Pride</figcaption>
+                    </figure>
+                    <!-- 4th story  -->
+                    <figure class="story-figure story-figure-4">
+                        <img src="../assets/story-board/pmk-promo-card-whiteBg.png" alt="pmk" style="object-fit: scale-down; object-position: center;">
+                    </figure>
+                    <!-- 5th story  -->
+                    <figure class="story-figure story-figure-5">
+                        <img src="../assets/story-board/tissue.png" alt="tissue culture lab" style="object-position: top;">
+                        <figcaption class="story-text">Cultivating a Greener Tomorrow</figcaption>
+                    </figure>
+                    <!-- 6th story  -->
+                    <figure class="story-figure story-figure-6">
+                        <img src="../assets/story-board/infont_of_pmk.png" alt="infont_of_pmk">
+                        <figcaption class="story-text">Standing With Communities</figcaption>
+                    </figure>
+                    <!-- 7th story  -->
+                    <figure class="story-figure story-figure-7">
+                        <img src="../assets/story-board/youth-group-2.png" alt="raise project">
+                        <figcaption class="story-text">Creating Opportunities, Changing Lives</figcaption>
+                    </figure>
+
+
+                    <!-- extra  -->
+                    <figure class="story-figure story-figure-8">
+                        <img src="../assets/story-board/agriculture.jpg" alt="raise project">
+                        <figcaption class="story-text">Empowering Families Through Livelihoods</figcaption>
+                    </figure>
+                    <figure class="story-figure story-figure-9">
+                        <img src="../assets/story-board/group-together.jpg" alt="raise project" style=" object-position: center;">
+                        <figcaption class="story-text">Where Hope Meets Action</figcaption>
+                    </figure>
+                    <figure class="story-figure story-figure-10">
+                        <img src="../assets/story-board/women.jpg" alt="raise project">
+                        <figcaption class="story-text">Empowering Every Dream</figcaption>
+                    </figure>
+                </div>
+
                 <!-- pmk mission and vision and objective  -->
                 <div class="inshort-vmo-layout">
                     <div class="inshort-vmo">
