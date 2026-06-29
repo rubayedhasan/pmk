@@ -9,11 +9,12 @@ const timelineAppear = new IntersectionObserver(
     });
   },
   {
-    threshold: [1],
+    threshold: [0.25],
   },
 );
 
 const timelineItems = document.querySelectorAll(".timeline-item");
-timelineItems.forEach((item) => {
+timelineItems.forEach((item, idx) => {
+  //   item.style.transitionDelay = idx * 0.1 + "s";
   timelineAppear.observe(item);
 });

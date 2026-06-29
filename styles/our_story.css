@@ -447,9 +447,10 @@
 .timeline-item {
   display: grid;
   grid-template-columns: 1fr 120px 1fr;
+
   align-items: center;
   gap: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   opacity: 0;
   visibility: hidden;
@@ -467,7 +468,7 @@
 .timeline-visible.timeline-item {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0);
+  transform: none;
 }
 
 /* timeline card */
@@ -475,12 +476,13 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 14px;
-  padding: 28px 28px;
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 28px;
+  transition: all 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .timeline-card:hover {
   background-color: rgba(0, 148, 106, 0.1);
+  transform: scale(1.025);
 }
 
 .timeline-card-subtitle {
@@ -579,6 +581,7 @@
   }
 
   .common-header-text {
+    max-width: unset;
     font-size: 0.875rem;
   }
 
@@ -671,6 +674,59 @@
   .inshort-vmo-text {
     font-size: 0.875rem;
   }
+
+  /* timeline section  */
+  .timeline-layout {
+    margin-top: 48px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-left-container {
+    order: 2;
+  }
+  .timeline-item:nth-child(odd) .timeline-center-container {
+    order: 1;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-right-container,
+  .timeline-item:nth-child(even) .timeline-left-container {
+    display: none;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .timeline-card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .timeline-card-title {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .timeline-card-text {
+    font-size: 0.8rem;
+    line-height: normal;
+    text-align: justify;
+  }
+
+  .timeline-hex {
+    width: 48px;
+    height: 48px;
+    font-size: 0.675rem;
+  }
+
+  .timeline-step-label {
+    font-size: 0.725rem;
+    margin-top: 4px;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -693,6 +749,7 @@
   }
 
   .common-header-text {
+    max-width: 620px;
     font-size: 0.875rem;
   }
 
@@ -787,6 +844,59 @@
   .inshort-vmo-text {
     font-size: 0.875rem;
   }
+
+  /* timeline section  */
+  .timeline-layout {
+    margin-top: 48px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 56px 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-left-container {
+    order: 2;
+  }
+  .timeline-item:nth-child(odd) .timeline-center-container {
+    order: 1;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-right-container,
+  .timeline-item:nth-child(even) .timeline-left-container {
+    display: none;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-card-subtitle {
+    font-size: 0.825rem;
+  }
+
+  .timeline-card-title {
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .timeline-card-text {
+    font-size: 0.825rem;
+    line-height: normal;
+    text-align: justify;
+  }
+
+  .timeline-hex {
+    width: 56px;
+    height: 56px;
+    font-size: 0.7rem;
+  }
+
+  .timeline-step-label {
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -837,6 +947,45 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+
+  /* timeline section  */
+  .timeline-layout {
+    margin-top: 64px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+
+  .timeline-card-subtitle {
+    font-size: 0.835rem;
+  }
+
+  .timeline-card-title {
+    font-size: 1.125rem;
+    margin-top: 10px;
+  }
+
+  .timeline-card-text {
+    font-size: 0.835rem;
+    line-height: normal;
+  }
+
+  .timeline-hex {
+    width: 64px;
+    height: 64px;
+    font-size: 0.75rem;
+  }
+
+  .timeline-step-label {
+    font-size: 0.775rem;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -853,6 +1002,45 @@
   /* story board  */
   .story-board-layout {
     grid-template-rows: repeat(4, 200px);
+  }
+
+  /* timeline section  */
+  .timeline-layout {
+    margin-top: 64px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+
+  .timeline-card-subtitle {
+    font-size: 0.835rem;
+  }
+
+  .timeline-card-title {
+    font-size: 1.15rem;
+    margin-top: 10px;
+  }
+
+  .timeline-card-text {
+    font-size: 0.835rem;
+    line-height: normal;
+  }
+
+  .timeline-hex {
+    width: 64px;
+    height: 64px;
+    font-size: 0.75rem;
+  }
+
+  .timeline-step-label {
+    font-size: 0.775rem;
   }
 }
 
