@@ -57,7 +57,7 @@
 
                         <div class="message">
                             <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.
-                                <a class="see-more" href="./pages/chief-executive.php">See More</a>
+                                <a class="see-more" href="../pages/chief-executive.php">See More</a>
                             </p>
                         </div>
                     </div>

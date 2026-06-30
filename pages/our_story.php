@@ -813,6 +813,84 @@
                 </div>
             </div>
         </section>
+
+        <!-- section:: our principle and values  -->
+        <section id="our-principle-and-values">
+            <div class="container-width">
+                <!-- section header -->
+                <hgroup class="story-common-header">
+                    <span class="common-header-label">Our Principles & Values</span>
+                    <h4 class="common-header-title">
+                        Guided by Principles,
+                        <br>
+                        <span style="color: var(--pmk-green);">
+                            United by Values
+                        </span>
+                    </h4>
+                    <p class="common-header-text">
+                        Our principles and values shape every decision, inspire meaningful partnerships, and empower us to create sustainable, inclusive, and lasting change for communities.
+                    </p>
+                </hgroup>
+
+                <!-- principle values layout  -->
+                <div class="principle-values-layout">
+                    <!-- 1st values item  -->
+                    <div class="value-container">
+                        <figure class="value-image">
+                            <img src="../assets/icons/innovation_icon.png" alt="INNOVATION">
+                        </figure>
+                        <h4 class="value-title">Innovation & Excellence</h4>
+                        <p class="value-text">
+                            PMK delivers innovative financial solutions, maintaining excellence to create sustainable opportunities and strengthen resilient communities.
+                        </p>
+                    </div>
+
+                    <!-- 2nd values item  -->
+                    <div class="value-container">
+                        <figure class="value-image">
+                            <img src="../assets/icons/accountability_icon.png" alt="accountability">
+                        </figure>
+                        <h4 class="value-title">Integrity & Accountability</h4>
+                        <p class="value-text">
+                            PMK upholds honesty, transparency, and accountability, building trust through ethical financial services and responsible governance.
+                        </p>
+                    </div>
+
+                    <!-- 3rd values item  -->
+                    <div class="value-container">
+                        <figure class="value-image">
+                            <img src="../assets/icons/dignity_icon.png" alt="dignity">
+                        </figure>
+                        <h4 class="value-title">Inclusion & Dignity</h4>
+                        <p class="value-text">
+                            PMK ensures equal financial opportunities, respecting every individual with dignity while fostering inclusive and sustainable development.
+                        </p>
+                    </div>
+
+                    <!-- 4th values item  -->
+                    <div class="value-container">
+                        <figure class="value-image">
+                            <img src="../assets/icons/care_icon.png" alt="care and compassion">
+                        </figure>
+                        <h4 class="value-title">People First</h4>
+                        <p class="value-text">
+                            PMK prioritizes people, delivering compassionate financial services that empower families, strengthen livelihoods, and inspire lasting hope.
+                        </p>
+                    </div>
+
+                    <!-- 5th values item  -->
+                    <div class="value-container">
+                        <figure class="value-image">
+                            <img src="../assets/icons/empower_icon.png" alt="empowerment">
+                        </figure>
+                        <h4 class="value-title">Empowerment & Growth</h4>
+                        <p class="value-text">
+                            PMK empowers individuals through accessible financial services, fostering entrepreneurship, economic independence, and sustainable community growth together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php
