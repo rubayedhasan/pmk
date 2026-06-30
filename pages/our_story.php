@@ -891,6 +891,79 @@
                 </div>
             </div>
         </section>
+
+        <!-- section:: founder message  -->
+        <section id="founder-message">
+            <div class="container-width">
+                <p>founder message</p>
+            </div>
+        </section>
+
+        <!-- section:: recognition  -->
+        <section id="recognition">
+            <div class="container-width">
+                <!-- section header -->
+                <hgroup class="story-common-header">
+                    <span class="common-header-label">Our Credentials</span>
+                    <h4 class="common-header-title">
+                        Accreditations
+
+                        <span style="color: var(--pmk-green);">
+                            & Recognition
+                        </span>
+                    </h4>
+                    <p class="common-header-text">
+                        PMK proudly maintains recognized accreditations and trusted partnerships, demonstrating regulatory compliance, organizational excellence, transparency, and unwavering commitment to sustainable community development.
+                    </p>
+                </hgroup>
+
+                <div class="recognition-layout">
+
+                    <!-- 1st item  -->
+                    <div class="recognition-field">
+                        <figure class="recognition-field-image">
+                            <img src="../assets/icons/bank_icon.png" alt="recognition organization icon">
+                        </figure>
+                        <h4 class="recognition-field-title">Regulatory Compliance</h4>
+                        <p class="recognition-field-text">
+                            Licensed by MRA since 2008, delivering transparent, trusted, compliant microfinance services
+                        </p>
+                    </div>
+
+                    <!-- 2nd item  -->
+                    <div class="recognition-field">
+                        <figure class="recognition-field-image">
+                            <img src="../assets/icons/board_icon.png" alt="recognition organization icon">
+                        </figure>
+                        <h4 class="recognition-field-title">Legal Recognition</h4>
+                        <p class="recognition-field-text">
+                            Legally registered with Social Services, NGO Affairs Bureau, and RJSC for organizational credibility.
+                    </div>
+
+                    <!-- 3rd item  -->
+                    <div class="recognition-field">
+                        <figure class="recognition-field-image">
+                            <img src="../assets/icons/handshak_icon.png" alt="recognition organization icon">
+                        </figure>
+                        <h4 class="recognition-field-title">Development Partners</h4>
+                        <p class="recognition-field-text">
+                            Collaborating with development partners to promote financial inclusion, resilience, and sustainable community development.
+                        </p>
+                    </div>
+
+                    <!-- 4th item  -->
+                    <div class="recognition-field" onclick="window.location.href='./legal_status.php'" style="cursor: pointer;" title="click to visit our legal status">
+                        <figure class="recognition-field-image">
+                            <img src="../assets/icons/link.png" alt="recognition organization icon">
+                        </figure>
+                        <h4 class="recognition-field-title">Legal Status</h4>
+                        <p class="recognition-field-text">
+                            Legal recognition reflects our commitment to transparency, accountability, and trust. Click to learn more about our legal status.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php

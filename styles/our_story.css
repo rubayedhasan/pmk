@@ -3,7 +3,9 @@
 /* shared styles  */
 #who-we-are,
 #story-timeline,
-#our-principle-and-values {
+#our-principle-and-values,
+#founder-message,
+#recognition {
   padding: 100px 0;
 }
 
@@ -601,6 +603,98 @@
   margin-top: 10px;
 }
 
+/* founder message sections styles  */
+#founder-message {
+  background-color: var(--pmk-green-light);
+}
+
+/* recognition sections styles  */
+#recognition .story-common-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.recognition-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.recognition-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e7ece9;
+  background-color: var(--pmk-white);
+
+  transition: all 0.35s ease-in-out;
+}
+
+.recognition-field:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.recognition-field-image {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2px;
+}
+
+.recognition-field:last-child .recognition-field-image {
+  width: 56px;
+  height: 56px;
+}
+
+.recognition-field-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.recognition-field-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-bottom: 12px;
+
+  position: relative;
+}
+
+.recognition-field-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--pmk-green-dark);
+}
+
+.recognition-field-text {
+  color: #6b7f79;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 4px;
+}
+
 /* reset footer  */
 .footer-main {
   margin-top: 0 !important;
@@ -615,7 +709,9 @@
   /* shared styles  */
   #who-we-are,
   #story-timeline,
-  #our-principle-and-values {
+  #our-principle-and-values,
+  #founder-message,
+  #recognition {
     padding: 60px 0;
   }
 
@@ -797,6 +893,31 @@
   .value-text {
     font-size: 0.875rem;
   }
+
+  /* recognition sections styles  */
+  .recognition-layout {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .recognition-field-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .recognition-field:last-child .recognition-field-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .recognition-field-title {
+    font-size: 1.05rem;
+  }
+
+  .recognition-field-text {
+    font-size: 0.875rem;
+  }
 }
 
 /* responsive styles:: medium devices  */
@@ -804,7 +925,9 @@
   /* shared styles  */
   #who-we-are,
   #story-timeline,
-  #our-principle-and-values {
+  #our-principle-and-values,
+  #founder-message,
+  #recognition {
     padding: 80px 0;
   }
 
@@ -988,6 +1111,35 @@
   .value-text {
     font-size: 0.875rem;
   }
+
+  /* recognition sections styles  */
+  .recognition-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 56px;
+  }
+
+  .recognition-field {
+    padding: 20px;
+  }
+
+  .recognition-field-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .recognition-field:last-child .recognition-field-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .recognition-field-title {
+    font-size: 1.1rem;
+  }
+
+  .recognition-field-text {
+    font-size: 0.875rem;
+  }
 }
 
 /* responsive styles:: large devices  */
@@ -1082,6 +1234,12 @@
   .principle-values-layout {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* recognition sections styles  */
+  .recognition-layout {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 56px;
+  }
 }
 
 /* responsive styles:: extra large devices  */
@@ -1137,6 +1295,11 @@
 
   .timeline-step-label {
     font-size: 0.775rem;
+  }
+
+  /* recognition sections styles  */
+  .recognition-layout {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
