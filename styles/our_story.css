@@ -611,8 +611,8 @@
 .our-founder-message-container {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 72px;
-  place-items: end;
+  gap: 40px;
+  place-items: center;
 }
 
 .founder-figure-image {
@@ -671,7 +671,7 @@
 /* content  */
 .mcb-label {
   color: var(--pmk-green);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.4px;
   text-transform: capitalize;
@@ -1018,6 +1018,70 @@
     font-size: 0.875rem;
   }
 
+  /* founder message sections styles  */
+  .our-founder-message-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    place-items: center;
+  }
+
+  .founder-figure-image {
+    width: 250px;
+    height: 320px;
+  }
+
+  .founder-monogram {
+    padding: 10px 0;
+    gap: 2px;
+  }
+
+  .fm-name {
+    font-size: 0.8rem;
+  }
+
+  .fm-post {
+    font-size: 0.8rem;
+  }
+
+  /* content  */
+  .mcb-label {
+    font-size: 0.875rem;
+  }
+
+  .mcb-title {
+    font-size: 1.35rem;
+    margin-top: 16px;
+  }
+
+  .founder-quote {
+    max-width: unset;
+    font-size: 1.05rem;
+    padding: 8px 16px;
+    margin: 16px 0 24px;
+  }
+
+  .founder-message-text {
+    font-size: 0.875rem;
+    text-align: justify;
+    margin-top: 10px;
+  }
+
+  .founder-signature {
+    margin-top: 24px;
+  }
+
+  .founder-name {
+    font-size: 1rem;
+  }
+
+  .fs-post {
+    font-size: 0.825rem;
+  }
+
+  .fs-org-name {
+    font-size: 0.775rem;
+  }
+
   /* recognition sections styles  */
   .recognition-layout {
     grid-template-columns: repeat(1, 1fr);
@@ -1234,6 +1298,70 @@
 
   .value-text {
     font-size: 0.875rem;
+  }
+
+  /* founder message sections styles  */
+  .our-founder-message-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    place-items: center;
+  }
+
+  .founder-figure-image {
+    width: 250px;
+    height: 320px;
+  }
+
+  .founder-monogram {
+    padding: 10px 0;
+    gap: 2px;
+  }
+
+  .fm-name {
+    font-size: 0.8rem;
+  }
+
+  .fm-post {
+    font-size: 0.8rem;
+  }
+
+  /* content  */
+  .mcb-label {
+    font-size: 0.875rem;
+  }
+
+  .mcb-title {
+    font-size: 1.35rem;
+    margin-top: 16px;
+  }
+
+  .founder-quote {
+    max-width: unset;
+    font-size: 1.05rem;
+    padding: 8px 16px;
+    margin: 16px 0 24px;
+  }
+
+  .founder-message-text {
+    font-size: 0.875rem;
+    text-align: justify;
+    margin-top: 10px;
+  }
+
+  .founder-signature {
+    margin-top: 24px;
+  }
+
+  .founder-name {
+    font-size: 1rem;
+  }
+
+  .fs-post {
+    font-size: 0.825rem;
+  }
+
+  .fs-org-name {
+    font-size: 0.775rem;
   }
 
   /* recognition sections styles  */
