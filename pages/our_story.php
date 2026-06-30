@@ -893,9 +893,50 @@
         </section>
 
         <!-- section:: founder message  -->
-        <section id="founder-message">
+        <section id="our-founder-message">
             <div class="container-width">
-                <p>founder message</p>
+                <div class="our-founder-message-container">
+                    <!-- founder picture  -->
+                    <figure class="founder-figure-image">
+                        <img src="../assets/photos/dewan_mannan_sir.png" alt="dewan mannan sir">
+
+                        <figcaption class="founder-monogram">
+                            <h5 class="fm-name">Late Dewan Abdul Mannan</h5>
+                            <span class="fm-post">Founder, PMK</span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- message content  -->
+                    <div class="message-container-box">
+                        <!-- header  -->
+                        <span class="mcb-label">A Word from Our Founder</span>
+                        <h4 class="mcb-title">
+                            A Vision Rooted in Compassion,
+                            <br>
+                            A Legacy Built on Service
+                        </h4>
+
+                        <!-- founder quote  -->
+                        <blockquote class="founder-quote">
+                            "True development begins when we empower people to believe in their own potential."
+                        </blockquote>
+
+                        <!-- body  -->
+                        <p class="founder-message-text">
+                            PMK was founded in 1988 with a vision of creating opportunities for the underserved and empowering communities to achieve self-reliance. What started as a humanitarian initiative has grown into a trusted development organization, serving thousands through microfinance, education, healthcare, and sustainable livelihood programs.
+                        </p>
+                        <p class="founder-message-text">
+                            Our mission has always been to uplift lives with compassion, integrity, and hope. Together, with the dedication of our people and the trust of our communities, we continue building a future where every individual has the opportunity to thrive.
+                        </p>
+
+                        <!-- footer  -->
+                        <div class="founder-signature">
+                            <h6 class="founder-name">Late. Dewan Abdul Mannan</h6>
+                            <span class="fs-post">Founder</span>
+                            <span class="fs-org-name">Palli Mongal Karmosuchi (PMK)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -918,7 +959,6 @@
                 </hgroup>
 
                 <div class="recognition-layout">
-
                     <!-- 1st item  -->
                     <div class="recognition-field">
                         <figure class="recognition-field-image">
