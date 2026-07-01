@@ -2187,7 +2187,7 @@
                 <!-- saving program  layout  -->
                 <div class="saving-program-layout">
                     <!-- saving program  COM-->
-                    <div class="saving-program saving-active-container">
+                    <div class="saving-program saving-active-container" onclick="slideRuleContainer('compulsory-saving-rules')">
                         <figure class="sp-icon">
                             <img src="../assets/icons/piggy_bank.png" alt="piggy bank">
                         </figure>
@@ -2214,7 +2214,7 @@
                     </div>
 
                     <!-- saving program  VOL-->
-                    <div class="saving-program">
+                    <div class="saving-program" onclick="slideRuleContainer('voluntary-saving-rules')">
                         <figure class="sp-icon">
                             <img src="../assets/icons/money.png" alt="money icon coin">
                         </figure>
@@ -2241,7 +2241,7 @@
                     </div>
 
                     <!-- saving program  MSP-->
-                    <div class="saving-program">
+                    <div class="saving-program" onclick="slideRuleContainer('msp-saving-rules')">
                         <figure class="sp-icon">
                             <img src="../assets/icons/time_increse_money.png" alt="money icon coin">
                         </figure>
@@ -2268,7 +2268,7 @@
                     </div>
 
                     <!-- saving program  FBS-->
-                    <div class="saving-program">
+                    <div class="saving-program" onclick="slideRuleContainer('fbs-saving-rules')">
                         <figure class="sp-icon">
                             <img src="../assets/icons/safe_box.png" alt="money icon coin">
                         </figure>

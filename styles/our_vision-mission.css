@@ -1,0 +1,37 @@
+/* hero section  */
+#vision-mission-hero {
+  height: calc(100vh - 90px);
+  background-image: url("../assets/slider/mission_page_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .vm-hero-label {
+}
+
+.vm-hero-title {
+}
+
+.vm-heo-description {
+} */
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
