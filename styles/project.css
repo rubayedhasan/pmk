@@ -66,6 +66,39 @@ img {
   max-width: 600px;
 }
 
+/* smooth scrolling appearance  */
+.page-eyebrow,
+.page-heder-title,
+.page-header-subtitle {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* smooth scrolling appearance  */
+.section-visible .page-eyebrow,
+.section-visible .page-heder-title,
+.section-visible .page-header-subtitle {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.section-visible .page-eyebrow {
+  transition-delay: 0.1s;
+}
+
+.section-visible .page-heder-title {
+  transition-delay: 0.2s;
+}
+
+.section-visible .page-header-subtitle {
+  transition-delay: 0.4s;
+}
+
 /* project hero section's style  */
 #project-hero {
   height: calc(100vh - 50px - 40px);
@@ -936,6 +969,84 @@ img {
 
 .copyright {
   background-color: #fff !important;
+}
+
+/* smooth scrolling appearance  */
+.about-body-text,
+.about-body-quote,
+.aside-photo,
+.project-aside-card,
+.smooth-button-container,
+.project-work-life-cycle,
+.beneficiaries-cards-layout,
+.pp-feature-image,
+.challenge-card,
+.aside-project-goal,
+.aside-project-objective,
+.feature-text,
+.pb-feature-card,
+.impact-grid-layout,
+.gallery-grid-layout {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-project-layout,
+.project-purpose-layout,
+.project-goal-objective-layout,
+.benefit-layout {
+  overflow: hidden;
+}
+
+.about-body-text,
+.about-body-quote,
+.challenge-card,
+.feature-text {
+  transform: translateY(24px);
+}
+
+.aside-photo,
+.smooth-button-container,
+.impact-grid-layout {
+  transform: translateY(48px);
+}
+
+.project-aside-card,
+.pb-feature-card {
+  transform: translateX(56px);
+}
+
+.pp-feature-image,
+.aside-project-goal {
+  transform: translateX(-150px);
+}
+
+.aside-project-objective {
+  transform: translateX(150px);
+}
+
+.section-visible.about-body-text,
+.section-visible.about-body-quote,
+.section-visible.aside-photo,
+.section-visible.project-aside-card,
+.section-visible.smooth-button-container,
+.section-visible.project-work-life-cycle,
+.section-visible.beneficiaries-cards-layout,
+.section-visible.pp-feature-image,
+.section-visible.challenge-card,
+.section-visible.aside-project-goal,
+.section-visible.aside-project-objective,
+.section-visible.feature-text,
+.section-visible.pb-feature-card,
+.section-visible.impact-grid-layout,
+.section-visible.gallery-grid-layout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* responsive styles:: small devices  */

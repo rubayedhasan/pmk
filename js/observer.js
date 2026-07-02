@@ -124,6 +124,12 @@
 // observedSections.observe(nationalAccreditation);
 // observedSections.observe(developmentPartner);
 
+// // pmk mfi page's all observer
+// // loan products
+// const mfiLoanProducts = document.querySelector("#mfi-loan-products");
+// observedSections.observe(mfiLoanProducts);
+
+// ai generated all observer al once
 function safeObserve(observer, elements) {
   if (!observer) return;
 
@@ -197,6 +203,7 @@ const observedSections = new IntersectionObserver(
 
 // ================= ALL TARGETS (SAFE) =================
 safeObserve(observedSections, [
+  // index page observer api
   document.querySelector("#pmk-perspective"),
   document.querySelector(".exe-row"),
   document.querySelector("#impact-graphical-board"),
@@ -208,4 +215,66 @@ safeObserve(observedSections, [
   document.querySelector("#recent-activity-container"),
   document.querySelector(".national-accreditation"),
   document.querySelector(".development-partners"),
+
+  // pmk_mfi page's observer api
+  document.querySelector(".loan-products-layout"),
+  document.querySelector(".loan-process-layout"),
+  document.querySelector(".eligible-criteria"),
+  document.querySelector(".eligible-criteria"),
+  document.querySelector(".loan-guide-layout"),
+  document.querySelector(".saving-program-layout"),
+  document.querySelector(".saving-rules-parent-container"),
+  document.querySelector(".saving-auth-strip"),
+  document.querySelector(".mfi-key-field-activities"),
+  document.querySelector("#activity-impact-board"),
+  document.querySelector(".asc-title"),
+  document.querySelector(".activity-slider"),
+
+  // project(raise) page's observer api
+  document.querySelector(".about-body-quote"),
+  document.querySelector(".aside-photo"),
+  document.querySelector(".project-work-life-cycle"),
+  document.querySelector(".beneficiaries-cards-layout"),
+  document.querySelector(".pp-feature-image"),
+  document.querySelector(".aside-project-goal"),
+  document.querySelector(".aside-project-objective"),
+  document.querySelector(".impact-grid-layout"),
+  document.querySelector(".gallery-grid-layout"),
 ]);
+
+// mfi page all header sections observer api
+const allMfiHeaders = document.querySelectorAll(".mfi-section-header");
+const observedMfiHeader = createObserver("section-visible");
+safeObserve(observedMfiHeader, allMfiHeaders);
+
+// project(raise) header section
+const projectPagesAllHeaders = document.querySelectorAll(
+  ".project-page-section-header",
+);
+safeObserve(observedMfiHeader, projectPagesAllHeaders);
+
+//project(raise) about body text section
+const allAboutBodyText = document.querySelectorAll(".about-body-text");
+safeObserve(observedMfiHeader, allAboutBodyText);
+
+//project(raise) about body text section
+const projectAsideCards = document.querySelectorAll(".project-aside-card");
+safeObserve(observedMfiHeader, projectAsideCards);
+
+//project(raise) challenge-card section
+const challengeCards = document.querySelectorAll(".challenge-card");
+safeObserve(observedMfiHeader, challengeCards);
+
+//project(raise) challenge-card section
+const featureText = document.querySelectorAll(".feature-text");
+safeObserve(observedMfiHeader, featureText);
+
+//project(raise) pb-feature-card section
+const featureCard = document.querySelectorAll(".pb-feature-card");
+safeObserve(observedMfiHeader, featureCard);
+
+//contact button container
+const smoothButtonContainer = document.querySelectorAll(
+  ".smooth-button-container",
+);
+safeObserve(observedMfiHeader, smoothButtonContainer);

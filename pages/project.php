@@ -134,7 +134,7 @@
                             Through the RAISE project, PMK focuses on building sustainable livelihood opportunities, strengthening self-employment, and improving economic resilience among underserved populations. By combining community engagement, practical training, and inclusive development approaches, we aim to help individuals achieve long-term financial stability and social empowerment.
                         </p>
 
-                        <div class="contact-button-container">
+                        <div class="contact-button-container smooth-button-container">
                             <button type="button" class="contact-button">
                                 <span>Download Project Brief</span>
                                 <span>
@@ -528,10 +528,12 @@
                     <!-- layout top  -->
                     <div class="layout-top">
                         <div class="pb-feature-text">
-                            <p>
-                                The program targets a broad group of youth entrepreneurs and micro-entrepreneurs, with special emphasis on COVID-19 affected micro-enterprises and low-income youth engaged in key employment-generating sectors such as Ready-Made Garments (RMG), leather goods and footwear, construction, and light engineering.
-                                The initiative provides loan-based financial support to promote self-employment, enterprise recovery, and business expansion across three major intervention components:
-                            </P>
+                            <div class="feature-text">
+                                <p>
+                                    The program targets a broad group of youth entrepreneurs and micro-entrepreneurs, with special emphasis on COVID-19 affected micro-enterprises and low-income youth engaged in key employment-generating sectors such as Ready-Made Garments (RMG), leather goods and footwear, construction, and light engineering.
+                                    The initiative provides loan-based financial support to promote self-employment, enterprise recovery, and business expansion across three major intervention components:
+                                </P>
+                            </div>
 
                             <div class="feature-text">
                                 <h5>COVID-19 Affected Entrepreneurs Component</h5>

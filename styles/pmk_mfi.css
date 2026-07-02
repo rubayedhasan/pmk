@@ -46,6 +46,38 @@
   margin-top: 16px;
 }
 
+.mfi-header-label,
+.mfi-header-title,
+.mfi-header-description {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* smooth scrolling appearance  */
+.section-visible .mfi-header-label,
+.section-visible .mfi-header-title,
+.section-visible .mfi-header-description {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.section-visible .mfi-header-label {
+  transition-delay: 0.1s;
+}
+
+.section-visible .mfi-header-title {
+  transition-delay: 0.2s;
+}
+
+.section-visible .mfi-header-description {
+  transition-delay: 0.4s;
+}
+
 /* mfi hero sections styles  */
 #mfi-hero {
   width: 100%;
@@ -465,10 +497,13 @@
 }
 
 .eligible-layout {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 24px;
+
+  overflow: hidden;
 }
 
 .eligible-criteria {
@@ -1772,6 +1807,61 @@
 
 .copyright {
   background-color: #fff !important;
+}
+
+/* smooth scrolling appearance  */
+.loan-products-layout,
+.loan-process-layout,
+.eligible-criteria,
+.loan-guide-layout,
+.saving-program-layout,
+.saving-rules-parent-container,
+.saving-auth-strip,
+.mfi-key-field-activities,
+#activity-impact-board,
+.asc-title,
+.activity-slider {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(150px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#mfi-saving-program .container-width,
+.mfi-activity-impact-layout {
+  overflow: hidden;
+}
+
+.eligible-criteria,
+.saving-rules-parent-container,
+#activity-impact-board {
+  transform: translate(150px, 0);
+}
+
+.mfi-key-field-activities {
+  transform: translate(-150px, 0);
+}
+
+.asc-title {
+  transform: translateY(16px);
+}
+
+.loan-products-layout.section-visible,
+.loan-process-layout.section-visible,
+.eligible-criteria.section-visible,
+.loan-guide-layout.section-visible,
+.saving-program-layout.section-visible,
+.saving-rules-parent-container.section-visible,
+.saving-auth-strip.section-visible,
+.mfi-key-field-activities.section-visible,
+#activity-impact-board.section-visible,
+.asc-title.section-visible,
+.activity-slider.section-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* responsive styles:: small devices  */

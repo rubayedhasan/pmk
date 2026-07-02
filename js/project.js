@@ -1,3 +1,34 @@
+function transitionDelay(element, index) {
+  element.style.transitionDelay = `${index * 0.15}s`;
+}
+
+//For about body text
+document
+  .querySelectorAll(".about-body-text, .about-body-quote")
+  .forEach((element, idx) => {
+    transitionDelay(element, idx);
+  });
+
+//For project aside card
+document.querySelectorAll(".project-aside-card").forEach((element, idx) => {
+  transitionDelay(element, idx);
+});
+
+//For challenge card
+document.querySelectorAll(".challenge-card").forEach((element, idx) => {
+  transitionDelay(element, idx);
+});
+
+//For challenge card
+document.querySelectorAll(".feature-text ").forEach((element, idx) => {
+  transitionDelay(element, idx);
+});
+
+//For pb-feature-card
+document.querySelectorAll(".pb-feature-card ").forEach((element, idx) => {
+  transitionDelay(element, idx);
+});
+
 /**
  * script for count down the project impact
  */
