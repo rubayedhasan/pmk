@@ -1,5 +1,5 @@
 function transitionDelay(element, index) {
-  element.style.transitionDelay = `${index * 0.15}s`;
+  element.style.transitionDelay = `${index * 0.05}s`;
 }
 
 //For about body text

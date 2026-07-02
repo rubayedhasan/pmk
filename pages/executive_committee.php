@@ -115,7 +115,7 @@
                             </div>
 
                             <div class="contact-button-container">
-                                <a href="" class="contact-button">
+                                <a href="./page.php" class="contact-button">
                                     <span class="btn-text">Read Biography</span>
                                     <span class="btn-icon">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right-dashed">

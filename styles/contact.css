@@ -590,6 +590,59 @@
   height: 20px;
 }
 
+/* smooth scrolling appearance  */
+.hq-info,
+.info-card,
+.contact-newsletter-container,
+.map-card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(56px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-visible.hq-info,
+.section-visible.info-card,
+.section-visible.contact-newsletter-container,
+.section-visible.map-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.maps-tag,
+.maps-label,
+.maps-description {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-visible.maps-tag,
+.section-visible.maps-label,
+.section-visible.maps-description {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.section-visible.maps-tag {
+  transition-delay: 0.1s;
+}
+
+.section-visible.maps-label {
+  transition-delay: 0.2s;
+}
+
+.section-visible.maps-description {
+  transition-delay: 0.4s;
+}
+
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   /* contact hero section styles  */

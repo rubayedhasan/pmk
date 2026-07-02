@@ -288,6 +288,9 @@
     include("../includes/footer.php");
     ?>
 
+
+    <!-- Linked custom script -->
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

@@ -46,6 +46,39 @@
   margin-top: 8px;
 }
 
+/* smooth scrolling appearance  */
+.common-header-label,
+.common-header-title,
+.common-header-text {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* smooth scrolling appearance  */
+.section-visible .common-header-label,
+.section-visible .common-header-title,
+.section-visible .common-header-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.section-visible .common-header-label {
+  transition-delay: 0.1s;
+}
+
+.section-visible .common-header-title {
+  transition-delay: 0.2s;
+}
+
+.section-visible .common-header-text {
+  transition-delay: 0.4s;
+}
+
 /* hero  */
 #story-hero {
   height: calc(100vh - 90px);
@@ -826,6 +859,80 @@
 
 .copyright {
   background-color: #fff !important;
+}
+
+/* smooth scrolling appearance  */
+.pmk-journey-text,
+.sub-content-label,
+.sub-content-list,
+.story-board-layout,
+.inshort-vmo,
+.founder-figure-image,
+.mcb-label,
+.mcb-title,
+.founder-quote,
+.founder-message-text,
+.founder-name,
+.fs-post,
+.fs-org-name,
+.value-container,
+.recognition-field {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pmk-journey-text,
+.sub-content-label,
+.sub-content-list,
+.mcb-label,
+.mcb-title,
+.founder-quote,
+.founder-message-text,
+.founder-name,
+.fs-post,
+.fs-org-name {
+  transform: translateY(24px);
+}
+
+.inshort-vmo,
+.value-container,
+.recognition-field {
+  transform: translateY(48px);
+}
+
+.founder-figure-image {
+  transform: scale(0);
+  transition:
+    opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-visible.pmk-journey-text,
+.section-visible.sub-content-label,
+.section-visible.sub-content-list,
+.section-visible.story-board-layout,
+.section-visible.inshort-vmo,
+.section-visible.founder-figure-image,
+.section-visible.mcb-label,
+.section-visible.mcb-title,
+.section-visible.founder-quote,
+.section-visible.founder-message-text,
+.section-visible.founder-name,
+.section-visible.fs-post,
+.section-visible.fs-org-name,
+.section-visible.value-container,
+.section-visible.recognition-field {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.section-visible.founder-figure-image {
+  transform: scale(1);
 }
 
 /* responsive styles:: small devices  */

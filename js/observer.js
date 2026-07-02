@@ -240,6 +240,12 @@ safeObserve(observedSections, [
   document.querySelector(".aside-project-objective"),
   document.querySelector(".impact-grid-layout"),
   document.querySelector(".gallery-grid-layout"),
+
+  // our storu page observer api
+  document.querySelector(".sub-content-label"),
+  document.querySelector(".sub-content-list"),
+  document.querySelector(".story-board-layout"),
+  // document.querySelector(".hq-info"),
 ]);
 
 // mfi page all header sections observer api
@@ -272,6 +278,38 @@ safeObserve(observedMfiHeader, featureText);
 //project(raise) pb-feature-card section
 const featureCard = document.querySelectorAll(".pb-feature-card");
 safeObserve(observedMfiHeader, featureCard);
+
+// our story page  header section
+const ourStoryAllHeaders = document.querySelectorAll(".story-common-header");
+safeObserve(observedMfiHeader, ourStoryAllHeaders);
+
+//our story page about body text section
+const allPmkJourneyText = document.querySelectorAll(".pmk-journey-text");
+safeObserve(observedMfiHeader, allPmkJourneyText);
+
+//our story page inshort-vmo section
+const allInshortVmo = document.querySelectorAll(".inshort-vmo");
+safeObserve(observedMfiHeader, allInshortVmo);
+
+//our story page value-container section
+const allValueContainer = document.querySelectorAll(".value-container");
+safeObserve(observedMfiHeader, allValueContainer);
+
+//our story page recognition-field section
+const allRecognitionField = document.querySelectorAll(".recognition-field");
+safeObserve(observedMfiHeader, allRecognitionField);
+
+//our story page founder message section
+const founderMessageSection = document.querySelectorAll(
+  ".founder-figure-image,.mcb-label,.mcb-title,.founder-quote,.founder-message-text,.founder-name,.fs-post,.fs-org-name",
+);
+safeObserve(observedMfiHeader, founderMessageSection);
+
+//our story page contact section
+const contactPageAllSection = document.querySelectorAll(
+  ".hq-info,.info-card,.contact-newsletter-container,.maps-tag,.maps-label,.maps-description,.map-card",
+);
+safeObserve(observedMfiHeader, contactPageAllSection);
 
 //contact button container
 const smoothButtonContainer = document.querySelectorAll(
