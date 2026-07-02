@@ -57,7 +57,7 @@
 
                 <!-- about visit button  -->
                 <div class="button-container">
-                    <a href="" class="visit-btn button-effect">
+                    <a href="../pages/our_story.php" class="visit-btn button-effect">
                         <span>Stories That Inspire</span>
                         <span class="btn-indicator"><i class="fa-solid fa-arrow-right-long"></i></span>
                     </a>
