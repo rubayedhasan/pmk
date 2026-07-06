@@ -82,17 +82,17 @@
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Our Projects</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/page.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>PMK Community Health</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/page.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Technical Training</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/page.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
@@ -106,17 +106,17 @@
 
                             <!-- footer nav  -->
                             <nav class="nav flex-column">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/our_story.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>About PMK</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/executive_committee.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Leadership</span></a>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../pages/annual_report.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>

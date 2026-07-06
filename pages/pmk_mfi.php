@@ -3278,7 +3278,7 @@
                             <div class="swiper-slide activity-microfinance">
                                 <div class="activity-cards">
                                     <figure class="activity-card-image">
-                                        <img src="../assets/images/mfi_1.png" class="ac-image" alt="mfi activity image">
+                                        <img src="../assets/pictures/mfi-6.jpg" class="ac-image" alt="mfi activity image">
 
                                         <!-- overlay logo -->
                                         <div class="overlay-logo">
@@ -3340,7 +3340,7 @@
                             <div class="swiper-slide activity-livelihood">
                                 <div class="activity-cards">
                                     <figure class="activity-card-image">
-                                        <img src="../assets/images/mfi_2.jpg" class="ac-image" alt="mfi activity image">
+                                        <img src="../assets/pictures/mfi-10.JPG" class="ac-image" alt="mfi activity image">
 
                                         <!-- overlay logo -->
                                         <div class="overlay-logo">
@@ -3402,7 +3402,7 @@
                             <div class="swiper-slide activity-financial-raining">
                                 <div class="activity-cards">
                                     <figure class="activity-card-image">
-                                        <img src="../assets/images/mfi_3.png" class="ac-image" alt="mfi activity image">
+                                        <img src="../assets/pictures/smart-3.jpg" class="ac-image" alt="mfi activity image">
 
                                         <!-- overlay logo -->
                                         <div class="overlay-logo">
@@ -3579,7 +3579,7 @@
                             <div class="swiper-slide activity-financial-raining">
                                 <div class="activity-cards">
                                     <figure class="activity-card-image">
-                                        <img src="../assets/images/mfi_4.png" class="ac-image" alt="mfi activity image">
+                                        <img src="../assets/pictures/community_health-10.JPG" class="ac-image" alt="mfi activity image">
 
                                         <!-- overlay logo -->
                                         <div class="overlay-logo">

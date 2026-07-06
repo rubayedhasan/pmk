@@ -40,7 +40,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/microfinance.png" alt="microfinance">
+                                    <img src="../assets/pictures/mfi-7.jpg" alt="microfinance">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-coins"></i>
@@ -58,7 +58,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/raise_project.png" alt="raise project">
+                                    <img src="../assets/raise/digital.jpg" alt="raise project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-people-line"></i>
@@ -76,7 +76,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/enrich_project.png" alt="enrich project">
+                                    <img src="../assets/raise/youth-entrepreneurs.jpg" alt="enrich project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-book-open-reader"></i>
@@ -94,7 +94,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/wash_project.png" alt="wash Project">
+                                    <img src="../assets/pictures/wash.jpeg" alt="wash Project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-droplet"></i>
@@ -112,7 +112,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/adolescents_program.png" alt="Adolescent">
+                                    <img src="../assets/pictures/mfi-8.JPG" alt="Adolescent">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-people-group"></i>
@@ -130,7 +130,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/tissue_culture_lab.png" alt="Tissue Culture Lab">
+                                    <img src="../assets/pictures/tissue-culture-1.jpg" alt="Tissue Culture Lab">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-seedling"></i>
@@ -148,7 +148,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/community_health.png" alt="Community Health Program">
+                                    <img src="../assets/pictures/community_health-9.jpg" alt="Community Health Program">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-square-plus"></i>
@@ -166,7 +166,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/caregiver_project.png" alt="Caregiving Program">
+                                    <img src="../assets/pictures/caregiver_program .png" alt="Caregiving Program">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-heart-circle-plus"></i>
@@ -184,7 +184,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/images/smart_project_mini-garments.png" alt="SMART Project">
+                                    <img src="../assets/pictures/smart-4.jpg" alt="SMART Project">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-lightbulb"></i>

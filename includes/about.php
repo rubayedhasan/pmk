@@ -17,7 +17,7 @@
             <!-- 1st: image  -->
             <div class="image-wrapper">
                 <figure class="long-img-container shinny-effect">
-                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/images/dummy-img-3.png" alt="dummy">
+                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/pmk-team-2.jpg" alt="dummy">
                 </figure>
                 <!-- experience year -->
                 <div class="experience">
@@ -28,7 +28,7 @@
 
             <!-- 2nd: image  -->
             <figure class="wider-img-container shinny-effect">
-                <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/images/dummy-img-1.png" alt="dummy">
+                <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/mfi-1.jpg" alt="dummy">
             </figure>
         </section>
     </div>

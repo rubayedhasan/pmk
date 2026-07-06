@@ -200,7 +200,7 @@
             <article class="activity-card">
                 <figure class="news-feature-image">
                     <a href="" class="news-feature-image-linked">
-                        <img src="../assets/images/dummy-img-1.png" alt="news feature image">
+                        <img src="../assets/pictures/community_health-2.jpeg" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
                         April 18, 2026
@@ -230,7 +230,7 @@
             <article class="activity-card">
                 <figure class="news-feature-image">
                     <a href="" class="news-feature-image-linked">
-                        <img src="../assets/images/dummy-img-1.png" alt="news feature image">
+                        <img src="../assets/pictures/community_health-3.jpeg" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
                         April 18, 2026
