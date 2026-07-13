@@ -71,7 +71,7 @@
                         <!-- gallery item )field -->
                         <div class="gallery-item" data-category="field">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-7.jpg" alt="health card given to member">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-7.JPG" alt="health card given to member">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -97,7 +97,7 @@
                         <!-- gallery item (field)  -->
                         <div class="gallery-item" data-category="field">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-10.jpg" alt="member buy cows after getting loan">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-10.JPG" alt="member buy cows after getting loan">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">
@@ -136,7 +136,7 @@
                         <!-- gallery item (mfi) -->
                         <div class="gallery-item" data-category="mfi-program">
                             <div class="image-item">
-                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-4.JPG" alt="pmk office meeting">
+                                <img loading="lazy" decoding="async" fetchpriority="high" src="../assets/pictures/mfi-4.jpg" alt="pmk office meeting">
 
                                 <!-- overlay  -->
                                 <div class="image-overlay">

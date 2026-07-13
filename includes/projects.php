@@ -40,7 +40,7 @@
                         <a class="project-link swiper-slide" href="">
                             <div class="project-card">
                                 <figure class="project-image">
-                                    <img src="../assets/pictures/mfi-7.jpg" alt="microfinance">
+                                    <img src="../assets/pictures/mfi-7.JPG" alt="microfinance">
                                     <figcaption class="project-card-body">
                                         <div class="project-icon">
                                             <i class="fa-solid fa-coins"></i>
