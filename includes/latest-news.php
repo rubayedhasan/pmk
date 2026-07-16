@@ -169,7 +169,7 @@
             <!--1st:: activity item  -->
             <article class="activity-card">
                 <figure class="news-feature-image">
-                    <a href="" class="news-feature-image-linked">
+                    <a href="../pages/news_page.php" class="news-feature-image-linked">
                         <video src="../assets/videos/channel_i_feature_pmk_news update.mp4" controls></video>
                     </a>
                     <figcaption class="news-posted-date">
@@ -182,14 +182,14 @@
                 <div class="news-content">
 
                     <h4 class="news-title">
-                        <a href="" class="linked-title">
+                        <a href="../pages/news_page.php" class="linked-title">
                             Channel i to Air “MFIs in Inclusive Development” with PMK Chief Executive Kamrun Nahar
                         </a>
                     </h4>
                     <p class="news-body">
                         Mr. Kamrun Nahar, Chief Executive of Palli Mongal Karmosuchi (PMK), attended as a special guest at the program titled “MFIs in Inclusive Development,” organized by Credit and Development Forum (CDF). The event highlighted the role of socio-economic development, financial inclusion, and microfinance activities in Bangladesh. The program will be aired on Channel i on Friday, May 15, 2026, at 11:30 AM.
                     </p>
-                    <a href="" class="news-link">
+                    <a href="../pages/news_page.php" class="news-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>
@@ -199,7 +199,7 @@
             <!--2nd:: activity item  -->
             <article class="activity-card">
                 <figure class="news-feature-image">
-                    <a href="" class="news-feature-image-linked">
+                    <a href="../pages/news_page.php" class="news-feature-image-linked">
                         <img src="../assets/pictures/community_health-2.jpeg" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
@@ -219,7 +219,7 @@
                     <p class="news-body">
                         Our organization successfully conducted a community health camp aimed at providing accessible healthcare services to rural populations. The initiative brought together qualified medical professionals and volunteers to offer free consultations, basic treatments, and health awareness sessions.
                     </p>
-                    <a href="" class="news-link">
+                    <a href="../pages/news_page.php" class="news-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>
@@ -229,7 +229,7 @@
             <!--3rd:: activity item  -->
             <article class="activity-card">
                 <figure class="news-feature-image">
-                    <a href="" class="news-feature-image-linked">
+                    <a href="../pages/news_page.php" class="news-feature-image-linked">
                         <img src="../assets/pictures/community_health-3.jpeg" alt="news feature image">
                     </a>
                     <figcaption class="news-posted-date">
@@ -242,14 +242,14 @@
                 <div class="news-content">
 
                     <h4 class="news-title">
-                        <a href="" class="linked-title">
+                        <a href="../pages/news_page.php" class="linked-title">
                             Community Health Camp Reaches Hundreds in Rural Areas
                         </a>
                     </h4>
                     <p class="news-body">
                         Our organization successfully conducted a community health camp aimed at providing accessible healthcare services to rural populations. The initiative brought together qualified medical professionals and volunteers to offer free consultations, basic treatments, and health awareness sessions.
                     </p>
-                    <a href="" class="news-link">
+                    <a href="../pages/news_page.php" class="news-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>

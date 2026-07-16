@@ -269,8 +269,207 @@
                 </div>
 
                 <!-- sub-section:: related news  -->
-                <aside class="related-news">
-                    <p>related news </p>
+                <aside class="related-news-container">
+                    <!-- sub-section:: relateed news  -->
+                    <div class="related-news">
+                        <h4 class="related-news-label">Related News</h4>
+                        <!-- cards  -->
+                        <div class="related-news-cards">
+
+                            <!--  card  item-->
+                            <div class="related-news-card">
+                                <figure class="related-news-image">
+                                    <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                                </figure>
+                                <div class="related-news-card-content">
+                                    <a href="">
+                                        <h4 class="rncc-title">Related News Title</h4>
+                                    </a>
+                                    <span class="rncc-post-date">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg>
+                                        April 25, 2026
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--  card  item-->
+                            <div class="related-news-card">
+                                <figure class="related-news-image">
+                                    <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                                </figure>
+                                <div class="related-news-card-content">
+                                    <a href="">
+                                        <h4 class="rncc-title">Related News Title</h4>
+                                    </a>
+                                    <span class="rncc-post-date">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg>
+                                        April 25, 2026
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--  card  item-->
+                            <div class="related-news-card">
+                                <figure class="related-news-image">
+                                    <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                                </figure>
+                                <div class="related-news-card-content">
+                                    <a href="">
+                                        <h4 class="rncc-title">Related News Title</h4>
+                                    </a>
+                                    <span class="rncc-post-date">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg>
+                                        April 25, 2026
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--  card  item-->
+                            <div class="related-news-card">
+                                <figure class="related-news-image">
+                                    <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                                </figure>
+                                <div class="related-news-card-content">
+                                    <a href="">
+                                        <h4 class="rncc-title">Related News Title</h4>
+                                    </a>
+                                    <span class="rncc-post-date">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg>
+                                        April 25, 2026
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--  card  item-->
+                            <div class="related-news-card">
+                                <figure class="related-news-image">
+                                    <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                                </figure>
+                                <div class="related-news-card-content">
+                                    <a href="">
+                                        <h4 class="rncc-title">Related News Title</h4>
+                                    </a>
+                                    <span class="rncc-post-date">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg>
+                                        April 25, 2026
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- viewall button  -->
+                            <div class="comment-button-container view-button">
+                                <button type="button" class="comment-button">
+                                    <span>View All</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l14 0" />
+                                        <path d="M15 16l4 -4" />
+                                        <path d="M15 8l4 4" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- categories  -->
+                        <div class="category-lists">
+                            <h4 class="related-news-label">Categories</h4>
+
+                            <div class="list">
+                                <!-- category item  -->
+                                <a href="">
+                                    <div class="category">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category-2">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M14 4h6v6h-6l0 -6" />
+                                            <path d="M4 14h6v6h-6l0 -6" />
+                                            <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                            <path d="M4 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                        </svg>
+                                        <span>Category</span>
+                                    </div>
+                                </a>
+
+                                <!-- category item  -->
+                                <a href="">
+                                    <div class="category">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category-2">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M14 4h6v6h-6l0 -6" />
+                                            <path d="M4 14h6v6h-6l0 -6" />
+                                            <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                            <path d="M4 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                        </svg>
+                                        <span>Category</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </aside>
             </section>
         </div>

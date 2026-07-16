@@ -172,7 +172,7 @@
             <!--1st:: project card item  -->
             <article class="project-update-card">
                 <figure class="project-feature-image">
-                    <a href="" class="project-feature-image-linked">
+                    <a href="../pages/news_page.php" class="project-feature-image-linked">
                         <img src="../assets/pictures/raise-3.jpg" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
@@ -192,7 +192,7 @@
                     <p class="project-body">
                         We are currently advancing our clean water initiative aimed at improving access to safe and reliable drinking water in rural communities. Many households in these areas still rely on unsafe water sources, leading to preventable health issues.
                     </p>
-                    <a href="" class="project-link">
+                    <a href="../pages/news_page.php" class="project-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>
@@ -202,7 +202,7 @@
             <!--2nd:: activity item  -->
             <article class="project-update-card">
                 <figure class="project-feature-image">
-                    <a href="" class="project-feature-image-linked">
+                    <a href="../pages/news_page.php" class="project-feature-image-linked">
                         <img src="../assets/pictures/raise-3.jpg" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
@@ -222,7 +222,7 @@
                     <p class="project-body">
                         We are currently advancing our clean water initiative aimed at improving access to safe and reliable drinking water in rural communities. Many households in these areas still rely on unsafe water sources, leading to preventable health issues.
                     </p>
-                    <a href="" class="project-link">
+                    <a href="../pages/news_page.php" class="project-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>
@@ -232,7 +232,7 @@
             <!--3rd:: activity item  -->
             <article class="project-update-card">
                 <figure class="project-feature-image">
-                    <a href="" class="project-feature-image-linked">
+                    <a href="../pages/news_page.php" class="project-feature-image-linked">
                         <img src="../assets/pictures/raise-3.jpg" alt="project feature image">
                     </a>
                     <figcaption class="project-posted-date">
@@ -252,7 +252,7 @@
                     <p class="project-body">
                         We are currently advancing our clean water initiative aimed at improving access to safe and reliable drinking water in rural communities. Many households in these areas still rely on unsafe water sources, leading to preventable health issues.
                     </p>
-                    <a href="" class="project-link">
+                    <a href="../pages/news_page.php" class="project-link">
                         <span> See More</span>
                         <span><i class="fa-solid fa-caret-right"></i></span>
                     </a>
