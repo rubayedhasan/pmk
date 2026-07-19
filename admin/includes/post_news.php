@@ -73,6 +73,10 @@ $section = $_GET['section'] ?? '';
 
 <body>
 
+    <form action="">
+
+    </form>
+
     <!-- section:: header  -->
     <!-- section:: header  -->
     <header class="publish-page-header">
@@ -130,7 +134,7 @@ $section = $_GET['section'] ?? '';
         </section>
 
         <!-- section:: categories  -->
-        <section id="categories" class="post-section section-hidden">
+        <section id="categories" class="post-section">
             <div class="container-width">
                 <div class="post-section-container">
                     <!-- category form  -->
@@ -325,7 +329,7 @@ $section = $_GET['section'] ?? '';
         </section>
 
         <!-- section:: post  -->
-        <section id="post" class="post-section ">
+        <section id="post" class="post-section section-hidden">
             <div class="container-width">
                 <div class="post-section-container">
                     <!-- category form  -->
@@ -446,14 +450,25 @@ $section = $_GET['section'] ?? '';
                                     <td>
                                         <select class="image-category">
                                             <option value="">Select Image Category</option>
+
+                                            <!-- Website UI -->
                                             <option value="slider">Slider</option>
+                                            <option value="page-banner">Page Banner</option>
                                             <option value="thumbnail">Thumbnail</option>
-                                            <option value="field operations">Field Operations</option>
-                                            <option value="program & events">Program & Events</option>
-                                            <option value="community engagement">Community Engagement</option>
-                                            <option value="training & workshops">Training & Workshops</option>
-                                            <option value="project update">Project Update</option>
-                                            <option value="recent activity">Recent Activity</option>
+
+                                            <!-- Content -->
+                                            <option value="project">Project</option>
+                                            <option value="field-operations">Field Operations</option>
+                                            <option value="program-events">Program & Events</option>
+                                            <option value="community-engagement">Community Engagement</option>
+                                            <option value="training-workshops">Training & Workshops</option>
+                                            <option value="project-update">Project Update</option>
+                                            <option value="recent-activity">Recent Activity</option>
+
+                                            <!-- Media -->
+                                            <option value="gallery">Gallery</option>
+                                            <option value="report-cover">Report Cover</option>
+                                            <option value="publication-cover">Publication Cover</option>
                                         </select>
                                         <span class="image-category-label section-hidden"></span>
                                     </td>

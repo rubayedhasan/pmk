@@ -38,35 +38,68 @@ async function uploadThePost() {
   );
   postForm.append("author_name", document.getElementById("author-name").value);
 
+  // append images
+  // document.querySelectorAll("#imageTbody tr").forEach((tableRow, idx) => {
+  //   const tableColumn = tableRow.querySelectorAll("select, input");
+
+  //   postForm.append(
+  //     `post_images[${idx}][image_category]`,
+  //     tableColumn[0].value || "",
+  //   );
+
+  //   const image = tableColumn[1].files[0];
+  //   if (image) {
+  //     postForm.append(`post_images[${idx}][image_path]`, image);
+  //   }
+  // });
+
+  document.querySelectorAll("#imageTbody tr").forEach((tableRow, idx) => {
+    const categorySelect = tableRow.querySelector(".image-category");
+    const fileInput = tableRow.querySelector(".post-image");
+
+    postForm.append(
+      `post_images[${idx}][image_category]`,
+      categorySelect.value || "",
+    );
+
+    const image = fileInput.files[0];
+    // console.log(`row ${idx}:`, categorySelect.value, image); // TEMP: remove after debugging
+    // console.log(`row ${idx}:`, categorySelect.value, fileInput.files[0]);
+    if (image) {
+      postForm.append(`post_images[${idx}][image_path]`, image);
+    }
+  });
+
   // send data to the server
   try {
     // disable the publish button
     if (circularPublishButton) {
       circularPublishButton.disabled = true;
       circularPublishButton.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-loader">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M12 6l0 -3" />
-	<path d="M16.25 7.75l2.15 -2.15" />
-	<path d="M18 12l3 0" />
-	<path d="M16.25 16.25l2.15 2.15" />
-	<path d="M12 18l0 3" />
-	<path d="M7.75 16.25l-2.15 2.15" />
-	<path d="M6 12l-3 0" />
-	<path d="M7.75 7.75l-2.15 -2.15" />
-</svg>
-    <span>Publishing...</span>
-    `;
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-loader">
+  	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  	<path d="M12 6l0 -3" />
+  	<path d="M16.25 7.75l2.15 -2.15" />
+  	<path d="M18 12l3 0" />
+  	<path d="M16.25 16.25l2.15 2.15" />
+  	<path d="M12 18l0 3" />
+  	<path d="M7.75 16.25l-2.15 2.15" />
+  	<path d="M6 12l-3 0" />
+  	<path d="M7.75 7.75l-2.15 -2.15" />
+  </svg>
+      <span>Publishing...</span>
+      `;
     }
 
     // fetching the data
     const postResponseData = await fetch("../server/posts.php", {
       method: "POST",
       body: postForm,
-      enctype: "multipart/form-data",
     });
 
     const responsePostResult = await postResponseData.json();
+
+    // console.log(responsePostResult);
 
     // response result success message
     if (responsePostResult.success) {
@@ -80,6 +113,20 @@ async function uploadThePost() {
     if (circularPublishButton) {
       circularPublishButton.disabled = false;
       circularPublishButton.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                  </svg>
+      <span>Publish</span>
+      `;
+    }
+  } catch (err) {
+    alert(`Network Error: ${err.message}`);
+
+    // on error enable the publish button
+    if (circularPublishButton) {
+      circularPublishButton.disabled = false;
+      circularPublishButton.innerHTML = `
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
@@ -87,8 +134,6 @@ async function uploadThePost() {
     <span>Publish</span>
     `;
     }
-  } catch (err) {
-    alert(`Network Error: ${err.message}`);
   }
 }
 
@@ -197,9 +242,8 @@ function handleImageUpload(imageTableRow) {
   });
 
   fileInputField.addEventListener("change", function (e) {
-    console.dir(e.target.files);
-
     handleImageFiles(e.target.files);
+    // console.log(fileInputField.value);
   });
 
   function handleImageFiles(files) {
@@ -232,7 +276,7 @@ function handleImageUpload(imageTableRow) {
           .querySelector(".remove-preview")
           .addEventListener("click", function (e) {
             fileInputField.value = "";
-            imagePreviewArea.remove();
+            imagePreviewArea.innerHTML = "";
           });
       };
 
