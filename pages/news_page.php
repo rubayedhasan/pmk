@@ -37,13 +37,16 @@ if (isset($_GET["post_id"])) {
     // QUERY:: ALL RELATED IMAGE WITH OUT THUMBNAIL
     $get_related_image_query = "SELECT post_image from post_image WHERE postcust_id = '$post_id' && postimage_cat != 'thumbnail'";
     $related_image_arr = $dbConnection->query($get_related_image_query)->fetch_all(MYSQLI_ASSOC);
+
+
+    // QUERY:: get all COMMENT
+    $get_all_comment = "SELECT * FROM post_comment WHERE post_id = '$post_id'";
+    $all_comment_arr = $dbConnection->query($get_all_comment)->fetch_all(MYSQLI_ASSOC);
+
+    // echo "<pre>";
+    // print_r($all_comment_arr);
+    // echo "</pre>";
 }
-
-
-// echo "<pre>";
-// print_r($related_image_arr);
-// echo $related_image_arr[0]["post_image"];
-// echo "</pre>";
 ?>
 
 
@@ -196,6 +199,56 @@ if (isset($_GET["post_id"])) {
                         ?>
                     </div>
 
+                    <!-- sub-section:: comment display area  -->
+                    <?php
+
+                    if (count($all_comment_arr) > 0) {
+                        $comment_length = count($all_comment_arr);
+
+                        echo "
+                     <div class='comment-display-area'>
+                        <h4 class='comment-area-label'>
+                        Comment
+                            <span style='color: #6b7280; font-size: 0.825rem;'>
+                               ($comment_length)
+                            </span>
+                        </h4>
+
+                        <div class='comment-container'>
+                        " ?>
+
+                        <?php
+                        foreach ($all_comment_arr as $comment) {
+                            $ava_name = substr($comment["commentor_name"], 0, 3);
+                            echo "
+                            <div class='comment'>
+                            <div class='user-avatar'>
+                            $ava_name
+                            </div>
+                            <div class='comment-body'>
+                                <div class='comment-meta'>
+                                    <span class='comment-name'>
+                                    $comment[commentor_name]
+                                    </span>
+                                </div>
+                                <p class='comment-text'>
+                                    $comment[comment]
+                                </p>
+                            </div>
+                        </div>
+                            ";
+                        }
+
+                        ?>
+
+                    <?php echo "
+                        </div>
+                    </div>
+                    
+                    ";
+                    }
+                    ?>
+
                     <!-- sub-section:: commnet area  -->
                     <div class="comment-area">
                         <hgroup>
@@ -204,23 +257,29 @@ if (isset($_GET["post_id"])) {
                                 Your email address will not published. So feel free to leave commenYour email address will remain private and will never be published. We welcome your thoughts—share your comments respectfully.
                             </p>
                         </hgroup>
-                        <form action="" method="post" class="news-comment-form">
+                        <form action="../admin/server/post_comment.php" method="post" class="news-comment-form">
                             <!-- textarea  -->
                             <div class="comment-input-field">
                                 <label for="comment-box">Your Comment</label>
-                                <textarea name="comment_box" id="comment-box" placeholder="We'd love to hear your opinion. Leave a comment..."></textarea>
+                                <textarea name="comment_box" id="comment-box" placeholder="We'd love to hear your opinion. Leave a comment..." required></textarea>
                             </div>
 
-                            <!-- textarea  -->
+                            <!-- name  -->
                             <div class="comment-input-field">
                                 <label for="commentor-name">Your Name</label>
-                                <input type="text" name="commentor_name" id="commentor-name" placeholder="Your Full Name">
+                                <input type="text" name="commentor_name" id="commentor-name" placeholder="Your Full Name" required>
                             </div>
 
-                            <!-- textarea  -->
+                            <!-- email  -->
                             <div class="comment-input-field">
                                 <label for="commentor-email">Your Email:</label>
                                 <input type="email" name="commentor_email" id="commentor-email" placeholder="Email Address">
+                            </div>
+
+                            <!-- post id  -->
+                            <div class="comment-input-field" style="display: none !important;">
+                                <label for="post-id">Post ID</label>
+                                <input type="text" name="post_id" id="post-id" value="<?php echo $post_id ?>">
                             </div>
 
                             <!-- post button  -->
