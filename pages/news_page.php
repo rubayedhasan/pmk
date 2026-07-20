@@ -1,3 +1,57 @@
+<?php
+// connect database 
+require_once("../admin/db/dbconnect.php");
+$dbConnection = $conn;
+
+
+if (isset($_GET["post_id"])) {
+    // POST ID 
+    $post_id = $_GET["post_id"];
+
+    // QUERY::GET MATCHED POST
+    $get_post_query = "SELECT * FROM posts WHERE post_customid = '$post_id'";
+    $posts_arr = $dbConnection->query($get_post_query)->fetch_assoc();
+    $post_category_id = $posts_arr["post_cat"];
+    $post_subcategory_id = $posts_arr["post_subcat"];
+    $post_title = $posts_arr["post_title"];
+    $post_description = $posts_arr["post_description"];
+    $post_datetme = $posts_arr["post_datetme"];
+    $post_authorname = $posts_arr["post_authorname"];
+
+    // QUERY:: GET CATEGORY
+    $get_category_query = "SELECT postcat_name FROM post_catecgory WHERE postcat_id = $post_category_id";
+    $get_category_arr = $dbConnection->query($get_category_query)->fetch_assoc();
+    $post_category_name = $get_category_arr['postcat_name'];
+
+    // QUERY:: GET SUB-CATEGORY
+    $get_subCategory_Query = "SELECT postsub_cat_name FROM postsub_cat WHERE postsub_cat_id = $post_subcategory_id";
+    $get_subcategory_arr = $dbConnection->query($get_subCategory_Query)->fetch_assoc();
+    $post_subcategory_name = $get_subcategory_arr['postsub_cat_name'];
+
+
+    // QUERY:: GET THUMBNAIL IMAGE
+    $get_thumbnail_query = "SELECT post_image from post_image WHERE postcust_id = '$post_id' && postimage_cat = 'thumbnail'";
+    $thumbnail_image_arr = $dbConnection->query($get_thumbnail_query)->fetch_assoc();
+    $thumbnail_image = $thumbnail_image_arr['post_image'];
+
+    // QUERY:: ALL RELATED IMAGE WITH OUT THUMBNAIL
+    $get_related_image_query = "SELECT post_image from post_image WHERE postcust_id = '$post_id' && postimage_cat != 'thumbnail'";
+    $related_image_arr = $dbConnection->query($get_related_image_query)->fetch_all(MYSQLI_ASSOC);
+}
+
+
+// echo "<pre>";
+// print_r($related_image_arr);
+// echo $related_image_arr[0]["post_image"];
+// echo "</pre>";
+
+
+
+// close the database connection 
+mysqli_close($dbConnection);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +83,7 @@
 
                     <!-- news image and title  -->
                     <figure class="news-feature-image">
-                        <img src="../assets/slider/medical_team_pmk.jpg" alt="">
+                        <img src="../admin/assets/uploads/posts/<?php echo $thumbnail_image; ?>" alt="<?php echo $post_title ?>">
                         <figcaption class="news-fea-img-content">
                             <p class="news-category">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category">
@@ -39,7 +93,9 @@
                                     <path d="M4 14h6v6h-6l0 -6" />
                                     <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                                 </svg>
-                                <span>Post category</span>
+                                <span>
+                                    <?php echo $post_category_name . " • " . $post_subcategory_name ?>
+                                </span>
                             </p>
                             <p class="news-post-date">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
@@ -56,10 +112,14 @@
                                     <path d="M7.01 17h.005" />
                                     <path d="M10.01 17h.005" />
                                 </svg>
-                                <span>April 18, 2026</span>
+                                <span>
+                                    <?php echo date("d F, Y", strtotime($post_datetme)); ?>
+                                </span>
                             </p>
                         </figcaption>
-                        <h1 class="news-title">Community Health Camp Reaches Hundreds in Rural Areas</h1>
+                        <h1 class="news-title">
+                            <?php echo $post_title ?>
+                        </h1>
                     </figure>
 
                     <!-- news meta action  -->
@@ -73,7 +133,9 @@
                                     <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
                                     <path d="M18.42 15.61a2.1 2.1 0 0 1 2.97 2.97l-3.39 3.42h-3v-3l3.42 -3.39" />
                                 </svg>
-                                <span class="author">Author Name</span>
+                                <span class="author">
+                                    <?php echo $post_authorname ?>
+                                </span>
                             </div>
                             <!-- reading time  -->
                             <div class="news-meta">
@@ -118,111 +180,25 @@
 
                     <!-- news content upper  -->
                     <div class="news-content">
-                        <p class="news-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam recusandae debitis fuga quibusdam, ut, omnis ratione tempore libero quos beatae, quam illo fugit! Enim repellendus asperiores velit accusamus molestiae illo voluptates corrupti magnam in obcaecati explicabo, pariatur labore minima perspiciatis, ut esse consequuntur! Nulla ullam sed dolorum consequatur dolorem?
-                        </p>
-                        <p class="news-description">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam iure eius asperiores tempore eaque, animi id, optio amet pariatur, provident sunt! Alias suscipit corrupti ex. Cupiditate odit maxime, tempore amet nulla atque ullam debitis necessitatibus cumque obcaecati quam numquam, magni aspernatur impedit nam quibusdam rem culpa explicabo. Facere quas excepturi sint mollitia. Impedit deleniti mollitia odit itaque animi laboriosam qui molestias nulla cumque ut aliquid velit rem, iusto nisi doloremque maiores magni commodi hic suscipit?
-                        </p>
-                        <p class="news-description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor deleniti molestias, similique quos ipsa rerum? Perferendis commodi laboriosam doloremque doloribus, ut dicta atque quibusdam corrupti soluta, quo incidunt cum eaque? Quisquam et inventore omnis tempora sequi quaerat possimus cumque, autem aperiam provident deleniti animi similique eaque vitae ut molestias! Doloribus excepturi aliquam expedita voluptatum beatae quae totam numquam consequatur ullam rerum placeat nulla molestias ut provident repellendus, nam id explicabo, adipisci sed. Facere aliquam ratione ab, nemo voluptas iure totam, dolores vel dolorem quis alias, velit doloremque illum architecto? Asperiores, atque soluta non aliquam delectus libero repellendus nam ab mollitia!
-                        </p>
-                        <p class="news-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ipsum illum labore officia sit illo reprehenderit, doloremque doloribus error blanditiis voluptatem eos, voluptatum optio eaque!
-                        </p>
+                        <div class="news-description">
+                            <?php echo str_replace('\r\n', '<br>', $post_description); ?>
+                        </div>
                     </div>
 
                     <!-- news content middle -->
                     <!-- news feature shor image  -->
                     <div class="news-feature-short-image-container">
-                        <figure class="new-feature-short-image">
-                            <img src="../assets/slider/Banner-1_1920by950.jpg" alt="">
+                        <?php
+                        if (count($related_image_arr) > 0) {
+                            foreach ($related_image_arr as $related_image) {
+                                echo "
+                            <figure class='new-feature-short-image'>
+                            <img src='../admin/assets/uploads/posts/$related_image[post_image]' alt='$post_title'>
                         </figure>
-                        <figure class="new-feature-short-image">
-                            <img src="../assets/slider/Banner-1_1920by950.jpg" alt="">
-                        </figure>
-                        <figure class="new-feature-short-image">
-                            <img src="../assets/slider/Banner-1_1920by950.jpg" alt="">
-                        </figure>
-                    </div>
-
-                    <!-- news content lower  -->
-                    <div>
-                        <p class="news-description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, ex? Et at sunt eos cumque molestiae enim ipsam reiciendis, adipisci quaerat recusandae inventore veniam nobis animi, mollitia ullam eveniet voluptates blanditiis tempore velit! Blanditiis nam dolore nesciunt incidunt alias, esse molestias quo aspernatur saepe assumenda magni quaerat sunt ipsa natus?
-                        </p>
-
-                        <p class="news-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam recusandae debitis fuga quibusdam, ut, omnis ratione tempore libero quos beatae, quam illo fugit! Enim repellendus asperiores velit accusamus molestiae illo voluptates corrupti magnam in obcaecati explicabo, pariatur labore minima perspiciatis, ut esse consequuntur! Nulla ullam sed dolorum consequatur dolorem?
-                        </p>
-
-                        <p class="news-description">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ipsum illum labore officia sit illo reprehenderit, doloremque doloribus error blanditiis voluptatem eos, voluptatum optio eaque!
-                        </p>
-
-                        <div class="new-key-highlight">
-                            <h4 class="news-key-label">Key Highlights</h4>
-
-                            <!-- key item -->
-                            <div class="news-key-item">
-                                <svg class="key-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 12l2 2l4 -4" />
-                                    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                </svg>
-                                <p class="key-item-content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, cumque.
-                                </p>
-                            </div>
-
-                            <!-- key item -->
-                            <div class="news-key-item">
-                                <svg class="key-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 12l2 2l4 -4" />
-                                    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                </svg>
-                                <p class="key-item-content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, cumque.
-                                </p>
-                            </div>
-
-                            <!-- key item -->
-                            <div class="news-key-item">
-                                <svg class="key-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 12l2 2l4 -4" />
-                                    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                </svg>
-                                <p class="key-item-content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, cumque.
-                                </p>
-                            </div>
-
-                            <!-- key item -->
-                            <div class="news-key-item">
-                                <svg class="key-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 12l2 2l4 -4" />
-                                    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                </svg>
-                                <p class="key-item-content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, cumque.
-                                </p>
-                            </div>
-
-                            <!-- key item -->
-                            <div class="news-key-item">
-                                <svg class="key-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M9 12l2 2l4 -4" />
-                                    <path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                </svg>
-                                <p class="key-item-content">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, cumque.
-                                </p>
-                            </div>
-                        </div>
+                            ";
+                            }
+                        }
+                        ?>
                     </div>
 
                     <!-- sub-section:: commnet area  -->

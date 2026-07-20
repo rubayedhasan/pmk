@@ -1,3 +1,33 @@
+<?php
+// connect database 
+require_once("../admin/db/dbconnect.php");
+$dbConnection = $conn;
+
+
+// QUERY:: GET LATEST NEWS POST (with out PROJECT AND CAREER AND GALLERY)
+$get_latest_post_query = "
+SELECT
+    p.post_customid,
+    c.postcat_name,
+    p.post_title,
+    p.post_description,
+    p.post_datetme
+FROM posts p
+INNER JOIN post_catecgory c
+    ON p.post_cat = c.postcat_id
+WHERE c.postcat_name NOT IN ('PROJECT', 'GALLERY', 'CAREER')
+ORDER BY p.post_datetme DESC
+LIMIT 6
+";
+
+$lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQLI_ASSOC);
+
+
+// echo "<pre>";
+// print_r($lates_posts_arr);
+// echo "</pre>";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,6 +132,7 @@
             font-size: 0.95rem;
             margin-top: 8px;
             font-weight: 500;
+            line-height: 1.4;
         }
 
         .news-link {
@@ -166,97 +197,102 @@
     <main>
         <!-- recent activity container  -->
         <div id="recent-activity-container">
-            <!--1st:: activity item  -->
-            <article class="activity-card">
-                <figure class="news-feature-image">
-                    <a href="../pages/news_page.php" class="news-feature-image-linked">
-                        <video src="../assets/videos/channel_i_feature_pmk_news update.mp4" controls></video>
+
+            <?php
+            if (count($lates_posts_arr) > 0) {
+                foreach ($lates_posts_arr as $latest_post) {
+
+                    // QUERY:: GET THUMBNAIL IMAGE
+                    $thumbnail_img_query = "SELECT post_image from post_image WHERE postcust_id = '$latest_post[post_customid]' && postimage_cat = 'thumbnail'";
+                    $thumbnail_img_arr = $dbConnection->query($thumbnail_img_query)->fetch_assoc();
+                    $thumbnail_img = $thumbnail_img_arr['post_image'];
+
+                    $formatted_date = date("d F, Y", strtotime($latest_post["post_datetme"]));
+
+                    // formate the description 
+                    $description = strip_tags($latest_post["post_description"]);
+                    $words = explode(" ", $description);
+                    $formatted_post_description = implode(" ", array_slice($words, 0, 30));
+                    if (count($words) > 50) {
+                        $formatted_post_description .= "...";
+                    }
+
+                    echo "
+                <article class='activity-card'>
+                <figure class='news-feature-image'>
+                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='project-feature-image-linked'>
+                        <img src='../admin/assets/uploads/posts/$thumbnail_img' alt='project feature image'>
                     </a>
-                    <figcaption class="news-posted-date">
-                        May 13, 2026
+
+                    <figcaption style='display: flex; align-items:center; gap:16px;'>
+                    <span class='news-posted-date' style='display: flex; align-items:center; gap:4px;'>
+                    <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-calendar-week'>
+	                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+	                <path d='M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12' />
+	                <path d='M16 3v4' />
+	                <path d='M8 3v4' />
+	                <path d='M4 11h16' />
+	                <path d='M7 14h.013' />
+	                <path d='M10.01 14h.005' />
+	                <path d='M13.01 14h.005' />
+	                <path d='M16.015 14h.005' />
+	                <path d='M13.015 17h.005' />
+	                <path d='M7.01 17h.005' />
+	                <path d='M10.01 17h.005' />
+                    </svg>
+
+                        $latest_post[postcat_name]
+                    </span>
+
+
+                    <span class='news-posted-date' style='display: flex; align-items:center; gap:4px;'>
+                    <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-calendar-week'>
+	                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+	                <path d='M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12' />
+	                <path d='M16 3v4' />
+	                <path d='M8 3v4' />
+	                <path d='M4 11h16' />
+	                <path d='M7 14h.013' />
+	                <path d='M10.01 14h.005' />
+	                <path d='M13.01 14h.005' />
+	                <path d='M16.015 14h.005' />
+	                <path d='M13.015 17h.005' />
+	                <path d='M7.01 17h.005' />
+	                <path d='M10.01 17h.005' />
+                    </svg>
+
+                        $formatted_date
+                    </span>
                     </figcaption>
                 </figure>
+                <div class='news-content'>
 
-
-                <!-- activity content  -->
-                <div class="news-content">
-
-                    <h4 class="news-title">
-                        <a href="../pages/news_page.php" class="linked-title">
-                            Channel i to Air “MFIs in Inclusive Development” with PMK Chief Executive Kamrun Nahar
+                    <h4 class='news-title'>
+                        <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='linked-title'>
+                           $latest_post[post_title]
                         </a>
                     </h4>
-                    <p class="news-body">
-                        Mr. Kamrun Nahar, Chief Executive of Palli Mongal Karmosuchi (PMK), attended as a special guest at the program titled “MFIs in Inclusive Development,” organized by Credit and Development Forum (CDF). The event highlighted the role of socio-economic development, financial inclusion, and microfinance activities in Bangladesh. The program will be aired on Channel i on Friday, May 15, 2026, at 11:30 AM.
+                    <p class='news-body'>
+                        $formatted_post_description
                     </p>
-                    <a href="../pages/news_page.php" class="news-link">
+                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='news-link'>
                         <span> See More</span>
-                        <span><i class="fa-solid fa-caret-right"></i></span>
+                        <span><i class='fa-solid fa-caret-right'></i></span>
                     </a>
                 </div>
             </article>
-
-            <!--2nd:: activity item  -->
-            <article class="activity-card">
-                <figure class="news-feature-image">
-                    <a href="../pages/news_page.php" class="news-feature-image-linked">
-                        <img src="../assets/pictures/community_health-2.jpeg" alt="news feature image">
-                    </a>
-                    <figcaption class="news-posted-date">
-                        April 18, 2026
-                    </figcaption>
-                </figure>
-
-
-                <!-- activity content  -->
-                <div class="news-content">
-
-                    <h4 class="news-title">
-                        <a href="" class="linked-title">
-                            Community Health Camp Reaches Hundreds in Rural Areas
-                        </a>
-                    </h4>
-                    <p class="news-body">
-                        Our organization successfully conducted a community health camp aimed at providing accessible healthcare services to rural populations. The initiative brought together qualified medical professionals and volunteers to offer free consultations, basic treatments, and health awareness sessions.
-                    </p>
-                    <a href="../pages/news_page.php" class="news-link">
-                        <span> See More</span>
-                        <span><i class="fa-solid fa-caret-right"></i></span>
-                    </a>
-                </div>
-            </article>
-
-            <!--3rd:: activity item  -->
-            <article class="activity-card">
-                <figure class="news-feature-image">
-                    <a href="../pages/news_page.php" class="news-feature-image-linked">
-                        <img src="../assets/pictures/community_health-3.jpeg" alt="news feature image">
-                    </a>
-                    <figcaption class="news-posted-date">
-                        April 18, 2026
-                    </figcaption>
-                </figure>
-
-
-                <!-- activity content  -->
-                <div class="news-content">
-
-                    <h4 class="news-title">
-                        <a href="../pages/news_page.php" class="linked-title">
-                            Community Health Camp Reaches Hundreds in Rural Areas
-                        </a>
-                    </h4>
-                    <p class="news-body">
-                        Our organization successfully conducted a community health camp aimed at providing accessible healthcare services to rural populations. The initiative brought together qualified medical professionals and volunteers to offer free consultations, basic treatments, and health awareness sessions.
-                    </p>
-                    <a href="../pages/news_page.php" class="news-link">
-                        <span> See More</span>
-                        <span><i class="fa-solid fa-caret-right"></i></span>
-                    </a>
-                </div>
-            </article>
+                
+                ";
+                }
+            }
+            ?>
         </div>
     </main>
 </body>
 
 </html>
+
+<?php
+// close the database connection 
+mysqli_close($dbConnection);
+?>
