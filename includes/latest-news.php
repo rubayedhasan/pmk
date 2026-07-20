@@ -221,7 +221,7 @@ $lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQL
                 <article class='activity-card'>
                 <figure class='news-feature-image'>
                     <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='project-feature-image-linked'>
-                        <img src='../admin/assets/uploads/posts/$thumbnail_img' alt='project feature image'>
+                        <img src='../admin/assets/uploads/posts/$thumbnail_img' alt='$latest_post[post_title]'>
                     </a>
 
                     <figcaption style='display: flex; align-items:center; gap:16px;'>
