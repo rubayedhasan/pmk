@@ -24,6 +24,13 @@
                 <!--project update container  -->
                 <?php include_once("../includes/project-update.php"); ?>
 
+                <!-- view more button  -->
+                <div class="button-container">
+                    <a href="../pages/news.php?category=PROJECT" class="visit-btn button-effect">
+                        <span>View All</span>
+                        <span class="btn-indicator"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -38,6 +45,14 @@
 
                 <!-- recent activity container  -->
                 <?php include_once("../includes/latest-news.php") ?>
+
+                <!-- view more button  -->
+                <div class="button-container">
+                    <a href="../pages/news.php" class="visit-btn button-effect">
+                        <span>View All</span>
+                        <span class="btn-indicator"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </a>
+                </div>
 
             </div>
         </section>

@@ -56,7 +56,7 @@ if (isset($_GET["post_id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMK | Newspaper</title>
+    <title>PMK | New Content</title>
     <!-- Linked to shared stylesheet.php" -->
     <?php include("../includes/sharedLinks.php") ?>
 
@@ -302,25 +302,26 @@ if (isset($_GET["post_id"])) {
                 <aside class="related-news-container">
                     <!-- sub-section:: relateed news  -->
                     <div class="related-news">
-                        <h4 class="related-news-label">Related News</h4>
-                        <!-- cards  -->
-                        <div class="related-news-cards">
+                        <?php
+                        // QUERY:: get related POST
+                        $get_related_post_query = "SELECT post_customid, post_title, post_datetme FROM posts WHERE post_cat = '$post_category_id' && post_customid != '$post_id'";
+                        $related_post_arr = $dbConnection->query($get_related_post_query)->fetch_all(MYSQLI_ASSOC);
 
-                            <?php
-                            // QUERY:: get related POST
-                            $get_related_post_query = "SELECT post_customid, post_title, post_datetme FROM posts WHERE post_cat = '$post_category_id' && post_customid != '$post_id'";
-                            $related_post_arr = $dbConnection->query($get_related_post_query)->fetch_all(MYSQLI_ASSOC);
+                        if (count($related_post_arr) > 0) {
+                            echo "
+                            <h4 class='related-news-label'>Related News</h4>
+                        <div class='related-news-cards'>                            
+                            ";
 
-                            if (count($related_post_arr) > 0) {
-                                foreach ($related_post_arr as $related_post) {
-                                    $formatted_date = date("d F, Y", strtotime($related_post["post_datetme"]));
+                            foreach ($related_post_arr as $related_post) {
+                                $formatted_date = date("d F, Y", strtotime($related_post["post_datetme"]));
 
-                                    // QUERY:: GET THUMBNAIL IMAGE
-                                    $thumb_img_query = "SELECT post_image from post_image WHERE postcust_id = '$related_post[post_customid]' && postimage_cat = 'thumbnail'";
-                                    $thumb_img_arr = $dbConnection->query($thumb_img_query)->fetch_assoc();
-                                    $thumb_img = $thumb_img_arr['post_image'];
+                                // QUERY:: GET THUMBNAIL IMAGE
+                                $thumb_img_query = "SELECT post_image from post_image WHERE postcust_id = '$related_post[post_customid]' && postimage_cat = 'thumbnail'";
+                                $thumb_img_arr = $dbConnection->query($thumb_img_query)->fetch_assoc();
+                                $thumb_img = $thumb_img_arr['post_image'];
 
-                                    echo "
+                                echo "
                                     <div class='related-news-card'>
                                 <figure class='related-news-image'>
                                     <img src='../admin/assets/uploads/posts/$thumb_img' alt='$related_post[post_title]'>
@@ -351,24 +352,27 @@ if (isset($_GET["post_id"])) {
                                 </div>
                             </div>
                                     ";
-                                }
                             }
 
-                            ?>
+                            echo "
 
-                            <!-- view all button  -->
-                            <div class="comment-button-container view-button">
-                                <button type="button" class="comment-button">
-                                    <span>View All</span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M5 12l14 0" />
-                                        <path d="M15 16l4 -4" />
-                                        <path d="M15 8l4 4" />
-                                    </svg>
-                                </button>
-                            </div>
+                             <div class='comment-button-container view-button'>
+                            <a href='./news.php?category=$post_category_id' class='comment-button''>
+                                <span>View All</span>
+                                <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right'>
+                                    <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                                    <path d='M5 12l14 0' />
+                                    <path d='M15 16l4 -4' />
+                                    <path d='M15 8l4 4' />
+                                </svg>
+                            </a>
                         </div>
+                    </div>
+                            
+                            ";
+                        }
+
+                        ?>
 
                         <!-- categories  -->
                         <div class="category-lists">
@@ -378,7 +382,7 @@ if (isset($_GET["post_id"])) {
 
                                 <?php
                                 // QUERY:: get all post category 
-                                $get_all_category_query = "SELECT * FROM post_catecgory WHERE postcat_name NOT IN ('PROJECT', 'GALLERY', 'CAREER', 'REPORTS')";
+                                $get_all_category_query = "SELECT * FROM post_catecgory WHERE postcat_name NOT IN ('GALLERY', 'CAREER', 'REPORTS', 'RESULTS')";
                                 $all_category_arr = $dbConnection->query($get_all_category_query)->fetch_all(MYSQLI_ASSOC);
 
                                 // print_r($all_category_arr);
@@ -386,7 +390,7 @@ if (isset($_GET["post_id"])) {
                                 if (count($all_category_arr) > 0) {
                                     foreach ($all_category_arr as $category) {
                                         echo "
-                                        <a href=''>
+                                        <a href='./news.php?category=$category[postcat_name]'>
                                             <div class='category'>
                                                 <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-category-2'>
                                                     <path stroke='none' d='M0 0h24v24H0z' fill='none' />

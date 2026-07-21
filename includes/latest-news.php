@@ -197,7 +197,6 @@ $lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQL
     <main>
         <!-- recent activity container  -->
         <div id="recent-activity-container">
-
             <?php
             if (count($lates_posts_arr) > 0) {
                 foreach ($lates_posts_arr as $latest_post) {
