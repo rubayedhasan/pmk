@@ -1,3 +1,18 @@
+<?php
+// connect database 
+// require_once("../admin/db/dbconnect.php");
+// $dbConnection = $conn;
+
+// QUERY:: get SLIDER image
+$get_slider_image_query = "SELECT post_image, post_title FROM post_image WHERE postimage_cat = 'slider'  ORDER BY post_imgid DESC LIMIT 6";
+$slider_image_arr = $dbConnection->query($get_slider_image_query)->fetch_all(MYSQLI_ASSOC);
+
+// echo "<pre>";
+// print_r($slider_image_arr);
+// echo "</pre>";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,80 +41,24 @@
         <!-- section::  banner -->
         <section id="banner" class="slider-container swiper">
             <div class="slider-wrapper swiper-wrapper">
-                <!-- 1st:: slide item(pmk)  -->
-                <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/Banner-1_1920by950.jpg" alt="">
-                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
+                <?php
+                foreach ($slider_image_arr as $slider_image) {
+                    echo "
+                     <div class='slider-item swiper-slide'>
+                    <figure class='slider-image'>
+                        <img src='../admin/assets/uploads/posts/$slider_image[post_image]' alt='$slider_image[post_title]'>
+                        <!-- <img src='../assets/slider/Banner_Size_1920by800.jpg.jpeg' alt=''> -->
+                        <figcaption class='slider-content'>
+                            <h2 class='slider-title font-playfair'>$slider_image[post_title]</h2>
                             <!-- slider buttons  -->
-                            <a href="" class="slider-button"><span>Read More</span></a>
+                            <a href='' class='slider-button'><span>Read More</span></a>
                         </figcaption>
                     </figure>
                 </div>
+                    ";
+                }
 
-                <!-- 2nd:: slide item(hospital)  -->
-                <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/Banner-3_1920by950.jpg" alt="">
-                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
-                            <!-- slider buttons  -->
-                            <a href="" class="slider-button"><span>Read More</span></a>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!-- 3rd:: slide item(nursing)  -->
-                <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/Banner-5_1920by950.jpg" alt="">
-                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
-                            <!-- slider buttons  -->
-                            <a href="" class="slider-button"><span>Read More</span></a>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!-- 4th:: slide item(various project)  -->
-                <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/Banner-6_1920by950.jpg" alt="">
-                        <!-- <img src="../assets/slider/Banner_Size_1920by800.jpg.jpeg" alt=""> -->
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
-                            <!-- slider buttons  -->
-                            <a href="" class="slider-button"><span>Read More</span></a>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <!-- 5th:: slide item(wash)  -->
-                <!-- <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/wash_project.JPG" alt="">
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
-
-                            <a href="" class="slider-button"><span>Read More</span></a>
-                        </figcaption>
-                    </figure>
-                </div> -->
-
-                <!-- 6th:: slide item(world bank)  -->
-                <!-- <div class="slider-item swiper-slide">
-                    <figure class="slider-image">
-                        <img src="../assets/slider/world_bank_visitor_at_pmk.JPG" alt="">
-                        <figcaption class="slider-content">
-                            <h2 class="slider-title font-playfair">PMK Project Headline</h2>
-                            <a href="" class="slider-button"><span>Read More</span></a>
-                        </figcaption>
-                    </figure>
-                </div> -->
+                ?>
             </div>
 
             <!-- slider controls  -->

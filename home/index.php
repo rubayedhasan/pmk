@@ -1,3 +1,10 @@
+<?php
+
+// connect database 
+require_once("../admin/db/dbconnect.php");
+$dbConnection = $conn;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,3 +81,8 @@
 </body>
 
 </html>
+
+
+<?php
+mysqli_close($dbConnection);
+?>

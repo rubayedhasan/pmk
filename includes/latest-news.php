@@ -1,7 +1,7 @@
 <?php
 // connect database 
-require_once("../admin/db/dbconnect.php");
-$dbConnection = $conn;
+// require_once("../admin/db/dbconnect.php");
+// $dbConnection = $conn;
 
 
 // QUERY:: GET LATEST NEWS POST (with out PROJECT AND CAREER AND GALLERY)
@@ -291,8 +291,3 @@ $lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQL
 </body>
 
 </html>
-
-<?php
-// close the database connection 
-mysqli_close($dbConnection);
-?>

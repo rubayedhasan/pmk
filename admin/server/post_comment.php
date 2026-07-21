@@ -5,17 +5,17 @@ $dbConnection = $conn;
 
 if (isset($_POST["commentor_name"]) && !empty($_POST["commentor_name"])) {
     $name = $_POST["commentor_name"];
-    $email = $_POST["commentor_email"];
+    $phone = $_POST["commentor_phone"];
     $comment = $_POST["comment_box"];
     $post_id = $_POST["post_id"];
 
 
     // QUERY:: INSERT THE COMMENT 
-    $inset_comment_query = $dbConnection->prepare("INSERT INTO post_comment (commentor_name, commentor_email, comment, post_id) VALUES (?,?,?,? )");
+    $inset_comment_query = $dbConnection->prepare("INSERT INTO post_comment (commentor_name, commentor_mobile, comment, post_id) VALUES (?,?,?,? )");
     $inset_comment_query->bind_param(
         "ssss",
         $name,
-        $email,
+        $phone,
         $comment,
         $post_id
     );

@@ -254,7 +254,7 @@ if (isset($_GET["post_id"])) {
                         <hgroup>
                             <h4 class="comment-area-label">Leave a Comment</h4>
                             <p class="comment-area-text">
-                                Your email address will not published. So feel free to leave commenYour email address will remain private and will never be published. We welcome your thoughts—share your comments respectfully.
+                                Your phone number will not published. So feel free to leave commenYour email address will remain private and will never be published. We welcome your thoughts—share your comments respectfully.
                             </p>
                         </hgroup>
                         <form action="../admin/server/post_comment.php" method="post" class="news-comment-form">
@@ -272,8 +272,8 @@ if (isset($_GET["post_id"])) {
 
                             <!-- email  -->
                             <div class="comment-input-field">
-                                <label for="commentor-email">Your Email:</label>
-                                <input type="email" name="commentor_email" id="commentor-email" placeholder="Email Address">
+                                <label for="commentor-phone">Your Phone:</label>
+                                <input type="text" name="commentor_phone" id="commentor-phone" placeholder="Phone Number" required>
                             </div>
 
                             <!-- post id  -->
@@ -378,7 +378,7 @@ if (isset($_GET["post_id"])) {
 
                                 <?php
                                 // QUERY:: get all post category 
-                                $get_all_category_query = "SELECT * FROM post_catecgory WHERE postcat_name NOT IN ('PROJECT', 'GALLERY', 'CAREER')";
+                                $get_all_category_query = "SELECT * FROM post_catecgory WHERE postcat_name NOT IN ('PROJECT', 'GALLERY', 'CAREER', 'REPORTS')";
                                 $all_category_arr = $dbConnection->query($get_all_category_query)->fetch_all(MYSQLI_ASSOC);
 
                                 // print_r($all_category_arr);

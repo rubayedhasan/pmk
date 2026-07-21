@@ -1,7 +1,7 @@
 <?php
 // connect database 
-require_once("../admin/db/dbconnect.php");
-$dbConnection = $conn;
+// require_once("../admin/db/dbconnect.php");
+// $dbConnection = $conn;
 
 
 // QUERY:: GET LATEST NEWS POST (with out PROJECT AND CAREER AND GALLERY)
