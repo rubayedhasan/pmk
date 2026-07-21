@@ -210,7 +210,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -221,12 +220,12 @@
                 </div>
 
                 <!-- view more button  -->
-                <div class="button-container">
+                <!-- <div class="button-container">
                     <button type="button" class="visit-btn visit-btn-outline button-effect">
                         <span><i class="fa-solid fa-users-viewfinder"></i></span>
                         <span>View More</span>
                     </button>
-                </div>
+                </div> -->
             </div>
             </div>
         </section>

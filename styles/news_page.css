@@ -172,6 +172,7 @@
   height: 280px;
   border: 3px solid var(--pmk-green-dark);
   margin: 0;
+  cursor: pointer;
   overflow: hidden;
 }
 

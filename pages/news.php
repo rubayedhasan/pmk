@@ -94,7 +94,7 @@ $category_arr = $dbConnection->query($get_category_query)->fetch_all(MYSQLI_ASSO
                         echo "
             <article class='activity-card'>
                 <figure class='news-feature-image'>
-                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='project-feature-image-linked'>
+                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='news-feature-image-linked'>
                         <img src='../admin/assets/uploads/posts/$thumbnail_img' alt='$latest_post[post_title]'>
                     </a>
 
