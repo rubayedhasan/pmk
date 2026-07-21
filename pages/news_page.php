@@ -184,7 +184,7 @@ if (isset($_GET["post_id"])) {
                     </div>
 
                     <!-- news content middle -->
-                    <!-- news feature shor image  -->
+                    <!-- news feature short image  -->
                     <div class="news-feature-short-image-container">
                         <?php
                         if (count($related_image_arr) > 0) {
@@ -197,6 +197,12 @@ if (isset($_GET["post_id"])) {
                             }
                         }
                         ?>
+                    </div>
+
+                    <!-- image popover container  -->
+                    <div class="image-popover">
+                        <span class="close-popover">&times;</span>
+                        <img loading="lazy" decoding="async" fetchpriority="high" src="" alt="">
                     </div>
 
                     <!-- sub-section:: comment display area  -->
@@ -420,6 +426,9 @@ if (isset($_GET["post_id"])) {
     include("../includes/footer.php");
     ?>
 
+
+    <!-- Linked custom script  -->
+    <script src="../js/news_page.js"></script>
 </body>
 
 </html>
