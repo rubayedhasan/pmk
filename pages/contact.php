@@ -158,28 +158,28 @@
                         <p class="news-text">Get the latest updates, announcements, and community news from PMK directly in your inbox.</p>
                     </div>
 
-                    <form action="" method="" class="contact-newsletter-form">
+                    <form action="../admin/server/contact_us.php" method="post" class="contact-newsletter-form">
                         <!-- name  -->
                         <div class="input-field">
                             <label for="contact-user-name">Name</label>
-                            <input type="text" name="contact_user_name" id="contact-user-name" placeholder="Enter Your Name">
+                            <input type="text" name="contact_user_name" id="contact-user-name" placeholder="Enter Your Name" required>
                         </div>
 
                         <!-- email  -->
                         <div class="input-field">
                             <label for="contact-user-email">Email</label>
-                            <input type="text" name="contact_user_email" id="contact-user-email" placeholder="Enter Your Email">
+                            <input type="text" name="contact_user_email" id="contact-user-email" placeholder="Enter Your Email" required>
                         </div>
 
                         <!-- message  -->
                         <div class="input-field">
                             <label for="contact-user-message">Message</label>
-                            <textarea name="contact_user_message" id="contact-user-message" placeholder="Drop A Message" cols="10" rows="5"></textarea>
+                            <textarea name="contact_user_message" id="contact-user-message" placeholder="Drop A Message" cols="10" rows="5" required></textarea>
                         </div>
 
                         <!-- submit button  -->
                         <div class="button-field">
-                            <button type="submit" name="contact_submit_btn">Submit Message</button>
+                            <button type="submit">Submit Message</button>
                         </div>
                     </form>
                 </div>

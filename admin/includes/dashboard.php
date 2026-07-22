@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>PMK | Admin Dashboard</title>
+    <!-- LInked custom stylesheet  -->
+    <link rel="stylesheet" href="../styles//index.css">
+    <link rel="stylesheet" href="../styles//dashboard.css">
 </head>
 
 <body>

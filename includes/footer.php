@@ -151,13 +151,14 @@
                             <!-- newsletter  -->
                             <div class="newsletter">
                                 <h5>Subscribe to Updates</h5>
-                                <form>
+                                <form action="../admin/server/subscribe.php" method="post">
                                     <input
                                         type="email"
-                                        name="user-email"
+                                        name="subscription_user"
                                         id="input-email"
                                         placeholder="Your Email Address" />
                                     <button id="subscribe-btn" type="submit">Subscribe</button>
+                                </form>
                                 </form>
                             </div>
                         </div>
@@ -193,9 +194,6 @@
             </section>
         </footer>
     </main>
-
-    <!-- Linked custom script  -->
-    <script src="../js/newsletter.js"></script>
 </body>
 
 </html>
