@@ -1,3 +1,17 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$user = $_SESSION["admin"]["username"] ?? "";
+
+if ($user) {
+    header("location:../index.php");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
