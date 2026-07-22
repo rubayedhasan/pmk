@@ -186,6 +186,44 @@
 
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
+  .panel-container {
+    padding: 24px 20px;
+  }
+
+  .panel {
+    padding: 24px;
+  }
+
+  .login-panel {
+    min-height: 420px;
+    padding: 74px 24px 40px;
+  }
+
+  .panel-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .panel-title {
+    font-size: 1.2rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .form-field label {
+    font-size: 0.875rem;
+  }
+
+  .form-field label svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 1.5px;
+  }
 }
 
 /* responsive styles:: medium devices  */
