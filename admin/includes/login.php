@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <!-- Linked custom stylesheet  -->
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/login.css">
 </head>
 
@@ -28,7 +29,7 @@
                         <h4 class="panel-title">PMK Portal</h4>
                     </div>
 
-                    <form action="" class="login-form">
+                    <form action="../server/admin_login.php" method="post" class="login-form">
                         <!-- user name  field  -->
                         <div class="form-field">
                             <label for="user-name">
@@ -80,13 +81,6 @@
             </div>
         </div>
     </main>
-
-    <script>
-        // prevent default the form 
-        document.querySelector(".login-button").addEventListener('click', (e) => {
-            e.preventDefault();
-        })
-    </script>
 </body>
 
 </html>

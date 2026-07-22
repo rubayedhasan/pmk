@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +15,13 @@
 
 <body>
     <?php
-    include_once("../includes/login.php");
+    $admin_user = $_SESSION["admin"]["username"] ?? "";
+
+    if ($admin_user) {
+        include_once("../includes/dashboard.php");
+    } else {
+        include_once("../includes/login.php");
+    }
     ?>
 </body>
 

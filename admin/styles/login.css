@@ -5,7 +5,6 @@
   align-items: center;
   margin: 0;
   padding: 40px 20px;
-  /* background-color: #e7e7e7; */
   background-color: var(--pmk-green-light);
 }
 
@@ -14,7 +13,6 @@
   max-width: 560px;
   border-radius: 24px;
   padding: 32px;
-  /* background: linear-gradient(155deg, #3fa844, #1f6b2c); */
   background: linear-gradient(155deg, var(--pmk-green), var(--pmk-green-dark));
   position: relative;
 }
@@ -23,7 +21,6 @@
   width: 64px;
   height: 64px;
   opacity: 0.55;
-  /* background-color: #1a5324; */
   background-color: var(--pmk-green-dark-sublet);
   position: absolute;
 }
