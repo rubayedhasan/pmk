@@ -1,3 +1,110 @@
+/* dashboard container  */
+#dashboard-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+
+  position: relative;
+}
+
+/* dashboard menu contianer  */
+#dashboard-menu-container {
+  padding: 32px 0;
+  color: var(--pmk-white);
+  background-color: var(--pmk-green-dark-sublet);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 340px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* dashboard menu image  */
+.d-menu-image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 24px;
+}
+
+.d-menu-image img {
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.d-menu-image-content {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.45px;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+/* dashboard menu  */
+.dashboard-menu {
+  flex: 1;
+  padding: 0 16px;
+}
+
+/* dashboard logout  */
+.dashboard-logout {
+  flex-shrink: 0;
+  padding: 24px 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.d-logout-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--pmk-white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.35px;
+  transition: all 0.35s ease-in-out;
+}
+
+.d-logout-button:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.d-logout-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* dashboard content container  */
+#dashboard-content-container {
+  border: 1px solid green;
+  padding: 32px 24px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 340px;
+  right: 0;
+  width: calc(100% - 340px);
+}
+
+/* dashboard topbar  */
+#dashobard-topbar {
+}
+
+/* dashboard area  */
+#dashboard {
+}
+
 /* responsive styles:: small devices  */
 @media (max-width: 767.98px) {
 }
