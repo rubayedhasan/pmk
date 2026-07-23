@@ -26,8 +26,8 @@
                 <div class="dashboard-menu">
                     <!-- dashboard  -->
                     <ul class="d-menu">
-                        <li class="d-menu-item d-active">
-                            <a href="" class="d-menu-link">
+                        <li class="d-menu-item">
+                            <a href="?dashboard=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-blocks">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M14 4a1 1 0 0 1 1 -1h5a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1l0 -5" />
@@ -42,7 +42,7 @@
                     <ul class="d-menu">
                         <h4 class="d-menu-title">Content Managment</h4>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?posts=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-description">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M14 3v4a1 1 0 0 0 1 1h4" />
@@ -54,7 +54,7 @@
                             </a>
                         </li>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?circular=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" />
@@ -66,7 +66,7 @@
                             </a>
                         </li>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?apply=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M13 5h8" />
@@ -80,7 +80,7 @@
                             </a>
                         </li>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?result=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-report">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
@@ -95,7 +95,7 @@
                             </a>
                         </li>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?report=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chart-donut">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-3.8a4.1 4.1 0 1 1 -5 -5v-4a.9 .9 0 0 0 -1 -.8" />
@@ -105,7 +105,7 @@
                             </a>
                         </li>
                         <li class="d-menu-item">
-                            <a href="" class="d-menu-link">
+                            <a href="?images=true" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-photo-alt">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M6 18h5" />
@@ -167,19 +167,43 @@
                                     <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 </svg>
                             </div>
-                            <h5 class="d-user">username</h5>
+                            <h5 class="d-user">
+                                <?php
+                                // echo $admin_user;
+                                echo "username";
+                                ?>
+                            </h5>
                         </div>
                     </div>
                 </div>
 
                 <!-- dashboard area  -->
                 <div id="dashboard">
-                    area
+                    <?php
+                    if (isset($_GET["posts"])) {
+                        include("../includes/all_posts.php");
+                    } else if (isset($_GET["circular"])) {
+                        include("../includes/all_circular.php");
+                    } else if (isset($_GET["apply"])) {
+                        include("../includes/applied_list.php");
+                    } else if (isset($_GET["result"])) {
+                        include("../includes/all_results.php");
+                    } else if (isset($_GET["report"])) {
+                        include("../includes/all_reports.php");
+                    } else if (isset($_GET["images"])) {
+                        include("../includes/all_images.php");
+                    } else {
+                        echo "Welcome To Dashboard";
+                    }
+                    ?>
                 </div>
 
             </div>
         </section>
     </main>
+
+    <!-- Linked custom script  -->
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>
