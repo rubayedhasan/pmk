@@ -1,8 +1,17 @@
 // // dashboard menu LInk active functionality
 const pageLocation = window.location.search || "?dashboard=true";
 const dMenuLinks = document.querySelectorAll(".d-menu-link");
+const topBarTitle = document.querySelector(".d-title");
 dMenuLinks.forEach((link) => {
-  link.classList.toggle("d-active", link.getAttribute("href") === pageLocation);
+  const activeLocation = link.getAttribute("href") === pageLocation;
+  link.classList.toggle("d-active", activeLocation);
+
+  if (activeLocation) {
+    topBarTitle.textContent = link.textContent;
+  }
+  link.addEventListener("click", () => {
+    topBarTitle.textContent = link.textContent;
+  });
 });
 
 // dashboard menu controller functionality
