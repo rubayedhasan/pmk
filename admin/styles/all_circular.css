@@ -36,8 +36,8 @@
 
 .panel-main-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 16px;
   margin-top: 24px;
 }
 
@@ -88,12 +88,23 @@
   margin-top: 2px;
 }
 
+.open-position {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: var(--pmk-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
 .item-dates {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 
 .published-date {
@@ -130,7 +141,7 @@
   font-size: 0.775rem;
   font-weight: 400;
   padding: 4px 8px;
-  margin-top: 8px;
+  margin-top: 12px;
   border-radius: 6px;
   text-transform: capitalize;
 }
