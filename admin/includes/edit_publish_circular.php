@@ -1,3 +1,18 @@
+<?php
+// connect database 
+require_once("../db/dbconnect.php");
+$dbConnection = $conn;
+
+if (isset($_GET["circular_id"])) {
+    $circular_id = $_GET["circular_id"];
+
+    // QUERY:: GET THE CIRCULAR DATA 
+    $circular_data_query = "SELECT * FROM publish_circular WHERE circular_id = '$circular_id'";
+    $circular_data = $dbConnection->query($circular_data_query)->fetch_assoc();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +94,7 @@
                             Circular / position title
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="text" name="circular_designation_title" placeholder="e.g: Branch Manager" id="circular-designation-title" class="circular-input-field">
+                        <input type="text" name="circular_designation_title" placeholder="e.g: Branch Manager" id="circular-designation-title" class="circular-input-field" value="<?php echo $circular_data['circular_title']; ?>">
                     </div>
 
                     <!-- circular designation category  -->
@@ -88,7 +103,7 @@
                             Designation Category
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="text" name="circular_designation_category" placeholder="e.g: BM" id="circular-designation-category" class="circular-input-field">
+                        <input type="text" name="circular_designation_category" placeholder="e.g: BM" id="circular-designation-category" class="circular-input-field" value="<?php echo $circular_data['designation_category']; ?>">
                         <p class="field-suggest-text">Short form only. e.g: CO/SCO/AO/BM/APM/DPM/PM/AD/DD/DIR</p>
                     </div>
 
@@ -99,7 +114,7 @@
                             <span style="color:#8fa19a; font-size:0.8rem; font-weight: 400;">(only number)</span>
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="number" name="circular_available_position" placeholder="e.g: 50" id="circular-available-position" class="circular-input-field">
+                        <input type="number" name="circular_available_position" placeholder="e.g: 50" id="circular-available-position" class="circular-input-field" value="<?php echo $circular_data['available_vacancy']; ?>">
                     </div>
 
                     <!-- circular id  -->
@@ -108,7 +123,7 @@
                             Circular ID
                             <span style="color:#8fa19a; font-size:0.8rem; font-weight: 400;">(auto-generated)</span>
                         </label>
-                        <input type="text" name="circular_id" value="id" id="circular-id" class="circular-input-field" disabled>
+                        <input type="text" name="circular_id" value="<?php echo $circular_data['circular_id']; ?>" id="circular-id" class="circular-input-field" disabled>
                         <p class="field-suggest-text">Unique circular reference, like: BM20260001</p>
                     </div>
                 </div>
@@ -139,7 +154,7 @@
                             Circular Publish Date
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input onfocus="this.showPicker()" type="date" name="circular_publish_date" id="circular-publish-date" class="circular-input-field">
+                        <input onfocus="this.showPicker()" type="date" name="circular_publish_date" id="circular-publish-date" class="circular-input-field" value="<?php echo $circular_data['circular_publish_date']; ?>">
                     </div>
 
                     <!-- circular deadline date  -->
@@ -148,7 +163,7 @@
                             Circular Deadline Date
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input onfocus="this.showPicker()" type="date" name="circular_application_deadline" id="circular-application-deadline" class="circular-input-field">
+                        <input onfocus="this.showPicker()" type="date" name="circular_application_deadline" id="circular-application-deadline" class="circular-input-field" value="<?php echo $circular_data['application_deadline']; ?>">
                     </div>
                 </div>
             </div>
@@ -177,7 +192,7 @@
                             Probation Period Salary
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="text" name="circular_probation_salary" placeholder="e.g. 58200 per month" id="circular-probation-salary" class="circular-input-field">
+                        <input type="text" name="circular_probation_salary" placeholder="e.g. 58200 per month" id="circular-probation-salary" class="circular-input-field" value="<?php echo $circular_data['probation_salary']; ?>">
                         <p class="field-suggest-text">Enter the probation period salary.</p>
                     </div>
 
@@ -187,7 +202,7 @@
                             Gross Salary
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="text" name="circular_gross_salary" placeholder="e.g. 58200 per month" id="circular-gross-salary" class="circular-input-field">
+                        <input type="text" name="circular_gross_salary" placeholder="e.g. 58200 per month" id="circular-gross-salary" class="circular-input-field" value="<?php echo $circular_data['gross_salary']; ?>">
                         <p class="field-suggest-text">Specify the gross salary after confirmation (including PF)</p>
                     </div>
 
@@ -197,7 +212,7 @@
                             Min Age
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="number" name="circular_min_age" value="18" min="18" id="circular-min-age" class="circular-input-field">
+                        <input type="number" name="circular_min_age" value="<?php echo $circular_data['min_age']; ?>" min="18" id="circular-min-age" class="circular-input-field">
                     </div>
 
                     <!--  Max Age  -->
@@ -206,7 +221,7 @@
                             Max Age
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="number" name="circular_max_age" placeholder="Enter maximum age limit. e.g. 32 or 42" min="18" id="circular-max-age" class="circular-input-field">
+                        <input type="number" name="circular_max_age" placeholder="Enter maximum age limit. e.g. 32 or 42" min="18" id="circular-max-age" class="circular-input-field" value="<?php echo $circular_data['max_age']; ?>">
                     </div>
 
                     <!-- age deadline   -->
@@ -215,7 +230,7 @@
                             Age Deadline
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input onfocus="this.showPicker()" type="date" name="circular_age_deadline" id="circular-age-deadline" class="circular-input-field">
+                        <input onfocus="this.showPicker()" type="date" name="circular_age_deadline" id="circular-age-deadline" class="circular-input-field" value="<?php echo $circular_data['age_deadline']; ?>">
                     </div>
                 </div>
             </div>
@@ -245,7 +260,7 @@
                             Educational qualification
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <textarea name="circular_education_requirement" placeholder="e.g. Bachelor's degree in Business Administration or related field" id="circular-education-requirement" class="circular-input-field"></textarea>
+                        <textarea name="circular_education_requirement" placeholder="e.g. Bachelor's degree in Business Administration or related field" id="circular-education-requirement" class="circular-input-field"><?php echo htmlspecialchars(trim($circular_data['qualification'])); ?></textarea>
                     </div>
 
                     <!-- Required Experience  -->
@@ -254,7 +269,7 @@
                             Required Experience
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <textarea name="circular_required_experience" placeholder="describe the required experience" id="circular-required-experience" class="circular-input-field"></textarea>
+                        <textarea name="circular_required_experience" placeholder="describe the required experience" id="circular-required-experience" class="circular-input-field"><?php echo htmlspecialchars(trim($circular_data['experience'])); ?></textarea>
                     </div>
 
                     <!-- additional requirement  -->
@@ -263,7 +278,7 @@
                             additional requirement
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <textarea name="circular_additional_requirement" placeholder="describe the additional requirement" id="circular-additional-requirement" class="circular-input-field"></textarea>
+                        <textarea name="circular_additional_requirement" placeholder="describe the additional requirement" id="circular-additional-requirement" class="circular-input-field"><?php echo htmlspecialchars(trim($circular_data['additional_requirement'])); ?></textarea>
                     </div>
                 </div>
             </div>
@@ -292,7 +307,7 @@
                             Training Rules
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <textarea name="circular_training_rules" placeholder="write the training conditions and rules" id="circular-training-rules" class="circular-input-field"></textarea>
+                        <textarea name="circular_training_rules" placeholder="write the training conditions and rules" id="circular-training-rules" class="circular-input-field"><?php echo htmlspecialchars(trim($circular_data['training_rules'])); ?></textarea>
                     </div>
                 </div>
             </div>
@@ -301,7 +316,7 @@
 
 
     <!-- Linked custom script  -->
-    <script src="../js/publish_circular.js"></script>
+    <script src="../js/edit_publish_circular.js"></script>
 </body>
 
 </html>

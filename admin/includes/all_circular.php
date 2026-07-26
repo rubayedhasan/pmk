@@ -117,7 +117,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
                             <path d='M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6' />
                         </svg>
                     </a>
-                    <a href='' title='edit' class='action-btn btn-edit'>
+                    <a href='../includes/edit_publish_circular.php?circular_id=$circular[circular_id]' title='edit' class='action-btn btn-edit'>
                         <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-edit'>
                             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                             <path d='M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1' />
@@ -125,7 +125,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
                             <path d='M16 5l3 3' />
                         </svg>
                     </a>
-                    <a href='' title='delete' class='action-btn btn-delete'>
+                    <a href='../server/delete_circular.php?circular_id=$circular[circular_id]' title='delete' class='action-btn btn-delete' onclick=\" return confirm('Are you sure you want to delete this circular?')\">
                         <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                             <path d='M4 7h16' />

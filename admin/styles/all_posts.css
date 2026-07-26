@@ -1,0 +1,63 @@
+/* panel header  */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panel-title {
+  color: var(--pmk-blue-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.35px;
+}
+
+.panel-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all 0.35s ease-in-out;
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+}
+
+.panel-action-button:hover {
+  background-color: var(--pmk-green-dark);
+}
+
+/* panel main container  */
+.panel-main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 16px;
+  margin-top: 24px;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

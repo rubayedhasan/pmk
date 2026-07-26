@@ -34,6 +34,7 @@
   background-color: var(--pmk-green-dark);
 }
 
+/* panel main container  */
 .panel-main-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,6 +42,7 @@
   margin-top: 24px;
 }
 
+/* panel item  */
 .panel-item {
   display: flex;
   flex-direction: column;
