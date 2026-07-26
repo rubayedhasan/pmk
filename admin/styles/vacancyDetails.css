@@ -1,0 +1,471 @@
+#circular-details-header {
+  height: 100vh;
+  color: var(--pmk-white);
+  background: linear-gradient(135deg, var(--pmk-blue-dark), #1f2933d1);
+  padding: 30px 0 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.career-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.pmk-logo {
+  width: 50px;
+}
+
+.pmk-logo img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-button {
+  display: block;
+  color: var(--pmk-white);
+  background-color: var(--pmk-green);
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: all 0.5s ease;
+}
+
+.home-button:hover {
+  background-color: var(--pmk-green-dark);
+}
+
+.career-header-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-title {
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.header-text {
+  color: var(--pmk-white);
+}
+
+.art-image {
+  width: 365px;
+  justify-self: flex-end;
+}
+
+.art-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 180px;
+  background-color: var(--pmk-green-light);
+  clip-path: path(
+    "M0,90C216,170 384,10 624,70C864,130 1032,190 1272,110C1488,40 1656,30 1920,95L1920,220L0,220Z"
+  );
+}
+
+/* vacancy-body section's styles  */
+#vacancy-body {
+  background-color: var(--pmk-green-light);
+  padding: 30px 40px 50px;
+}
+
+.vacancy-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.vacancy-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.user-action-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-action-container span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 42px;
+  background-color: var(--pmk-white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.user-action-container span i {
+  color: var(--pmk-dark);
+  font-size: 1rem;
+}
+
+.user-action-container span:hover {
+  background-color: #2e7d32;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.user-action-container span:hover i {
+  color: #ffffff;
+}
+
+.user-action-container span:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy-description p {
+  color: #606069;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0px;
+  text-transform: capitalize;
+}
+
+.org-overview {
+  margin-top: 40px;
+}
+
+.org-overview p,
+.vacancy-info-description,
+.vacancy-info-list li {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.vacancy-info {
+  margin-top: 24px;
+}
+.vacancy-info:first-child {
+  margin-top: 32px;
+}
+
+.vacancy-info-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.vacancy-info-list li {
+  list-style: disc;
+  list-style-position: inside;
+  margin-left: 25px;
+}
+
+/* vacancy info table  */
+.vacancy-info-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 24px 0;
+}
+
+/* Table itself stays white so it lifts off the green-light background */
+.vacancy-info-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--pmk-white);
+  border: 1px solid #d7e8e1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 40, 30, 0.06);
+}
+
+.vacancy-info-table thead th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: var(--pmk-white);
+  background: var(--pmk-green);
+  padding: 13px 18px;
+  white-space: nowrap;
+}
+
+.vacancy-info-table tbody td {
+  padding: 15px 18px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--pmk-dark);
+  border-bottom: 1px solid var(--pmk-green-light);
+}
+
+/* Icon sits inline with the value; currentColor makes it inherit each column's color */
+.vacancy-info-table tbody td svg {
+  vertical-align: -3px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.vacancy-info-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.vacancy-info-table tbody tr:hover td {
+  background: var(--pmk-green-light);
+}
+
+/* Highlight the deadline column so it stands out */
+.vacancy-info-table tbody td:last-child {
+  color: var(--pmk-blue-dark);
+  font-weight: 700;
+}
+
+/* Highlight salary columns in green */
+.vacancy-info-table tbody td:nth-child(2),
+.vacancy-info-table tbody td:nth-child(3) {
+  color: var(--pmk-green-dark);
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+  #circular-details-header {
+    height: auto;
+  }
+  .pmk-logo {
+    width: 40px;
+  }
+
+  .home-button {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .career-header-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .art-image {
+    width: 230px;
+  }
+
+  /* vacancy-body section's styles  */
+  #vacancy-body {
+    background-color: var(--pmk-green-light);
+    padding: 30px;
+  }
+
+  .vacancy-title {
+    font-size: 1.8rem;
+  }
+
+  .user-action-container span {
+    width: 35px;
+    height: 32px;
+  }
+
+  .user-action-container span i {
+    font-size: 0.875rem;
+  }
+
+  .org-overview p,
+  .vacancy-info-description,
+  .vacancy-info-list li {
+    font-size: 0.95rem;
+  }
+
+  .vacancy-info {
+    margin-top: 18px;
+  }
+
+  .vacancy-info-title {
+    margin-bottom: 12px;
+  }
+
+  .vacancy-info-list li {
+    margin-left: 18px;
+  }
+
+  /* vacancy info table  */
+  .vacancy-info-table table,
+  .vacancy-info-table thead,
+  .vacancy-info-table tbody,
+  .vacancy-info-table th,
+  .vacancy-info-table td,
+  .vacancy-info-table tr {
+    display: block;
+  }
+
+  .vacancy-info-table thead {
+    display: none; /* hide header row, labels move inline via data-label */
+  }
+
+  .vacancy-info-table table {
+    border-radius: 12px;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  .vacancy-info-table tbody tr {
+    background: var(--pmk-white);
+    border: 1px solid #d7e8e1;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(15, 40, 30, 0.06);
+  }
+
+  .vacancy-info-table tbody td {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--pmk-green-light);
+    text-align: right;
+  }
+
+  .vacancy-info-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  /* Push the icon (and the text after it) to the right, away from the label */
+  .vacancy-info-table tbody td svg {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* Inject the column label in front of each value on mobile */
+  .vacancy-info-table tbody td::before {
+    content: attr(data-label);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #7a8a84;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576.98px) {
+  .career-header-container {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    order: 2;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .art-image {
+    order: 1;
+    width: 100%;
+  }
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pmk-logo {
+    width: 40px;
+  }
+
+  .home-button {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .header-title {
+    font-size: 2.75rem;
+  }
+
+  .header-text {
+    font-size: 0.95rem;
+  }
+
+  .art-image {
+    width: 280px;
+  }
+
+  /* vacancy-body section's styles  */
+  .vacancy-title {
+    font-size: 2.25rem;
+  }
+
+  .user-action-container span {
+    width: 40px;
+    height: 38px;
+  }
+
+  .org-overview p,
+  .vacancy-info-description,
+  .vacancy-info-list li {
+    font-size: 0.95rem;
+  }
+
+  .vacancy-info {
+    margin-top: 25px;
+  }
+
+  .vacancy-info-title {
+    margin-bottom: 12px;
+  }
+
+  .vacancy-info-list li {
+    margin-left: 18px;
+  }
+
+  /* vacancy info table  */
+  .vacancy-info-table {
+    max-width: 100%;
+  }
+
+  .vacancy-info-table thead th {
+    font-size: 11px;
+    padding: 11px 8px;
+  }
+
+  .vacancy-info-table tbody td {
+    padding: 14px;
+    font-size: 11.5px;
+  }
+
+  .vacancy-info-table tbody td svg {
+    vertical-align: -4px;
+    margin-right: 4px;
+  }
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
