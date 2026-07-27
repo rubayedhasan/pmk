@@ -152,7 +152,12 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                             </tr>
                         </thead>
                         <tbody class="post-table-body">
-                            <?php foreach ($all_post_arr as $post) { ?>
+                            <?php foreach ($all_post_arr as $post) {
+                                // QUERY::thumbnail image 
+                                $thumbnail_image_query = "SELECT post_image FROM post_image WHERE postcust_id = '$post[post_customid]'";
+                                $thumbnail_image = $dbConnection->query($thumbnail_image_query)->fetch_assoc();
+
+                            ?>
                                 <tr>
                                     <td>
                                         <span class="post-id">
@@ -161,7 +166,7 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                                     </td>
                                     <td>
                                         <figure class="post-thumbnail">
-                                            <img src="../assets/uploads/posts/PMK-CNT-000001_thumbnail_00001.jpg" alt="">
+                                            <img src="../assets/uploads/posts/<?php echo $thumbnail_image["post_image"] ?>" alt="<?php echo $post["post_title"]; ?>">
                                         </figure>
                                     </td>
                                     <td>
@@ -214,7 +219,7 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                                     </td>
                                     <td>
                                         <div class='item-actions'>
-                                            <a href='' title='view' class='action-btn btn-view'>
+                                            <a href="../includes/view_news_page.php?post_id=<?php echo $post["post_customid"]; ?>" title='view' class='action-btn btn-view'>
                                                 <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-eye'>
                                                     <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                                     <path d='M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0' />
