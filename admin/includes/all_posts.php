@@ -166,7 +166,7 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                                     </td>
                                     <td>
                                         <figure class="post-thumbnail">
-                                            <img src="../assets/uploads/posts/<?php echo $thumbnail_image["post_image"] ?>" alt="<?php echo $post["post_title"]; ?>">
+                                            <img src="../assets/uploads/posts/<?php echo $thumbnail_image["post_image"] ?? "" ?>" alt="<?php echo $post["post_title"]; ?>">
                                         </figure>
                                     </td>
                                     <td>
@@ -236,7 +236,7 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                                                         <path d='M16 5l3 3' />
                                                     </svg>
                                                 </a>
-                                                <a href='' title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
+                                                <a href="../server/delete_post.php?post_id=<?php echo $post["post_customid"]; ?>" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
                                                     <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                                         <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                                         <path d='M4 7h16' />
