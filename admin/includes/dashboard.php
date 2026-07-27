@@ -169,8 +169,8 @@
                             </div>
                             <h5 class="d-user">
                                 <?php
-                                // echo $admin_user;
-                                echo "username";
+                                echo $admin_user;
+                                // echo "username";
                                 ?>
                             </h5>
                         </div>

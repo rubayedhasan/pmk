@@ -132,6 +132,7 @@ try {
         "success" => true,
         "message" => "The recruitment circular has been published successfully and is now available for applications."
     ]);
+    // header("location: ../includes/dashboard.php");
 } catch (Exception $err) {
     // rollback all data if failed to insert any data to database 
     mysqli_rollback($dbConnection);
@@ -141,6 +142,8 @@ try {
         "success" => false,
         "message" => $err->getMessage()
     ]);
+
+    // header("location: ../includes/dashboard.php");
 }
 
 
