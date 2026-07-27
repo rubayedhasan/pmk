@@ -15,8 +15,22 @@ $all_category_arr = $dbConnection->query($all_category_query)->fetch_all(MYSQLI_
 $all_subcategory_query = "SELECT * FROM postsub_cat";
 $all_subcategory_arr = $dbConnection->query($all_subcategory_query)->fetch_all(MYSQLI_ASSOC);
 
+$all_post_query = "SELECT 
+                            p.*,
+                            c.postcat_name,
+                            s.postsub_cat_name
+                     FROM 
+                            posts AS p
+                    LEFT JOIN post_catecgory AS c
+                            ON p.post_cat = c.postcat_id
+                    LEFT JOIN postsub_cat AS s
+                            ON p.post_subcat = s.postsub_cat_id
+                    ORDER BY post_datetme DESC
+                            ";
+$all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
+
 // echo "<pre>";
-// print_r($all_subcategory_arr);
+// print_r($all_post_arr);
 // echo "</pre>";
 ?>
 
@@ -42,7 +56,9 @@ $all_subcategory_arr = $dbConnection->query($all_subcategory_query)->fetch_all(M
         <!-- search box  -->
         <div class="panel-meta-container">
             <div class="panel-meta">
-                Total Post: <span style="color:var(--pmk-blue-dark); font-weight: 600;"></span>
+                Total Post: <span style="color:var(--pmk-blue-dark); font-weight: 600;">
+                    <?php echo count($all_post_arr); ?>
+                </span>
             </div>
             <div class="panel-meta">
                 Total Category: <span style="color:var(--pmk-blue-dark); font-weight: 600;">
@@ -136,45 +152,99 @@ $all_subcategory_arr = $dbConnection->query($all_subcategory_query)->fetch_all(M
                             </tr>
                         </thead>
                         <tbody class="post-table-body">
-                            <tr>
-                                <td>tabel-1</td>
-                                <td>tabel-2</td>
-                                <td>tabel-3</td>
-                                <td>tabel-4</td>
-                                <td>tabel-5</td>
-                                <td>tabel-6</td>
-                                <td>
-                                    <div class='item-actions'>
-                                        <a href='' title='view' class='action-btn btn-view'>
-                                            <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-eye'>
-                                                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                                                <path d='M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0' />
-                                                <path d='M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6' />
+                            <?php foreach ($all_post_arr as $post) { ?>
+                                <tr>
+                                    <td>
+                                        <span class="post-id">
+                                            <?php echo $post["post_customid"]; ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <figure class="post-thumbnail">
+                                            <img src="../assets/uploads/posts/PMK-CNT-000001_thumbnail_00001.jpg" alt="">
+                                        </figure>
+                                    </td>
+                                    <td>
+                                        <h4 class="post-title">
+                                            <?php echo $post["post_title"]; ?>
+                                        </h4>
+                                    </td>
+                                    <td>
+                                        <div class="post-categories-container">
+                                            <div class="post-categories">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 4h6v6h-6l0 -6" />
+                                                    <path d="M14 4h6v6h-6l0 -6" />
+                                                    <path d="M4 14h6v6h-6l0 -6" />
+                                                    <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                                </svg>
+                                                <?php echo $post["postcat_name"]; ?>
+                                            </div>
+                                            <div class="post-categories post-sub">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category-2">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 4h6v6h-6l0 -6" />
+                                                    <path d="M4 14h6v6h-6l0 -6" />
+                                                    <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                                    <path d="M4 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                                </svg>
+                                                <?php echo $post["postsub_cat_name"]; ?>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="post-author">
+                                            <?php echo $post["post_authorname"]; ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="post-date">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-clock">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M10.5 21h-4.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3" />
+                                                <path d="M16 3v4" />
+                                                <path d="M8 3v4" />
+                                                <path d="M4 11h10" />
+                                                <path d="M14 18a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                                <path d="M18 16.5v1.5l.5 .5" />
                                             </svg>
-                                        </a>
+                                            <?php echo $post["post_datetme"]; ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class='item-actions'>
+                                            <a href='' title='view' class='action-btn btn-view'>
+                                                <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-eye'>
+                                                    <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                                                    <path d='M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0' />
+                                                    <path d='M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6' />
+                                                </svg>
+                                            </a>
 
-                                        <?php if ($user_role == 1) { ?>
-                                            <a href='' title='edit' class='action-btn btn-edit'>
-                                                <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-edit'>
-                                                    <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                                                    <path d='M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1' />
-                                                    <path d='M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415' />
-                                                    <path d='M16 5l3 3' />
-                                                </svg>
-                                            </a>
-                                            <a href='' title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
-                                                <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
-                                                    <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                                                    <path d='M4 7h16' />
-                                                    <path d='M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' />
-                                                    <path d='M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' />
-                                                    <path d='M10 12l4 4m0 -4l-4 4' />
-                                                </svg>
-                                            </a>
-                                        <?php  } ?>
-                                    </div>
-                                </td>
-                            </tr>
+                                            <?php if ($user_role == 1) { ?>
+                                                <a href='' title='edit' class='action-btn btn-edit'>
+                                                    <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-edit'>
+                                                        <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                                                        <path d='M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1' />
+                                                        <path d='M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415' />
+                                                        <path d='M16 5l3 3' />
+                                                    </svg>
+                                                </a>
+                                                <a href='' title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
+                                                    <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
+                                                        <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                                                        <path d='M4 7h16' />
+                                                        <path d='M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' />
+                                                        <path d='M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' />
+                                                        <path d='M10 12l4 4m0 -4l-4 4' />
+                                                    </svg>
+                                                </a>
+                                            <?php  } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
