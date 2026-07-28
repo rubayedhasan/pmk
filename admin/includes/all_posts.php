@@ -15,6 +15,30 @@ $all_category_arr = $dbConnection->query($all_category_query)->fetch_all(MYSQLI_
 $all_subcategory_query = "SELECT * FROM postsub_cat";
 $all_subcategory_arr = $dbConnection->query($all_subcategory_query)->fetch_all(MYSQLI_ASSOC);
 
+// CONDITIONAL BASE QUERY :: 
+$condition = '';
+$sort_order = ' ORDER BY post_datetme DESC';
+
+// FILTER BY:: post title 
+if (isset($_REQUEST['search_post']) && $_REQUEST['search_post'] != "") {
+    $condition .= ' AND p.post_title LIKE "%' . $_REQUEST['search_post'] . '%"';
+}
+
+// FILTER BY:: post category 
+if (isset($_REQUEST['post_category']) && $_REQUEST['post_category'] != "") {
+    $condition .= ' AND p.post_cat =' . (int)$_REQUEST['post_category'];
+}
+
+// FILTER BY:: post sub-category 
+if (isset($_REQUEST['post_subcategory']) && $_REQUEST['post_subcategory'] != "") {
+    $condition .= ' AND p.post_subcat =' . (int)$_REQUEST['post_subcategory'];
+}
+
+// FILTER BY:: post title sort order 
+if (isset($_REQUEST['post_latest']) && $_REQUEST['post_latest'] == 2) {
+    $sort_order = ' ORDER BY post_datetme ASC';
+}
+
 $all_post_query = "SELECT 
                             p.*,
                             c.postcat_name,
@@ -25,13 +49,9 @@ $all_post_query = "SELECT
                             ON p.post_cat = c.postcat_id
                     LEFT JOIN postsub_cat AS s
                             ON p.post_subcat = s.postsub_cat_id
-                    ORDER BY post_datetme DESC
-                            ";
+                    WHERE 1 " . $condition . $sort_order . "";
 $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
 
-// echo "<pre>";
-// print_r($all_post_arr);
-// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -109,11 +129,11 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                             <?php } ?>
 
                         </select>
-                        <select name="post_subcategory" id="post-subcategory">
-                            <option value="">Newest First</option>
-                            <option value="">Oldest First</option>
+                        <select name="post_latest" id="post-subcategory">
+                            <option value="1">Newest First</option>
+                            <option value="2">Oldest First</option>
                         </select>
-                        <button type="submit" class="src-post-submit" title="submit filter">
+                        <button type="submit" class="src-post-submit" name="submit_post_filter" title="submit filter">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-filter-2">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M4 6h16" />
@@ -228,7 +248,7 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                                             </a>
 
                                             <?php if ($user_role == 1) { ?>
-                                                <a href='' title='edit' class='action-btn btn-edit'>
+                                                <a href='../includes/edit_post_news.php?post_id=<?php echo $post["post_customid"]; ?>' title='edit' class='action-btn btn-edit'>
                                                     <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-edit'>
                                                         <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                                         <path d='M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1' />
@@ -264,7 +284,29 @@ $all_post_arr = $dbConnection->query($all_post_query)->fetch_all(MYSQLI_ASSOC);
                 location.reload();
             }
         });
+
+        // functionality:: enable the sub category after selection the category
+        const postMainCategory = document.querySelector("#post-category");
+        const postSubcategoryMain = document.querySelector("#post-subcategory");
+        postMainCategory.addEventListener("change", function() {
+            const categoryId = this.value;
+
+            // fetch the sub category data from server
+            fetch("../server/fetch_post_subcategory.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: "post_category_id=" + categoryId,
+                })
+                .then((response) => response.text())
+                .then((subcategory_data) => {
+                    postSubcategoryMain.innerHTML = subcategory_data;
+                    postSubcategoryMain.removeAttribute("disabled");
+                });
+        });
     </script>
+
 </body>
 
 </html>

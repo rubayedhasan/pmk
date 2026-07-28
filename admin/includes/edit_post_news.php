@@ -38,7 +38,7 @@ $section = $_GET['section'] ?? '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMK | Post News</title>
+    <title>Edit Post News</title>
     <?php
     // Linked with shared links
     include_once("../includes/sharedLinks.php");
