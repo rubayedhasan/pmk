@@ -1,115 +1,57 @@
-<?php
-// session_start();
-$user_role = $_SESSION['admin']['role'];
+const selectCircular = document.getElementById("select-circular");
+selectCircular.addEventListener("change", function (e) {
+  let selectedValue = this.value;
 
-// connect database 
-require_once("../db/dbconnect.php");
-$dbConnection = $conn;
+  if (selectedValue === "") {
+    return;
+  }
 
-// get circular list 
-$get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular ORDER BY application_deadline DESC";
-$circular_list = $dbConnection->query($get_circular_list_query)->fetch_all(MYSQLI_ASSOC);
+  fetch("../server/fetch_applied-list.php", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: "circular_id=" + selectedValue,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.length === 0) {
+        document.getElementById("applied_list_tbody").innerHTML = `
+            <tr>
+                <td colspan="8" style="text-align:center;">No Data Found</td>
+            </tr>
+        `;
+        return;
+      }
 
-// set the user role in js 
-echo "
-        <script> 
-            let userRole = $user_role;
-        </script>
-"
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>apply list</title>
-
-    <!-- Linked custom stylesheet  -->
-    <link rel="stylesheet" href="../styles/all_circular.css">
-    <link rel="stylesheet" href="../styles/applied_list.css">
-</head>
-
-<body>
-    <!-- section:: panel header  -->
-    <header class="panel-header">
-        <!-- head  -->
-        <div class="panel-content-box">
-            <h4 class="panel-title">Applied List</h4>
-            <span class="panel-text">View and manage all job applications.</span>
-        </div>
-
-        <!-- search box  -->
-        <div class="panel-search-box">
-            <form class="search_form">
-                <input type="search" name="search_circular" id="search-candidate" placeholder="Search by id or name or phone">
-                <select name="select_circular" id="select-circular">
-                    <option value="">Select Circular</option>
-                    <?php
-                    foreach ($circular_list as $circular) { ?>
-                        <option value="<?php echo $circular['circular_id']; ?>">
-                            <?php echo $circular['circular_title'] . " [" . $circular['circular_id'] . "]"; ?>
-                        </option>
-                    <?php } ?>
-                </select>
-                <button type="button" class="src-btn-reset" onclick="setTimeout(()=> document.querySelector( '.search_form').submit(),0)" title="reset">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rotate-2">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
-                        <path d="M18.37 7.16l0 .01" />
-                        <path d="M13 19.94l0 .01" />
-                        <path d="M16.84 18.37l0 .01" />
-                        <path d="M19.37 15.1l0 .01" />
-                        <path d="M19.94 11l0 .01" />
-                    </svg>
-                </button>
-            </form>
-        </div>
-    </header>
-
-    <main>
-        <!-- section:: main container  -->
-        <section class="panel-main-container">
-            <div class="table-wrapper">
-                <table class="panel-table">
-                    <thead class="panel-table-head">
-                        <tr>
-                            <th>ID</th>
-                            <th>Photo</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Job Circular</th>
-                            <th>Applied Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="applied_list_tbody" class="panel-table-body">
-                        <tr>
+      document.getElementById("applied_list_tbody").innerHTML = data
+        .map(
+          (candidate, idx) => `       
+        <tr data-user-id="${candidate.user_id}" data-candidate-name = "${candidate.candidate_name}" data-candidate-phone="${candidate.user_id.split("-")[1]}">
                             <td>
                                 <span class='circular-id'>
-                                    PMKU-01727955188
+                                   ${candidate.user_id}
                                 </span>
                             </td>
                             <td>
                                 <figure class="candidate-image">
-                                    <img src="../assets/images/profile_pic_ai.jpeg" alt="picture">
+                                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/${candidate.profile_picture}" alt="picture">
                                 </figure>
                             </td>
                             <td>
                                 <span class='item-title'>
-                                    R. Hasan
+                                    ${candidate.candidate_name}
                                 </span>
                             </td>
                             <td>
                                 <span class='open-position'>
-                                    01727955188
+                                    ${candidate.user_id.split("-")[1]}
                                 </span>
                             </td>
                             <td>
                                 <span class='open-position'>
-                                    01727955188
+                                    ${candidate.circular_title}
                                 </span>
                             </td>
                             <td>
@@ -128,7 +70,7 @@ echo "
                                         <path d='M7.01 17h.005' />
                                         <path d='M10.01 17h.005' />
                                     </svg>
-                                    24-06-2027
+                                    ${candidate.applied_date}
                                 </div>
                             </td>
                             <td>
@@ -158,7 +100,9 @@ echo "
                                         </svg>
                                     </a>
 
-                                    <?php if ($user_role == 1) { ?>
+                                    ${
+                                      userRole
+                                        ? `
                                         <a href="" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
                                             <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                                 <path stroke='none' d='M0 0h24v24H0z' fill='none' />
@@ -168,24 +112,15 @@ echo "
                                                 <path d='M10 12l4 4m0 -4l-4 4' />
                                             </svg>
                                         </a>
-                                    <?php  } ?>
+                                        `
+                                        : ""
+                                    }
+                                        
                                 </div>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        window.addEventListener("pageshow", function(event) {
-            if (event.persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
-                location.reload();
-            }
-        });
-    </script>
-    <script src="../js/applied_list.js"></script>
-</body>
-
-</html>
+        `,
+        )
+        .join("");
+    });
+});
