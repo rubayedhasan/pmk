@@ -75,8 +75,9 @@ echo "
                 <table class="panel-table">
                     <thead class="panel-table-head">
                         <tr>
-                            <th>ID</th>
+                            <th>#</th>
                             <th>Photo</th>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Job Circular</th>
@@ -89,13 +90,18 @@ echo "
                         <tr>
                             <td>
                                 <span class='circular-id'>
-                                    PMKU-01727955188
+                                    1
                                 </span>
                             </td>
                             <td>
                                 <figure class="candidate-image">
                                     <img src="../assets/images/profile_pic_ai.jpeg" alt="picture">
                                 </figure>
+                            </td>
+                            <td>
+                                <span class='circular-id'>
+                                    PMKU-01727955188
+                                </span>
                             </td>
                             <td>
                                 <span class='item-title'>

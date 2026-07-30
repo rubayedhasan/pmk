@@ -31,13 +31,18 @@ selectCircular.addEventListener("change", function (e) {
         <tr data-user-id="${candidate.user_id}" data-candidate-name = "${candidate.candidate_name}" data-candidate-phone="${candidate.user_id.split("-")[1]}">
                             <td>
                                 <span class='circular-id'>
-                                   ${candidate.user_id}
+                                   ${idx + 1}
                                 </span>
                             </td>
                             <td>
                                 <figure class="candidate-image">
                                     <img src="https://careers.pmk-bd.org/assets/candidate_picture/${candidate.profile_picture}" alt="picture">
                                 </figure>
+                            </td>
+                            <td>
+                                <span class='circular-id'>
+                                   ${candidate.user_id}
+                                </span>
                             </td>
                             <td>
                                 <span class='item-title'>
@@ -123,4 +128,35 @@ selectCircular.addEventListener("change", function (e) {
         )
         .join("");
     });
+});
+
+// live search functionality
+const searchCandidate = document.getElementById("search-candidate");
+searchCandidate.addEventListener("input", function () {
+  const searchKeyword = this.value.trim().toLowerCase();
+
+  const tableRows = document.querySelectorAll("#applied_list_tbody tr");
+  let searchCount = 0;
+
+  tableRows.forEach((dataRow) => {
+    if (!dataRow.dataset.userId) {
+      return;
+    }
+
+    const userId = dataRow.dataset.userId.toLowerCase();
+    const candidateName = dataRow.dataset.candidateName.toLowerCase();
+    const candidatePhone = dataRow.dataset.candidatePhone.toLowerCase();
+
+    const matchedData =
+      userId.includes(searchKeyword) ||
+      candidateName.includes(searchKeyword) ||
+      candidatePhone.includes(searchKeyword);
+
+    if (matchedData) {
+      dataRow.style.display = "";
+      searchCount++;
+    } else {
+      dataRow.style.display = "none";
+    }
+  });
 });
