@@ -92,7 +92,7 @@ async function uploadThePost() {
     }
 
     // fetching the data
-    const postResponseData = await fetch("../server/posts.php", {
+    const postResponseData = await fetch("../server/edit_posts.php", {
       method: "POST",
       body: postForm,
     });

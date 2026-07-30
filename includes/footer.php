@@ -23,7 +23,7 @@
                         <!-- about PMK  -->
                         <div class="col">
                             <h3 class="widget-title">About PMK</h3>
-                            <figure>
+                            <figure onclick="window.location.href='../index.php'">
                                 <img
                                     src="../assets/logo/main-logo.png"
                                     alt="pmk-logo"
@@ -121,7 +121,7 @@
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Annual Reports</span></a>
-                                <a class="nav-link" href="https://careers.pmk.org.bd/">
+                                <a class="nav-link" href="https://careers.pmk-bd.org">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>

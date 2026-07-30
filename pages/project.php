@@ -858,7 +858,12 @@
                     </p>
                 </div>
 
-                <?php include_once("../includes/project-update.php"); ?>
+                <?php
+                // connect database 
+                require_once("../admin/db/dbconnect.php");
+                $dbConnection = $conn;
+
+                include_once("../includes/project-update.php"); ?>
             </div>
         </section>
 

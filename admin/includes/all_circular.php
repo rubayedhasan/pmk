@@ -10,9 +10,9 @@ $dbConnection = $conn;
 if (isset($_POST["search_circular"]) && !empty($_POST["search_circular"])) {
     $search_key = $_POST["search_circular"];
 
-    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular WHERE circular_id LIKE '%$search_key%' || circular_title LIKE '%$search_key%' ORDER BY circular_publish_date DESC";
+    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular WHERE circular_id LIKE '%$search_key%' || circular_title LIKE '%$search_key%' ORDER BY application_deadline DESC";
 } else {
-    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular  ORDER BY circular_publish_date DESC";
+    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular  ORDER BY application_deadline DESC";
 }
 
 $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSOC);

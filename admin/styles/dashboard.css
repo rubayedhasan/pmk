@@ -102,6 +102,9 @@
   margin-bottom: 2px;
 }
 
+.d-dropdown {
+}
+
 .d-active {
   background-color: var(--pmk-green);
 }

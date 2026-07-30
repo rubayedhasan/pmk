@@ -65,8 +65,8 @@
                                 <span>Job Circular</span>
                             </a>
                         </li>
-                        <li class="d-menu-item">
-                            <a href="?apply=true" class="d-menu-link">
+                        <li class="d-menu-item  d-dropdown">
+                            <a href="" class="d-menu-link">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M13 5h8" />
@@ -78,6 +78,34 @@
                                 </svg>
                                 <span>Apply List</span>
                             </a>
+
+                            <ul class="d-dropdown-menu">
+                                <li class="d-menu-item">
+                                    <a href="?apply=true" class="d-menu-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users-group">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                            <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                                            <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                            <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                                            <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                            <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                                        </svg>
+                                        <span>Examinee List</span>
+                                    </a>
+                                </li>
+                                <li class="d-menu-item">
+                                    <a href="" class="d-menu-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-spacehey">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M15 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                            <path d="M14 20h6v-6a3 3 0 0 0 -6 0v6" />
+                                            <path d="M11 8v2.5a3.5 3.5 0 0 1 -3.5 3.5h-.5a3 3 0 0 1 0 -6h4" />
+                                        </svg>
+                                        <span>Interviewer List</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="d-menu-item">
                             <a href="?result=true" class="d-menu-link">

@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="mini-nav-link" href="https://careers.pmk.org.bd/">
+                            <a class="mini-nav-link" href="https://careers.pmk-bd.org">
                                 <span class="nav-icon">
                                     <img src="../assets/icons/user-tie-solid-full.svg" alt="user icon">
                                 </span>

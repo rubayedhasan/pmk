@@ -11,21 +11,18 @@ $allPostCategory = $dbConnection->query($getCategoryQuery)->fetch_all(MYSQLI_ASS
 $getSubCategoryQuery = "SELECT * FROM postsub_cat";
 $allSubCAtegory = $dbConnection->query($getSubCategoryQuery)->fetch_all(MYSQLI_ASSOC);
 
-// generate post custom id 
-$post_id_prefix = "PMK-CNT-";
-$post_id_query = "SELECT post_customid FROM posts WHERE post_customid LIKE '$post_id_prefix%' ORDER BY post_customid DESC LIMIT 1";
+// EDIT POST :: 
+if (isset($_GET['post_id'])) {
+    $post_id = $_GET['post_id'];
 
-$result_post_id = $dbConnection->query($post_id_query);
+    // QUERY:: get post details
+    $get_post_details_query = "SELECT * FROM posts WHERE post_customid = '$post_id'";
+    $post_details = $dbConnection->query($get_post_details_query)->fetch_assoc();
 
-if ($result_post_id->num_rows > 0) {
-    $id_row = $result_post_id->fetch_all(MYSQLI_ASSOC);
-    $last_sequence = (int) substr($id_row[0]["post_customid"], -6);
-    $next_sequence = $last_sequence + 1;
-} else {
-    $next_sequence = 1;
+    echo "<pre>";
+    print_r($post_details);
+    echo "</pre>";
 }
-
-$post_custom_id = $post_id_prefix . str_pad($next_sequence, 6, "0", STR_PAD_LEFT);
 
 // after add category and sub category store the page location
 $section = $_GET['section'] ?? '';
@@ -72,12 +69,6 @@ $section = $_GET['section'] ?? '';
 </head>
 
 <body>
-
-    <form action="">
-
-    </form>
-
-    <!-- section:: header  -->
     <!-- section:: header  -->
     <header class="publish-page-header">
         <div class="publish-header-content">
@@ -347,7 +338,7 @@ $section = $_GET['section'] ?? '';
                             <!-- input:: post ID       -->
                             <div class="form-input">
                                 <label for="post-id">Post ID</label>
-                                <input type="text" name="post_id" id="post-id" value="<?php echo $post_custom_id; ?>" disabled>
+                                <input type="text" name="post_id" id="post-id" value="<?php echo $post_id; ?>" disabled>
                             </div>
 
                             <!-- input:: post title       -->
@@ -356,7 +347,7 @@ $section = $_GET['section'] ?? '';
                                     Title
                                     <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                                 </label>
-                                <input type="text" name="post_title" id="post-title" placeholder="Enter Post Title">
+                                <input type="text" name="post_title" id="post-title" value="<?php echo $post_details['post_title'] ?>">
                             </div>
 
                             <!-- select:: category      -->
