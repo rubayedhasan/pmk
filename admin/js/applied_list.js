@@ -46,12 +46,7 @@ function displayTableData(data) {
     .map(
       (candidate, idx) => `       
         <tr data-user-id="${candidate.user_id}" data-candidate-name = "${candidate.candidate_name}" data-candidate-phone="${candidate.user_id.split("-")[1]}">
-                            <td>
-                                <span class='circular-id'>
-                                   ${idx + 1}
-                                </span>
-                            </td>
-                            <td>
+                           <td>
                                 <figure class="candidate-image">
                                     <img src="https://careers.pmk-bd.org/assets/candidate_picture/${candidate.profile_picture}" alt="picture">
                                 </figure>
@@ -116,7 +111,7 @@ function displayTableData(data) {
                                             <path d="M4 16h3" />
                                         </svg>
                                     </a>
-                                    <a href='' title='change applicant status' class='action-btn btn-edit'>
+                                    <a href='javascript:void(0)' title='change applicant status' class='action-btn btn-edit'>
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-id">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -10" />
@@ -130,7 +125,7 @@ function displayTableData(data) {
                                     ${
                                       userRole
                                         ? `
-                                        <a href="" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
+                                        <a href="../server/delete_candidate.php?user_id=${candidate.user_id}" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this candidate?')">
                                             <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                                 <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                                 <path d='M4 7h16' />

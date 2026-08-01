@@ -75,7 +75,6 @@ echo "
                 <table class="panel-table">
                     <thead class="panel-table-head">
                         <tr>
-                            <th>#</th>
                             <th>Photo</th>
                             <th>ID</th>
                             <th>Name</th>
@@ -169,7 +168,8 @@ echo "
                                         </svg>
                                     </a>
 
-                                    <?php if ($user_role == 1) { ?>
+                                    <?php //if ($user_role == 1) { 
+                                    ?>
                                         <a href="" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this circular?')">
                                             <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                                 <path stroke='none' d='M0 0h24v24H0z' fill='none' />
@@ -179,12 +179,42 @@ echo "
                                                 <path d='M10 12l4 4m0 -4l-4 4' />
                                             </svg>
                                         </a>
-                                    <?php  } ?>
+                                    <?php  //} 
+                                    ?>
                                 </div>
                             </td>
                         </tr> -->
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <!-- section:: status modal  -->
+        <section id="candidate_status_modal" class="d-modal">
+            <div class="d-modal-content">
+                <h4 class="d-modal-label">Change Applicant Status</h4>
+                <div class="d-modal-form">
+                    <h5 class="candidate">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-screen">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19.03 17.818a3 3 0 0 0 1.97 -2.818v-8a3 3 0 0 0 -3 -3h-12a3 3 0 0 0 -3 3v8c0 1.317 .85 2.436 2.03 2.84" />
+                            <path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                            <path d="M8 21a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2" />
+                        </svg>
+                        <span id="d-modal-candidate-Name">R Hasan</span>
+                    </h5>
+                    <input type="hidden" name="candidate_user_id">
+                    <select name="candidate_status" id="candidate-status">
+                        <option value="1">Pending</option>
+                        <option value="2">ShortListed / Present</option>
+                        <option value="0">Rejected</option>
+                    </select>
+
+                    <div class="d-modal-actions">
+                        <button type="button" class="d-modal-update">Update</button>
+                        <button type="button" class="d-modal-close">Cancel</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -195,8 +225,7 @@ echo "
 
             <!-- pagination container  -->
             <ul class="" id="pagination">
-                <!-- first page button  -->
-                <li class="d-page-item">
+                <!-- <li class="d-page-item">
                     <button type="button" class="d-page-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-left">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -205,7 +234,6 @@ echo "
                         </svg>
                     </button>
                 </li>
-                <!-- previous page button  -->
                 <li class="d-page-item">
                     <button type="button" class="d-page-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
@@ -229,7 +257,6 @@ echo "
                         3
                     </button>
                 </li>
-                <!-- next page button  -->
                 <li class="d-page-item">
                     <button type="button" class="d-page-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
@@ -238,7 +265,6 @@ echo "
                         </svg>
                     </button>
                 </li>
-                <!-- last page button  -->
                 <li class="d-page-item">
                     <button type="button" class="d-page-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-right">
@@ -247,7 +273,7 @@ echo "
                             <path d="M13 7l5 5l-5 5" />
                         </svg>
                     </button>
-                </li>
+                </li> -->
             </ul>
 
             <!-- page input  -->
