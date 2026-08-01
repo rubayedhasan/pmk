@@ -203,7 +203,7 @@ echo "
                         </svg>
                         <span id="d-modal-candidate-Name">R Hasan</span>
                     </h5>
-                    <input type="hidden" name="candidate_user_id">
+                    <input type="hidden" name="candidate_user_id" id="candidate_user_id">
                     <select name="candidate_status" id="candidate-status">
                         <option value="1">Pending</option>
                         <option value="2">ShortListed / Present</option>
@@ -211,8 +211,8 @@ echo "
                     </select>
 
                     <div class="d-modal-actions">
-                        <button type="button" class="d-modal-update">Update</button>
-                        <button type="button" class="d-modal-close">Cancel</button>
+                        <button type="button" class="d-modal-update" onclick="updateCandidateStatus()">Update</button>
+                        <button type="button" class="d-modal-close" onclick="closeStatusModal()">Cancel</button>
                     </div>
                 </div>
             </div>

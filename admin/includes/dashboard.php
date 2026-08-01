@@ -102,7 +102,19 @@
                                     <path d="M8 11h4" />
                                     <path d="M8 15h3" />
                                 </svg>
-                                <span>Result</span>
+                                <span>Circular Result</span>
+                            </a>
+                        </li>
+                        <li class="d-menu-item">
+                            <a href="?reject=true" class="d-menu-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-x">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
+                                    <path d="M22 22l-5 -5" />
+                                    <path d="M17 22l5 -5" />
+                                </svg>
+                                <span>Rejected List</span>
                             </a>
                         </li>
                         <li class="d-menu-item">
@@ -200,6 +212,8 @@
                         include("../includes/interview_list.php");
                     } else if (isset($_GET["result"])) {
                         include("../includes/all_results.php");
+                    } else if (isset($_GET["reject"])) {
+                        include("../includes/all_reject.php");
                     } else if (isset($_GET["report"])) {
                         include("../includes/all_reports.php");
                     } else if (isset($_GET["images"])) {

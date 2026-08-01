@@ -1,3 +1,20 @@
+// current page location
+const pageUrl = new URLSearchParams(window.location.search);
+let fetchUrl = "../server/fetch_applied-list.php";
+
+// set fetching url on condition
+if (pageUrl.has("interview")) {
+  fetchUrl = "../server/fetch_interview_list.php";
+}
+
+if (pageUrl.has("result")) {
+  fetchUrl = "../server/fetch_result_list.php";
+}
+
+if (pageUrl.has("reject")) {
+  fetchUrl = "../server/fetch_reject_list.php";
+}
+
 // all data
 let candidateAllData = [];
 
@@ -9,7 +26,7 @@ selectCircular.addEventListener("change", function () {
 
 // load Candidate data functionality
 function loadCandidates(circularId = "") {
-  fetch("../server/fetch_applied-list.php", {
+  fetch(fetchUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
@@ -32,6 +49,8 @@ function loadCandidates(circularId = "") {
 
         return;
       }
+
+      console.log(data);
 
       candidateAllData = data;
       pageNumber = 1;
@@ -96,7 +115,7 @@ function displayTableData(data) {
                                 </div>
                             </td>
                             <td>
-                                <span class='circular-status cs-pending'>pending</span>
+                            ${getApplicantStatus(candidate.applicant_status)}
                             </td>
                             <td>
                                 <div class='item-actions'>
@@ -111,19 +130,42 @@ function displayTableData(data) {
                                             <path d="M4 16h3" />
                                         </svg>
                                     </a>
-                                    <a href='javascript:void(0)' title='change applicant status' class='action-btn btn-edit'>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-id">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    ${
+                                      candidate.applicant_status != 3
+                                        ? `<a
+                                          href="javascript:void(0)"
+                                          title="change applicant status"
+                                          class="action-btn btn-edit"
+                                          onclick="openStatusModal('${candidate.user_id}', '${candidate.candidate_name}')"
+                                        >
+                                          <svg
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-id"
+                                          >
+                                            <path
+                                              stroke="none"
+                                              d="M0 0h24v24H0z"
+                                              fill="none"
+                                            />
                                             <path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -10" />
                                             <path d="M7 10a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                                             <path d="M15 8l2 0" />
                                             <path d="M15 12l2 0" />
                                             <path d="M7 16l10 0" />
-                                        </svg>
-                                    </a>
+                                          </svg>
+                                        </a>`
+                                        : ""
+                                    }
 
                                     ${
-                                      userRole
+                                      userRole == 1
                                         ? `
                                         <a href="../server/delete_candidate.php?user_id=${candidate.user_id}" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this candidate?')">
                                             <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
@@ -144,6 +186,72 @@ function displayTableData(data) {
         `,
     )
     .join("");
+}
+
+function getApplicantStatus(status) {
+  switch (Number(status)) {
+    case 1:
+      return `<span class='circular-status cs-pending'>pending</span>`;
+    case 2:
+      return `<span class="circular-status cs-active">Shortlisted</span>`;
+    case 3:
+      return `<span class="circular-status cs-active">Selected</span>`;
+    case 0:
+      return `<span class="circular-status cs-dead">Rejected</span>`;
+    default:
+      return `<span class="circular-status">Unknown</span>`;
+  }
+}
+
+// open status change modal functionality
+function openStatusModal(userId, candidateName) {
+  document.getElementById("candidate_user_id").value = userId;
+
+  document.getElementById("d-modal-candidate-Name").innerHTML =
+    `<strong>${candidateName}</strong>`;
+
+  document.querySelector(".d-modal-content").style.top = "30%";
+  document.getElementById("candidate_status_modal").style.opacity = "1";
+  document.getElementById("candidate_status_modal").style.visibility =
+    "visible";
+}
+
+// close  status change modal functionality
+function closeStatusModal() {
+  document.querySelector(".d-modal-content").style.top = "25%";
+  document.getElementById("candidate_status_modal").style.opacity = "0";
+  document.getElementById("candidate_status_modal").style.visibility = "hidden";
+}
+
+//   status change functionality
+function updateCandidateStatus() {
+  const userId = document.getElementById("candidate_user_id").value;
+
+  const applicantStatus = document.getElementById("candidate-status").value;
+
+  fetch("../server/update_candidate_status.php", {
+    method: "POST",
+
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+
+    body:
+      "user_id=" +
+      encodeURIComponent(userId) +
+      "&applicant_status=" +
+      encodeURIComponent(applicantStatus),
+  })
+    .then((res) => res.json())
+
+    .then((data) => {
+      alert(data.message);
+
+      if (data.success) {
+        closeStatusModal();
+        loadCandidates(selectCircular.value);
+      }
+    });
 }
 
 // ================= Pagination =================

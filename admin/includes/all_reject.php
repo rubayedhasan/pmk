@@ -201,10 +201,11 @@ echo "
                             <path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
                             <path d="M8 21a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2" />
                         </svg>
-                        <span id="d-modal-candidate-Name">R Hasan</span>
+                        <span id="d-modal-candidate-Name"></span>
                     </h5>
                     <input type="hidden" name="candidate_user_id" id="candidate_user_id">
                     <select name="candidate_status" id="candidate-status">
+                        <option value="1">Pending</option>
                         <option value="2">ShortListed / Present</option>
                         <option value="3">Selected</option>
                         <option value="0">Rejected</option>
