@@ -45,7 +45,7 @@ echo "
             <form class="search_form">
                 <input type="search" name="search_circular" id="search-candidate" placeholder="Search by id or name or phone">
                 <select name="select_circular" id="select-circular">
-                    <option value="">Select Circular</option>
+                    <option value="">All Circulars</option>
                     <?php
                     foreach ($circular_list as $circular) { ?>
                         <option value="<?php echo $circular['circular_id']; ?>">
@@ -87,7 +87,7 @@ echo "
                         </tr>
                     </thead>
                     <tbody id="applied_list_tbody" class="panel-table-body">
-                        <tr>
+                        <!-- <tr>
                             <td>
                                 <span class='circular-id'>
                                     1
@@ -114,9 +114,14 @@ echo "
                                 </span>
                             </td>
                             <td>
-                                <span class='open-position'>
-                                    01727955188
-                                </span>
+                                <div>
+                                    <span class='open-position'>
+                                        01727955188
+                                    </span>
+                                    <span class='circular-id'>
+                                        PMKU-01727955188
+                                    </span>
+                                </div>
                             </td>
                             <td>
                                 <div class='published-date'>
@@ -177,9 +182,91 @@ echo "
                                     <?php  } ?>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <!-- section::pagination  -->
+        <section id="pagination-container">
+            <!-- page details  -->
+            <div class="page-details">Showing 1 to 10 of 100</div>
+
+            <!-- pagination container  -->
+            <ul class="" id="pagination">
+                <!-- first page button  -->
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-left">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M11 7l-5 5l5 5" />
+                            <path d="M17 7l-5 5l5 5" />
+                        </svg>
+                    </button>
+                </li>
+                <!-- previous page button  -->
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                    </button>
+                </li>
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link d-page-active">
+                        1
+                    </button>
+                </li>
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        2
+                    </button>
+                </li>
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        3
+                    </button>
+                </li>
+                <!-- next page button  -->
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 6l6 6l-6 6" />
+                        </svg>
+                    </button>
+                </li>
+                <!-- last page button  -->
+                <li class="d-page-item">
+                    <button type="button" class="d-page-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-right">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 7l5 5l-5 5" />
+                            <path d="M13 7l5 5l-5 5" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- page input  -->
+            <div class="page-input">
+                <input
+                    type="number"
+                    id="go-page"
+                    placeholder="Go"
+                    min="1">
+
+                <div class="page-select">
+                    <label for="per-page">Rows</label>
+                    <select id="per-page">
+                        <option value="10">10</option>
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
             </div>
         </section>
     </main>

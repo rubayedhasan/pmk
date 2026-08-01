@@ -1,33 +1,50 @@
+// all data
+let candidateAllData = [];
+
+// circular select functionality
 const selectCircular = document.getElementById("select-circular");
-selectCircular.addEventListener("change", function (e) {
-  let selectedValue = this.value;
+selectCircular.addEventListener("change", function () {
+  loadCandidates(this.value);
+});
 
-  if (selectedValue === "") {
-    return;
-  }
-
+// load Candidate data functionality
+function loadCandidates(circularId = "") {
   fetch("../server/fetch_applied-list.php", {
-    method: "post",
+    method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: "circular_id=" + selectedValue,
+    body: "circular_id=" + encodeURIComponent(circularId),
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       if (data.length === 0) {
-        document.getElementById("applied_list_tbody").innerHTML = `
-            <tr>
-                <td colspan="8" style="text-align:center;">No Data Found</td>
-            </tr>
-        `;
+        candidateAllData = [];
+
+        document.getElementById("applied_list_tbody").innerHTML = `<tr>
+                <td colspan="9" style="text-align:center">
+                    No Data Found
+                </td>
+            </tr>`;
+
+        document.getElementById("pagination").innerHTML = "";
+        document.querySelector(".page-details").textContent = "";
+
         return;
       }
 
-      document.getElementById("applied_list_tbody").innerHTML = data
-        .map(
-          (candidate, idx) => `       
+      candidateAllData = data;
+      pageNumber = 1;
+
+      enablePagination();
+    });
+}
+
+// function:: table data to  display
+function displayTableData(data) {
+  document.getElementById("applied_list_tbody").innerHTML = data
+    .map(
+      (candidate, idx) => `       
         <tr data-user-id="${candidate.user_id}" data-candidate-name = "${candidate.candidate_name}" data-candidate-phone="${candidate.user_id.split("-")[1]}">
                             <td>
                                 <span class='circular-id'>
@@ -55,9 +72,14 @@ selectCircular.addEventListener("change", function (e) {
                                 </span>
                             </td>
                             <td>
-                                <span class='open-position'>
+                                 <div>
+                                    <span class='open-position'>
                                     ${candidate.circular_title}
-                                </span>
+                                    </span>
+                                    <span class='circular-id'>
+                                        ${candidate.circular_id}
+                                    </span>
+                                </div>
                             </td>
                             <td>
                                 <div class='published-date'>
@@ -125,9 +147,134 @@ selectCircular.addEventListener("change", function (e) {
                             </td>
                         </tr>
         `,
-        )
-        .join("");
-    });
+    )
+    .join("");
+}
+
+// ================= Pagination =================
+
+let perPage = 25;
+let pageNumber = 1;
+
+function enablePagination() {
+  const totalDataCount = candidateAllData.length;
+  const totalPage = Math.ceil(totalDataCount / perPage);
+
+  const startIndex = (pageNumber - 1) * perPage;
+  const endIndex = startIndex + perPage;
+
+  displayTableData(candidateAllData.slice(startIndex, endIndex));
+
+  document.querySelector(".page-details").textContent =
+    `Showing ${startIndex + 1} to ${Math.min(endIndex, totalDataCount)} of ${totalDataCount}`;
+
+  let html = "";
+
+  // First Page
+  html += `
+<li class="d-page-item">
+    <button
+        type="button"
+        class="d-page-link ${pageNumber === 1 ? "disabled" : ""}"
+        ${pageNumber === 1 ? "disabled" : ""}
+        onclick="changePage(1)">
+        &laquo;
+    </button>
+</li>
+`;
+
+  // Previous Page
+  html += `
+<li class="d-page-item">
+    <button
+        type="button"
+        class="d-page-link ${pageNumber === 1 ? "disabled" : ""}"
+        ${pageNumber === 1 ? "disabled" : ""}
+        onclick="changePage(${pageNumber - 1})">
+        &lsaquo;
+    </button>
+</li>
+`;
+
+  // Page Numbers
+  for (let i = 1; i <= totalPage; i++) {
+    html += `
+    <li class="d-page-item">
+        <button
+            type="button"
+            class="d-page-link ${i === pageNumber ? "d-page-active" : ""}"
+            onclick="changePage(${i})">
+            ${i}
+        </button>
+    </li>
+    `;
+  }
+
+  // Next Page
+  html += `
+<li class="d-page-item">
+    <button
+        type="button"
+        class="d-page-link ${pageNumber === totalPage ? "disabled" : ""}"
+        ${pageNumber === totalPage ? "disabled" : ""}
+        onclick="changePage(${pageNumber + 1})">
+        &rsaquo;
+    </button>
+</li>
+`;
+
+  // Last Page
+  html += `
+<li class="d-page-item">
+    <button
+        type="button"
+        class="d-page-link ${pageNumber === totalPage ? "disabled" : ""}"
+        ${pageNumber === totalPage ? "disabled" : ""}
+        onclick="changePage(${totalPage})">
+        &raquo;
+    </button>
+</li>
+`;
+
+  document.getElementById("pagination").innerHTML = html;
+  document.getElementById("go-page").max = totalPage;
+}
+
+function changePage(page) {
+  const totalPage = Math.ceil(candidateAllData.length / perPage);
+
+  if (page < 1 || page > totalPage) {
+    return;
+  }
+
+  pageNumber = page;
+
+  enablePagination();
+}
+
+// Go To Page
+document.getElementById("go-page").addEventListener("keydown", function (e) {
+  if (e.key !== "Enter") return;
+
+  const page = parseInt(this.value);
+  const totalPage = Math.ceil(candidateAllData.length / perPage);
+
+  if (isNaN(page) || page < 1 || page > totalPage) {
+    alert(`Enter a page between 1 and ${totalPage}`);
+    return;
+  }
+
+  pageNumber = page;
+  enablePagination();
+
+  this.value = "";
+});
+
+// Change Per Page
+document.getElementById("per-page").addEventListener("change", function () {
+  perPage = parseInt(this.value);
+  pageNumber = 1;
+  enablePagination();
 });
 
 // live search functionality
@@ -160,3 +307,6 @@ searchCandidate.addEventListener("input", function () {
     }
   });
 });
+
+// load candidate data default
+loadCandidates();
