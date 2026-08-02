@@ -77,8 +77,12 @@ if (isset($_GET['user_id'])) {
             <aside class="profile-aside">
                 <!-- profile image  -->
                 <figure class="profile-picture">
-                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['profile_picture']; ?>"
-                        alt="<?php echo $general_info['candidate_name']; ?>">
+                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['profile_picture'];
+                                                                                    ?>"
+                        alt="<?php echo $general_info['candidate_name'];
+                                ?>">
+
+                    <!-- <img src="../assets/images/profile_pic_ai.jpeg" alt=""> -->
                 </figure>
                 <h2 class="user-name">
                     <?php echo $general_info['candidate_name']; ?>
@@ -148,7 +152,7 @@ if (isset($_GET['user_id'])) {
                     <!-- address  -->
                     <div class="info">
                         <figure class="signature">
-                            <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['signature']; ?>"
+                            <img src="https://careers.pmk-bd.org/assets/candidate_signature/<?php echo $general_info['signature']; ?>"
                                 alt="signature">
                         </figure>
 
@@ -280,35 +284,54 @@ if (isset($_GET['user_id'])) {
                         <?php foreach ($education as $edu) { ?>
                             <div class="tl-item">
                                 <div class="row">
-                                    <span class="title"><?php echo $edu["edu_examination"]; ?> in <?php echo $edu["edu_msubject"]; ?></span><span class="year"><?php echo $edu["academic_year"]; ?></span>
+                                    <span class="title"><?php echo stripslashes($edu["edu_examination"]); ?> in <?php echo $edu["edu_msubject"]; ?></span><span class="year"><?php echo $edu["academic_year"]; ?></span>
                                 </div>
-                                <div class="desc"><?php echo $edu["edu_institution"]; ?> — <?php echo $edu["edu_msubject"]; ?></div>
+                                <div class="desc"><?php echo stripslashes($edu["edu_institution"]); ?> — <?php echo $edu["edu_msubject"]; ?></div>
                                 <span class="result">CGPA <?php echo $edu["result"]; ?></span>
                             </div>
                         <?php } ?>
                     </div>
                 </div>
 
-                <!-- training  -->
+                <!-- training -->
                 <div class="sec">
                     <div class="sec-title">
-                        <span class="num">2</span>Training &amp; Certifications<span
-                            class="line"></span>
+                        <span class="num">2</span>Training &amp; Certifications<span class="line"></span>
                     </div>
                     <div class="tl">
-                        <?php foreach ($training as $tra) { ?>
+                        <?php if (!empty($training)) { ?>
+                            <?php foreach ($training as $tra) { ?>
+                                <?php if (!empty($tra['course_name'])) { ?>
+                                    <div class="tl-item">
+                                        <div class="row">
+                                            <span class="title">
+                                                <?php echo $tra['course_name']; ?>
+                                            </span>
+                                            <span class="year">
+                                                <?php echo !empty($tra['course_stard_date']) ? date("M Y", strtotime($tra['course_stard_date'])) : "N/A"; ?>
+                                                to
+                                                <?php echo !empty($tra['course_end_date']) ? date("M Y", strtotime($tra['course_end_date'])) : "Present"; ?>
+                                            </span>
+                                        </div>
+                                        <div class="desc">
+                                            <?php echo !empty($tra['institution_name']) ? stripslashes($tra['institution_name']) : "N/A"; ?>
+                                            —
+                                            <?php echo !empty($tra['course_duration']) ? $tra['course_duration'] : "N/A"; ?>
+                                        </div>
+                                        <div class="desc">
+                                            <?php echo !empty($tra['institution_address']) ? stripslashes($tra['institution_address']) : "N/A"; ?>
+                                        </div>
+                                        <span class="result">Completed</span>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="tl-item">
+                                        <div class="desc">No training or certification information available.</div>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
+                        <?php } else { ?>
                             <div class="tl-item">
-                                <div class="row">
-                                    <span class="title">
-                                        <?php echo $tra['course_name'] ?>
-                                    </span>
-                                    <span class="year">
-                                        <?php echo $tra['course_stard_date'] ?> to <?php echo $tra['course_end_date'] ?>
-                                    </span>
-                                </div>
-                                <div class="desc"><?php echo $tra['institution_name'] ?> — <?php echo $tra['course_duration'] ?></div>
-                                <div class="desc"><?php echo $tra['institution_address'] ?></div>
-                                <span class="result">Completed</span>
+                                <div class="desc">No training or certification information available.</div>
                             </div>
                         <?php } ?>
                     </div>
@@ -317,22 +340,39 @@ if (isset($_GET['user_id'])) {
                 <!-- job experience -->
                 <div class="sec">
                     <div class="sec-title">
-                        <span class="num">3</span>Job Experience<span
-                            class="line"></span>
+                        <span class="num">3</span>Job Experience<span class="line"></span>
                     </div>
                     <div class="tl">
-                        <?php foreach ($jobExp as $exp) { ?>
+                        <?php if (!empty($jobExp)) { ?>
+                            <?php foreach ($jobExp as $exp) { ?>
+                                <?php if (!empty($exp['project_name'])) { ?>
+                                    <div class="tl-item">
+                                        <div class="row">
+                                            <span class="title">
+                                                <?php echo $exp['project_name']; ?>
+                                            </span>
+                                            <span class="year">
+                                                <?php echo !empty($exp['from_date']) ? date("M Y", strtotime($exp['from_date'])) : "N/A"; ?>
+                                                to
+                                                <?php echo !empty($exp['to_date']) ? date("M Y", strtotime($exp['to_date'])) : "Present"; ?>
+                                            </span>
+                                        </div>
+                                        <div class="desc">
+                                            <?php echo !empty($exp['org_name']) ? stripslashes($exp['org_name']) : "N/A"; ?>
+                                        </div>
+                                        <div class="desc">
+                                            <?php echo !empty($exp['company_location']) ? stripslashes($exp['company_location']) : "N/A"; ?>
+                                        </div>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="tl-item">
+                                        <div class="desc">No job experience available.</div>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
+                        <?php } else { ?>
                             <div class="tl-item">
-                                <div class="row">
-                                    <span class="title">
-                                        <?php echo $exp['project_name'] ?>
-                                    </span>
-                                    <span class="year">
-                                        <?php echo $exp['from_date'] ?> to <?php echo $exp['to_date'] ?>
-                                    </span>
-                                </div>
-                                <div class="desc"><?php echo stripslashes($exp['org_name']) ?></div>
-                                <div class="desc"><?php echo stripslashes($exp['company_location']) ?></div>
+                                <div class="desc">No job experience available.</div>
                             </div>
                         <?php } ?>
                     </div>
@@ -367,7 +407,7 @@ if (isset($_GET['user_id'])) {
             btn.innerHTML = "Preparing…";
 
             html2pdf().set({
-                margin: 0,
+                margin: [0, 0, 0, 0],
                 filename: fileName,
                 image: {
                     type: "jpeg",

@@ -203,10 +203,11 @@ echo "
                         </svg>
                         <span id="d-modal-candidate-Name">R Hasan</span>
                     </h5>
+                    <input type="hidden" name="candidate_circular_id" id="candidate_circular_id">
                     <input type="hidden" name="candidate_user_id" id="candidate_user_id">
                     <select name="candidate_status" id="candidate-status">
+                        <option value="1">Pending</option>
                         <option value="2">ShortListed / Present</option>
-                        <option value="3">Selected</option>
                         <option value="0">Rejected</option>
                     </select>
 
@@ -221,60 +222,10 @@ echo "
         <!-- section::pagination  -->
         <section id="pagination-container">
             <!-- page details  -->
-            <div class="page-details">Showing 1 to 10 of 100</div>
+            <div class="page-details"></div>
 
             <!-- pagination container  -->
-            <ul class="" id="pagination">
-                <!-- <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-left">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 7l-5 5l5 5" />
-                            <path d="M17 7l-5 5l5 5" />
-                        </svg>
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M15 6l-6 6l6 6" />
-                        </svg>
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link d-page-active">
-                        1
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        2
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        3
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9 6l6 6l-6 6" />
-                        </svg>
-                    </button>
-                </li>
-                <li class="d-page-item">
-                    <button type="button" class="d-page-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-right">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M7 7l5 5l-5 5" />
-                            <path d="M13 7l5 5l-5 5" />
-                        </svg>
-                    </button>
-                </li> -->
-            </ul>
+            <ul class="" id="pagination"></ul>
 
             <!-- page input  -->
             <div class="page-input">

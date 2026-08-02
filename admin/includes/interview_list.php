@@ -204,8 +204,9 @@ echo "
                         <span id="d-modal-candidate-Name">R Hasan</span>
                     </h5>
                     <input type="hidden" name="candidate_user_id" id="candidate_user_id">
+                    <input type="hidden" name="candidate_circular_id" id="candidate_circular_id">
                     <select name="candidate_status" id="candidate-status">
-                        <option value="2">ShortListed / Present</option>
+                        <option value="1">Pending</option>
                         <option value="3">Selected</option>
                         <option value="0">Rejected</option>
                     </select>

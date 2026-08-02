@@ -130,13 +130,13 @@ function displayTableData(data) {
                                             <path d="M4 16h3" />
                                         </svg>
                                     </a>
-                                    ${
-                                      candidate.applicant_status != 3
-                                        ? `<a
+                                    <a
                                           href="javascript:void(0)"
                                           title="change applicant status"
                                           class="action-btn btn-edit"
-                                          onclick="openStatusModal('${candidate.user_id}', '${candidate.candidate_name}')"
+                                          onclick="openStatusModal('${candidate.user_id}','${
+                                            candidate.circular_id
+                                          }', '${candidate.candidate_name}')"
                                         >
                                           <svg
                                             width="16"
@@ -160,9 +160,7 @@ function displayTableData(data) {
                                             <path d="M15 12l2 0" />
                                             <path d="M7 16l10 0" />
                                           </svg>
-                                        </a>`
-                                        : ""
-                                    }
+                                        </a>
 
                                     ${
                                       userRole == 1
@@ -204,8 +202,9 @@ function getApplicantStatus(status) {
 }
 
 // open status change modal functionality
-function openStatusModal(userId, candidateName) {
+function openStatusModal(userId, circularId, candidateName) {
   document.getElementById("candidate_user_id").value = userId;
+  document.getElementById("candidate_circular_id").value = circularId;
 
   document.getElementById("d-modal-candidate-Name").innerHTML =
     `<strong>${candidateName}</strong>`;
@@ -226,6 +225,7 @@ function closeStatusModal() {
 //   status change functionality
 function updateCandidateStatus() {
   const userId = document.getElementById("candidate_user_id").value;
+  const circular_id = document.getElementById("candidate_circular_id").value;
 
   const applicantStatus = document.getElementById("candidate-status").value;
 
@@ -239,6 +239,8 @@ function updateCandidateStatus() {
     body:
       "user_id=" +
       encodeURIComponent(userId) +
+      "&circular_id=" +
+      encodeURIComponent(circular_id) +
       "&applicant_status=" +
       encodeURIComponent(applicantStatus),
   })
