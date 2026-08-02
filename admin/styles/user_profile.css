@@ -3,11 +3,15 @@
   margin: 0;
 }
 
+.profile-page-header {
+  margin-top: 24px;
+}
+
 /* page size define   */
 #main-page {
   width: 210mm;
   height: 297mm;
-  margin: 48px auto;
+  margin: 24px auto;
   border: 0.5px solid #1f293330;
 
   display: flex;
@@ -167,19 +171,21 @@
   display: block;
   color: #6b7c76;
   font-size: 0.8rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .data-info-value {
   color: var(--pmk-dark);
   font-weight: 700;
   font-size: 0.875rem;
+  text-transform: capitalize;
 }
 
 .data-value {
   color: var(--pmk-dark);
   font-weight: 400;
   font-size: 0.85rem;
+  text-transform: capitalize;
 }
 
 .sec {
@@ -264,6 +270,7 @@
   color: var(--pmk-dark);
   font-size: 0.8rem;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .tl-item .year {
@@ -286,6 +293,80 @@
   margin-top: 6px;
   border-radius: 8px;
   background: var(--pmk-green-light);
+}
+
+.cv-header {
+  max-width: 850px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Google Sans", "Roboto", sans-serif;
+}
+
+.cv-header .back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #176f4e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 4px;
+}
+.cv-header .back-btn:hover {
+  text-decoration: underline;
+}
+
+.cv-header .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cv-header button.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #cfe6dc;
+  background: #ffffff;
+  color: #176f4e;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+.cv-header button.action:hover {
+  background: #e6f4ef;
+}
+.cv-header button.action:active {
+  transform: scale(0.97);
+}
+
+.cv-header button.primary {
+  background: #00946a;
+  border-color: #00946a;
+  color: #ffffff;
+}
+.cv-header button.primary:hover {
+  background: #176f4e;
+}
+
+/* hide the header when printing / exporting */
+@media print {
+  header .cv-header {
+    display: none !important;
+  }
+
+  .main-page {
+    margin: 0;
+  }
 }
 
 /* responsive styles:: small devices  */

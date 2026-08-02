@@ -1,3 +1,39 @@
+<?php
+// connect database 
+require_once("../db/dbconnect.php");
+$dbConnection = $conn;
+
+if (isset($_GET['user_id'])) {
+    $user_id = $_GET['user_id'];
+
+    // QUERY:: general information 
+    $get_generalInfo_query = "SELECT * FROM candidate_general_information WHERE user_id = '$user_id' LIMIT 1";
+    $general_info = $dbConnection->query($get_generalInfo_query)->fetch_assoc();
+
+    // QUERY:: identity 
+    $get_identity_query = "SELECT * FROM candidate_identity WHERE user_id = '$user_id' LIMIT 1";
+    $identity = $dbConnection->query($get_identity_query)->fetch_assoc();
+
+    // QUERY:: address 
+    $get_address_query = "SELECT * FROM candidate_address WHERE user_id = '$user_id' LIMIT 1";
+    $address = $dbConnection->query($get_address_query)->fetch_assoc();
+
+    // QUERY:: education 
+    $get_education_query = "SELECT * FROM candidate_education WHERE user_id = '$user_id' LIMIT 1";
+    $education = $dbConnection->query($get_education_query)->fetch_all(MYSQLI_ASSOC);
+
+    // QUERY:: training 
+    $get_training_query = "SELECT * FROM candidate_training WHERE user_id = '$user_id' LIMIT 1";
+    $training = $dbConnection->query($get_training_query)->fetch_all(MYSQLI_ASSOC);
+
+    // QUERY:: job experience 
+    $get_jobExp_query = "SELECT * FROM candidate_job_experience WHERE user_id = '$user_id' LIMIT 1";
+    $jobExp = $dbConnection->query($get_jobExp_query)->fetch_all(MYSQLI_ASSOC);
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,15 +55,34 @@
     <!-- section:: main  -->
     <main>
 
+        <header class="profile-page-header">
+            <div class="cv-header">
+                <button class="back-btn" onclick="cvGoBack()">
+                    ← Back
+                </button>
+                <div class="actions">
+                    <button class="action" onclick="window.print()">
+                        🖨️ Print
+                    </button>
+                    <button class="action primary" id="downloadBtn" onclick="cvDownloadPDF()">
+                        ⬇️ Download PDF
+                    </button>
+                </div>
+            </div>
+        </header>
+
         <!-- section:: main-page (A4 size)  -->
         <section id="main-page">
             <!-- sub-section:: profile aside  -->
             <aside class="profile-aside">
                 <!-- profile image  -->
                 <figure class="profile-picture">
-                    <img src="../assets/images/profile_pic_ai.jpeg" alt="profile">
+                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['profile_picture']; ?>"
+                        alt="<?php echo $general_info['candidate_name']; ?>">
                 </figure>
-                <h2 class="user-name">Md. Rubayed Hasan</h2>
+                <h2 class="user-name">
+                    <?php echo $general_info['candidate_name']; ?>
+                </h2>
 
                 <!-- contact  -->
                 <div class="profile-info">
@@ -38,7 +93,9 @@
                         <div class="info-label">
                             <span class="info-label-text">Phone</span>
                         </div>
-                        <div class="info-value">01727955188</div>
+                        <div class="info-value" id="phone">
+                            <?php echo $identity['mobile_no']; ?>
+                        </div>
                     </div>
 
                     <!-- email  -->
@@ -46,7 +103,9 @@
                         <div class="info-label">
                             <span class="info-label-text">Email</span>
                         </div>
-                        <div class="info-value">text@gmail.com</div>
+                        <div class="info-value">
+                            <?php echo $identity['email_id']; ?>
+                        </div>
                     </div>
                 </div>
 
@@ -56,7 +115,13 @@
 
                     <!-- address  -->
                     <div class="info">
-                        <div class="info-value">House: 87/2, Nowdpara, Bheramara, Kushtia. Upazila: Bheramara, Post Office: Bheramara-7040, Distric: Kushtia, Division: Khulna </div>
+                        <div class="info-value" style="line-height: 1.5;">
+                            <?php echo $address['per_house']; ?>
+                            Upazila: <?php echo $address['per_upazilla']; ?>,
+                            Post Office: <?php echo $address['per_post']; ?>-<?php echo $address['per_post_code']; ?>,
+                            Distric: <?php echo $address['per_district']; ?>,
+                            Division: <?php echo $address['per_division']; ?>
+                        </div>
                     </div>
                 </div>
 
@@ -66,7 +131,13 @@
 
                     <!-- address  -->
                     <div class="info">
-                        <div class="info-value">House: 87/2, Nowdpara, Bheramara, Kushtia. Upazila: Bheramara, Post Office: Bheramara-7040, Distric: Kushtia, Division: Khulna </div>
+                        <div class="info-value" style="line-height: 1.5;">
+                            <?php echo $address['pre_house']; ?>
+                            Upazila: <?php echo $address['pre_upazilla']; ?>,
+                            Post Office: <?php echo $address['pre_post']; ?>-<?php echo $address['pre_post_code']; ?>,
+                            Distric: <?php echo $address['pre_district']; ?>,
+                            Division: <?php echo $address['pre_division']; ?>
+                        </div>
                     </div>
                 </div>
 
@@ -77,11 +148,12 @@
                     <!-- address  -->
                     <div class="info">
                         <figure class="signature">
-                            <img src="../assets/images/candidate_signature_01684586267.jpg" alt="">
+                            <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['signature']; ?>"
+                                alt="signature">
                         </figure>
 
                         <h5 class="signature-name">
-                            MD. Rubayed Hasan
+                            <?php echo $general_info['candidate_name']; ?>
                         </h5>
                     </div>
                 </div>
@@ -99,17 +171,21 @@
                     <!-- Father Name  -->
                     <div class="data">
                         <div class="data-label">
-                            <span class="data-label-text">Father's Name</span>
+                            <span class="data-label-text">Father's Name:</span>
                         </div>
-                        <div class="data-info-value">Md. Mehadi Hasan Tipu</div>
+                        <div class="data-info-value">
+                            <?php echo $general_info['fathers_name']; ?>
+                        </div>
                     </div>
 
                     <!-- Mother Name  -->
                     <div class="data" style="margin-top: 6px;">
                         <div class="data-label">
-                            <span class="data-label-text">Mother's Name</span>
+                            <span class="data-label-text">Mother's Name:</span>
                         </div>
-                        <div class="data-info-value">Mst. Nasima Akhtar</div>
+                        <div class="data-info-value">
+                            <?php echo $general_info['mothers_name']; ?>
+                        </div>
                     </div>
 
                     <!-- identity  -->
@@ -119,56 +195,78 @@
                             <div class="data-label">
                                 <span class="data-label-text">Date of Birth:</span>
                             </div>
-                            <div class="data-value">20 April 2026</div>
+                            <div class="data-value">
+                                <?php echo $identity['date_of_birth']; ?>
+                            </div>
                         </div>
                         <!-- Gender -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">Gender:</span>
                             </div>
-                            <div class="data-value">Male</div>
+                            <div class="data-value">
+                                <?php echo $general_info['gender']; ?>
+                            </div>
                         </div>
                         <!-- Marital status -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">Marital status:</span>
                             </div>
-                            <div class="data-value">Unmarried</div>
+                            <div class="data-value">
+                                <?php echo $general_info['marital_status']; ?>
+                            </div>
                         </div>
                         <!-- Religion -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">Religion:</span>
                             </div>
-                            <div class="data-value">Islam</div>
+                            <div class="data-value">
+                                <?php echo $general_info['religion']; ?>
+                            </div>
                         </div>
                         <!--  Blood group  -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text"> Blood group:</span>
                             </div>
-                            <div class="data-value">A-</div>
+                            <div class="data-value">
+                                <?php echo $general_info['blood_group']; ?>
+                            </div>
                         </div>
                         <!-- Nationality -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">Nationality:</span>
                             </div>
-                            <div class="data-value">Bangladeshi</div>
+                            <div class="data-value">
+                                <?php echo $identity['nationality']; ?>
+                            </div>
                         </div>
                         <!-- NID -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">NID:</span>
                             </div>
-                            <div class="data-value">1993xxxxxx427</div>
+                            <div class="data-value">
+                                <?php echo $identity['national_id']; ?>
+                            </div>
                         </div>
                         <!-- Passport No. -->
                         <div class="data">
                             <div class="data-label">
                                 <span class="data-label-text">Passport:</span>
                             </div>
-                            <div class="data-value">BN0245891</div>
+                            <div class="data-value">
+                                <?php
+                                if (!empty($identity['passport_no'])) {
+                                    echo $identity['passport_no'];
+                                } else {
+                                    echo "Not Available";
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,31 +277,15 @@
                         <span class="num">1</span>Education<span class="line"></span>
                     </div>
                     <div class="tl">
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">MSS in Economics</span><span class="year">2018</span>
+                        <?php foreach ($education as $edu) { ?>
+                            <div class="tl-item">
+                                <div class="row">
+                                    <span class="title"><?php echo $edu["edu_examination"]; ?> in <?php echo $edu["edu_msubject"]; ?></span><span class="year"><?php echo $edu["academic_year"]; ?></span>
+                                </div>
+                                <div class="desc"><?php echo $edu["edu_institution"]; ?> — <?php echo $edu["edu_msubject"]; ?></div>
+                                <span class="result">CGPA <?php echo $edu["result"]; ?></span>
                             </div>
-                            <div class="desc">University of Rajshahi — Economics</div>
-                            <span class="result">CGPA 3.72</span>
-                        </div>
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">BSS (Honours)</span><span class="year">2016</span>
-                            </div>
-                            <div class="desc">
-                                Rajshahi College — National University · Economics
-                            </div>
-                            <span class="result">CGPA 3.61</span>
-                        </div>
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">HSC</span><span class="year">2011</span>
-                            </div>
-                            <div class="desc">
-                                Kurigram Government College — Rangpur Board · Business Studies
-                            </div>
-                            <span class="result">GPA 4.80</span>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -214,22 +296,21 @@
                             class="line"></span>
                     </div>
                     <div class="tl">
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">Microfinance Operations &amp; Risk</span><span class="year">Feb 2023</span>
+                        <?php foreach ($training as $tra) { ?>
+                            <div class="tl-item">
+                                <div class="row">
+                                    <span class="title">
+                                        <?php echo $tra['course_name'] ?>
+                                    </span>
+                                    <span class="year">
+                                        <?php echo $tra['course_stard_date'] ?> to <?php echo $tra['course_end_date'] ?>
+                                    </span>
+                                </div>
+                                <div class="desc"><?php echo $tra['institution_name'] ?> — <?php echo $tra['course_duration'] ?></div>
+                                <div class="desc"><?php echo $tra['institution_address'] ?></div>
+                                <span class="result">Completed</span>
                             </div>
-                            <div class="desc">PMK Training Institute, Dhaka — 2 weeks</div>
-                            <span class="result">Completed</span>
-                        </div>
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">Field-level Data Collection (KoboToolbox)</span><span class="year">Jun 2022</span>
-                            </div>
-                            <div class="desc">
-                                BRAC Institute of Governance, Dhaka — 5 days
-                            </div>
-                            <span class="result">Completed</span>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -240,27 +321,81 @@
                             class="line"></span>
                     </div>
                     <div class="tl">
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">Microfinance Operations &amp; Risk</span><span class="year">Feb 2023</span>
+                        <?php foreach ($jobExp as $exp) { ?>
+                            <div class="tl-item">
+                                <div class="row">
+                                    <span class="title">
+                                        <?php echo $exp['project_name'] ?>
+                                    </span>
+                                    <span class="year">
+                                        <?php echo $exp['from_date'] ?> to <?php echo $exp['to_date'] ?>
+                                    </span>
+                                </div>
+                                <div class="desc"><?php echo stripslashes($exp['org_name']) ?></div>
+                                <div class="desc"><?php echo stripslashes($exp['company_location']) ?></div>
                             </div>
-                            <div class="desc">PMK Training Institute, Dhaka — 2 weeks</div>
-                            <span class="result">Completed</span>
-                        </div>
-                        <div class="tl-item">
-                            <div class="row">
-                                <span class="title">Field-level Data Collection (KoboToolbox)</span><span class="year">Jun 2022</span>
-                            </div>
-                            <div class="desc">
-                                BRAC Institute of Governance, Dhaka — 5 days
-                            </div>
-                            <span class="result">Completed</span>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        function cvGoBack() {
+            window.history.back();
+        }
+
+        // ---- DOWNLOAD PDF ----
+        function cvDownloadPDF() {
+            const btn = document.getElementById("downloadBtn");
+            const el = document.getElementById("main-page");
+            if (!el) {
+                console.error('Element with id="main-page" not found.');
+                return;
+            }
+
+            const nameEl = el.querySelector(".user-name");
+            const phoneEl = el.querySelector("#phone");
+            const fileName = (nameEl && phoneEl ? nameEl.innerText.trim().replace(/\s+/g, "_") + "_" + phoneEl.innerText.trim() : "candidate") + "_CV.pdf";
+
+            const original = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = "Preparing…";
+
+            html2pdf().set({
+                margin: 0,
+                filename: fileName,
+                image: {
+                    type: "jpeg",
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true
+                },
+                jsPDF: {
+                    unit: "mm",
+                    format: "a4",
+                    orientation: "portrait"
+                },
+                pagebreak: {
+                    mode: ["avoid-all", "css", "legacy"]
+                }
+            }).from(el).save().then(() => {
+                btn.disabled = false;
+                btn.innerHTML = original;
+            }).catch((err) => {
+                console.error("PDF generation failed:", err);
+                btn.disabled = false;
+                btn.innerHTML = original;
+            });
+        }
+    </script>
 </body>
 
 </html>
