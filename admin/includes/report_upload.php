@@ -12,7 +12,7 @@
 
     <!-- Linked custom stylesheet -->
     <link rel="stylesheet" href="../styles/publish_page_header.css">
-    <link rel="stylesheet" href="../styles/post_news.css">
+    <link rel="stylesheet" href="../styles/report_upload.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                 </svg>
                 <span>Cancel</span>
             </button>
-            <button type="button" class="publish-action-button ppab-green publish-button" onclick="uploadThePost()">
+            <button type="button" class="publish-action-button ppab-green publish-button" onclick="uploadTheReport()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
@@ -54,116 +54,91 @@
     <!-- section:: main  -->
     <main>
 
-        <!-- section:: post  -->
-        <section id="post" class="post-section section-hidden">
-            <div class="container-width">
-                <div class="post-section-container">
-                    <!-- category form  -->
-                    <div class="section-form-container grid-full">
-                        <!-- post form  container (form will create by js FormData obj)-->
-                        <div class="section-form">
-                            <!-- input:: Image upload       -->
-                            <div class="form-input grid-full">
-                                <div class="upload-image-header">
-                                    <div>
-                                        <h4 class="upload-header-title">Upload Images</h4>
-                                        <p class="upload-header-text">
-                                            Fill in the necessary fields by assigning a category and uploading an image for each row.
-                                        </p>
-                                    </div>
-                                    <button type="button" class="image-row-add-btn" id="img-row-add-btn" onclick="addNewRow()">
-                                        + Add Image
-                                    </button>
-                                </div>
+        <!-- section:: upload report  -->
+        <section class="published-main-container">
+            <div class="upload-container">
+                <h4 class="uc-title">Upload A PDF</h4>
+                <div class="upload-manager">
+                    <div class="pdf-container">
+                        <div class="image-drop-area">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 16V4M12 4l-4 4M12 4l4 4"
+                                    stroke="#33504D"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"
+                                    stroke="#33504D"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <h5 class="drop-area-title">Click to upload, or drag an pad here</h5>
+                            <p class="drop-area-text">One file at a time · PDF format only</p>
+                            <input type="file" class="post-pdf section-hidden" accept="application/pdf">
+                        </div>
 
-                                <!-- form table  -->
-                                <div class="image-table-wrapper">
-                                    <table class="table-upload-image">
-                                        <thead>
-                                            <tr>
-                                                <th>Image Category</th>
-                                                <th>Image</th>
-                                                <th>Preview</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="image-tbody" id="imageTbody"></tbody>
-                                    </table>
-                                </div>
+                        <!-- file preview  -->
+                        <div class="file-display section-hidden">
+                            <div class="file-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                    <path d="M17 18h2" />
+                                    <path d="M20 15h-3v6" />
+                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1" />
+                                </svg>
                             </div>
+                            <div class="file-meta">
+                                <h4 class="file-name">Annual Report 2025-26.pdf</h4>
+                                <p class="file-size">
+                                    Size:
+                                    <span id="file-mb">56</span>
+                                    MB
+                                </p>
+                            </div>
+                            <button type="button" class="file-remove" id="remove-file">×</button>
+                        </div>
+                    </div>
 
-                            <!-- for show the table row  -->
-                            <template id="image-row-template">
-                                <tr>
-                                    <!-- image category  -->
-                                    <td>
-                                        <select class="image-category">
-                                            <option value="">Select Image Category</option>
-
-                                            <!-- Website UI -->
-                                            <option value="slider">Slider</option>
-                                            <option value="page-banner">Page Banner</option>
-                                            <option value="thumbnail">Thumbnail</option>
-
-                                            <!-- Content -->
-                                            <option value="project">Project</option>
-                                            <option value="field-operations">Field Operations</option>
-                                            <option value="program-events">Program & Events</option>
-                                            <option value="community-engagement">Community Engagement</option>
-                                            <option value="training-workshops">Training & Workshops</option>
-                                            <option value="project-update">Project Update</option>
-                                            <option value="recent-activity">Recent Activity</option>
-
-                                            <!-- Media -->
-                                            <option value="gallery">Gallery</option>
-                                            <option value="report-cover">Report Cover</option>
-                                            <option value="publication-cover">Publication Cover</option>
-                                        </select>
-                                        <span class="image-category-label section-hidden"></span>
-                                    </td>
-
-                                    <!-- image input  -->
-                                    <td>
-                                        <div class="image-drop-area">
-                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                    d="M12 16V4M12 4l-4 4M12 4l4 4"
-                                                    stroke="#33504D"
-                                                    stroke-width="1.6"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"
-                                                    stroke="#33504D"
-                                                    stroke-width="1.6"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                            <h5 class="drop-area-title">Click to upload, or drag an image here</h5>
-                                            <p class="drop-area-text">JPG, PNG, WEBP — up to 5MB</p>
-                                            <input type="file" class="post-image section-hidden" accept="image/*">
-                                        </div>
-                                    </td>
-
-                                    <!-- preview  -->
-                                    <td>
-                                        <div class="image-preview-area"></div>
-                                    </td>
-
-                                    <!-- action  -->
-                                    <td>
-                                        <button type="button" class="delete-image-row-btn" title="Remove Row">✕</button>
-                                    </td>
-                                </tr>
-                            </template>
+                    <div class="upload-form">
+                        <div class="upload-form-input">
+                            <label for="report-title">
+                                Report Title
+                                <span style="color:red; pointer-events: none;  user-select: none;">*</span>
+                            </label>
+                            <input type="text" name="report_title" id="report-title" placeholder="e.g: Annual Report 2025-26" required>
+                        </div>
+                        <div class="upload-form-input">
+                            <label for="report-category">
+                                Report Category
+                                <span style="color:red; pointer-events: none;  user-select: none;">*</span>
+                            </label>
+                            <select name="report_category" id="report-category" required>
+                                <option value="">Select A Category</option>
+                                <option value="1">Annual Report</option>
+                                <option value="2">Audit Report</option>
+                            </select>
+                        </div>
+                        <div class="upload-form-input">
+                            <label for="financial-year">
+                                Financial Year
+                                <span style="color:red; pointer-events: none;  user-select: none;">*</span>
+                            </label>
+                            <input type="text" name="financial_year" id="financial-year" placeholder="e.g: 2025-26" required>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Linked custom script  -->
-    <script src="../js/post_news.js"></script>
+    <script src="../js/report_upload.js"></script>
 </body>
 
 </html>

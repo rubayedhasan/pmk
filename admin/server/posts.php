@@ -129,7 +129,7 @@ try {
     $imageCounters = [];
 
     // IMAGE INSERTING QUERY 
-    $image_insert_query = $dbConnection->prepare("INSERT INTO post_image( postcust_id, post_image, image_file_path, postimage_cat, post_title) VALUES (?,?,?,?,?)");
+    $image_insert_query = $dbConnection->prepare("INSERT INTO post_image( postcust_id, post_image, postimage_cat, post_title) VALUES (?,?,?,?)");
 
 
     // is the image come in popper way 
@@ -213,16 +213,12 @@ try {
             // remember this file, in case a LATER row fails and we need to undo everything
             $movedFiles[] = $file_destination;
 
-            // this is the path we save in the database (used later to display the image)
-            $stored_img_file_path = "../admin/assets/uploads/posts/" . $file_name;
 
-
-            // inser the image to database 
+            // insert the image to database 
             $image_insert_query->bind_param(
-                "sssss",
+                "ssss",
                 $post_id,
                 $file_name,
-                $stored_img_file_path,
                 $image_category,
                 $post_title
             );

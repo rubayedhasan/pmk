@@ -1,0 +1,211 @@
+body {
+  background-color: #f5f8f7;
+  scroll-behavior: smooth;
+}
+
+.section-hidden {
+  display: none !important;
+}
+
+/* published main container  */
+.published-main-container {
+  margin: 50px 0;
+}
+
+.upload-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e3e9e6;
+  background-color: var(--pmk-white);
+  box-shadow:
+    0 1px 2px rgba(15, 35, 28, 0.06),
+    0 8px 24px -12px rgba(15, 35, 28, 0.12);
+}
+
+.uc-title {
+  color: var(--pmk-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.upload-manager {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.pdf-container {
+  flex: 1;
+}
+
+.image-drop-area {
+  width: 100%;
+  min-width: 220px;
+  min-height: 140px;
+  padding: 18px 14px;
+  border-radius: 10px;
+  border: 1.5px dashed #dce4e2;
+  background-color: #f6f8f7;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-drop-area:hover,
+.image-drop-area.droparea-dragover {
+  border-color: #33504d;
+  background-color: #e8efee;
+}
+
+.drop-area-title {
+  color: var(--pmk-blue-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.drop-area-text {
+  color: #6b7a75;
+  font-size: 0.75rem;
+  margin-top: 2px;
+  line-height: normal;
+}
+
+.file-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cfe0da;
+  background-color: #e5efec;
+}
+
+.file-icon {
+  flex-shrink: 0;
+}
+
+.file-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--pmk-green-dark);
+}
+
+.file-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  color: var(--pmk-blue-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  color: #5a564c;
+  font-size: 0.775rem;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 4px;
+}
+
+.file-remove {
+  flex-shrink: 0;
+  color: #5a564c;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.upload-form {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.upload-form-input:first-child {
+  grid-column: span 2;
+}
+
+.upload-form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.upload-form-input label {
+  color: var(--pmk-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.upload-form-input input {
+  width: 100%;
+  outline: none;
+  color: var(--pmk-dark);
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 08px;
+  border: 1px solid #e3e9e6;
+  background-color: var(--pmk-white);
+}
+
+.upload-form-input select {
+  width: 100%;
+  color: #6b7a75;
+  padding: 11px 13px;
+  border: 1px solid #dce3e0;
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--pmk-white);
+  padding: 11px 40px 11px 13px;
+
+  appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236b7a75' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}
