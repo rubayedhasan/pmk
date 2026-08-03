@@ -22,6 +22,7 @@ let candidateAllData = [];
 const selectCircular = document.getElementById("select-circular");
 selectCircular.addEventListener("change", function () {
   loadCandidates(this.value);
+  console.log(pageUrl);
 });
 
 // load Candidate data functionality

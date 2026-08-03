@@ -10,7 +10,7 @@ $year = date("Y");
 $prefix = $category . $year;
 
 $sql = "SELECT circular_id
-        FROM publish_circular
+        FROM publish_circular2
         WHERE circular_id LIKE '$prefix%'
         ORDER BY circular_id DESC
         LIMIT 1";

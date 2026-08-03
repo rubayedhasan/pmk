@@ -10,9 +10,9 @@ $dbConnection = $conn;
 if (isset($_POST["search_circular"]) && !empty($_POST["search_circular"])) {
     $search_key = $_POST["search_circular"];
 
-    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular WHERE circular_id LIKE '%$search_key%' || circular_title LIKE '%$search_key%' ORDER BY application_deadline DESC";
+    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular2 WHERE circular_id LIKE '%$search_key%' || circular_title LIKE '%$search_key%' ORDER BY application_deadline DESC";
 } else {
-    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular  ORDER BY application_deadline DESC";
+    $all_circular_query = "SELECT circular_id, circular_title, available_vacancy, circular_publish_date, application_deadline, circular_status FROM publish_circular2  ORDER BY application_deadline DESC";
 }
 
 $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSOC);
@@ -67,7 +67,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
 
         <!-- button  -->
         <div class="panel-button-box">
-            <button type="button" class="panel-action-button" onclick="window.location.href='../includes/publish_circular.php'">
+            <button type="button" class="panel-action-button" onclick="window.location.href='../includes/publish_circular2.php'">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M12 5l0 14" />
@@ -158,7 +158,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
                             echo " </td>
                             <td>
                                 <div class='item-actions'>
-                                    <a href='../includes/vacancyDetails.php?circular_id=$circular[circular_id]' title='view' class='action-btn btn-view'>
+                                    <a href='../includes/vacancyDetails2.php?circular_id=$circular[circular_id]' title='view' class='action-btn btn-view'>
                                         <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-eye'>
                                             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                             <path d='M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0' />
@@ -167,7 +167,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
                                     </a> ";
 
                             if ($user_role == 1) {
-                                echo "<a href='../includes/edit_publish_circular.php?circular_id=$circular[circular_id]' title='edit' class='action-btn btn-edit'>
+                                echo "<a href='../includes/edit_publish_circular2.php?circular_id=$circular[circular_id]' title='edit' class='action-btn btn-edit'>
                                         <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-edit'>
                                             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                             <path d='M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1' />
@@ -175,7 +175,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
                                             <path d='M16 5l3 3' />
                                         </svg>
                                     </a>
-                                    <a href='../server/delete_circular.php?circular_id=$circular[circular_id]' title='delete' class='action-btn btn-delete' onclick=\"return confirm('Are you sure you want to delete this circular?')\">
+                                    <a href='../server/delete_circular2.php?circular_id=$circular[circular_id]' title='delete' class='action-btn btn-delete' onclick=\"return confirm('Are you sure you want to delete this circular?')\">
                                         <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                             <path d='M4 7h16' />

@@ -15,7 +15,7 @@ if ($circular_id == "") {
                 cgi.*,
                 pc.circular_title
             FROM candidate_general_information cgi
-            INNER JOIN publish_circular pc
+            INNER JOIN publish_circular2 pc
                 ON cgi.circular_id = pc.circular_id
             WHERE cgi.applicant_status = 0
             ORDER BY cgi.id DESC";
@@ -25,7 +25,7 @@ if ($circular_id == "") {
                 cgi.*,
                 pc.circular_title
             FROM candidate_general_information cgi
-            INNER JOIN publish_circular pc
+            INNER JOIN publish_circular2 pc
                 ON cgi.circular_id = pc.circular_id
             WHERE cgi.circular_id='$circular_id'
             AND cgi.applicant_status=1
