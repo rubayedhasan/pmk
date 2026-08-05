@@ -50,8 +50,10 @@ try {
     $circular_designation_category = clean($dbConnection, $_POST["circular_designation_category"] ?? "");
     $circular_available_position = clean($dbConnection, $_POST["circular_available_position"] ?? "");
     $circular_id = clean($dbConnection, $_POST["circular_id"] ?? "");
+    $employment_type = clean($dbConnection, $_POST["employment_type"] ?? "");
 
     // step-2:: PUBLISH DATE
+    $job_location = clean($dbConnection, $_POST["job_location"] ?? "");
     $circular_publish_date = clean($dbConnection, $_POST["circular_publish_date"] ?? "");
     $circular_application_deadline = clean($dbConnection, $_POST["circular_application_deadline"] ?? "");
 
@@ -67,12 +69,8 @@ try {
     $circular_age_deadline = clean($dbConnection, $_POST["circular_age_deadline"] ?? "");
 
     // step-4:: QUALIFICATION
-    $circular_education_requirement = clean($dbConnection, $_POST["circular_education_requirement"] ?? "");
-    $circular_required_experience = clean($dbConnection, $_POST["circular_required_experience"] ?? "");
-    $circular_additional_requirement = clean($dbConnection, $_POST["circular_additional_requirement"] ?? "");
+    $circular_description = trim($_POST["circular_description"]) ?? "";
 
-    // step-5:: APPLICATION INSTRUCTIONS
-    $circular_training_rules = clean($dbConnection, $_POST["circular_training_rules"] ?? "");
 
 
     // prepper the query 
@@ -87,18 +85,17 @@ try {
     min_age,
     max_age,
     age_deadline,
-    qualification,
-    experience,
-    additional_requirement,
-    training_rules,
+    circular_description,
+    job_location,
     circular_publish_date,
     application_deadline,
-    circular_status
-    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    circular_status,
+    employment_type
+    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
     );
 
     $circularDataQuery->bind_param(
-        "sssiiiiisssssssi",
+        "ssssiiiisssssii",
         $circular_id,
         $circular_designation_title,
         $circular_designation_category,
@@ -108,13 +105,12 @@ try {
         $circular_min_age,
         $circular_max_age,
         $circular_age_deadline,
-        $circular_education_requirement,
-        $circular_required_experience,
-        $circular_additional_requirement,
-        $circular_training_rules,
+        $circular_description,
+        $job_location,
         $circular_publish_date,
         $circular_application_deadline,
-        $circular_status
+        $circular_status,
+        $employment_type
     );
 
     $outcomeCircularDataQuery = $circularDataQuery->execute();

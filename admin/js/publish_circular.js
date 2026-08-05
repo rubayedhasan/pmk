@@ -39,11 +39,20 @@ async function handlePublishCircular() {
     document.getElementById("circular-available-position").value,
   );
   circularFormData.append(
+    "employment_type",
+    document.getElementById("employment-type").value,
+  );
+  circularFormData.append(
     "circular_id",
     document.getElementById("circular-id").value,
   );
 
   // step-2:: publish date
+  circularFormData.append(
+    "job_location",
+    document.getElementById("job-location").value,
+  );
+
   circularFormData.append(
     "circular_publish_date",
     document.getElementById("circular-publish-date").value,
@@ -77,23 +86,12 @@ async function handlePublishCircular() {
 
   // step-4:: qualification
   circularFormData.append(
-    "circular_education_requirement",
-    document.getElementById("circular-education-requirement").value,
-  );
-  circularFormData.append(
-    "circular_required_experience",
-    document.getElementById("circular-required-experience").value,
-  );
-  circularFormData.append(
-    "circular_additional_requirement",
-    document.getElementById("circular-additional-requirement").value,
+    "circular_description",
+    document.getElementById("circular-description").value,
   );
 
-  // step-5:: application instructions
-  circularFormData.append(
-    "circular_training_rules",
-    document.getElementById("circular-training-rules").value,
-  );
+  console.log(document.getElementById("circular-description").value);
+  console.log(Object.fromEntries(circularFormData));
 
   // send data to back end:: circular_published.php
   try {

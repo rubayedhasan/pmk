@@ -80,7 +80,7 @@ try {
     $post_title = clean($dbConnection, $_POST["post_title"] ?? "");
     $post_main_category = clean($dbConnection, $_POST["post_main_category"] ?? "");
     $post_subcategory_main = clean($dbConnection, $_POST["post_subcategory_main"] ?? "");
-    $post_description = clean($dbConnection, $_POST["post_description"] ?? "");
+    $post_description = trim($_POST["post_description"]) ?? "";
     $author_name = clean($dbConnection, $_POST["author_name"] ?? "");
 
     // query 

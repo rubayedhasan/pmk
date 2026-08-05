@@ -517,6 +517,151 @@ $section = $_GET['section'] ?? '';
     <script>
         tinymce.init({
             selector: '#post-description',
+
+            // Editor
+            height: 500,
+            resize: false,
+            menubar: 'file edit view insert format table tools help',
+            branding: false,
+            promotion: false,
+
+            // Plugins
+            plugins: [
+                'advlist',
+                'anchor',
+                'autolink',
+                'autosave',
+                'charmap',
+                'code',
+                'codesample',
+                'directionality',
+                'fullscreen',
+                'help',
+                'image',
+                'insertdatetime',
+                'link',
+                'lists',
+                'media',
+                'preview',
+                'searchreplace',
+                'table',
+                'visualblocks',
+                'visualchars',
+                'wordcount'
+            ],
+
+            // Toolbar
+            toolbar: [
+                'undo redo | blocks fontfamily fontsize',
+                'bold italic underline strikethrough forecolor backcolor',
+                'alignleft aligncenter alignright alignjustify',
+                'bullist numlist outdent indent',
+                'link image media table',
+                'codesample code fullscreen preview',
+                'removeformat'
+            ].join(' | '),
+
+            // Clean HTML
+            forced_root_block: 'p',
+            verify_html: true,
+            cleanup: true,
+            remove_linebreaks: false,
+            convert_urls: false,
+
+            // Prevent TinyMCE classes/styles
+            inline_styles: false,
+            convert_fonts_to_spans: false,
+
+            // Remove unwanted attributes/classes/styles
+            invalid_styles: {
+                '*': 'color font-size font-family line-height background background-color'
+            },
+
+            // Allow only clean HTML
+            valid_elements: 'p,br,strong/b,em/i,u,s,' +
+                'h1,h2,h3,h4,h5,h6,' +
+                'ul,ol,li,' +
+                'blockquote,' +
+                'table,thead,tbody,tr,th,td,' +
+                'a[href|target|title],' +
+                'img[src|alt|width|height],' +
+                'pre,code',
+
+            // Remove class/style attributes from output
+            extended_valid_elements: 'span',
+            invalid_elements: 'font',
+
+            // Clean pasted content
+            paste_as_text: false,
+            paste_remove_styles: true,
+            paste_remove_spans: true,
+            paste_strip_class_attributes: 'all',
+            paste_webkit_styles: 'none',
+
+            // Image
+            image_title: true,
+            automatic_uploads: false,
+
+            // Table
+            table_default_attributes: {},
+            table_default_styles: {},
+            table_class_list: [],
+
+            // Content CSS
+            content_css: false,
+            content_style: `
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            font-size:16px;
+            margin:15px;
+        }
+
+        table{
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        table,th,td{
+            border:1px solid #ccc;
+        }
+
+        th,td{
+            padding:8px;
+        }
+
+        img{
+            max-width:100%;
+            height:auto;
+        }
+    `,
+
+            // Remove classes before saving
+            setup: function(editor) {
+
+                editor.on('GetContent', function(e) {
+
+                    let div = document.createElement('div');
+                    div.innerHTML = e.content;
+
+                    div.querySelectorAll('*').forEach(el => {
+                        el.removeAttribute('class');
+                        el.removeAttribute('style');
+                        el.removeAttribute('id');
+                        el.removeAttribute('data-mce-style');
+                        el.removeAttribute('data-mce-src');
+                        el.removeAttribute('data-mce-selected');
+                    });
+
+                    e.content = div.innerHTML;
+                });
+
+            }
+        });
+    </script>
+
+    <!-- <script>
+        tinymce.init({
+            selector: '#post-description',
             height: 350,
             resize: false,
             menubar: false,
@@ -526,7 +671,7 @@ $section = $_GET['section'] ?? '';
             promotion: false,
             content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
         });
-    </script>
+    </script> -->
 
     <!-- Linked custom script  -->
     <script src="../js/post_news.js"></script>

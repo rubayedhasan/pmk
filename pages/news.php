@@ -79,7 +79,7 @@ $category_arr = $dbConnection->query($get_category_query)->fetch_all(MYSQLI_ASSO
                         // QUERY:: GET THUMBNAIL IMAGE
                         $thumbnail_img_query = "SELECT post_image from post_image WHERE postcust_id = '$latest_post[post_customid]' && postimage_cat = 'thumbnail' LIMIT 1";
                         $thumbnail_img_arr = $dbConnection->query($thumbnail_img_query)->fetch_assoc();
-                        $thumbnail_img = $thumbnail_img_arr['post_image'];
+                        $thumbnail_img = $thumbnail_img_arr['post_image'] ?? "";
 
                         $formatted_date = date("d F, Y", strtotime($latest_post["post_datetme"]));
 
@@ -147,7 +147,7 @@ $category_arr = $dbConnection->query($get_category_query)->fetch_all(MYSQLI_ASSO
                         </a>
                     </h4>
                     <p class='news-body'>
-                        $formatted_post_description
+                    $formatted_post_description
                     </p>
                     <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='news-link'>
                         <span> See More</span>

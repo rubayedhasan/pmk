@@ -24,22 +24,22 @@ const drawerReportList = document.getElementById("drawer-report-list");
 const drawerSearchBox = document.getElementById("drawer-search-field");
 
 // audit report data
-const auditReport = [
-  {
-    financialYear: "AUD 2022-23",
-    pages: 7,
-    size: "10 MB",
-    badge: "latest",
-    url: "../assets/audit_report/audit_report_2022-23.pdf",
-  },
-  //   {
-  //     financialYear: "FY 2021-22",
-  //     pages: 45,
-  //     size: "10 MB",
-  //     badge: "archived",
-  //     url: "../assets/annual_report/po-application-form-guidelines.pdf",
-  //   },
-];
+// const auditReport = [
+//   {
+//     financialYear: "AUD 2022-23",
+//     pages: 7,
+//     size: "10 MB",
+//     badge: "latest",
+//     url: "../assets/audit_report/audit_report_2022-23.pdf",
+//   },
+//   //   {
+//   //     financialYear: "FY 2021-22",
+//   //     pages: 45,
+//   //     size: "10 MB",
+//   //     badge: "archived",
+//   //     url: "../assets/annual_report/po-application-form-guidelines.pdf",
+//   //   },
+// ];
 
 // pdf file icon
 function fileIcon(iconActive) {
@@ -80,9 +80,6 @@ function reportListItem(report, reportIndex) {
                                 <div class="report-body">
                                     <div class="report-year">
                                     ${report.financialYear}
-                                    </div>
-                                    <div class="report-size">
-                                    ${report.pages} pages · ${report.size}
                                     </div>
                                 </div>
                                 ${reportBadge}

@@ -24,23 +24,24 @@ const drawerReportList = document.getElementById("drawer-report-list");
 const drawerSearchBox = document.getElementById("drawer-search-field");
 
 // annual report data
-const annualReport = [
-  {
-    financialYear: "FY 2022-23",
-    pages: 45,
-    size: "94 MB",
-    badge: "latest",
-    url: "../assets/annual_report/annual_report_2022-23.pdf",
-  },
-  //   {
-  //     financialYear: "FY 2021-22",
-  //     pages: 45,
-  //     size: "10 MB",
-  //     badge: "archived",
-  //     url: "../assets/annual_report/po-application-form-guidelines.pdf",
-  //   },
-];
+// const annualReport = [
+//   {
+//     financialYear: "FY 2022-23",
+//     // pages: 45,
+//     // size: "94 MB",
+//     badge: "latest",
+//     url: "../assets/annual_report/annual_report_2022-23.pdf",
+//   },
+//   //   {
+//   //     financialYear: "FY 2021-22",
+//   //     pages: 45,
+//   //     size: "10 MB",
+//   //     badge: "archived",
+//   //     url: "../assets/annual_report/po-application-form-guidelines.pdf",
+//   //   },
+// ];
 
+console.log(annualReport);
 // pdf file icon
 function fileIcon(iconActive) {
   const greenColor = iconActive ? "#00946a" : "#b0c4bb";
@@ -81,13 +82,26 @@ function reportListItem(report, reportIndex) {
                                     <div class="report-year">
                                     ${report.financialYear}
                                     </div>
-                                    <div class="report-size">
-                                    ${report.pages} pages · ${report.size}
-                                    </div>
                                 </div>
                                 ${reportBadge}
                             </div>
       `;
+  // return `
+  //      <div class="report " data-index="${reportIndex}">
+  //                               <div class="report-icon">
+  //                                  ${fileIcon(false)}
+  //                               </div>
+  //                               <div class="report-body">
+  //                                   <div class="report-year">
+  //                                   ${report.financialYear}
+  //                                   </div>
+  //                                   <div class="report-size">
+  //                                   ${report.pages} pages · ${report.size}
+  //                                   </div>
+  //                               </div>
+  //                               ${reportBadge}
+  //                           </div>
+  //     `;
 }
 
 // insert the html

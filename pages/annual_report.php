@@ -1,3 +1,14 @@
+<?php
+// connect database 
+require_once("../admin/db/dbconnect.php");
+$dbConnection = $conn;
+
+// QUERY:: get the report
+$get_report_query = "SELECT * FROM pmk_reports WHERE report_category = 1 ORDER BY id DESC";
+$annual_report = $dbConnection->query($get_report_query)->fetch_all(MYSQLI_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +22,18 @@
 
     <!-- Linked custom styles sheet  -->
     <link rel="stylesheet" href="../styles/report_page.css">
+
+    <script>
+        const annualReport = [
+            <?php
+            foreach ($annual_report as $idx => $annual) { ?> {
+                    financialYear: "FY <?php echo htmlspecialchars($annual['financial_year']); ?>",
+                    badge: <?= $idx === 0 ? '"latest"' : '""' ?>,
+                    url: "../admin/assets/reports/<?php echo htmlspecialchars($annual['report_file']); ?>",
+                },
+            <?php  }  ?>
+        ];
+    </script>
 </head>
 
 

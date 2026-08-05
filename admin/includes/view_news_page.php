@@ -31,7 +31,7 @@ if (isset($_GET["post_id"])) {
     // QUERY:: GET THUMBNAIL IMAGE
     $get_thumbnail_query = "SELECT post_image from post_image WHERE postcust_id = '$post_id' && postimage_cat = 'thumbnail'";
     $thumbnail_image_arr = $dbConnection->query($get_thumbnail_query)->fetch_assoc();
-    $thumbnail_image = $thumbnail_image_arr['post_image'];
+    $thumbnail_image = $thumbnail_image_arr['post_image'] ?? "";
 
     // QUERY:: ALL RELATED IMAGE WITH OUT THUMBNAIL
     $get_related_image_query = "SELECT post_image from post_image WHERE postcust_id = '$post_id' && postimage_cat != 'thumbnail'";

@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMK | Publish Circular</title>
+    <!-- Linked favicon  -->
+    <link rel="shortcut icon" href="../assets/logo/main-logo.png" type="image/x-icon">
 
-    <!-- Linked shared link  -->
-    <?php include_once("../includes/sharedLinks.php");    ?>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
 
     <!-- Linked custom stylesheet  -->
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/publish_page_header.css">
     <link rel="stylesheet" href="../styles/publish_circular.css">
 </head>
@@ -99,11 +103,26 @@
                             <span style="color:#8fa19a; font-size:0.8rem; font-weight: 400;">(only number)</span>
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <input type="number" name="circular_available_position" placeholder="e.g: 50" id="circular-available-position" class="circular-input-field">
+                        <input type="text" name="circular_available_position" placeholder="e.g: 50" id="circular-available-position" class="circular-input-field">
+                    </div>
+
+                    <!-- Employment Type  -->
+                    <div class="circular-input-container">
+                        <label for="circular-id" class="circular-input-label">
+                            Employment Type
+                            <span style="color:red; pointer-events: none;  user-select: none;">*</span>
+                        </label>
+                        <select name="employment_type" id="employment-type" class="circular-input-field">
+                            <option value="">Select Employment Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Contractual</option>
+                            <option value="3">Intern</option>
+                            <option value="4">Part Time</option>
+                        </select>
                     </div>
 
                     <!-- circular id  -->
-                    <div class="circular-input-container input-field-full">
+                    <div class="circular-input-container">
                         <label for="circular-id" class="circular-input-label">
                             Circular ID
                             <span style="color:#8fa19a; font-size:0.8rem; font-weight: 400;">(auto-generated)</span>
@@ -133,6 +152,15 @@
 
                 <!-- input field container  -->
                 <div class="circular-action-input-container">
+                    <!-- Job location  -->
+                    <div class="circular-input-container input-field-full">
+                        <label for="job-location" class="circular-input-label">
+                            Job Location
+                            <span style="color:red; pointer-events: none;  user-select: none;">*</span>
+                        </label>
+                        <input type="text" name="job_location" placeholder="define job location" id="job-location" class="circular-input-field">
+                    </div>
+
                     <!-- circular publish date  -->
                     <div class="circular-input-container">
                         <label for="circular-publish-date" class="circular-input-label">
@@ -232,8 +260,8 @@
                         </svg>
                     </div>
                     <div class="info-header-content">
-                        <h4 class="info-header-title">Eligibility & Experience</h4>
-                        <p class="info-header-text">Qualification, experience shown to applicants</p>
+                        <h4 class="info-header-title">Eligibility, Experience & Responsibility</h4>
+                        <p class="info-header-text">Qualification, experience, skilled and responsibility shown to applicants</p>
                     </div>
                 </div>
 
@@ -242,63 +270,74 @@
                     <!-- Educational qualification  -->
                     <div class="circular-input-container input-field-full">
                         <label for="circular-education-requirement" class="circular-input-label">
-                            Educational qualification
+                            Circular Description
                             <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                         </label>
-                        <textarea name="circular_education_requirement" placeholder="e.g. Bachelor's degree in Business Administration or related field" id="circular-education-requirement" class="circular-input-field"></textarea>
-                    </div>
-
-                    <!-- Required Experience  -->
-                    <div class="circular-input-container input-field-full">
-                        <label for="circular-required-experience" class="circular-input-label">
-                            Required Experience
-                            <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                        </label>
-                        <textarea name="circular_required_experience" placeholder="describe the required experience" id="circular-required-experience" class="circular-input-field"></textarea>
-                    </div>
-
-                    <!-- additional requirement  -->
-                    <div class="circular-input-container input-field-full">
-                        <label for="circular-additional-requirement" class="circular-input-label">
-                            additional requirement
-                            <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                        </label>
-                        <textarea name="circular_additional_requirement" placeholder="describe the additional requirement" id="circular-additional-requirement" class="circular-input-field"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <!-- step-5 apply method  -->
-            <div class="circular-info-container">
-                <!-- step container header  -->
-                <div class="info-container-header">
-                    <div class="info-header-serial">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-number-5-small">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M10 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-3v-4h4" />
-                        </svg>
-                    </div>
-                    <div class="info-header-content">
-                        <h4 class="info-header-title">Instructions for Applicants</h4>
-                        <p class="info-header-text">the application procedure and submission details</p>
-                    </div>
-                </div>
-
-                <!-- input field container  -->
-                <div class="circular-action-input-container">
-                    <!-- training condition  -->
-                    <div class="circular-input-container input-field-full">
-                        <label for="circular-training-rules" class="circular-input-label">
-                            Training Rules
-                            <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                        </label>
-                        <textarea name="circular_training_rules" placeholder="write the training conditions and rules" id="circular-training-rules" class="circular-input-field"></textarea>
+                        <textarea name="circular_description" id="circular-description" class="circular-input-field"></textarea>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- sumner note script  -->
+    <script>
+        $(document).ready(function() {
+            $('#circular-description').summernote({
+                placeholder: 'Write the job description...',
+                height: 350,
+                tabsize: 2,
+
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture']],
+                    ['view', ['fullscreen', 'codeview']]
+                ],
+
+                callbacks: {
+                    onPaste: function(e) {
+                        e.preventDefault();
+
+                        const text = (e.originalEvent || e).clipboardData.getData('text/plain');
+
+                        document.execCommand('insertText', false, text);
+
+                        // Add default classes after the paste is complete
+                        setTimeout(() => {
+                            const $editable = $(this).next('.note-editor').find('.note-editable');
+
+                            $editable.find('p').addClass('vacancy-info-description');
+                            $editable.find('h1').addClass('vacancy-info-title');
+                            $editable.find('h2').addClass('vacancy-info-title');
+                            $editable.find('h3').addClass('vacancy-info-title');
+                            $editable.find('h4').addClass('vacancy-info-title');
+                            $editable.find('h5').addClass('vacancy-info-title');
+                            $editable.find('h6').addClass('vacancy-info-title');
+                            $editable.find('ul').addClass('vacancy-info-list');
+                            $editable.find('ol').addClass('vacancy-info-list');
+                        }, 0);
+                    },
+
+                    onChange: function(contents, $editable) {
+                        $editable.find('p').addClass('vacancy-info-description');
+                        $editable.find('h1').addClass('vacancy-info-title');
+                        $editable.find('h2').addClass('vacancy-info-title');
+                        $editable.find('h3').addClass('vacancy-info-title');
+                        $editable.find('h4').addClass('vacancy-info-title');
+                        $editable.find('h5').addClass('vacancy-info-title');
+                        $editable.find('h6').addClass('vacancy-info-title');
+                        $editable.find('ul').addClass('vacancy-info-list');
+                        $editable.find('ol').addClass('vacancy-info-list');
+                    }
+                }
+            });
+        });
+    </script>
 
     <!-- Linked custom script  -->
     <script src="../js/publish_circular.js"></script>

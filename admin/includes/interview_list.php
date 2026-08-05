@@ -7,7 +7,7 @@ require_once("../db/dbconnect.php");
 $dbConnection = $conn;
 
 // get circular list 
-$get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular2 ORDER BY application_deadline DESC";
+$get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular ORDER BY application_deadline DESC";
 $circular_list = $dbConnection->query($get_circular_list_query)->fetch_all(MYSQLI_ASSOC);
 
 // set the user role in js 

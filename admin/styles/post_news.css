@@ -41,6 +41,8 @@ body {
   padding: 12px 14px;
   border-bottom: 2px solid transparent;
 
+  list-style: none;
+
   cursor: pointer;
   transition: all 0.35s ease-in-out;
 }

@@ -7,7 +7,7 @@ require_once("../db/dbconnect.php");
 $dbConnection = $conn;
 
 // get circular list 
-$get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular2 ORDER BY application_deadline DESC";
+$get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular ORDER BY application_deadline DESC";
 $circular_list = $dbConnection->query($get_circular_list_query)->fetch_all(MYSQLI_ASSOC);
 
 // set the user role in js 
@@ -204,6 +204,7 @@ echo "
                         <span id="d-modal-candidate-Name"></span>
                     </h5>
                     <input type="hidden" name="candidate_user_id" id="candidate_user_id">
+                    <input type="hidden" name="candidate_circular_id" id="candidate_circular_id">
                     <select name="candidate_status" id="candidate-status">
                         <option value="1">Pending</option>
                         <option value="2">ShortListed / Present</option>
