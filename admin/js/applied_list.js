@@ -119,7 +119,7 @@ function displayTableData(data) {
                             </td>
                             <td>
                                 <div class='item-actions'>
-                                    <a href="../includes/user_profile.php?user_id=${candidate.user_id}" title='view profile' class='action-btn btn-view'>
+                                    <a href="../includes/user_profile.php?user_id=${candidate.user_id}&circular_id=${candidate.circular_id}" title='view profile' class='action-btn btn-view'>
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-address-book">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2" />
@@ -165,7 +165,7 @@ function displayTableData(data) {
                                     ${
                                       userRole == 1
                                         ? `
-                                        <a href="../server/delete_candidate.php?user_id=${candidate.user_id}" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this candidate?')">
+                                        <a href="../server/delete_candidate.php?user_id=${candidate.user_id}&circular_id=${candidate.circular_id}" title='delete' class='action-btn btn-delete' onclick="return confirm('Are you sure you want to delete this candidate?')">
                                             <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash-x'>
                                                 <path stroke='none' d='M0 0h24v24H0z' fill='none' />
                                                 <path d='M4 7h16' />

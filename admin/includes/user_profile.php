@@ -5,29 +5,30 @@ $dbConnection = $conn;
 
 if (isset($_GET['user_id'])) {
     $user_id = $_GET['user_id'];
+    $circular_id = $_GET['circular_id'];
 
     // QUERY:: general information 
-    $get_generalInfo_query = "SELECT * FROM candidate_general_information WHERE user_id = '$user_id' LIMIT 1";
+    $get_generalInfo_query = "SELECT * FROM candidate_general_information WHERE user_id = '$user_id' AND circular_id = '$circular_id' LIMIT 1";
     $general_info = $dbConnection->query($get_generalInfo_query)->fetch_assoc();
 
     // QUERY:: identity 
-    $get_identity_query = "SELECT * FROM candidate_identity WHERE user_id = '$user_id' LIMIT 1";
+    $get_identity_query = "SELECT * FROM candidate_identity WHERE user_id = '$user_id' AND circular_id = '$circular_id' LIMIT 1";
     $identity = $dbConnection->query($get_identity_query)->fetch_assoc();
 
     // QUERY:: address 
-    $get_address_query = "SELECT * FROM candidate_address WHERE user_id = '$user_id' LIMIT 1";
+    $get_address_query = "SELECT * FROM candidate_address WHERE user_id = '$user_id' AND circular_id = '$circular_id' LIMIT 1";
     $address = $dbConnection->query($get_address_query)->fetch_assoc();
 
     // QUERY:: education 
-    $get_education_query = "SELECT * FROM candidate_education WHERE user_id = '$user_id' LIMIT 1";
+    $get_education_query = "SELECT * FROM candidate_education WHERE user_id = '$user_id' AND circular_id = '$circular_id'";
     $education = $dbConnection->query($get_education_query)->fetch_all(MYSQLI_ASSOC);
 
     // QUERY:: training 
-    $get_training_query = "SELECT * FROM candidate_training WHERE user_id = '$user_id' LIMIT 1";
+    $get_training_query = "SELECT * FROM candidate_training WHERE user_id = '$user_id' AND circular_id = '$circular_id'";
     $training = $dbConnection->query($get_training_query)->fetch_all(MYSQLI_ASSOC);
 
     // QUERY:: job experience 
-    $get_jobExp_query = "SELECT * FROM candidate_job_experience WHERE user_id = '$user_id' LIMIT 1";
+    $get_jobExp_query = "SELECT * FROM candidate_job_experience WHERE user_id = '$user_id' AND circular_id = '$circular_id'";
     $jobExp = $dbConnection->query($get_jobExp_query)->fetch_all(MYSQLI_ASSOC);
 }
 
@@ -281,7 +282,8 @@ if (isset($_GET['user_id'])) {
                         <span class="num">1</span>Education<span class="line"></span>
                     </div>
                     <div class="tl">
-                        <?php foreach ($education as $edu) { ?>
+                        <?php foreach ($education as $edu) {  ?>
+
                             <div class="tl-item">
                                 <div class="row">
                                     <span class="title"><?php echo stripslashes($edu["edu_examination"]); ?> in <?php echo $edu["edu_msubject"]; ?></span><span class="year"><?php echo $edu["academic_year"]; ?></span>
