@@ -174,10 +174,15 @@
   padding: 12px 32px 12px 24px;
   cursor: pointer;
   border-left: 3px solid transparent;
+  border-bottom: 1px solid #dde8e3;
   transition:
     background 0.14s,
     border-color 0.14s;
   position: relative;
+}
+
+.report:last-child {
+  border-bottom: none;
 }
 
 .report:hover {
@@ -187,6 +192,7 @@
 .report-active {
   background: var(--pmk-green-light);
   border-left-color: var(--pmk-green);
+  border-bottom-color: var(--pmk-green);
 }
 
 .report-icon {

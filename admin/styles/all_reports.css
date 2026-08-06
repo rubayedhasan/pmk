@@ -1,0 +1,72 @@
+.file-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.file-icon {
+  flex-shrink: 0;
+}
+
+.file-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--pmk-green-dark);
+}
+
+.file-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  color: var(--pmk-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  color: #5a564c;
+  font-size: 0.775rem;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 4px;
+}
+
+.report-category {
+  color: var(--pmk-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-size {
+  color: #5a564c;
+  font-size: 0.775rem;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-status {
+  width: fit-content;
+  color: var(--pmk-white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: var(--pmk-green);
+  border: 0.5px solid var(--pmk-green-dark);
+}
