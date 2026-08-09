@@ -35,7 +35,7 @@ $section = $_GET['section'] ?? '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Post News</title>
+    <title>PMK | Post News</title>
     <?php
     // Linked with shared links
     include_once("../includes/sharedLinks.php");
@@ -47,25 +47,6 @@ $section = $_GET['section'] ?? '';
     <!-- Linked custom stylesheet -->
     <link rel="stylesheet" href="../styles/publish_page_header.css">
     <link rel="stylesheet" href="../styles/post_news.css">
-
-    <script>
-        window.onload = function() {
-
-            document.querySelectorAll(".publish-tab").forEach((tab) => {
-                tab.classList.remove("publish-tab-active")
-            });
-
-            <?php if ($section === 'categories') : ?>
-                togglePostSection('categories');
-                document.querySelectorAll(".publish-tab")[0].classList.add("publish-tab-active");
-            <?php endif; ?>
-
-            <?php if ($section === 'sub-categories') : ?>
-                togglePostSection('sub-categories');
-                document.querySelectorAll(".publish-tab")[1].classList.add("publish-tab-active");
-            <?php endif; ?>
-        };
-    </script>
 </head>
 
 <body>
@@ -76,8 +57,8 @@ $section = $_GET['section'] ?? '';
                 <img src="../assets/logo/main-logo.png" alt="pmk logo" class="pmk-logo">
             </figure>
             <div class="publish-page-into">
-                <p class="page-intro-text">New Content</p>
-                <h4 class="page-intro-title">Create and publish content.</h4>
+                <p class="page-intro-text">Edit Content</p>
+                <h4 class="page-intro-title">Edit and publish content.</h4>
             </div>
         </div>
         <div class="publish-action-buttons">
@@ -106,221 +87,8 @@ $section = $_GET['section'] ?? '';
 
     <!-- section:: main  -->
     <main>
-        <!-- section:: tap bar tabs  -->
-        <section id="publish-topbar-tabs">
-            <ul class="publish-tabs">
-                <li class="publish-tab publish-tab-active" onclick="togglePostSection('categories')">
-                    Categories
-                </li>
-                <li class="publish-tab" onclick="togglePostSection('sub-categories')">
-                    Sub-Categories
-                </li>
-                <!-- <li class="publish-tab" onclick="togglePostSection()">
-                    Content Images
-                </li> -->
-                <li class="publish-tab" onclick="togglePostSection('post')">
-                    Posts
-                </li>
-            </ul>
-        </section>
-
-        <!-- section:: categories  -->
-        <section id="categories" class="post-section">
-            <div class="container-width">
-                <div class="post-section-container">
-                    <!-- category form  -->
-                    <div class="section-form-container">
-                        <hgroup>
-                            <span class="post-section-label">Content Category</span>
-                            <h4 class="post-section-title">Categories</h4>
-                            <p class="post-section-text">
-                                Top-level categories organize every post. Each sub-category belongs to one parent category, ensuring clear and consistent classification.
-                            </p>
-                        </hgroup>
-
-                        <!-- form  -->
-                        <form class="section-form category-form" action="../server/post_categories.php" method="post">
-                            <!-- input:: category name  -->
-                            <div class="form-input grid-full">
-                                <label for="post_category">
-                                    category Name
-                                    <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                                </label>
-                                <input type="text" name="post_category" id="post-category" placeholder="Create a category">
-                            </div>
-                            <!-- button:: add category  -->
-                            <div class="form-input grid-full">
-                                <button type="submit" name="add_category_btn">Add Category</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- category display list  -->
-                    <div class="section-display-list">
-                        <div class="display-list-header">
-                            <h4 class="list-header-label">All Categories</h4>
-                            <span class="list-label-badge"><?php echo count($allPostCategory) ?> items</span>
-                        </div>
-
-                        <!-- display list container -->
-                        <div class="list">
-
-                            <?php
-                            $count3 = 1;
-                            foreach ($allPostCategory as $category) {
-                                echo "
-                            <div class='category'>
-                                <span class='list-serial'>
-                                {$count3}
-                                </span>
-                                <h5 class='list-category-name'>
-                                $category[postcat_name]
-                                </h5>
-                                <div class='list-action'>
-                                    <div class='action-btn' onclick=\"window.location.href='../server/post_categories.php?category_id={$category['postcat_id']}'\">
-                                        <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash'>
-                                            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                                            <path d='M4 7l16 0' />
-                                            <path d='M10 11l0 6' />
-                                            <path d='M14 11l0 6' />
-                                            <path d='M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' />
-                                            <path d='M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>                            
-                            ";
-                                $count3++;
-                            }
-                            ?>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
-        <!-- section:: sub categories  -->
-        <section id="sub-categories" class="post-section section-hidden">
-            <div class="container-width">
-                <div class="post-section-container">
-                    <!-- category form  -->
-                    <div class="section-form-container">
-                        <hgroup>
-                            <span class="post-section-label">Content Sub-Category</span>
-                            <h4 class="post-section-title">Sub Categories</h4>
-                            <p class="post-section-text">
-                                Sub-categories organize posts within a parent category, providing more specific classification for improved organization and navigation.
-                            </p>
-                        </hgroup>
-
-                        <!-- form  -->
-                        <form class="section-form category-form" action="../server/post_categories.php" method="post">
-                            <!-- select:: category name  -->
-                            <div class="form-input grid-full">
-                                <label for="post-subcategory">
-                                    Category
-                                    <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                                </label>
-                                <select name="select_parent_category" id="select-parent-category">
-                                    <option value=''>
-                                        Select Category
-                                    </option>
-
-                                    <?php
-                                    foreach ($allPostCategory as $category) {
-                                        echo " 
-                                        <option value='$category[postcat_id]'>
-                                        $category[postcat_name]
-                                        </option>
-                                    ";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-
-                            <!-- input:: dub category name  -->
-                            <div class="form-input grid-full">
-                                <label for="post-subcategory">
-                                    Sub category
-                                    <span style="color:red; pointer-events: none;  user-select: none;">*</span>
-                                </label>
-                                <input type="text" name="post_subcategory" id="post-subcategory" placeholder="Create a sub category">
-                            </div>
-
-                            <!-- button::add sub category  -->
-                            <div class="form-input grid-full">
-                                <button type="submit" name="add_subcategory_btn">Add Sub Category</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- category display list  -->
-                    <div class="section-display-list">
-                        <div class="display-list-header">
-                            <h4 class="list-header-label">All Sub Categories</h4>
-                            <span class="list-label-badge"><?php echo count($allSubCAtegory) ?> items</span>
-                        </div>
-
-                        <!-- display list container -->
-                        <div class="list">
-                            <?php
-                            $count = 1;
-                            foreach ($allPostCategory as $category) {
-                                echo "
-                                <h5 class='subcategory-label'>
-                                    {$count}.  $category[postcat_name]
-                                </h5>
-                                ";
-                                $count++;
-
-
-                                $count2 = 1;
-                                foreach ($allSubCAtegory as $subcategory) {
-                                    if ($category["postcat_id"] === $subcategory["postcat_id"]) {
-                                        echo "
-                            <div class='category'>
-                                <span class='list-serial'>
-                                {$count2}
-                                </span>
-                                <h5 class='list-category-name'>
-                                $subcategory[postsub_cat_name]
-                                </h5>
-                                <div class='list-action'>
-                                    <div class='action-btn' onclick=\"window.location.href='../server/post_categories.php?subcategory_id={$subcategory['postsub_cat_id']}'\">
-                                        <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-trash'>
-                                            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                                            <path d='M4 7l16 0' />
-                                            <path d='M10 11l0 6' />
-                                            <path d='M14 11l0 6' />
-                                            <path d='M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' />
-                                            <path d='M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>                            
-                            ";
-
-                                        $count2++;
-                                    }
-                                }
-                            }
-
-                            ?>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
         <!-- section:: post  -->
-        <section id="post" class="post-section section-hidden">
+        <section id="post" class="post-section">
             <div class="container-width">
                 <div class="post-section-container">
                     <!-- category form  -->
@@ -338,7 +106,7 @@ $section = $_GET['section'] ?? '';
                             <!-- input:: post ID       -->
                             <div class="form-input">
                                 <label for="post-id">Post ID</label>
-                                <input type="text" name="post_id" id="post-id" value="<?php echo $post_id; ?>" disabled>
+                                <input type="text" name="post_id" id="post-id" value="<?php echo $post_details['post_customid']; ?>" disabled>
                             </div>
 
                             <!-- input:: post title       -->
@@ -347,7 +115,7 @@ $section = $_GET['section'] ?? '';
                                     Title
                                     <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                                 </label>
-                                <input type="text" name="post_title" id="post-title" value="<?php echo $post_details['post_title'] ?>">
+                                <input type="text" name="post_title" id="post-title" value="<?php echo $post_details['post_title']; ?>">
                             </div>
 
                             <!-- select:: category      -->
@@ -508,19 +276,150 @@ $section = $_GET['section'] ?? '';
     <script>
         tinymce.init({
             selector: '#post-description',
-            height: 350,
+
+            // Editor
+            height: 500,
             resize: false,
-            menubar: false,
-            plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
-            toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table link image code | removeformat',
+            menubar: 'file edit view insert format table tools help',
             branding: false,
             promotion: false,
-            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+
+            // Plugins
+            plugins: [
+                'advlist',
+                'anchor',
+                'autolink',
+                'autosave',
+                'charmap',
+                'code',
+                'codesample',
+                'directionality',
+                'fullscreen',
+                'help',
+                'image',
+                'insertdatetime',
+                'link',
+                'lists',
+                'media',
+                'preview',
+                'searchreplace',
+                'table',
+                'visualblocks',
+                'visualchars',
+                'wordcount'
+            ],
+
+            // Toolbar
+            toolbar: [
+                'undo redo | blocks fontfamily fontsize',
+                'bold italic underline strikethrough forecolor backcolor',
+                'alignleft aligncenter alignright alignjustify',
+                'bullist numlist outdent indent',
+                'link image media table',
+                'codesample code fullscreen preview',
+                'removeformat'
+            ].join(' | '),
+
+            // Clean HTML
+            forced_root_block: 'p',
+            verify_html: true,
+            cleanup: true,
+            remove_linebreaks: false,
+            convert_urls: false,
+
+            // Prevent TinyMCE classes/styles
+            inline_styles: false,
+            convert_fonts_to_spans: false,
+
+            // Remove unwanted attributes/classes/styles
+            invalid_styles: {
+                '*': 'color font-size font-family line-height background background-color'
+            },
+
+            // Allow only clean HTML
+            valid_elements: 'p,br,strong/b,em/i,u,s,' +
+                'h1,h2,h3,h4,h5,h6,' +
+                'ul,ol,li,' +
+                'blockquote,' +
+                'table,thead,tbody,tr,th,td,' +
+                'a[href|target|title],' +
+                'img[src|alt|width|height],' +
+                'pre,code',
+
+            // Remove class/style attributes from output
+            extended_valid_elements: 'span',
+            invalid_elements: 'font',
+
+            // Clean pasted content
+            paste_as_text: false,
+            paste_remove_styles: true,
+            paste_remove_spans: true,
+            paste_strip_class_attributes: 'all',
+            paste_webkit_styles: 'none',
+
+            // Image
+            image_title: true,
+            automatic_uploads: false,
+
+            // Table
+            table_default_attributes: {},
+            table_default_styles: {},
+            table_class_list: [],
+
+            // Content CSS
+            content_css: false,
+            content_style: `
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            font-size:16px;
+            margin:15px;
+        }
+
+        table{
+            border-collapse:collapse;
+            width:100%;
+        }
+
+        table,th,td{
+            border:1px solid #ccc;
+        }
+
+        th,td{
+            padding:8px;
+        }
+
+        img{
+            max-width:100%;
+            height:auto;
+        }
+    `,
+
+            // Remove classes before saving
+            setup: function(editor) {
+
+                editor.on('GetContent', function(e) {
+
+                    let div = document.createElement('div');
+                    div.innerHTML = e.content;
+
+                    div.querySelectorAll('*').forEach(el => {
+                        el.removeAttribute('class');
+                        el.removeAttribute('style');
+                        el.removeAttribute('id');
+                        el.removeAttribute('data-mce-style');
+                        el.removeAttribute('data-mce-src');
+                        el.removeAttribute('data-mce-selected');
+                    });
+
+                    e.content = div.innerHTML;
+                });
+
+            }
         });
     </script>
 
     <!-- Linked custom script  -->
-    <script src="../js/post_news.js"></script>
+    <script src="../js/edit_post_news.js"></script>
 </body>
 
 </html>

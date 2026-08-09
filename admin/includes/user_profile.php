@@ -379,6 +379,26 @@ if (isset($_GET['user_id'])) {
                         <?php } ?>
                     </div>
                 </div>
+
+                <!-- additional  -->
+                <div class="sec">
+                    <div class="sec-title">
+                        <span class="num">4</span>Additional<span class="line"></span>
+                    </div>
+                    <div class="tl">
+                        <?php if (!empty($general_info['additonal_information'])) { ?>
+                            <div class="tl-item">
+                                <div class="desc">
+                                    <?php echo  nl2br(htmlspecialchars($general_info['additonal_information'])); ?>
+                                </div>
+                            </div>
+                        <?php } else { ?>
+                            <div class="tl-item">
+                                <div class="desc">No Additional Information available.</div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

@@ -124,9 +124,6 @@ $section = $_GET['section'] ?? '';
                 <li class="publish-tab" onclick="togglePostSection('sub-categories')">
                     Sub-Categories
                 </li>
-                <!-- <li class="publish-tab" onclick="togglePostSection()">
-                    Content Images
-                </li> -->
                 <li class="publish-tab" onclick="togglePostSection('post')">
                     Posts
                 </li>
@@ -658,20 +655,6 @@ $section = $_GET['section'] ?? '';
             }
         });
     </script>
-
-    <!-- <script>
-        tinymce.init({
-            selector: '#post-description',
-            height: 350,
-            resize: false,
-            menubar: false,
-            plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
-            toolbar: 'undo redo | blocks | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table link image code | removeformat',
-            branding: false,
-            promotion: false,
-            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
-        });
-    </script> -->
 
     <!-- Linked custom script  -->
     <script src="../js/post_news.js"></script>

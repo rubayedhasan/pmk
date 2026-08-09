@@ -42,8 +42,8 @@ if (isset($_GET["circular_id"])) {
                 <img src="../assets/logo/main-logo.png" alt="pmk logo" class="pmk-logo">
             </figure>
             <div class="publish-page-into">
-                <p class="page-intro-text">New Circular</p>
-                <h4 class="page-intro-title">Publish New Circular</h4>
+                <p class="page-intro-text">Edit Circular</p>
+                <h4 class="page-intro-title">Edit & Publish Circular</h4>
             </div>
         </div>
         <div class="publish-action-buttons">

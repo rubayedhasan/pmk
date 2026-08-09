@@ -38,21 +38,6 @@ async function uploadThePost() {
   );
   postForm.append("author_name", document.getElementById("author-name").value);
 
-  // append images
-  // document.querySelectorAll("#imageTbody tr").forEach((tableRow, idx) => {
-  //   const tableColumn = tableRow.querySelectorAll("select, input");
-
-  //   postForm.append(
-  //     `post_images[${idx}][image_category]`,
-  //     tableColumn[0].value || "",
-  //   );
-
-  //   const image = tableColumn[1].files[0];
-  //   if (image) {
-  //     postForm.append(`post_images[${idx}][image_path]`, image);
-  //   }
-  // });
-
   document.querySelectorAll("#imageTbody tr").forEach((tableRow, idx) => {
     const categorySelect = tableRow.querySelector(".image-category");
     const fileInput = tableRow.querySelector(".post-image");
@@ -63,8 +48,6 @@ async function uploadThePost() {
     );
 
     const image = fileInput.files[0];
-    // console.log(`row ${idx}:`, categorySelect.value, image); // TEMP: remove after debugging
-    // console.log(`row ${idx}:`, categorySelect.value, fileInput.files[0]);
     if (image) {
       postForm.append(`post_images[${idx}][image_path]`, image);
     }
