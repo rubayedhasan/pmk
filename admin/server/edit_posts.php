@@ -92,136 +92,695 @@ try {
         throw new Exception("ERROR: " . $post_query->error);
     }
 
-    // ================================================
-    // STEP 2 :: save every image that came with this post
-    // ================================================
+    // ================================================================
+    // STEP 2 :: IMAGE EDITING
+    // ================================================================
 
-    // // creating the folder directory 
-    // $uploadDir = "../assets/uploads/posts/";
-    // if (!is_dir($uploadDir)) {
-    //     mkdir($uploadDir, 0755, true);
-    // }
+    // Upload directory
+    $uploadDir = "../assets/uploads/posts/";
 
-    // //validation::  file type and size 
-    // $allowedExe = ['jpg', "jpeg", "png", "gif", "webp"];
-    // $allowedMimeType = ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/webp"];
-    // $fileMaxSize = 5 * 1024 * 1024;
-
-    // // this array keeps count of how many images we've already numbered
-    // // per category DURING this one form submission, so 2 slider images
-    // // sent together don't both try to become "00001"
-    // $imageCounters = [];
-
-    // // IMAGE INSERTING QUERY 
-    // $image_insert_query = $dbConnection->prepare("INSERT INTO post_image( postcust_id, post_image, image_file_path, postimage_cat, post_title) VALUES (?,?,?,?,?)");
+    if (!is_dir($uploadDir)) {
+        if (!mkdir($uploadDir, 0755, true)) {
+            throw new Exception("Unable to create image upload directory.");
+        }
+    }
 
 
-    // // is the image come in popper way 
-    // if (isset($_POST["post_images"]) && is_array($_POST["post_images"])) {
-    //     foreach ($_POST["post_images"] as $idx => $imageRowData) {
-    //         $image_category = clean($dbConnection, $imageRowData["image_category"] ?? "");
-
-    //         // validate:: is the file exist 
-    //         $is_file_exist = isset($_FILES["post_images"]["tmp_name"][$idx]["image_path"]) && $_FILES["post_images"]["error"][$idx]["image_path"] === UPLOAD_ERR_OK;
-
-    //         // an empty row (user added it but never filled it in) is skipped, not an error
-    //         if ($image_category === "" && !$is_file_exist) {
-    //             continue;
-    //         }
-
-    //         // but if a category WAS picked, a file is required for that row
-    //         if (!$is_file_exist) {
-    //             throw new Exception("Image Row" . ((int) $idx + 1) . ": an image is required ");
-    //         }
-
-    //         if (!$is_file_exist) {
-    //             error_log("Missing file for row {$idx}: " . print_r($_FILES, true));
-    //             throw new Exception("Image Row " . ((int) $idx + 1) . ": an image is required.");
-    //         }
-
-    //         $image_temp_path = $_FILES["post_images"]["tmp_name"][$idx]["image_path"];
-    //         $image_size =  $_FILES["post_images"]["size"][$idx]["image_path"];
-    //         $image_name  =  $_FILES["post_images"]["name"][$idx]["image_path"];
-
-    //         // validation:: image max size is 5MB
-    //         if ($image_size > $fileMaxSize) {
-    //             throw new Exception("Row " . ((int)$idx + 1) . ": file exceeds 5MB.");
-    //         }
-
-    //         // validation:: check the extension 
-    //         $image_exe = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
-    //         if (!in_array($image_exe, $allowedExe, true)) {
-    //             throw new Exception("Row " . ((int)$idx + 1) . ": invalid picture format. Allowed: JPG, PNG, GIF, WEBP.");
-    //         }
-
-    //         // validation:: the file is REALLY an image, not just renamed to look like one
-    //         $image_mime_type = mime_content_type($image_temp_path);
-    //         if (!in_array($image_mime_type, $allowedMimeType, true)) {
-    //             throw new Exception("Row " . ((int)$idx + 1) . ": unsupported image type.");
-    //         }
-
-    //         // custom image name to save 
-    //         // pattern :: post Custom Id + image category + sequence
-    //         $image_category_slug = slugify($image_category);
-
-    //         // first time seeing this category in this request?
-    //         // ask the database how many images already exist for this post+category,
-    //         // so numbering continues instead of restarting at 1 every time
-    //         if (!isset($imageCounters[$image_category_slug])) {
-    //             $image_count_query = $dbConnection->prepare("SELECT COUNT(*) AS total FROM post_image WHERE postcust_id = ? AND postimage_cat = ?");
-    //             $image_count_query->bind_param(
-    //                 "ss",
-    //                 $post_id,
-    //                 $image_category,
-    //             );
-    //             $image_count_query->execute();
-
-    //             $image_count_result = $image_count_query->get_result()->fetch_assoc();
-
-    //             $imageCounters[$image_category_slug] = (int) $image_count_result['total'] + 1;
-    //         } else {
-    //             $imageCounters[$image_category_slug]++;
-    //         }
-
-    //         // sequence 
-    //         $image_id_sequence = str_pad($imageCounters[$image_category_slug], 5, "0", STR_PAD_LEFT);
-
-    //         $file_name =  $post_id . "_" . $image_category_slug . "_" . $image_id_sequence . "." . $image_exe;
-    //         $file_destination = $uploadDir  . $file_name;
-
-    //         // actually move the uploaded file into the folder
-    //         if (!move_uploaded_file($image_temp_path, $file_destination)) {
-    //             throw new Exception("Row " . ((int)$idx + 1) . ": failed to save the uploaded file.");
-    //         }
-
-    //         // remember this file, in case a LATER row fails and we need to undo everything
-    //         $movedFiles[] = $file_destination;
-
-    //         // this is the path we save in the database (used later to display the image)
-    //         $stored_img_file_path = "../admin/assets/uploads/posts/" . $file_name;
+    // Allowed image extensions
+    $allowedExtensions = [
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "webp"
+    ];
 
 
-    //         // inser the image to database 
-    //         $image_insert_query->bind_param(
-    //             "sssss",
-    //             $post_id,
-    //             $file_name,
-    //             $stored_img_file_path,
-    //             $image_category,
-    //             $post_title
-    //         );
-    //         $outcome_image_insert_query = $image_insert_query->execute();
+    // Allowed MIME types
+    $allowedMimeTypes = [
+        "image/jpeg",
+        "image/png",
+        "image/gif",
+        "image/webp"
+    ];
 
-    //         if (!$outcome_image_insert_query) {
-    //             throw new Exception("Row " . ((int)$idx + 1) . ": " . $image_insert_query->error);
-    //         }
-    //     }
-    // }
 
-    // validate::if all ok the submit the data to database 
+    // Maximum file size
+    $fileMaxSize = 5 * 1024 * 1024;
+
+
+    // Files created during this request.
+    // If anything fails, these can be removed.
+    $movedFiles = [];
+
+
+    // Files that should be deleted AFTER successful DB commit.
+    $filesToDelete = [];
+
+
+    // ================================================================
+    // HELPER :: generate image filename
+    // ================================================================
+
+    function generateImageFileName(
+        $dbConnection,
+        $postId,
+        $imageCategory,
+        $extension
+    ) {
+
+        $categorySlug = slugify($imageCategory);
+
+
+        // Get current number for this post/category
+        $countQuery = $dbConnection->prepare(
+            "SELECT COUNT(*) AS total
+         FROM post_image
+         WHERE postcust_id = ?
+         AND postimage_cat = ?"
+        );
+
+        $countQuery->bind_param(
+            "ss",
+            $postId,
+            $imageCategory
+        );
+
+        $countQuery->execute();
+
+        $countResult =
+            $countQuery->get_result()->fetch_assoc();
+
+        $sequence =
+            ((int)$countResult["total"]) + 1;
+
+
+        // Avoid filename collision
+        do {
+
+            $sequenceNumber =
+                str_pad(
+                    $sequence,
+                    5,
+                    "0",
+                    STR_PAD_LEFT
+                );
+
+            $fileName =
+                $postId .
+                "_" .
+                $categorySlug .
+                "_" .
+                $sequenceNumber .
+                "." .
+                $extension;
+
+
+            $existingFileQuery = $dbConnection->prepare(
+                "SELECT post_imgid
+             FROM post_image
+             WHERE post_image = ?
+             LIMIT 1"
+            );
+
+            $existingFileQuery->bind_param(
+                "s",
+                $fileName
+            );
+
+            $existingFileQuery->execute();
+
+            $exists =
+                $existingFileQuery->get_result()->num_rows > 0;
+
+
+            if ($exists) {
+                $sequence++;
+            }
+        } while ($exists);
+
+
+        return $fileName;
+    }
+
+
+    // ================================================================
+    // STEP 2A :: DELETE EXISTING IMAGES
+    // ================================================================
+
+    $deletedImageIds =
+        $_POST["deleted_image_ids"] ?? [];
+
+
+    if (!is_array($deletedImageIds)) {
+        $deletedImageIds = [];
+    }
+
+
+    $deleteImageQuery = $dbConnection->prepare(
+        "SELECT post_image
+     FROM post_image
+     WHERE post_imgid = ?
+     AND postcust_id = ?"
+    );
+
+
+    $deleteImageDbQuery = $dbConnection->prepare(
+        "DELETE FROM post_image
+     WHERE post_imgid = ?
+     AND postcust_id = ?"
+    );
+
+
+    foreach ($deletedImageIds as $deletedImageId) {
+
+        $deletedImageId =
+            (int)$deletedImageId;
+
+
+        if ($deletedImageId <= 0) {
+            continue;
+        }
+
+
+        // Get image information first
+
+        $deleteImageQuery->bind_param(
+            "is",
+            $deletedImageId,
+            $post_id
+        );
+
+        $deleteImageQuery->execute();
+
+
+        $oldImage =
+            $deleteImageQuery
+            ->get_result()
+            ->fetch_assoc();
+
+
+        if (!$oldImage) {
+            continue;
+        }
+
+
+        // Delete DB record
+
+        $deleteImageDbQuery->bind_param(
+            "is",
+            $deletedImageId,
+            $post_id
+        );
+
+        $deleteImageDbQuery->execute();
+
+
+        // Remember physical file.
+        // It will be removed only AFTER COMMIT.
+        if (!empty($oldImage["post_image"])) {
+
+            $oldPhysicalPath =
+                $uploadDir .
+                basename($oldImage["post_image"]);
+
+            if (file_exists($oldPhysicalPath)) {
+                $filesToDelete[] = $oldPhysicalPath;
+            }
+        }
+    }
+
+
+    // ================================================================
+    // STEP 2B :: PROCESS CURRENT IMAGE ROWS
+    // ================================================================
+
+    $postImages =
+        $_POST["post_images"] ?? [];
+
+
+    if (!is_array($postImages)) {
+        $postImages = [];
+    }
+
+
+    // INSERT query
+
+    $imageInsertQuery = $dbConnection->prepare(
+        "INSERT INTO post_image
+    (
+        postcust_id,
+        post_image,
+        postimage_cat,
+        post_title
+    )
+    VALUES (?, ?, ?, ?)"
+    );
+
+
+    // UPDATE query for category/title only
+
+    $imageUpdateQuery = $dbConnection->prepare(
+        "UPDATE post_image
+     SET postimage_cat = ?,
+         post_title = ?
+     WHERE post_imgid = ?
+     AND postcust_id = ?"
+    );
+
+
+    // UPDATE query for replacement image
+
+    $imageReplaceQuery = $dbConnection->prepare(
+        "UPDATE post_image
+     SET post_image = ?,
+         postimage_cat = ?,
+         post_title = ?
+     WHERE post_imgid = ?
+     AND postcust_id = ?"
+    );
+
+
+    // Get old image information
+
+    $getExistingImageQuery = $dbConnection->prepare(
+        "SELECT post_image, postimage_cat
+     FROM post_image
+     WHERE post_imgid = ?
+     AND postcust_id = ?
+     LIMIT 1"
+    );
+
+
+    foreach ($postImages as $idx => $imageRow) {
+
+        $rowNumber = ((int)$idx) + 1;
+
+
+        $imageId =
+            (int)($imageRow["image_id"] ?? 0);
+
+
+        $imageCategory =
+            clean(
+                $dbConnection,
+                $imageRow["image_category"] ?? ""
+            );
+
+
+        // File exists for this row?
+        $hasNewFile =
+            isset($_FILES["post_images"]["tmp_name"][$idx]["image_path"])
+            &&
+            $_FILES["post_images"]["error"][$idx]["image_path"]
+            === UPLOAD_ERR_OK;
+
+
+        // ==========================================================
+        // EMPTY NEW ROW
+        // ==========================================================
+
+        if ($imageId <= 0 && !$hasNewFile && $imageCategory === "") {
+            continue;
+        }
+
+
+        // ==========================================================
+        // EXISTING IMAGE
+        // ==========================================================
+
+        if ($imageId > 0) {
+
+
+            // Verify image belongs to this post
+
+            $getExistingImageQuery->bind_param(
+                "is",
+                $imageId,
+                $post_id
+            );
+
+            $getExistingImageQuery->execute();
+
+
+            $existingImage =
+                $getExistingImageQuery
+                ->get_result()
+                ->fetch_assoc();
+
+
+            if (!$existingImage) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: existing image was not found."
+                );
+            }
+
+
+            // ======================================================
+            // EXISTING IMAGE + NO NEW FILE
+            // ======================================================
+            //
+            // Only update its category/title.
+            //
+
+            if (!$hasNewFile) {
+
+                if ($imageCategory === "") {
+
+                    throw new Exception(
+                        "Image Row {$rowNumber}: image category is required."
+                    );
+                }
+
+
+                $imageUpdateQuery->bind_param(
+                    "ssis",
+                    $imageCategory,
+                    $post_title,
+                    $imageId,
+                    $post_id
+                );
+
+
+                $imageUpdateQuery->execute();
+
+
+                continue;
+            }
+
+
+            // ======================================================
+            // EXISTING IMAGE + NEW FILE
+            // ======================================================
+            //
+            // This means the user is replacing the old image.
+            //
+
+
+            $tmpPath =
+                $_FILES["post_images"]["tmp_name"][$idx]["image_path"];
+
+            $fileSize =
+                $_FILES["post_images"]["size"][$idx]["image_path"];
+
+            $originalName =
+                $_FILES["post_images"]["name"][$idx]["image_path"];
+
+
+            // Validate size
+
+            if ($fileSize > $fileMaxSize) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: file exceeds 5MB."
+                );
+            }
+
+
+            // Validate real image
+
+            $mimeType =
+                mime_content_type($tmpPath);
+
+
+            if (!in_array(
+                $mimeType,
+                $allowedMimeTypes,
+                true
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: unsupported image type."
+                );
+            }
+
+
+            // Get extension from actual MIME type
+
+            $extension =
+                strtolower(
+                    pathinfo(
+                        $originalName,
+                        PATHINFO_EXTENSION
+                    )
+                );
+
+
+            if (!in_array(
+                $extension,
+                $allowedExtensions,
+                true
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: invalid image format."
+                );
+            }
+
+
+            if ($imageCategory === "") {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: image category is required."
+                );
+            }
+
+
+            // Generate filename
+
+            $fileName =
+                generateImageFileName(
+                    $dbConnection,
+                    $post_id,
+                    $imageCategory,
+                    $extension
+                );
+
+
+            $destination =
+                $uploadDir . $fileName;
+
+
+            // Move replacement file
+
+            if (!move_uploaded_file(
+                $tmpPath,
+                $destination
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: failed to save replacement image."
+                );
+            }
+
+
+            // Remember newly created file
+
+            $movedFiles[] = $destination;
+
+            // Update database
+
+            $imageReplaceQuery->bind_param(
+                "sssis",
+                $fileName,
+                $imageCategory,
+                $post_title,
+                $imageId,
+                $post_id
+            );
+
+
+            $imageReplaceQuery->execute();
+
+
+            // Old physical file should be deleted AFTER commit
+
+            if (!empty($existingImage["post_image"])) {
+
+                $oldPhysicalPath =
+                    $uploadDir .
+                    basename($existingImage["post_image"]);
+
+
+                if (
+                    file_exists($oldPhysicalPath)
+                    &&
+                    $oldPhysicalPath !== $destination
+                ) {
+
+                    $filesToDelete[] =
+                        $oldPhysicalPath;
+                }
+            }
+
+
+            continue;
+        }
+
+
+        // ==========================================================
+        // NEW IMAGE
+        // ==========================================================
+
+        if ($imageId <= 0) {
+
+            // A new row must have a file
+
+            if (!$hasNewFile) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: an image is required."
+                );
+            }
+
+
+            if ($imageCategory === "") {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: image category is required."
+                );
+            }
+
+
+            $tmpPath =
+                $_FILES["post_images"]["tmp_name"][$idx]["image_path"];
+
+            $fileSize =
+                $_FILES["post_images"]["size"][$idx]["image_path"];
+
+            $originalName =
+                $_FILES["post_images"]["name"][$idx]["image_path"];
+
+
+            // Validate size
+
+            if ($fileSize > $fileMaxSize) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: file exceeds 5MB."
+                );
+            }
+
+
+            // Validate MIME
+
+            $mimeType =
+                mime_content_type($tmpPath);
+
+
+            if (!in_array(
+                $mimeType,
+                $allowedMimeTypes,
+                true
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: unsupported image type."
+                );
+            }
+
+
+            // Extension
+
+            $extension =
+                strtolower(
+                    pathinfo(
+                        $originalName,
+                        PATHINFO_EXTENSION
+                    )
+                );
+
+
+            if (!in_array(
+                $extension,
+                $allowedExtensions,
+                true
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: invalid image format."
+                );
+            }
+
+
+            // Generate filename
+
+            $fileName =
+                generateImageFileName(
+                    $dbConnection,
+                    $post_id,
+                    $imageCategory,
+                    $extension
+                );
+
+
+            $destination =
+                $uploadDir . $fileName;
+
+
+            // Move file
+
+            if (!move_uploaded_file(
+                $tmpPath,
+                $destination
+            )) {
+
+                throw new Exception(
+                    "Image Row {$rowNumber}: failed to save image."
+                );
+            }
+
+
+            // Remember file
+
+            $movedFiles[] =
+                $destination;
+
+
+            // Insert DB record
+
+            $imageInsertQuery->bind_param(
+                "ssss",
+                $post_id,
+                $fileName,
+                $imageCategory,
+                $post_title
+            );
+
+
+            $imageInsertQuery->execute();
+        }
+    }
+
+    // ================================================================
+    // COMMIT DATABASE CHANGES
+    // ================================================================
+
     mysqli_commit($dbConnection);
 
-    // return success json message
+
+    // ================================================================
+    // DELETE OLD PHYSICAL IMAGE FILES
+    // ================================================================
+    //
+    // We only delete them AFTER successful database commit.
+    // This prevents accidentally losing the old image if the DB
+    // transaction fails.
+    //
+
+    foreach ($filesToDelete as $file) {
+
+        if (file_exists($file)) {
+            unlink($file);
+        }
+    }
+
+
+    // ================================================================
+    // SUCCESS
+    // ================================================================
+
     echo json_encode([
         "success" => true,
         "message" => "The news post has been updated successfully and the changes are now available to readers."

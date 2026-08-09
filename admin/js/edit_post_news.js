@@ -38,19 +38,43 @@ async function uploadThePost() {
   );
   postForm.append("author_name", document.getElementById("author-name").value);
 
+  // ============================================================
+  // IMAGES
+  // ============================================================
+
   document.querySelectorAll("#imageTbody tr").forEach((tableRow, idx) => {
     const categorySelect = tableRow.querySelector(".image-category");
+
     const fileInput = tableRow.querySelector(".post-image");
 
+    const existingImageId = tableRow.querySelector(".existing-image-id");
+
+    // Existing image ID
     postForm.append(
-      `post_images[${idx}][image_category]`,
-      categorySelect.value || "",
+      `post_images[${idx}][image_id]`,
+      existingImageId?.value || "",
     );
 
-    const image = fileInput.files[0];
+    // Image category
+    postForm.append(
+      `post_images[${idx}][image_category]`,
+      categorySelect?.value || "",
+    );
+
+    // New/replacement image
+    const image = fileInput?.files[0];
+
     if (image) {
       postForm.append(`post_images[${idx}][image_path]`, image);
     }
+  });
+
+  // ============================================================
+  // DELETED EXISTING IMAGES
+  // ============================================================
+
+  deletedImageIds.forEach((imageId) => {
+    postForm.append("deleted_image_ids[]", imageId);
   });
 
   // send data to the server
@@ -163,36 +187,70 @@ postMainCategory.addEventListener("change", function () {
     });
 });
 
-// upload image functionality
+// ============================================================
+// IMAGE EDIT FUNCTIONALITY
+// ============================================================
+
 const imageTableBody = document.querySelector("#imageTbody");
 const imageRowTemplate = document.querySelector("#image-row-template");
 
-// function:: add new row
+// Keep deleted existing image IDs globally.
+// These IDs will be sent to PHP when the post is submitted.
+const deletedImageIds = new Set();
+
+// ============================================================
+// ADD NEW IMAGE ROW
+// ============================================================
+
 function addNewRow() {
   const newRow = imageRowTemplate.content.firstElementChild.cloneNode(true);
-  imageTableBody.append(newRow);
+
+  imageTableBody.appendChild(newRow);
+
   handleImageUpload(newRow);
 }
 
-// image select category functionality
+// ============================================================
+// HANDLE IMAGE ROW
+// ============================================================
+
 function handleImageUpload(imageTableRow) {
   const selectImageCategory = imageTableRow.querySelector(".image-category");
+
   const imageCategoryLabel = imageTableRow.querySelector(
     ".image-category-label",
   );
+
   const imageDropArea = imageTableRow.querySelector(".image-drop-area");
+
   const fileInputField = imageTableRow.querySelector(".post-image");
+
   const imagePreviewArea = imageTableRow.querySelector(".image-preview-area");
+
   const deleteImageRowButton = imageTableRow.querySelector(
     ".delete-image-row-btn",
   );
 
-  // open input
-  imageDropArea.addEventListener("click", function () {
+  const existingImageIdInput =
+    imageTableRow.querySelector(".existing-image-id");
+
+  // ==========================================================
+  // OPEN FILE INPUT
+  // ==========================================================
+
+  imageDropArea.addEventListener("click", function (e) {
+    // Do not open file selector if clicking an inner button
+    if (e.target.closest(".remove-preview")) {
+      return;
+    }
+
     fileInputField.click();
   });
 
-  // selecting image category
+  // ==========================================================
+  // CATEGORY CHANGE
+  // ==========================================================
+
   selectImageCategory.addEventListener("change", function () {
     if (!this.value) {
       imageCategoryLabel.classList.add("section-hidden");
@@ -202,118 +260,266 @@ function handleImageUpload(imageTableRow) {
     }
   });
 
-  // drag and drop functionality
+  // ==========================================================
+  // DRAG OVER
+  // ==========================================================
+
   imageDropArea.addEventListener("dragover", function (e) {
     e.preventDefault();
+
     this.classList.add("droparea-dragover");
   });
 
+  // ==========================================================
+  // DRAG ENTER
+  // ==========================================================
+
   imageDropArea.addEventListener("dragenter", function (e) {
     e.preventDefault();
+
     this.classList.add("droparea-dragover");
   });
+
+  // ==========================================================
+  // DRAG LEAVE
+  // ==========================================================
+
+  imageDropArea.addEventListener("dragleave", function () {
+    this.classList.remove("droparea-dragover");
+  });
+
+  // ==========================================================
+  // DROP IMAGE
+  // ==========================================================
 
   imageDropArea.addEventListener("drop", function (e) {
     e.preventDefault();
 
+    this.classList.remove("droparea-dragover");
+
     if (e.dataTransfer.files.length) {
       fileInputField.files = e.dataTransfer.files;
+
+      handleImageFiles(fileInputField.files);
     }
-    handleImageFiles(fileInputField.files);
-
-    this.classList.remove("droparea-dragover");
   });
 
-  fileInputField.addEventListener("change", function (e) {
-    handleImageFiles(e.target.files);
-    // console.log(fileInputField.value);
+  // ==========================================================
+  // FILE INPUT CHANGE
+  // ==========================================================
+
+  fileInputField.addEventListener("change", function () {
+    handleImageFiles(this.files);
   });
+
+  // ==========================================================
+  // HANDLE IMAGE FILE
+  // ==========================================================
 
   function handleImageFiles(files) {
     const fileMaxSize = 5 * 1024 * 1024;
 
-    Array.from(files).forEach((file) => {
-      // valid:: file typo is image
-      if (!file.type.startsWith("image/")) {
-        fileInputField.value = "";
-        return;
-      }
+    if (!files || !files.length) {
+      return;
+    }
 
-      // valid:: file size max 5 mb
-      if (file.size > fileMaxSize) {
-        alert("File Size is Too long");
-        fileInputField.value = "";
-        return;
-      }
+    const file = files[0];
 
-      const fileReader = new FileReader();
-      fileReader.onload = (e) => {
-        imagePreviewArea.innerHTML = `
-              <div class="preview-img">
-                  <img src="${e.target.result}" alt="">
-                  <button class="remove-preview" title="Remove Preview">✕</button>
+    // Validate MIME type
+
+    if (!file.type.startsWith("image/")) {
+      alert("Please select a valid image file.");
+
+      fileInputField.value = "";
+
+      return;
+    }
+
+    // Validate size
+
+    if (file.size > fileMaxSize) {
+      alert("File size must not exceed 5MB.");
+
+      fileInputField.value = "";
+
+      return;
+    }
+
+    const fileReader = new FileReader();
+
+    fileReader.onload = function (e) {
+      imagePreviewArea.innerHTML = `
+        <div class="preview-img">
+
+          <img
+            src="${e.target.result}"
+            alt=""
+          >
+
+          <button
+            type="button"
+            class="remove-preview"
+            title="Remove Preview">
+            ✕
+          </button>
+
+          ${
+            existingImageIdInput.value
+              ? `<span class="existing-image-label">
+                    New image selected
+                 </span>`
+              : ""
+          }
+
+        </div>
+      `;
+
+      const removePreviewButton =
+        imagePreviewArea.querySelector(".remove-preview");
+
+      removePreviewButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        fileInputField.value = "";
+
+        // ======================================================
+        // EXISTING IMAGE
+        // ======================================================
+
+        if (existingImageIdInput.value) {
+          const originalImage = existingPostImage.find(
+            (img) =>
+              String(img.post_imgid) === String(existingImageIdInput.value),
+          );
+
+          if (originalImage) {
+            imagePreviewArea.innerHTML = `
+              <div class="preview-img existing-preview">
+
+                <img
+                  src="${originalImage.image_file_path}"
+                  alt="${originalImage.post_image}"
+                >
+
+                <span class="existing-image-label">
+                  Existing Image
+                </span>
+
               </div>
-        `;
+            `;
+          }
+        }
 
-        imagePreviewArea
-          .querySelector(".remove-preview")
-          .addEventListener("click", function (e) {
-            fileInputField.value = "";
-            imagePreviewArea.innerHTML = "";
-          });
-      };
+        // ======================================================
+        // NEW IMAGE
+        // ======================================================
+        else {
+          imagePreviewArea.innerHTML = "";
+        }
+      });
+    };
 
-      fileReader.readAsDataURL(file);
-    });
+    fileReader.readAsDataURL(file);
   }
 
-  deleteImageRowButton.addEventListener("click", () => {
-    if (imageTableBody.children.length > 1) {
-      imageTableRow.remove();
+  // ==========================================================
+  // DELETE IMAGE ROW
+  // ==========================================================
+
+  deleteImageRowButton.addEventListener("click", function () {
+    const existingImageId = existingImageIdInput.value;
+
+    // Existing database image
+    if (existingImageId) {
+      const confirmed = confirm("Are you sure you want to delete this image?");
+
+      if (!confirmed) {
+        return;
+      }
+
+      // Remember this ID.
+      // PHP will delete it from database and disk.
+      deletedImageIds.add(String(existingImageId));
     }
+
+    imageTableRow.remove();
   });
 }
 
-console.log(existingPostImage);
+// validation:: load existing image or new image
+// ============================================================
+// LOAD EXISTING IMAGES
+// ============================================================
 
-// validation:: loadn existing image or new image
 if (existingPostImage.length > 0) {
-  existingPostImage.forEach((img) => {
-    addExistingImageRow(img);
+  existingPostImage.forEach((imageData) => {
+    addExistingImageRow(imageData);
   });
 } else {
-  // call first time
+  // No existing image.
+  // Create one empty row.
   addNewRow();
 }
 
-// exsisting image handle functionality
+// ============================================================
+// ADD EXISTING IMAGE ROW
+// ============================================================
+
 function addExistingImageRow(imageData) {
   const newRow = imageRowTemplate.content.firstElementChild.cloneNode(true);
-  imageTableBody.append(newRow);
 
-  // get the elements
+  imageTableBody.appendChild(newRow);
+
+  // Elements
+
   const inputImgId = newRow.querySelector(".existing-image-id");
-  const categorySelect = newRow.querySelector(".image-category");
 
-  const fileInput = newRow.querySelector(".post-image");
+  const categorySelect = newRow.querySelector(".image-category");
 
   const previewArea = newRow.querySelector(".image-preview-area");
 
-  // set the elements values
-  inputImgId.value = imageData.post_imgid;
-  categorySelect.value = imageData.postimage_cat;
-  previewArea.innerHTML = `
-        <div class="preview-img existing-preview">
-            <img
-                src="https://pmk-bd.org/admin/assets/uploads/posts/${imageData.post_image}"
-                alt="${imageData.post_title}"
-            >
+  // ==========================================================
+  // SET EXISTING IMAGE ID
+  // ==========================================================
 
-            <span class="existing-image-label">
-                Existing Image
-            </span>
-        </div>
-    `;
+  inputImgId.value = imageData.post_imgid;
+
+  // ==========================================================
+  // SET IMAGE CATEGORY
+  // ==========================================================
+
+  categorySelect.value = imageData.postimage_cat;
+
+  // Update category label
+
+  const categoryLabel = newRow.querySelector(".image-category-label");
+
+  if (imageData.postimage_cat) {
+    categoryLabel.textContent = imageData.postimage_cat;
+
+    categoryLabel.classList.remove("section-hidden");
+  }
+
+  // ==========================================================
+  // EXISTING IMAGE PREVIEW
+  // ==========================================================
+
+  previewArea.innerHTML = `
+    <div class="preview-img existing-preview">
+
+      <img
+        src="../assets/uploads/posts/${imageData.post_image}"
+        alt="${imageData.post_title}"
+      >
+
+      <span class="existing-image-label">
+        Existing Image
+      </span>
+
+    </div>
+  `;
+
+  // Attach all handlers
 
   handleImageUpload(newRow);
 }
