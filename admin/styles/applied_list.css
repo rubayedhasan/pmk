@@ -2,6 +2,25 @@
   min-height: 650px;
 }
 
+.edu-filter-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.edu-filter-container input {
+  width: 320px;
+  height: 32px;
+  border: 1.5px solid #dde3ef;
+  border-radius: 9px;
+  padding: 0 12px;
+  font-size: 0.8rem;
+  color: var(--pmk-dark);
+  background: #f8f9fc;
+  outline: none;
+  transition: all 0.35s ease-in-out;
+}
+
 .candidate-image {
   width: 75px;
   height: 75px;

@@ -274,5 +274,46 @@ function handleImageUpload(imageTableRow) {
   });
 }
 
-// call first time
-addNewRow();
+console.log(existingPostImage);
+
+// validation:: loadn existing image or new image
+if (existingPostImage.length > 0) {
+  existingPostImage.forEach((img) => {
+    addExistingImageRow(img);
+  });
+} else {
+  // call first time
+  addNewRow();
+}
+
+// exsisting image handle functionality
+function addExistingImageRow(imageData) {
+  const newRow = imageRowTemplate.content.firstElementChild.cloneNode(true);
+  imageTableBody.append(newRow);
+
+  // get the elements
+  const inputImgId = newRow.querySelector(".existing-image-id");
+  const categorySelect = newRow.querySelector(".image-category");
+
+  const fileInput = newRow.querySelector(".post-image");
+
+  const previewArea = newRow.querySelector(".image-preview-area");
+
+  // set the elements values
+  inputImgId.value = imageData.post_imgid;
+  categorySelect.value = imageData.postimage_cat;
+  previewArea.innerHTML = `
+        <div class="preview-img existing-preview">
+            <img
+                src="https://pmk-bd.org/admin/assets/uploads/posts/${imageData.post_image}"
+                alt="${imageData.post_title}"
+            >
+
+            <span class="existing-image-label">
+                Existing Image
+            </span>
+        </div>
+    `;
+
+  handleImageUpload(newRow);
+}

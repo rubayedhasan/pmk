@@ -10,6 +10,7 @@ $dbConnection = $conn;
 $get_circular_list_query = "SELECT circular_id, circular_title FROM publish_circular ORDER BY application_deadline DESC";
 $circular_list = $dbConnection->query($get_circular_list_query)->fetch_all(MYSQLI_ASSOC);
 
+
 // set the user role in js 
 echo "
         <script> 
@@ -42,8 +43,14 @@ echo "
 
         <!-- search box  -->
         <div class="panel-search-box">
-            <form class="search_form">
-                <input type="search" name="search_circular" id="search-candidate" placeholder="Search by id or name or phone">
+            <form class="search_form" onsubmit="(e)=>e.preventDefault()">
+                <!-- search by phone or name  -->
+                <input type="text" name="search_circular" id="search-candidate" placeholder="Search by id or name or phone">
+
+                <!-- search by education  -->
+                <input type="text" name="search_edu" id="search-edu" placeholder="Search By University...">
+
+                <!-- circular list  -->
                 <select name="select_circular" id="select-circular">
                     <option value="">All Circulars</option>
                     <?php
@@ -53,17 +60,6 @@ echo "
                         </option>
                     <?php } ?>
                 </select>
-                <button type="button" class="src-btn-reset" onclick="setTimeout(()=> document.querySelector( '.search_form').submit(),0)" title="reset">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rotate-2">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
-                        <path d="M18.37 7.16l0 .01" />
-                        <path d="M13 19.94l0 .01" />
-                        <path d="M16.84 18.37l0 .01" />
-                        <path d="M19.37 15.1l0 .01" />
-                        <path d="M19.94 11l0 .01" />
-                    </svg>
-                </button>
             </form>
         </div>
     </header>
@@ -79,6 +75,7 @@ echo "
                             <th>ID</th>
                             <th>Name</th>
                             <th>Phone</th>
+                            <th>Edu Institute</th>
                             <th>Job Circular</th>
                             <th>Applied Date</th>
                             <th>Status</th>

@@ -17,6 +17,7 @@ if (pageUrl.has("reject")) {
 
 // all data
 let candidateAllData = [];
+let candidateFilteredData = [];
 
 // circular select functionality
 const selectCircular = document.getElementById("select-circular");
@@ -50,9 +51,10 @@ function loadCandidates(circularId = "") {
         return;
       }
 
-      // console.log(data);
+      console.log(data);
 
       candidateAllData = data;
+      candidateFilteredData = [...data];
       pageNumber = 1;
 
       enablePagination();
@@ -84,6 +86,11 @@ function displayTableData(data) {
                                 <span class='open-position'>
                                     ${candidate.user_id.split("-")[1]}
                                 </span>
+                            </td>
+                            <td>
+                                <div class='edu-section' >
+                                    ${candidate.edu_institutions}
+                                </div>
                             </td>
                             <td>
                                  <div>
@@ -262,13 +269,15 @@ let perPage = 25;
 let pageNumber = 1;
 
 function enablePagination() {
-  const totalDataCount = candidateAllData.length;
+  // const totalDataCount = candidateAllData.length;
+  const totalDataCount = candidateFilteredData.length;
   const totalPage = Math.ceil(totalDataCount / perPage);
 
   const startIndex = (pageNumber - 1) * perPage;
   const endIndex = startIndex + perPage;
 
-  displayTableData(candidateAllData.slice(startIndex, endIndex));
+  // displayTableData(candidateAllData.slice(startIndex, endIndex));
+  displayTableData(candidateFilteredData.slice(startIndex, endIndex));
 
   document.querySelector(".page-details").textContent =
     `Showing ${startIndex + 1} to ${Math.min(endIndex, totalDataCount)} of ${totalDataCount}`;
@@ -346,7 +355,8 @@ function enablePagination() {
 }
 
 function changePage(page) {
-  const totalPage = Math.ceil(candidateAllData.length / perPage);
+  // const totalPage = Math.ceil(candidateAllData.length / perPage);
+  const totalPage = Math.ceil(candidateFilteredData.length / perPage);
 
   if (page < 1 || page > totalPage) {
     return;
@@ -383,35 +393,76 @@ document.getElementById("per-page").addEventListener("change", function () {
 });
 
 // live search functionality
+// const searchCandidate = document.getElementById("search-candidate");
+// searchCandidate.addEventListener("input", function () {
+//   const searchKeyword = this.value.trim().toLowerCase();
+//   const filteredData = candidateAllData.filter((candidate) => {
+//     const userId = String(candidate.user_id ?? "").toLowerCase();
+//     const candidateName = String(candidate.candidate_name ?? "").toLowerCase();
+//     const candidatePhone = String(
+//       candidate.user_id?.split("-")[1] ?? "",
+//     ).toLowerCase();
+//     return (
+//       userId.includes(searchKeyword) ||
+//       candidateName.includes(searchKeyword) ||
+//       candidatePhone.includes(searchKeyword)
+//     );
+//   });
+//   displayTableData(filteredData);
+// });
+
+// // university search
+// const eduSearch = document.getElementById("search-edu");
+// eduSearch.addEventListener("input", function () {
+//   const eduKey = this.value.trim().toLowerCase();
+//   const filterDataByEdu = candidateAllData.filter((candidate) => {
+//     const eduInstitute = String(candidate.edu_institutions ?? "").toLowerCase();
+
+//     return eduInstitute.includes(eduKey);
+//   });
+
+//   displayTableData(filterDataByEdu);
+// });
+
+// live search functionality
 const searchCandidate = document.getElementById("search-candidate");
-searchCandidate.addEventListener("input", function () {
-  const searchKeyword = this.value.trim().toLowerCase();
+const eduSearch = document.getElementById("search-edu");
 
-  const tableRows = document.querySelectorAll("#applied_list_tbody tr");
-  let searchCount = 0;
+function filterCandidates() {
+  const searchKeyword = searchCandidate.value.trim().toLowerCase();
+  const eduKey = eduSearch.value.trim().toLowerCase();
 
-  tableRows.forEach((dataRow) => {
-    if (!dataRow.dataset.userId) {
-      return;
-    }
+  candidateFilteredData = candidateAllData.filter((candidate) => {
+    const userId = String(candidate.user_id ?? "").toLowerCase();
 
-    const userId = dataRow.dataset.userId.toLowerCase();
-    const candidateName = dataRow.dataset.candidateName.toLowerCase();
-    const candidatePhone = dataRow.dataset.candidatePhone.toLowerCase();
+    const candidateName = String(candidate.candidate_name ?? "").toLowerCase();
 
-    const matchedData =
+    const candidatePhone = String(
+      candidate.user_id?.split("-")[1] ?? "",
+    ).toLowerCase();
+
+    const eduInstitute = String(candidate.edu_institutions ?? "").toLowerCase();
+
+    const candidateMatch =
+      !searchKeyword ||
       userId.includes(searchKeyword) ||
       candidateName.includes(searchKeyword) ||
       candidatePhone.includes(searchKeyword);
 
-    if (matchedData) {
-      dataRow.style.display = "";
-      searchCount++;
-    } else {
-      dataRow.style.display = "none";
-    }
+    const educationMatch = !eduKey || eduInstitute.includes(eduKey);
+
+    return candidateMatch && educationMatch;
   });
-});
+
+  // Always start from page 1 after filtering
+  pageNumber = 1;
+
+  enablePagination();
+}
+
+searchCandidate.addEventListener("input", filterCandidates);
+
+eduSearch.addEventListener("input", filterCandidates);
 
 // load candidate data default
 loadCandidates();

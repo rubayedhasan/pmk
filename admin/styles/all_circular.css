@@ -191,7 +191,8 @@
   line-height: normal;
 }
 
-.published-date {
+.published-date,
+.edu-section {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -200,6 +201,11 @@
   font-size: 0.875rem;
   font-weight: 500;
   line-height: normal;
+}
+
+.edu-section {
+  font-size: 0.825rem;
+  white-space: normal;
 }
 
 .circular-deadline {

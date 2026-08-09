@@ -18,10 +18,16 @@ if (isset($_GET['post_id'])) {
     // QUERY:: get post details
     $get_post_details_query = "SELECT * FROM posts WHERE post_customid = '$post_id'";
     $post_details = $dbConnection->query($get_post_details_query)->fetch_assoc();
+
+    // QUERY:: get post images 
+    $get_post_images_query = "SELECT * FROM post_image WHERE postcust_id = '$post_id'";
+    $post_images = $dbConnection->query($get_post_images_query)->fetch_all(MYSQLI_ASSOC);
+
+    echo "<pre>";
+    print_r($post_images);
+    echo "</pre>";
 }
 
-// after add category and sub category store the page location
-$section = $_GET['section'] ?? '';
 ?>
 
 
@@ -202,6 +208,9 @@ $section = $_GET['section'] ?? '';
                             <!-- for show the table row  -->
                             <template id="image-row-template">
                                 <tr>
+                                    <!-- image id  -->
+                                    <input type="hidden" name="" id="" class="existing-image-id" value="">
+
                                     <!-- image category  -->
                                     <td>
                                         <select class="image-category">
@@ -416,6 +425,11 @@ $section = $_GET['section'] ?? '';
 
             }
         });
+    </script>
+
+    <!-- set the image json  -->
+    <script>
+        const existingPostImage = <?php echo json_encode($post_images); ?>;
     </script>
 
     <!-- Linked custom script  -->

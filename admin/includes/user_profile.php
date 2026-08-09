@@ -124,7 +124,7 @@ if (isset($_GET['user_id'])) {
                             <?php echo $address['per_house']; ?>
                             Upazila: <?php echo $address['per_upazilla']; ?>,
                             Post Office: <?php echo $address['per_post']; ?>-<?php echo $address['per_post_code']; ?>,
-                            Distric: <?php echo $address['per_district']; ?>,
+                            District: <?php echo $address['per_district']; ?>,
                             Division: <?php echo $address['per_division']; ?>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ if (isset($_GET['user_id'])) {
                             <?php echo $address['pre_house']; ?>
                             Upazila: <?php echo $address['pre_upazilla']; ?>,
                             Post Office: <?php echo $address['pre_post']; ?>-<?php echo $address['pre_post_code']; ?>,
-                            Distric: <?php echo $address['pre_district']; ?>,
+                            District: <?php echo $address['pre_district']; ?>,
                             Division: <?php echo $address['pre_division']; ?>
                         </div>
                     </div>
