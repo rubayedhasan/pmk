@@ -18,10 +18,6 @@ if (isset($_GET['post_id'])) {
     // QUERY:: get post details
     $get_post_details_query = "SELECT * FROM posts WHERE post_customid = '$post_id'";
     $post_details = $dbConnection->query($get_post_details_query)->fetch_assoc();
-
-    echo "<pre>";
-    print_r($post_details);
-    echo "</pre>";
 }
 
 // after add category and sub category store the page location
@@ -109,7 +105,7 @@ $section = $_GET['section'] ?? '';
                                 <input type="text" name="post_id" id="post-id" value="<?php echo $post_details['post_customid']; ?>" disabled>
                             </div>
 
-                            <!-- input:: post title       -->
+                            <!-- input:: post title  -->
                             <div class="form-input grid-full">
                                 <label for="post-title">
                                     Title
@@ -128,14 +124,9 @@ $section = $_GET['section'] ?? '';
                                     <option value=''>
                                         Select Category
                                     </option>
-
                                     <?php
                                     foreach ($allPostCategory as $category) {
-                                        echo "
-                                        <option value='$category[postcat_id]'>
-                                        $category[postcat_name]
-                                        </option>
-                                    ";
+                                        echo "<option value='{$category['postcat_id']}' " . ($post_details['post_cat'] == $category['postcat_id'] ? 'selected' : '') . "> {$category['postcat_name']}</option>";
                                     }
                                     ?>
                                 </select>
@@ -147,10 +138,16 @@ $section = $_GET['section'] ?? '';
                                     Sub Category
                                     <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                                 </label>
-                                <select name="post_subcategory_main" id="post-subcategory-main" disabled>
+                                <select name="post_subcategory_main" id="post-subcategory-main">
                                     <option value=''>
                                         Select Sub Category
                                     </option>
+                                    <?php
+                                    foreach ($allSubCAtegory as $subCategory) {
+                                        echo "<option value='{$subCategory['postsub_cat_id']}' " .
+                                            ($post_details['post_subcat'] == $subCategory['postsub_cat_id'] ? 'selected' : '') . "> {$subCategory['postsub_cat_name']}</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
 
@@ -160,7 +157,7 @@ $section = $_GET['section'] ?? '';
                                     Post Description
                                     <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                                 </label>
-                                <textarea name="post_description" id="post-description" placeholder="Enter text Description"></textarea>
+                                <textarea name="post_description" id="post-description"><?php echo $post_details['post_description']; ?></textarea>
                             </div>
 
                             <!-- input:: author name       -->
@@ -169,7 +166,7 @@ $section = $_GET['section'] ?? '';
                                     Author Name
                                     <span style="color:red; pointer-events: none;  user-select: none;">*</span>
                                 </label>
-                                <input type="text" name="author_name" id="author-name" placeholder="Author">
+                                <input type="text" name="author_name" id="author-name" value="<?php echo $post_details['post_authorname']; ?>">
                             </div>
 
                             <!-- input:: Image upload       -->
@@ -322,6 +319,9 @@ $section = $_GET['section'] ?? '';
 
             // Clean HTML
             forced_root_block: 'p',
+            forced_root_block_attrs: {
+                class: 'news-description'
+            },
             verify_html: true,
             cleanup: true,
             remove_linebreaks: false,

@@ -179,7 +179,11 @@ if (isset($_GET["post_id"])) {
                     <!-- news content upper  -->
                     <div class="news-content">
                         <div class="news-description">
-                            <?php echo str_replace('\r\n', '<br>', $post_description); ?>
+                            <?php
+                            //echo str_replace('\r\n', '<br>', $post_description);
+                            echo $post_description;
+
+                            ?>
                         </div>
                     </div>
 
