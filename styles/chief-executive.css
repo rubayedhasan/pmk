@@ -4,11 +4,12 @@
 
 /* executive person hero section's styles  */
 #executive-person-hero {
-  height: calc(100vh - 50px - 40px);
-  padding: 3.5rem 10% 0;
+  /* height: calc(100vh - 50px - 40px); */
+  /* padding: 3.5rem 10% 0; */
+  padding: 6.5rem 10%;
   display: grid;
   grid-template-columns: 1fr 300px;
-  align-items: end;
+  align-items: center;
   gap: 3rem;
   overflow: hidden;
   background:
@@ -28,6 +29,8 @@
       var(--pmk-dark) 35%,
       var(--pmk-blue-dark) 100%
     );
+
+  position: relative;
 }
 
 #executive-person-hero::before {
@@ -65,11 +68,12 @@
 }
 
 .hero-feature-image {
-  width: 210px;
+  /* width: 210px; */
+  width: 280px;
   height: 300px;
-  border: 1px solid rgba(0, 148, 106, 0.25);
+  /* border: 1px solid rgba(0, 148, 106, 0.25); */
   border-radius: 10px 10px 0 0;
-  background-color: var(--pmk-green-dark-sublet);
+  background-color: var(--pmk-green-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,6 +101,7 @@
   font-size: 0.9rem;
   line-height: 1.5px;
   font-weight: 500;
+  text-align: center;
 }
 
 .hero-eyebrow {
@@ -123,7 +128,8 @@
 
 .executive-name {
   color: var(--pmk-white);
-  font-size: 3.375rem;
+  /* font-size: 3.375rem; */
+  font-size: 3rem;
   line-height: 1.1;
   font-weight: 700;
   margin-top: 24px;
@@ -226,7 +232,7 @@
 }
 
 .sidebar-contact {
-  margin-top: 30px;
+  margin-top: 16px;
   padding: 14px 18px;
   background-color: var(--pmk-dark);
   border-radius: 12px;
@@ -267,6 +273,53 @@
 
 .content-section:not(:last-child) {
   margin-bottom: 50px;
+}
+
+.sidebar-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.sidebar-social li a {
+  color: var(--pmk-blue-dark);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-social li a:hover {
+  color: var(--pmk-white);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-social li a[aria-label="facebook"]:hover {
+  background: #1877f2;
+}
+
+.sidebar-social li a[aria-label="linkedin"]:hover {
+  background: #0a66c2;
+}
+
+.sidebar-social li a[aria-label="mail"]:hover {
+  background: #ea4335;
+}
+
+.sidebar-social li a[aria-label="x-twitter"]:hover {
+  background: #000000;
+}
+
+.sidebar-social li a[aria-label="youtube"]:hover {
+  background: #ff0000;
 }
 
 /* section header  */

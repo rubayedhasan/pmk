@@ -43,25 +43,25 @@
                             <ul class="social-icons d-flex gap-3 justify-content-start">
                                 <li>
                                     <a
-                                        href="https://facebook.com/themefisher"
+                                        href="https://www.facebook.com/PMKNGO"
                                         target="_blank"
                                         class="social-link facebook">
                                         <i class="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="social-link twitter">
-                                        <i class="fa-brands fa-square-twitter"></i>
+                                    <a href="https://www.linkedin.com/in/palli-mongal-karmosuchi-pmk-599597426/" target="_blank" class="social-link github">
+                                        <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="social-link instagram">
+                                    <a href="" target="_blank" class="social-link instagram">
                                         <i class="fa-brands fa-square-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="social-link github">
-                                        <i class="fa-brands fa-github"></i>
+                                    <a href="" target="_blank" class="social-link twitter">
+                                        <i class="fa-brands fa-square-twitter"></i>
                                     </a>
                                 </li>
                             </ul>

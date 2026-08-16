@@ -1,0 +1,92 @@
+/* branch page header  */
+.branch-page-header {
+  padding: 40px 0 32px;
+  background-color: var(--pmk-white);
+}
+
+.branch-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f4f8f6;
+  border: 1.5px solid rgba(30, 45, 38, 0.22);
+}
+
+.search-svg {
+  color: #5b6b64;
+}
+
+.search-input-container {
+  width: 380px;
+  position: relative;
+}
+
+#search-branch {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+#clear-search-btn {
+  position: absolute;
+}
+
+.branch-metas {
+  /* flex: 1; */
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.br-meta-value {
+  color: var(--pmk-dark);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.br-meta-label {
+  color: #5b6b64d1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: normal;
+}
+
+/* branch list container  */
+.branch-list-container {
+  background-color: #f3f4f3;
+}
+
+/* responsive styles:: small devices  */
+@media (max-width: 767.98px) {
+}
+
+/* responsive styles:: medium devices  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* responsive styles:: large devices  */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* responsive styles:: extra large devices  */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* responsive styles:: extra extra large devices  */
+@media (min-width: 1400px) {
+}

@@ -7,10 +7,10 @@
     <title>PMK ! Footer</title>
     <link
         rel="shortcut icon"
-        href="../assets/logo/logo.png"
+        href="../../assets/logo/logo.png"
         type="image/x-icon" />
 
-    <link rel="stylesheet" href="../styles/footer-alter.css" />
+    <link rel="stylesheet" href="../../styles/footer-alter.css" />
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                             <h3 class="widget-title">About PMK</h3>
                             <figure>
                                 <img
-                                    src="../assets/logo/main-logo.png"
+                                    src="../../assets/logo/main-logo.png"
                                     alt="pmk-logo"
                                     loading="lazy"
                                     class="pmk-mini-logo" />
@@ -72,12 +72,12 @@
 
                             <!-- footer nav  -->
                             <nav class="nav flex-column">
-                                <a class="nav-link" href="../pages/pmk_mfi.php">
+                                <a class="nav-link" href="../../pages/pmk_mfi.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Microfinance Program</span></a>
-                                <a class="nav-link" href="../pages/project.php">
+                                <a class="nav-link" href="../../pages/project.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
@@ -126,7 +126,7 @@
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Careers</span></a>
-                                <a class="nav-link" href="../pages/contact.php">
+                                <a class="nav-link" href="../../pages/contact.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>

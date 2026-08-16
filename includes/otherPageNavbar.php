@@ -7,7 +7,7 @@
     <title>PMK | Navbar</title>
 
     <!-- Linked my custom stylesheet  -->
-    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
 
 </head>
 
@@ -18,27 +18,27 @@
             <div class="mini-nav-container">
 
                 <div class="brand">
-                    <a class="brand-name" href="../index.php">
-                        <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
+                    <a class="brand-name" href="../../index.php">
+                        <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
                     </a>
                 </div>
 
                 <!-- mini navigation  menu -->
                 <div class="container-mini-navbar">
                     <!-- mini-navbar  -->
-                    <ul class="mini-navbar">
+                    <ul class="mini-navbar" style="margin-bottom: 0; list-style: none;">
                         <li>
-                            <a class="mini-nav-link" href=" #">
+                            <a class="mini-nav-link" href="../../pages/news.php" style="text-decoration: none;">
                                 <span class="nav-icon">
-                                    <img src="../assets/icons/newspaper-regular-full.svg" alt="newspaper icon">
+                                    <img src="../../assets/icons/newspaper-regular-full.svg" alt="newspaper icon">
                                 </span>
                                 <span>NEWS</span>
                             </a>
                         </li>
                         <li>
-                            <a class="mini-nav-link" href="https://careers.pmk.org.bd/" target="_blank">
+                            <a class="mini-nav-link" href="https://careers.pmk.org.bd/" target="_blank" style="text-decoration: none;">
                                 <span class="nav-icon">
-                                    <img src="../assets/icons/user-tie-solid-full.svg" alt="user icon">
+                                    <img src="../../assets/icons/user-tie-solid-full.svg" alt="user icon">
                                 </span>
                                 <span> CAREER </span>
                             </a>
@@ -51,9 +51,9 @@
                             class="dropdown-toggle lang-btn"
                             type="button"
                             data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                            aria-expanded="false" style="text-decoration: none;">
                             <span class="nav-icon">
-                                <img src="../assets/icons/earth-asia-solid-full.svg" alt="earth icon">
+                                <img src="../../assets/icons/earth-asia-solid-full.svg" alt="earth icon">
                             </span> <span>English</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -73,8 +73,8 @@
     <nav id="navigation" class="navbar navbar-expand-lg">
         <div class="container-fluid container-width">
             <!-- brand name  -->
-            <a class="brand-name d-inline-block d-lg-none" href="../index.php">
-                <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
+            <a class="brand-name d-inline-block d-lg-none" href="../../index.php">
+                <img class="logo-img" loading="lazy" decoding="async" fetchpriority="high" src="../../assets/logo/PMK_Logo_For_Web.png" alt="pmk logo">
             </a>
 
             <!-- toggler button and menu  -->
@@ -86,9 +86,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1 gap-xxl-2">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.php">
+                        <a class="nav-link" aria-current="page" href="../../index.php">
                             <span class="nav-icon">
-                                <img src="../assets/icons/house-solid-full.svg" alt="house icon">
+                                <img src="../../assets/icons/house-solid-full.svg" alt="house icon">
                             </span>
                             <span>Home</span>
                         </a>
@@ -101,7 +101,7 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <span class="nav-icon">
-                                <img src="../assets/icons/address-card-solid-full.svg" alt="card icon">
+                                <img src="../../assets/icons/address-card-solid-full.svg" alt="card icon">
                             </span>
                             <span>About PMK</span>
                         </a>
@@ -114,14 +114,14 @@
                                 <a class="dropdown-item" href="#">Success Stories & Achievements</a>
                             </li>
                             <li><a class="dropdown-item" href="#">Governance Body</a></li>
-                            <li><a class="dropdown-item" href="../pages/executive_body.php">Executive Body</a></li>
-                            <li><a class="dropdown-item" href="../pages/legal_status.php">Legal & Registration</a></li>
+                            <li><a class="dropdown-item" href="../../pages/executive_body.php">Executive Body</a></li>
+                            <li><a class="dropdown-item" href="../../pages/legal_status.php">Legal & Registration</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/pmk_mfi.php">
+                        <a class="nav-link" href="../../pages/pmk_mfi.php">
                             <span class="nav-icon">
-                                <img src="../assets/icons/hands-bound-solid-full.svg" alt="hand bound icon">
+                                <img src="../../assets/icons/hands-bound-solid-full.svg" alt="hand bound icon">
                             </span>
                             <span>Microfinance</span>
                         </a>
@@ -134,12 +134,12 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <span class="nav-icon">
-                                <img src="../assets/icons/folder-open-solid-full.svg" alt="folder open icon">
+                                <img src="../../assets/icons/folder-open-solid-full.svg" alt="folder open icon">
                             </span>
                             <span>Projects</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../pages/project.php">RAISE Project</a></li>
+                            <li><a class="dropdown-item" href="../../pages/project.php">RAISE Project</a></li>
                             <li><a class="dropdown-item" href="#">ENRICH Project</a></li>
                             <li><a class="dropdown-item" href="#">Wash Project</a></li>
                             <li><a class="dropdown-item" href="#">SMART Project</a></li>
@@ -155,7 +155,7 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <span class="nav-icon">
-                                <img src="../assets/icons/brain-solid-full.svg" alt="brain icon">
+                                <img src="../../assets/icons/brain-solid-full.svg" alt="brain icon">
                             </span>
                             <span>Our Initiatives</span>
                         </a>
@@ -173,7 +173,7 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <span class="nav-icon">
-                                <img src="../assets/icons/book-solid-full.svg" alt="book icon">
+                                <img src="../../assets/icons/book-solid-full.svg" alt="book icon">
                             </span>
                             <span>Case Studies</span>
                         </a>
@@ -192,27 +192,27 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <span class="nav-icon">
-                                <img src="../assets/icons/chart-pie-solid-full.svg" alt="pie chart icon">
+                                <img src="../../assets/icons/chart-pie-solid-full.svg" alt="pie chart icon">
                             </span>
                             <span>Reports</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../pages/annual_report.php">Annual Reports</a></li>
-                            <li><a class="dropdown-item" href="../pages/audit_report.php">Audit Reports</a></li>
+                            <li><a class="dropdown-item" href="../../pages/annual_report.php">Annual Reports</a></li>
+                            <li><a class="dropdown-item" href="../../pages/audit_report.php">Audit Reports</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/working_area.php">
+                        <a class="nav-link" href="../../pages/working_area.php">
                             <span class="nav-icon">
-                                <img src="../assets/icons/location-dot-solid-full.svg" alt="location icon">
+                                <img src="../../assets/icons/location-dot-solid-full.svg" alt="location icon">
                             </span>
                             <span>Working Area</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/contact.php">
-                            <span class="nav-icon"><img src="../assets/icons/square-phone-solid-full.svg" alt="phone icon"></span>
+                        <a class="nav-link" href="../../pages/contact.php">
+                            <span class="nav-icon"><img src="../../assets/icons/square-phone-solid-full.svg" alt="phone icon"></span>
                             <span>Contact</span>
                         </a>
                     </li>
@@ -223,7 +223,7 @@
 
 
     <!-- Linked my custom script  -->
-    <script src="../js/navbar.js"></script>
+    <script src="../../js/navbar.js"></script>
 </body>
 
 </html>

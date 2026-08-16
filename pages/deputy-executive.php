@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chief Executive | PMK</title>
+    <meta name="description" content="Meet Dewan Faisal, Deputy Chief Executive Director of PMK, providing visionary leadership and advancing humanitarian service, community empowerment, and sustainable social development.">
+    <title>Deputy Chief Executive Director | PMK</title>
 
     <!-- Linked to shared stylesheet.php" -->
     <?php include("../includes/sharedLinks.php") ?>
@@ -27,37 +28,36 @@
             <div class="hero-content-container">
                 <div class="hero-eyebrow">
                     <span class="eyebrow-line"></span>
-                    <p class="eyebrow-text">Chief Executive Director · PMK</p>
+                    <p class="eyebrow-text">Deputy Chief Executive Director · PMK</p>
                 </div>
 
-                <h1 class="executive-name">Kamrun Nahar</h1>
-                <p class="hero-role">Strategic Leadership · Social Development · Humanitarian Service</p>
+                <h1 class="executive-name">Dewan Faisal</h1>
+                <p class="hero-role">Visionary Leadership · Humanitarian Service · Community Transformation</p>
                 <p class="hero-quote">
-                    "Our work is not just about providing services — it is about restoring
-                    dignity and creating a society where no one is left behind."
+                    "True leadership begins with service — empowering people, strengthening communities, and turning hope into meaningful change."
                 </p>
                 <div class="hero-impact">
                     <div class="impact">
-                        <span class="impact-number">25+
+                        <span class="impact-number">10+
                         </span>
                         <span class="impact-label">Leadership (Years)</span>
                     </div>
                     <div class="impact">
-                        <span class="impact-number">50K
+                        <span class="impact-number">20K
                         </span>
                         <span class="impact-label">Lives Impacted</span>
                     </div>
                     <div class="impact">
-                        <span class="impact-number">30+
+                        <span class="impact-number">15+
                         </span>
-                        <span class="impact-label">Projects Led</span>
+                        <span class="impact-label">Initiatives Led</span>
                     </div>
                 </div>
             </div>
             <div class="hero-image-container">
                 <figure class="hero-feature-image">
-                    <img src="../assets/photos/kamrun_nahar_executive_of_pmk.png" alt="Chief Executive">
-                    <figcaption class="image-tag">Chief Executive </figcaption>
+                    <img src="../assets/photos/dewan_faisal_deputy_of_pmk.png" alt="deputy Chief Executive">
+                    <figcaption class="image-tag">Deputy Chief Executive </figcaption>
                 </figure>
             </div>
         </section>
@@ -127,8 +127,14 @@
                                 <span class="side-icon">
                                     <i class="fa-regular fa-envelope"></i>
                                 </span>
-                                <span>ce@pmk-bd.org</span>
+                                <span>dce@pmk-bd.org</span>
                             </div>
+                            <!-- <div class="side-row">
+                                <span class="side-icon">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </span>
+                                <span>Linkedin Profile</span>
+                            </div> -->
                             <div class="side-row">
                                 <span class="side-icon">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -139,7 +145,7 @@
 
                         <ul class="sidebar-social">
                             <li>
-                                <a href="mailto:ce@pmk-bd.org" aria-label="mail" title="Gmail">
+                                <a href="mailto:dce@pmk-bd.org" aria-label="mail" title="Gmail">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                             </li>
@@ -178,13 +184,13 @@
                             <!-- about content card  -->
                             <div class="about-content-card">
                                 <p class="content-body">
-                                    Kamrun Nahar is a dedicated development leader and social advocate with extensive experience in community empowerment and sustainable development initiatives. As the Chief Executive of Palli Mongal Karmosuchi (PMK), she has played a pivotal role in advancing the organization’s mission to improve the socio-economic conditions of marginalized and vulnerable communities across Bangladesh.
+                                    Dewan Faisal is a committed development professional and humanitarian leader dedicated to community empowerment and inclusive social development. As the Deputy Chief Executive Director of Palli Mongal Karmosuchi (PMK), he contributes to advancing the organization’s mission of serving marginalized and vulnerable communities through meaningful and sustainable development initiatives.
                                 </p>
                                 <p class="content-body">
-                                    With a strong commitment to inclusive development, women’s empowerment, education, healthcare, and livelihood enhancement, she has successfully led strategic programs that create lasting impact at the grassroots level. Her leadership approach emphasizes accountability, innovation, collaboration, and community participation — ensuring that development efforts are both people-centered and sustainable.
+                                    With a strong belief in people-centered development, his work focuses on strengthening livelihoods, expanding opportunities, supporting community resilience, and promoting the dignity and well-being of underserved populations. His leadership reflects a humble and collaborative approach, encouraging teamwork, community participation, accountability, and practical solutions that respond to people’s real needs.
                                 </p>
                                 <p class="content-body">
-                                    Under her guidance, PMK has strengthened its institutional capacity and expanded its reach through impactful partnerships and integrated development programs. Kamrun Nahar continues to inspire positive change by championing initiatives that promote dignity, resilience, and equal opportunities for underserved populations.
+                                    Through his contribution to PMK’s programs and institutional development, Dewan Faisal supports the organization in building stronger communities and creating opportunities for lasting positive change. He remains committed to serving with integrity, compassion, and purpose, believing that sustainable development is achieved when communities are empowered to shape a better future for themselves and generations to come.
                                 </p>
                             </div>
 
@@ -378,17 +384,9 @@
                             <!-- timeline  -->
                             <div class="history-timeline">
                                 <div class="timeline">
-                                    <div class="timeline-item current">
-                                        <div class="tl-dot"></div>
-                                        <div class="tl-period">2018-present</div>
-                                        <div class="tl-role">Chief Executive</div>
-                                        <div class="tl-org">Palli Mongal Karmosuchi (PMK)</div>
-                                        <div class="tl-address">Zirabo, Ashulia, Dhaka-1341</div>
-                                    </div>
-
                                     <div class="timeline-item">
                                         <div class="tl-dot"></div>
-                                        <div class="tl-period">2014-2018</div>
+                                        <div class="tl-period">2023-Present</div>
                                         <div class="tl-role">Deputy Chief Executive</div>
                                         <div class="tl-org">Palli Mongal Karmosuchi (PMK)</div>
                                         <div class="tl-address">Zirabo, Ashulia, Dhaka-1341</div>
@@ -396,7 +394,7 @@
 
                                     <div class="timeline-item">
                                         <div class="tl-dot"></div>
-                                        <div class="tl-period">2010-2014</div>
+                                        <div class="tl-period">2015-2020</div>
                                         <div class="tl-role">Director, Program</div>
                                         <div class="tl-org">Palli Mongal Karmosuchi (PMK)</div>
                                         <div class="tl-address">Zirabo, Ashulia, Dhaka-1341</div>
@@ -404,7 +402,7 @@
 
                                     <div class="timeline-item">
                                         <div class="tl-dot"></div>
-                                        <div class="tl-period">2007-2010</div>
+                                        <div class="tl-period">2012-2015</div>
                                         <div class="tl-role">Deputy Director, Program</div>
                                         <div class="tl-org">Palli Mongal Karmosuchi (PMK)</div>
                                         <div class="tl-address">Zirabo, Ashulia, Dhaka-1341</div>
@@ -412,7 +410,7 @@
 
                                     <div class="timeline-item">
                                         <div class="tl-dot"></div>
-                                        <div class="tl-period">2005-2007</div>
+                                        <div class="tl-period">2010-2012</div>
                                         <div class="tl-role">Assistant Director, Program</div>
                                         <div class="tl-org">Palli Mongal Karmosuchi (PMK)</div>
                                         <div class="tl-address">Zirabo, Ashulia, Dhaka-1341</div>
@@ -601,23 +599,23 @@
                                         <p> In the name of God, Most Gracious, Most Merciful</p>
                                     </div>
                                     <p class="msg-body">
-                                        As we reflect on our journey at Palli Mongal Karmosuchi (PMK), we are reminded of our humble beginnings in 1988, initiated by the voluntary efforts of local youth. Today, we stand as a leadin non-profit organization committed to the socio-economic development of Bangladesh.
-                                        Our Microfinance Program plays a vital role in fostering entrepreneurship and creating employment opportunities across 35 districts. By supporting small entrepreneurs, we contribute to sustainable economic growth and empower communities to thrive.
+                                        At Palli Mongal Karmosuchi (PMK), our journey of empowering commu-nities and fostering sustainable development has been at the heart of our mission since 1988. What began with the dedication of local youth has now grown into a nation wide movement, driving positive change across Bangladesh.
                                     </p>
                                     <p class="msg-body">
-                                        We remain steadfast in our commitment to transparency, accountabilty and innovation. Our focus is on deepening our impact and expanding our reach to serve more individuals in need, promoting social equity and sustainable development.
+                                        Our Microfinance Program reflects this mission by supporting small-scale entrepreneurs, helping them grow their businesses and create job opportu-nities. By doing so, we're not only enhancing individual livelihoods but also strengthening the broader economic fabric in 35 districts.
+                                        As we continue to expand our efforts, our commitment to transparency, accountability and innovation remains unwavering. We believe that collaboration and fresh ideas will enable us to extend our reach and provide more impactful support to those in need.
                                     </p>
                                     <p class="msg-body">
-                                        We express our heartfelt gratitude to our dedicated staff, partnersaaaa and supporters. Together, we will continue to achieve new milestones and create lasting change.
+                                        With deep gratitude, I acknowledge the tireless efforts of our staff, partners and supporters. Together, we are building a future that promises growth, opportunity and lasting change for all.
                                     </p>
                                 </div>
                                 <div class="msg-monogram">
                                     <figure class="msg-person-image">
-                                        <img src="../assets/photos/kamrun_nahar_executive_of_pmk.png" alt="kamrun_nahar_executive_of_pmk">
+                                        <img src="../assets/photos/dewan_faisal_deputy_of_pmk.png" alt="dewan_faisal_deputy_of_pmk">
                                     </figure>
                                     <div class="msg-sign">
-                                        <span class="person">Kamrun Nahar</span>
-                                        <span class="person-role">Chief Executive</span>
+                                        <span class="person">Dewan Faisal</span>
+                                        <span class="person-role">Deputy Chief Executive</span>
                                         <span class="person-org">Palli Mongal Karmosuchi (PMK)</span>
                                     </div>
                                 </div>
@@ -639,12 +637,12 @@
                                     <!-- row  -->
                                     <div class="detail-row">
                                         <span class="detail-label">Full Name</span>
-                                        <span class="detail-value">Kamrun Nahar</span>
+                                        <span class="detail-value">Dewan Faisal</span>
                                     </div>
                                     <!-- row  -->
                                     <div class="detail-row">
                                         <span class="detail-label">Date Of Birth</span>
-                                        <span class="detail-value">January 1, 1978</span>
+                                        <span class="detail-value">March 10, 1985</span>
                                     </div>
                                     <!-- row  -->
                                     <div class="detail-row">
@@ -678,7 +676,7 @@
                                     <!-- row  -->
                                     <div class="detail-row">
                                         <span class="detail-label">Email</span>
-                                        <span class="detail-value">ce@pmk-bd.org</span>
+                                        <span class="detail-value">dce@pmk-bd.org</span>
                                     </div>
                                     <!-- row  -->
                                     <div class="detail-row">

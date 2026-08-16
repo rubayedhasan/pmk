@@ -58,7 +58,7 @@ if (isset($_GET['user_id'])) {
 
         <header class="profile-page-header">
             <div class="cv-header">
-                <button class="back-btn" onclick="cvGoBack()">
+                <button class="back-btn" onclick="window.history.back()">
                     ← Back
                 </button>
                 <div class="actions">
@@ -78,7 +78,7 @@ if (isset($_GET['user_id'])) {
             <aside class="profile-aside">
                 <!-- profile image  -->
                 <figure class="profile-picture">
-                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo $general_info['profile_picture'];
+                    <img src="https://careers.pmk-bd.org/assets/candidate_picture/<?php echo htmlspecialchars($general_info['profile_picture']);
                                                                                     ?>"
                         alt="<?php echo $general_info['candidate_name'];
                                 ?>">
@@ -158,7 +158,7 @@ if (isset($_GET['user_id'])) {
                         </figure>
 
                         <h5 class="signature-name">
-                            <?php echo $general_info['candidate_name']; ?>
+                            <?php echo htmlspecialchars($general_info['candidate_name']); ?>
                         </h5>
                     </div>
                 </div>
