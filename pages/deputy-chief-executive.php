@@ -384,7 +384,7 @@
                             <!-- timeline  -->
                             <div class="history-timeline">
                                 <div class="timeline">
-                                    <div class="timeline-item">
+                                    <div class="timeline-item current">
                                         <div class="tl-dot"></div>
                                         <div class="tl-period">2023-Present</div>
                                         <div class="tl-role">Deputy Chief Executive</div>

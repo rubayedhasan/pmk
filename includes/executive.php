@@ -64,7 +64,7 @@
                 </div>
 
                 <!-- DED Message  -->
-                <div class="exe-col exe-ded" onclick="window.open('../pages/deputy-executive.php', '_blank')" style="cursor: pointer;">
+                <div class="exe-col exe-ded" onclick="window.open('../pages/deputy-chief-executive.php', '_blank')" style="cursor: pointer;">
                     <!-- message  -->
                     <div class="content">
                         <div class="msg-packet">
@@ -73,7 +73,7 @@
 
                         <div class="message">
                             <p>At Palli Mongal Karmosuchi (PMK), our journey of empowering communities and fostering sustainable development has been central to our mission since 1988, beginning with the dedication and voluntary efforts of local youth across different regions of Bangladesh.
-                                <a class="see-more" href="../pages/deputy-executive.php" target="_blank">See More</a>
+                                <a class="see-more" href="../pages/deputy-chief-executive.php" target="_blank">See More</a>
                             </p>
                         </div>
                     </div>

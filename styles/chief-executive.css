@@ -71,9 +71,8 @@
   /* width: 210px; */
   width: 280px;
   height: 300px;
-  /* border: 1px solid rgba(0, 148, 106, 0.25); */
   border-radius: 10px 10px 0 0;
-  background-color: var(--pmk-green-dark);
+  background: linear-gradient(135deg, #184438 0%, #154035 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,13 +94,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--pmk-dark);
-  color: var(--pmk-green);
-  padding: 16px 14px;
-  font-size: 0.9rem;
+  color: var(--pmk-white);
+  font-size: 0.825rem;
   line-height: 1.5px;
   font-weight: 500;
   text-align: center;
+  padding: 16px 14px;
+  background-color: var(--pmk-dark);
 }
 
 .hero-eyebrow {
@@ -234,7 +233,7 @@
 .sidebar-contact {
   margin-top: 16px;
   padding: 14px 18px;
-  background-color: var(--pmk-dark);
+  background-color: var(--pmk-green-dark-sublet);
   border-radius: 12px;
 }
 
@@ -249,7 +248,7 @@
 }
 
 .side-row {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.75rem;
 
   display: flex;
@@ -950,7 +949,11 @@
 
   .hero-feature-image {
     width: 180px;
-    height: 260px;
+    height: 200px;
+  }
+
+  .image-tag {
+    display: none;
   }
 
   /* overview section's styles  */
@@ -1088,7 +1091,8 @@
   }
 
   .hero-feature-image {
-    width: 190px;
+    width: 230px;
+    height: 250px;
   }
   .hero-role {
     font-size: 0.75rem;
@@ -1167,7 +1171,7 @@
   }
 
   .hero-feature-image {
-    width: 200px;
+    width: 270px;
     height: 290px;
   }
 
