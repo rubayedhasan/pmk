@@ -72,7 +72,21 @@
   width: 280px;
   height: 300px;
   border-radius: 10px 10px 0 0;
-  background: linear-gradient(135deg, #184438 0%, #154035 100%);
+  /* background: linear-gradient(135deg, #184438 0%, #154035 100%); */
+  /* background: repeating-linear-gradient(
+    135deg,
+    #184438 0px,
+    #184438 110px,
+    #174236 110px,
+    #174236 220px
+  ); */
+  background: radial-gradient(
+    circle at center,
+    #1b4a3d 0%,
+    #184438 35%,
+    #154035 65%,
+    #10352d 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,8 +247,24 @@
 .sidebar-contact {
   margin-top: 16px;
   padding: 14px 18px;
-  background-color: var(--pmk-green-dark-sublet);
   border-radius: 12px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 148, 106, 0.28),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(8, 61, 86, 0.35),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      var(--pmk-dark-sublet) 0%,
+      var(--pmk-dark) 35%,
+      var(--pmk-blue-dark) 100%
+    );
 }
 
 .side-contact-label {

@@ -66,7 +66,7 @@
 .search_form input:focus,
 .search_form select:focus {
   border-color: #128e69;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 0 0 3px rgba(18, 142, 105, 0.12);
 }
 
