@@ -53,8 +53,6 @@ function loadBranch() {
 function displayBranches(data) {
   // validation if no data found show a message
   if (data.length === 0) {
-    allBranch = [];
-
     document.querySelector(".branch-grid-layout").innerHTML = `
         <div class="branch-card" style="grid-column: 1 / -1; text-align: center"> 
             <div class="br-card-body">
@@ -323,6 +321,10 @@ clearSearchBtn.addEventListener("click", function (e) {
 function branchSelectionFilter(code, select) {
   if (code === "") {
     filterBranches = [...allBranch];
+    // Always start from page 1 after filtering
+    pageNumber = 1;
+
+    enablePagination();
   } else {
     if (select === "division") {
       filterBranches = allBranch.filter((branch) => {
@@ -335,12 +337,12 @@ function branchSelectionFilter(code, select) {
         return branch.district_code === code;
       });
     }
+
+    // Always start from page 1 after filtering
+    pageNumber = 1;
+
+    enablePagination();
   }
-
-  // Always start from page 1 after filtering
-  pageNumber = 1;
-
-  enablePagination();
 }
 
 // select element event
@@ -349,6 +351,19 @@ document
   .addEventListener("change", function (e) {
     const keyCode = this.value;
     branchSelectionFilter(keyCode, "division");
+
+    // fetch the sub category data from server
+    fetch("../server_request/fetch_district.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "division_code=" + keyCode,
+    })
+      .then((response) => response.text())
+      .then((district_data) => {
+        document.getElementById("search-district").innerHTML = district_data;
+      });
   });
 document
   .getElementById("search-district")
