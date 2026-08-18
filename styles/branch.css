@@ -235,7 +235,20 @@
   width: 100%;
   height: 260px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid rgba(30, 45, 38, 0.12);
+}
+
+.no-map {
+  width: 100%;
+  height: 260px;
+  border-radius: 8px;
+  border: 1px solid rgba(30, 45, 38, 0.12);
+  background-color: #f5f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a918d;
+  font-size: 14px;
 }
 
 .detail-row.services {
@@ -336,7 +349,7 @@
   }
 
   .branch-location {
-    height: 280px;
+    height: 220px;
   }
 
   .detail-row.services {

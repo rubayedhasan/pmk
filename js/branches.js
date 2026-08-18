@@ -83,7 +83,7 @@ function displayBranches(data) {
     .map(
       (branch) => `    
         <div class="branch-card" data-branch-code="${branch.branch_code}"
-        data-branch-name="${branch.branch_name}" data-division-code="${branch.division_code}" data-district-code="${branch.district_code}">
+        data-branch-name="${branch.branch_name}" onclick="window.location.href='../pages/branch.php?branch_code=${branch.branch_code}&branch_name=${branch.branch_name}'" style="cursor:pointer;">
                             <div class="br_card-header">
                                 <div class="br-code">
                                     ${branch.branch_code}
@@ -113,7 +113,7 @@ function displayBranches(data) {
                                         <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
                                         <path d="M3 7l9 6l9 -6" />
                                     </svg>
-                                    <a href="mailto:${branch.email_id}">
+                                    <a href="javascript:void(0)">
                                          ${branch.email_id}
                                     </a>
                                 </div>
@@ -124,7 +124,7 @@ function displayBranches(data) {
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
                                     </svg>
-                                    <a href="mailto:${branch.mobile_no}">
+                                    <a href="javascript:void(0)">
                                          ${branch.mobile_no}
                                     </a>
                                 </div>

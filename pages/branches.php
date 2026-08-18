@@ -10,7 +10,7 @@ $divisions = $conn_ad->query($get_division_query)->fetch_all(MYSQLI_ASSOC);
 $get_district_query = "SELECT  * FROM area_district";
 $districts = $conn_ad->query($get_district_query)->fetch_all(MYSQLI_ASSOC);
 
-// QUERY:: get all branche 
+// QUERY:: get all branch
 $get_branches_query = "SELECT ob.*,
 ad.division_name,
 adc.disctrict_name,
@@ -29,9 +29,6 @@ ON ob.upazilla_code = upz.upazilla_code
  WHERE branch_status = 1 ORDER BY branch_code ASC";
 $branches = $conn_ad->query($get_branches_query)->fetch_all(MYSQLI_ASSOC);
 
-// echo "<pre>";
-// print_r($branches);
-// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -164,3 +161,5 @@ $branches = $conn_ad->query($get_branches_query)->fetch_all(MYSQLI_ASSOC);
 </body>
 
 </html>
+
+<?php mysqli_close($conn_ad); ?>

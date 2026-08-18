@@ -1,3 +1,44 @@
+<?php
+// database connection 
+require_once('../db_auth/db_global.php');
+
+if (isset($_GET['branch_code'])) {
+    $branch_code = $_GET['branch_code'];
+
+    // QUERY:: get all branch
+    $get_branches_query = "SELECT ob.*,
+ad.division_name,
+adc.disctrict_name,
+upz.upazilla_name,
+oar.area_name,
+orgn.region_name,
+ozn.zone_name
+FROM office_branch AS ob
+
+LEFT JOIN area_division AS ad
+ON ob.division_code = ad.division_code
+
+LEFT JOIN area_district AS adc
+ON ob.district_code = adc.district_code
+
+LEFT JOIN area_upazilla AS upz
+ON ob.upazilla_code = upz.upazilla_code
+
+LEFT JOIN office_area AS oar
+ON ob.area_code = oar.area_code
+
+LEFT JOIN office_region AS orgn
+ON ob.region_code = orgn.region_code
+
+LEFT JOIN office_zone AS ozn
+ON ob.zone_code = ozn.zone_code
+
+ WHERE branch_code = '$branch_code'";
+    $branch = $conn_ad->query($get_branches_query)->fetch_assoc();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +66,13 @@
             <div class="container-width">
                 <div class="branch-intro-container">
                     <div class="br-intro-meta">
-                        <div class="br-meta br-code">000</div>
-                        <div class="br-meta br-division">Dhaka Division</div>
+                        <div class="br-meta br-code">
+                            <?php echo $branch['branch_code'] ?? "N/A"; ?>
+                        </div>
+                        <div class="br-meta br-division">
+                            <?php echo $branch['division_name'] ?? "N/A"; ?>
+                            Division
+                        </div>
                         <div class="br-meta br-status">
                             <span class="active-dot"></span>
                             Open Now
@@ -35,11 +81,19 @@
 
                     <div class="branch-self-container">
                         <div class="branch-self">
-                            <h3 class="branch-name">Mirpur Branch </h3>
-                            <p class="branch-text">Mirpur Upazilla, Dhaka District</p>
+                            <h3 class="branch-name">
+                                <?php
+                                echo $branch['branch_name'] ?? "N/A";
+                                echo $branch['branch_code'] !== '000' ? " Branch" : "";
+                                ?>
+                            </h3>
+                            <p class="branch-text">
+                                <?php echo $branch['upazilla_name'] ?? "N/A"; ?> Upazilla,
+                                <?php echo $branch['disctrict_name'] ?? "N/A"; ?> District
+                            </p>
                         </div>
                         <div class="action-buttons">
-                            <a href="" type="button" class="action-btn cta-call">
+                            <a href="tel:<?php echo $branch['mobile_no'] ?? "N/A"; ?>" type="button" class="action-btn cta-call">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-phone-call">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
@@ -48,7 +102,7 @@
                                 </svg>
                                 Call Branch
                             </a>
-                            <a href="" type="button" class="action-btn cta-direction">
+                            <a href="https://www.google.com/maps?q=<?php echo $branch['loc_latitute'] ?? '0'; ?>,<?php echo $branch['loc_longitute'] ?? '0'; ?>" target="_blank" type="button" class="action-btn cta-direction">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
@@ -91,7 +145,7 @@
                                     Address
                                 </div>
                                 <div class="detail-value">
-                                    PMK Bhaban, Zirabo
+                                    <?php echo $branch['address'] ?? "N/A"; ?>
                                 </div>
                             </div>
 
@@ -105,7 +159,9 @@
                                     Phone
                                 </div>
                                 <div class="detail-value">
-                                    <a href="" class="detail-value-link">017XXXXXXXXXXX</a>
+                                    <a href="tel:<?php echo $branch['mobile_no'] ?? "N/A"; ?>" class="detail-value-link">
+                                        <?php echo $branch['mobile_no'] ?? "N/A"; ?>
+                                    </a>
                                 </div>
                             </div>
 
@@ -120,7 +176,9 @@
                                     Email
                                 </div>
                                 <div class="detail-value">
-                                    <a href="" class="detail-value-link">abc@gmail.com</a>
+                                    <a href="mailto:<?php echo $branch['email_id'] ?? "N/A"; ?>" class="detail-value-link">
+                                        <?php echo $branch['email_id'] ?? "N/A"; ?>
+                                    </a>
                                 </div>
                             </div>
 
@@ -144,13 +202,29 @@
                                     Established
                                 </div>
                                 <div class="detail-value">
-                                    21 March 2026
+                                    <?php
+                                    echo !empty($branch['branch_op_date'])
+                                        ? date('d F Y', strtotime($branch['branch_op_date']))
+                                        : 'N/A';
+                                    ?>
                                 </div>
                             </div>
 
                             <!-- location  -->
                             <div class="detail-row">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58434.70163680454!2d90.30721144863277!3d23.741357400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b79a394ac3%3A0xdd67a691b0f0d64b!2sPalli%20Mongal%20Karmosuchi%20(PMK)%20Head%20Office!5e0!3m2!1sen!2sbd!4v1787033194573!5m2!1sen!2sbd" class="branch-location" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                <?php if (!empty($branch['loc_latitute']) && !empty($branch['loc_longitute'])): ?>
+                                    <iframe
+                                        src="https://www.google.com/maps?q=<?php echo $branch['loc_latitute']; ?>,<?php echo $branch['loc_longitute']; ?>&output=embed"
+                                        class="branch-location"
+                                        allowfullscreen
+                                        loading="lazy"
+                                        referrerpolicy="strict-origin-when-cross-origin">
+                                    </iframe>
+                                <?php else: ?>
+                                    <div class="branch-location no-map">
+                                        <span>Google Maps location will be added soon.</span>
+                                    </div>
+                                <?php endif; ?>
                             </div>
 
                         </div>
@@ -206,7 +280,9 @@
                                     Branch Code
                                 </div>
                                 <div class="detail-value">
-                                    000
+                                    <?php
+                                    echo $branch['branch_code'] ?? "N/A";
+                                    ?>
                                 </div>
                             </div>
 
@@ -221,7 +297,7 @@
                                     Branch Name
                                 </div>
                                 <div class="detail-value">
-                                    Mirpur Branch
+                                    <?php echo $branch['branch_name'] ?? "N/A"; ?>
                                 </div>
                             </div>
 
@@ -236,7 +312,7 @@
                                     Area
                                 </div>
                                 <div class="detail-value">
-                                    000
+                                    <?php echo $branch['area_name'] ?? "N/A"; ?>
                                 </div>
                             </div>
 
@@ -251,7 +327,7 @@
                                     Region
                                 </div>
                                 <div class="detail-value">
-                                    Mirpur Branch
+                                    <?php echo $branch['region_name'] ?? "N/A"; ?>
                                 </div>
                             </div>
 
@@ -266,7 +342,7 @@
                                     Zone
                                 </div>
                                 <div class="detail-value">
-                                    Mirpur Branch
+                                    <?php echo $branch['zone_name'] ?? "N/A"; ?>
                                 </div>
                             </div>
 
@@ -307,3 +383,5 @@
 </body>
 
 </html>
+
+<?php mysqli_close($conn_ad); ?>
