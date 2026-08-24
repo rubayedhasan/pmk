@@ -28,6 +28,14 @@
                     <!-- mini-navbar  -->
                     <ul class="mini-navbar">
                         <li>
+                            <a class="mini-nav-link" href="../pages/download_pmk_app.php">
+                                <span class="nav-icon">
+                                    <img src="../assets/icons/download-solid-full.svg" alt="DOWNLOAD icon">
+                                </span>
+                                <span>DOWNLOAD</span>
+                            </a>
+                        </li>
+                        <li>
                             <a class="mini-nav-link" href="../pages/news.php">
                                 <span class="nav-icon">
                                     <img src="../assets/icons/newspaper-regular-full.svg" alt="newspaper icon">
