@@ -18,8 +18,12 @@
   flex-shrink: 0;
 }
 
-.panel-search-box {
+.circular-page.panel-search-box {
   flex: 0.5;
+}
+
+.panel-search-box {
+  flex: 0.8;
 }
 
 .panel-button-box {

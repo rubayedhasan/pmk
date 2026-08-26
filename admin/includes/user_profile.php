@@ -7,6 +7,10 @@ if (isset($_GET['user_id'])) {
     $user_id = $_GET['user_id'];
     $circular_id = $_GET['circular_id'];
 
+    // QUERY:: get circular name 
+    $get_circular_list_query = "SELECT  circular_title FROM publish_circular Where circular_id = '$circular_id'";
+    $circular_name = $dbConnection->query($get_circular_list_query)->fetch_assoc();
+
     // QUERY:: general information 
     $get_generalInfo_query = "SELECT * FROM candidate_general_information WHERE user_id = '$user_id' AND circular_id = '$circular_id' LIMIT 1";
     $general_info = $dbConnection->query($get_generalInfo_query)->fetch_assoc();
@@ -168,6 +172,9 @@ if (isset($_GET['user_id'])) {
 
             <!-- sub-section:: profile main content  -->
             <div class="profile-content">
+                <span class="job-circular-name">
+                    <?php echo $circular_name['circular_title']; ?>
+                </span>
 
                 <!-- personal info  -->
                 <div class="profile-content-info">

@@ -41,7 +41,7 @@ $all_circular = $dbConnection->query($all_circular_query)->fetch_all(MYSQLI_ASSO
         </div>
 
         <!-- search box  -->
-        <div class="panel-search-box">
+        <div class="circular-page panel-search-box">
             <form method="post" class="search_form">
                 <input type="search" name="search_circular" id="search-circular" placeholder="Search by ID or Title">
                 <button type="submit" class="src-btn-submit" title="submit">

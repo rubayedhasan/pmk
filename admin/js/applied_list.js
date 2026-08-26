@@ -22,11 +22,39 @@ let candidateFilteredData = [];
 // circular select functionality
 const selectCircular = document.getElementById("select-circular");
 selectCircular.addEventListener("change", function () {
+  // Update circular title
+  document.getElementById("selected-circular-title").innerText =
+    selectCircular.options[selectCircular.selectedIndex].text;
+
+  // Reset all filters
+  searchCandidate.value = "";
+  eduSearch.value = "";
+  higherDegree.value = "";
+
+  // Load candidates for the selected circular
   loadCandidates(this.value);
 });
 
 // load Candidate data functionality
 function loadCandidates(circularId = "") {
+  const tbody = document.getElementById("applied_list_tbody");
+
+  // Show loading state
+  tbody.innerHTML = `
+    <tr>
+      <td colspan="9" style="text-align:center; padding:30px;">
+        <div class="loading-state">
+          <span class="loading-spinner"></span>
+          <span>Loading candidates...</span>
+        </div>
+      </td>
+    </tr>
+  `;
+
+  // Optional: clear pagination/details while loading
+  document.getElementById("pagination").innerHTML = "";
+  document.querySelector(".page-details").textContent = "";
+
   fetch(fetchUrl, {
     method: "POST",
     headers: {
@@ -34,16 +62,25 @@ function loadCandidates(circularId = "") {
     },
     body: "circular_id=" + encodeURIComponent(circularId),
   })
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch candidate data");
+      }
+
+      return res.json();
+    })
     .then((data) => {
       if (data.length === 0) {
         candidateAllData = [];
+        candidateFilteredData = [];
 
-        document.getElementById("applied_list_tbody").innerHTML = `<tr>
-                <td colspan="9" style="text-align:center">
-                    No Data Found
-                </td>
-            </tr>`;
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="8" style="text-align:center">
+              No Data Found
+            </td>
+          </tr>
+        `;
 
         document.getElementById("pagination").innerHTML = "";
         document.querySelector(".page-details").textContent = "";
@@ -58,6 +95,23 @@ function loadCandidates(circularId = "") {
       pageNumber = 1;
 
       enablePagination();
+    })
+    .catch((error) => {
+      console.error("Error loading candidates:", error);
+
+      candidateAllData = [];
+      candidateFilteredData = [];
+
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="8" style="text-align:center; padding:30px;">
+            Failed to load candidate data.
+          </td>
+        </tr>
+      `;
+
+      document.getElementById("pagination").innerHTML = "";
+      document.querySelector(".page-details").textContent = "";
     });
 }
 
@@ -73,14 +127,14 @@ function displayTableData(data) {
                                 </figure>
                             </td>
                             <td>
-                                <span class='circular-id'>
-                                   ${candidate.user_id}
-                                </span>
-                            </td>
-                            <td>
+                                <div style="display:flex; flex-direction:column; gap:2px;">
                                 <span class='item-title'>
                                     ${candidate.candidate_name}
+                                </span>                                
+                                <span class='circular-id'>
+                                    ${candidate.user_id}
                                 </span>
+                                </div>
                             </td>
                             <td>
                                 <span class='open-position'>
@@ -89,17 +143,12 @@ function displayTableData(data) {
                             </td>
                             <td>
                                 <div class='edu-section' >
-                                    ${candidate.edu_institutions}
+                                    ${candidate.edu_institution}
                                 </div>
                             </td>
                             <td>
-                                 <div>
-                                    <span class='open-position'>
-                                    ${candidate.circular_title}
-                                    </span>
-                                    <span class='circular-id'>
-                                        ${candidate.circular_id}
-                                    </span>
+                                <div class='edu-section' >
+                                    ${candidate.edu_examination} in ${candidate.edu_msubject}
                                 </div>
                             </td>
                             <td>
@@ -393,44 +442,14 @@ document.getElementById("per-page").addEventListener("change", function () {
 });
 
 // live search functionality
-// const searchCandidate = document.getElementById("search-candidate");
-// searchCandidate.addEventListener("input", function () {
-//   const searchKeyword = this.value.trim().toLowerCase();
-//   const filteredData = candidateAllData.filter((candidate) => {
-//     const userId = String(candidate.user_id ?? "").toLowerCase();
-//     const candidateName = String(candidate.candidate_name ?? "").toLowerCase();
-//     const candidatePhone = String(
-//       candidate.user_id?.split("-")[1] ?? "",
-//     ).toLowerCase();
-//     return (
-//       userId.includes(searchKeyword) ||
-//       candidateName.includes(searchKeyword) ||
-//       candidatePhone.includes(searchKeyword)
-//     );
-//   });
-//   displayTableData(filteredData);
-// });
-
-// // university search
-// const eduSearch = document.getElementById("search-edu");
-// eduSearch.addEventListener("input", function () {
-//   const eduKey = this.value.trim().toLowerCase();
-//   const filterDataByEdu = candidateAllData.filter((candidate) => {
-//     const eduInstitute = String(candidate.edu_institutions ?? "").toLowerCase();
-
-//     return eduInstitute.includes(eduKey);
-//   });
-
-//   displayTableData(filterDataByEdu);
-// });
-
-// live search functionality
 const searchCandidate = document.getElementById("search-candidate");
 const eduSearch = document.getElementById("search-edu");
+const higherDegree = document.getElementById("select-higher-degree");
 
 function filterCandidates() {
   const searchKeyword = searchCandidate.value.trim().toLowerCase();
   const eduKey = eduSearch.value.trim().toLowerCase();
+  const degreeKey = higherDegree.value.trim().toLowerCase();
 
   candidateFilteredData = candidateAllData.filter((candidate) => {
     const userId = String(candidate.user_id ?? "").toLowerCase();
@@ -441,28 +460,356 @@ function filterCandidates() {
       candidate.user_id?.split("-")[1] ?? "",
     ).toLowerCase();
 
-    const eduInstitute = String(candidate.edu_institutions ?? "").toLowerCase();
+    const eduInstitute = String(candidate.edu_institution ?? "").toLowerCase();
 
+    const candidateDegree = String(
+      candidate.edu_examination ?? "",
+    ).toLowerCase();
+
+    // Search by ID / name / phone
     const candidateMatch =
       !searchKeyword ||
       userId.includes(searchKeyword) ||
       candidateName.includes(searchKeyword) ||
       candidatePhone.includes(searchKeyword);
 
+    // Search by university
     const educationMatch = !eduKey || eduInstitute.includes(eduKey);
 
-    return candidateMatch && educationMatch;
+    // Filter by higher degree
+    let degreeMatch = true;
+    if (degreeKey) {
+      degreeMatch = candidateDegree.includes(degreeKey);
+    }
+
+    return candidateMatch && educationMatch && degreeMatch;
   });
 
   // Always start from page 1 after filtering
   pageNumber = 1;
-
   enablePagination();
 }
 
+// Search filters
 searchCandidate.addEventListener("input", filterCandidates);
-
 eduSearch.addEventListener("input", filterCandidates);
+
+// Higher degree filter
+higherDegree.addEventListener("change", function () {
+  filterCandidates();
+});
 
 // load candidate data default
 loadCandidates();
+
+// ============================================================
+// Excel Export
+// ============================================================
+
+const downloadExcelButton = document.getElementById("download-excel");
+downloadExcelButton.addEventListener("click", function () {
+  const circularId = selectCircular.value;
+  if (circularId === "") {
+    return alert("Please select a circular first.");
+  }
+
+  if (!candidateAllData || candidateAllData.length === 0) {
+    return alert("No candidates available for this circular.");
+  }
+
+  // export excel file function call
+  downloadCandidatesExcel(candidateAllData);
+});
+
+// ============================================================
+// Create Excel File
+// ============================================================
+
+function downloadCandidatesExcel(candidates) {
+  let excelContent = `
+      <html>
+
+          <head>
+                <meta charset = "UTF-8">
+
+                <style>
+                    table{
+                        border-collapse: collapse;
+                        width:100%;                    
+                    }
+
+                    th,td{
+                        padding: 6px;
+                        vertical-align: middle;
+                        border: 1px solid #000000;                    
+                    }
+
+                    th{
+                       text-align: center;
+                       font-weight: 700;
+                       background-color: #09EAF7;                 
+                    }
+
+                    td{
+                        text-align: center;                    
+                    }
+
+                    .text-left{
+                        text-align: left;                 
+                    }
+                </style>
+          </head>
+
+          <body>
+
+              <table>
+                  <thead>
+                                  <!-- =========================
+                                               HEADER ROW 1
+                                  ========================== -->
+                    <tr>
+                        <th rowspan="2">SL.</th>
+                        <th rowspan="2">Name</th>
+                        <th colspan="5">Educational Qualification</th>
+                        <th colspan="2">Experience</th>
+                        <th colspan="2">Working Period</th>
+                        <th rowspan="2">Date of Birth</th>
+                        <th rowspan="2">Age</th>
+                        <th rowspan="2">Address</th>
+                        <th rowspan="2">Contact Number</th>
+                    </tr>
+                    
+                                  <!-- =========================
+                                               HEADER ROW 2
+                                  ========================== -->
+                    <tr>
+                            <!-- Education -->
+                        <th>Institute</th>
+                        <th>Degree</th>
+                        <th>Subject</th>
+                        <th>Academic Year</th>
+                        <th>Result</th>
+
+                            <!-- experience -->
+                        <th>Org. Name</th>
+                        <th>Designation</th>
+
+                            <!-- working period -->
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>                    
+
+                  </thead>
+
+                  <tbody>
+                  `;
+  // ========================================================
+  // Candidate Rows
+  // ========================================================
+
+  candidates.forEach(function (candidate, idx) {
+    const experiences = candidate.experiences || [];
+
+    // If candidate has no experience, create one empty row
+    const experienceRows =
+      experiences.length > 0
+        ? experiences
+        : [
+            {
+              org_name: "",
+              project_name: "",
+              from_date: "",
+              to_date: "",
+            },
+          ];
+
+    const rowSpan = experienceRows.length;
+
+    experienceRows.forEach(function (experience, experienceIndex) {
+      excelContent += `<tr>`;
+
+      // ====================================================
+      // Candidate information
+      // ====================================================
+
+      if (experienceIndex === 0) {
+        excelContent += `
+                <td rowspan="${rowSpan}">
+                    ${idx + 1}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.candidate_name)}
+                </td>
+            `;
+      }
+
+      // ====================================================
+      // Education
+      // ====================================================
+      if (experienceIndex === 0) {
+        excelContent += `
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.edu_institution)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.edu_examination)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.edu_msubject)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.academic_year)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.result)}
+                </td>
+            `;
+      }
+
+      // ====================================================
+      // Experience
+      // ====================================================
+
+      excelContent += `
+            <td>
+                ${escapeExcelValue(experience.org_name)}
+            </td>
+
+            <td>
+                ${escapeExcelValue(experience.project_name)}
+            </td>
+
+            <td>
+                ${escapeExcelValue(experience.from_date)}
+            </td>
+
+            <td>
+                ${escapeExcelValue(experience.to_date)}
+            </td>
+        `;
+
+      // ====================================================
+      // Candidate address age contact
+      // ====================================================
+
+      if (experienceIndex === 0) {
+        excelContent += `
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.date_of_birth)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${calculateTheAge(
+                      candidate.date_of_birth,
+                      candidate.age_deadline,
+                    )}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.per_upazilla)},
+                    ${escapeExcelValue(candidate.per_post)}-
+                    ${escapeExcelValue(candidate.per_post_code)},
+                    ${escapeExcelValue(candidate.per_district)},
+                    ${escapeExcelValue(candidate.per_division)}
+                </td>
+
+                <td rowspan="${rowSpan}">
+                    ${escapeExcelValue(candidate.user_id?.split("-")[1] || "")}
+                </td>
+            `;
+      }
+
+      excelContent += `</tr>`;
+    });
+  });
+
+  excelContent += `  </tbody>
+
+              </table>
+
+          </body>
+
+
+      </html>
+
+  `;
+
+  // ========================================================
+  // Calculate the age
+  // ========================================================
+  function calculateTheAge(dob, ageDeadline) {
+    if (!dob || !ageDeadline) {
+      return "";
+    }
+
+    const birth = new Date(dob);
+    const deadline = new Date(ageDeadline);
+
+    if (isNaN(birth.getTime() || isNaN(deadline.getTime()))) {
+      return "";
+    }
+
+    let years = deadline.getFullYear() - birth.getFullYear();
+    let months = deadline.getMonth() - birth.getMonth();
+
+    return `${years} year ${months} month`;
+  }
+
+  // ========================================================
+  // Create Blob
+  // ========================================================
+
+  const blob = new Blob(["\ufeff", excelContent], {
+    type: "application/vnd.ms-excel",
+  });
+
+  // ========================================================
+  // Create Blob
+  // ========================================================
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+
+  link.download = getExcelFileName();
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+}
+
+// ============================================================
+// Escape HTML Values
+// ============================================================
+function escapeExcelValue(value) {
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/}/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+// ========================================================
+// Excel File Name
+// ========================================================
+function getExcelFileName() {
+  const fileName = selectCircular.options[selectCircular.selectedIndex].text
+    .replace(/[\\/:*?"<>|[\]]/g, "")
+    .trim();
+
+  return `${fileName || "candidates"}.xls`;
+}
