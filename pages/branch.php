@@ -16,22 +16,22 @@ ozn.zone_name
 FROM office_branch AS ob
 
 LEFT JOIN area_division AS ad
-ON ob.division_code = ad.division_code
+ON ob.bdivision_code = ad.division_code
 
 LEFT JOIN area_district AS adc
-ON ob.district_code = adc.district_code
+ON ob.bdistrict_code = adc.district_code
 
 LEFT JOIN area_upazilla AS upz
-ON ob.upazilla_code = upz.upazilla_code
+ON ob.bupazilla_code = upz.upazilla_code
 
 LEFT JOIN office_area AS oar
-ON ob.area_code = oar.area_code
+ON ob.barea_code = oar.area_code
 
 LEFT JOIN office_region AS orgn
-ON ob.region_code = orgn.region_code
+ON ob.bregion_code = orgn.region_code
 
 LEFT JOIN office_zone AS ozn
-ON ob.zone_code = ozn.zone_code
+ON ob.bzone_code = ozn.zone_code
 
  WHERE branch_code = '$branch_code'";
     $branch = $conn_ad->query($get_branches_query)->fetch_assoc();

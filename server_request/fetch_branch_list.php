@@ -15,13 +15,13 @@ upz.upazilla_name
 FROM office_branch AS ob
 
 LEFT JOIN area_division AS ad
-ON ob.division_code = ad.division_code
+ON ob.bdivision_code = ad.division_code
 
 LEFT JOIN area_district AS adc
-ON ob.district_code = adc.district_code
+ON ob.bdistrict_code = adc.district_code
 
 LEFT JOIN area_upazilla AS upz
-ON ob.upazilla_code = upz.upazilla_code
+ON ob.bupazilla_code = upz.upazilla_code
 
  WHERE branch_status = 1 ORDER BY branch_code ASC";
 

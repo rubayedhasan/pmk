@@ -45,19 +45,19 @@ $dbConnection = $conn;
         include_once("../includes/glance.php");
 
         // Linked section:: PMK Projects
-        include_once("../includes/projects.php");
+        // include_once("../includes/projects.php");
 
         // Linked section:: Gallery
-        include_once("../includes/gallery.php");
+        // include_once("../includes/gallery.php");
 
         // Linked section:: video Gallery 
-        include_once("../includes/video-gallery.php");
+        // include_once("../includes/video-gallery.php");
 
         // Linked section:: Latest News
         include_once("../includes/recent-activities.php");
 
         // Linked section:: PMK Partners 
-        include_once("../includes/partner.php");
+        // include_once("../includes/partner.php");
         ?>
 
         <!-- back to top button  -->

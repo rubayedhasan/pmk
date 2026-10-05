@@ -399,3 +399,19 @@
 /* responsive styles:: extra extra large devices  */
 @media (min-width: 1400px) {
 }
+
+/* print layout */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  #main-page {
+    border: none;
+  }
+
+  #main-page * {
+    color: #000 !important;
+  }
+}
