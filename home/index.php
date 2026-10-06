@@ -23,7 +23,7 @@ $dbConnection = $conn;
 <body>
     <?php
     // Linked section:: Navar/Header
-    include_once("../includes/navbar.php");
+    include_once("../includes/navbar_outlet.php");
 
     // Linked section:: Banner
     include_once("../includes/banner.php");
