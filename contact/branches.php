@@ -49,7 +49,7 @@ $branches = $conn_ad->query($get_branches_query)->fetch_all(MYSQLI_ASSOC);
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/navbar.php");
+    include("../includes/navbar_outlet.php");
     ?>
 
     <!-- section::Main  -->

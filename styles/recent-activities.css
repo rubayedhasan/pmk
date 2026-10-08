@@ -6,11 +6,8 @@
 }
 
 #project-update {
-  /* padding: 60px 0;
-  background-color: rgba(0, 0, 0, 0.03); */
-  /* background: linear-gradient(135deg, #f0fdfa, #ecfeff); */
   padding: 120px 0;
-  background-color: var(--pmk-white);
+  background: linear-gradient(135deg, #f0fdfa33, #e9feff00);
 }
 
 /* responsive styles:: small devices  */

@@ -11,27 +11,47 @@
 
 <body>
 
-    <div class="container-width">
-        <!-- section:: About Image  -->
-        <section id="about-image-container">
-            <!-- 1st: image  -->
-            <div class="image-wrapper">
-                <figure class="long-img-container shinny-effect">
-                    <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/pmk-team-2.jpg" alt="dummy">
-                </figure>
-                <!-- experience year -->
-                <div class="experience">
-                    <h4>38+</h4>
-                    <p>Years Of Experience</p>
-                </div>
-            </div>
+    <!-- section:: About Image  -->
+    <section class="about-image">
+        <!-- animation bubble  -->
+        <div class="bubbles" aria-hidden="true">
+            <!-- top-left group -->
+            <span class="bubble b1"></span>
+            <span class="bubble b2"></span>
+            <span class="bubble b3"></span>
+            <span class="bubble b4"></span>
+            <!-- bottom-right group -->
+            <span class="bubble b5"></span>
+            <span class="bubble b6"></span>
+            <span class="bubble b7"></span>
+            <span class="bubble b8"></span>
+        </div>
 
-            <!-- 2nd: image  -->
-            <figure class="wider-img-container shinny-effect">
-                <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/mfi-1.jpg" alt="dummy">
-            </figure>
-        </section>
-    </div>
+        <div class="container-width">
+            <div id="about-image-container">
+                <!-- 1st: image  -->
+                <div class="image-wrapper">
+                    <figure class="long-img-container shinny-effect">
+                        <img class="long-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/pmk-team-2.jpg" alt="dummy">
+                    </figure>
+                    <!-- experience year -->
+                    <div class="experience">
+                        <h4>
+                            <script>
+                                document.write(new Date().getFullYear() - 1988);
+                            </script>+
+                        </h4>
+                        <p>Years Of Experience</p>
+                    </div>
+                </div>
+
+                <!-- 2nd: image  -->
+                <figure class="wider-img-container shinny-effect">
+                    <img class="wide-img" loading="lazy" decoding="async" fetchpriority="low" src="../assets/pictures/mfi-1.jpg" alt="dummy">
+                </figure>
+            </div>
+        </div>
+    </section>
 
     <!-- section:: About Content-container  -->
     <section id="about-content-container">

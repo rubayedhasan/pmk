@@ -1,6 +1,6 @@
 /* hero  */
 #legal-hero {
-  padding: 60px 0;
+  padding: 140px 0 100px;
   background-color: var(--pmk-green);
 }
 
@@ -228,6 +228,10 @@
 
 /* Tablet */
 @media (max-width: 768px) {
+  #legal-hero {
+    padding: 60px 0;
+  }
+
   .registration-cards {
     width: 100%;
   }

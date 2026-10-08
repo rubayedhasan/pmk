@@ -68,7 +68,7 @@ if (isset($_GET["post_id"])) {
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/navbar.php");
+    include("../includes/navbar_outlet.php");
     ?>
 
     <!-- section::Main  -->
@@ -337,7 +337,7 @@ if (isset($_GET["post_id"])) {
                                     <img src='../admin/assets/uploads/posts/$thumb_img' alt='$related_post[post_title]'>
                                 </figure>
                                 <div class='related-news-card-content'>
-                                    <a href='../pages/news_page.php?post_id=$related_post[post_customid]'>
+                                    <a href='../news/news_page.php?post_id=$related_post[post_customid]'>
                                         <h4 class='rncc-title'>
                                         $related_post[post_title]
                                         </h4>

@@ -222,7 +222,7 @@ $lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQL
                     echo "
                 <article class='activity-card'>
                 <figure class='news-feature-image'>
-                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='project-feature-image-linked'>
+                    <a href='../news/news_page.php?post_id=$latest_post[post_customid]' class='project-feature-image-linked'>
                         <img src='../admin/assets/uploads/posts/$thumbnail_img' alt='$latest_post[post_title]'>
                     </a>
 
@@ -269,14 +269,14 @@ $lates_posts_arr = $dbConnection->query($get_latest_post_query)->fetch_all(MYSQL
                 <div class='news-content'>
 
                     <h4 class='news-title'>
-                        <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='linked-title'>
+                        <a href='../news/news_page.php?post_id=$latest_post[post_customid]' class='linked-title'>
                            $latest_post[post_title]
                         </a>
                     </h4>
                     <p class='news-body'>
                         $formatted_post_description
                     </p>
-                    <a href='../pages/news_page.php?post_id=$latest_post[post_customid]' class='news-link'>
+                    <a href='../news/news_page.php?post_id=$latest_post[post_customid]' class='news-link'>
                         <span> See More</span>
                         <span><i class='fa-solid fa-caret-right'></i></span>
                     </a>

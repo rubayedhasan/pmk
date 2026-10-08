@@ -19,7 +19,7 @@
 
                 <!-- footer visit button  -->
                 <div class="button-container">
-                    <a href="../pages/contact.php" class="visit-btn button-effect">
+                    <a href="../contact/contact.php" class="visit-btn button-effect">
                         <span><i class="fa-solid fa-people-group"></i></span>
                         <span>Become A Member</span></a>
                 </div>

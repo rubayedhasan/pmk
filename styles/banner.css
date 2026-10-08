@@ -1,8 +1,8 @@
 /* slider section styles  */
 .slider-container {
   position: relative;
-  /* height: 100%; */
-  height: calc(100vh - 64px);
+  height: 100vh;
+  /* height: calc(100vh - 64px); */
   width: 100%;
   overflow: hidden;
 }
@@ -15,6 +15,7 @@
 
 .slider-wrapper .slider-item .slider-image {
   position: relative;
+  margin: 0;
 }
 
 .slider-wrapper .slider-item .slider-image img {
@@ -190,7 +191,7 @@
   }
 
   .slider-wrapper .slider-item .slider-content {
-    bottom: 12px;
+    bottom: 22px;
     gap: 10px;
   }
   .slider-item .slider-content .slider-title {
@@ -255,7 +256,7 @@
   }
 
   .slider-container .slider-controls {
-    bottom: 30px;
+    bottom: 12px;
   }
 }
 

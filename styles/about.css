@@ -3,14 +3,219 @@
 
 /* about section styles  */
 /* about image  */
+.about-image {
+  background: linear-gradient(135deg, rgb(240, 253, 250), rgb(236, 254, 255));
+  padding: 40px 0 200px;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   ABOUT IMAGE: BACKGROUND CHANGE
+   ===================================================== */
+.about-image {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 650px;
+  padding: 40px 0 200px;
+  background: linear-gradient(135deg, #f8fdfb 0%, #eaf6f1 50%, #f1f9fb 100%);
+}
+
+/* two soft color blobs that slowly drift */
+.about-image::before,
+.about-image::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: clamp(260px, 45vw, 560px);
+  height: clamp(260px, 45vw, 560px);
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.about-image::before {
+  top: -10%;
+  left: -8%;
+  background: rgba(0, 148, 106, 0.13);
+  animation: blobOne 22s ease-in-out infinite alternate;
+}
+
+.about-image::after {
+  bottom: -15%;
+  right: -8%;
+  background: rgba(111, 205, 176, 0.25);
+  animation: blobTwo 22s ease-in-out infinite alternate;
+}
+
+@keyframes blobOne {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40%, 30%) scale(1.2);
+  }
+  100% {
+    transform: translate(10%, 70%) scale(1);
+  }
+}
+
+@keyframes blobTwo {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40%, -30%) scale(1.2);
+  }
+  100% {
+    transform: translate(-10%, -70%) scale(1);
+  }
+}
+
+/* =====================================================
+   ABOUT IMAGE: FLOATING BUBBLES
+   ===================================================== */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 28%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.5) 20%,
+    rgba(200, 238, 226, 0.4) 60%,
+    rgba(150, 215, 195, 0.45) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.8),
+    0 4px 14px rgba(111, 205, 176, 0.2);
+}
+
+/* ---- top-left group ---- */
+.b1 {
+  width: 54px;
+  height: 54px;
+  top: 18%;
+  left: 8%;
+  animation: floatB 10s ease-in-out infinite;
+}
+.b2 {
+  width: 32px;
+  height: 32px;
+  top: 28%;
+  left: 15%;
+  animation: floatC 8s ease-in-out infinite;
+}
+.b3 {
+  width: 22px;
+  height: 22px;
+  top: 12%;
+  left: 16%;
+  animation: floatA 7s ease-in-out infinite reverse;
+}
+.b4 {
+  width: 14px;
+  height: 14px;
+  top: 24%;
+  left: 4%;
+  animation: floatB 6s ease-in-out infinite reverse;
+}
+
+/* ---- bottom-right group ---- */
+.b5 {
+  width: 54px;
+  height: 54px;
+  bottom: 18%;
+  right: 8%;
+  animation: floatB 10s ease-in-out infinite;
+}
+.b6 {
+  width: 32px;
+  height: 32px;
+  bottom: 28%;
+  right: 15%;
+  animation: floatC 8s ease-in-out infinite;
+}
+.b7 {
+  width: 22px;
+  height: 22px;
+  bottom: 12%;
+  right: 16%;
+  animation: floatA 7s ease-in-out infinite reverse;
+}
+.b8 {
+  width: 14px;
+  height: 14px;
+  bottom: 24%;
+  right: 4%;
+  animation: floatB 6s ease-in-out infinite reverse;
+}
+
+/* three different curved paths */
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(14px, -18px);
+  }
+  50% {
+    transform: translate(-6px, -32px);
+  }
+  75% {
+    transform: translate(-16px, -12px);
+  }
+}
+
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-16px, -14px);
+  }
+  60% {
+    transform: translate(8px, -28px);
+  }
+  80% {
+    transform: translate(18px, -10px);
+  }
+}
+
+@keyframes floatC {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(10px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -22px);
+  }
+  80% {
+    transform: translate(-4px, -8px);
+  }
+}
+
 #about-image-container {
-  margin-top: 45px;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 240px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 .image-wrapper {
   position: relative;
   display: flex;
@@ -23,6 +228,7 @@
   width: 0;
   height: 510px;
   position: relative;
+  z-index: 1000;
   transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -34,10 +240,10 @@
 
 .wider-img-container {
   width: 0;
-  height: 330px;
+  height: 310px;
   position: absolute;
-  bottom: -70px;
-  left: 610px;
+  bottom: -110px;
+  left: 670px;
   z-index: 5000;
   opacity: 0;
   transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -45,7 +251,8 @@
 
 .about-visible .wider-img-container {
   opacity: 1;
-  width: 443px;
+  /* width: 443px; */
+  width: 500px;
   transition-delay: 0.5s;
 }
 
@@ -126,14 +333,57 @@
 
 /* about content  */
 #about-content-container {
-  margin-top: 120px;
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 40px 0;
+  padding: 80px 0;
 }
 
 /*responsive styles:: small devices  */
 @media (max-width: 767.98px) {
   /* about section  */
+  .about-image {
+    padding: 70px 0 200px;
+    background: linear-gradient(135deg, rgb(240, 253, 250), rgb(236, 254, 255));
+  }
+
+  /* animation bubble  */
+  .about-image::before,
+  .about-image::after {
+    filter: blur(50px);
+  }
+
+  .b1 {
+    width: 32px;
+    height: 32px;
+    left: 5%;
+  }
+  .b2 {
+    width: 22px;
+    height: 22px;
+    left: 2%;
+  }
+  .b3 {
+    width: 14px;
+    height: 14px;
+  }
+  .b5 {
+    width: 36px;
+    height: 36px;
+    right: 5%;
+  }
+  .b6 {
+    width: 22px;
+    height: 22px;
+  }
+  .b7 {
+    width: 16px;
+    height: 16px;
+  }
+
+  .b4,
+  .b8 {
+    display: none;
+  }
+
   #about-image-container {
     height: auto;
   }
@@ -149,8 +399,10 @@
   .wider-img-container {
     height: 200px;
     position: absolute;
-    left: 100px;
-    bottom: -100px;
+    /* left: 100px;
+    bottom: -100px; */
+    left: 120px;
+    bottom: -120px;
   }
 
   .about-visible .wider-img-container {
@@ -169,6 +421,9 @@
 
   .experience h4 {
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2px;
   }
 
   .experience p {
@@ -184,6 +439,21 @@
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* about image container  */
+  .about-image {
+    padding: 50px 0 200px;
+    background: linear-gradient(135deg, rgb(240, 253, 250), rgb(236, 254, 255));
+  }
+
+  /* for bubble  */
+  .b1 {
+    width: 40px;
+    height: 40px;
+  }
+  .b5 {
+    width: 44px;
+    height: 44px;
+  }
+
   .long-img-container {
     height: 508px;
   }
@@ -197,11 +467,16 @@
     left: 250px;
   }
 
+  .wider-img-container {
+    height: 280px;
+    bottom: -110px;
+    left: 220px;
+  }
+
   .about-visible .wider-img-container {
     width: 435px;
   }
 
-  /* about content container  */
   /* about content container */
   #about-content-container {
     height: auto;
@@ -210,6 +485,15 @@
 
 /* responsive styles:: large devices  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* about image container  */
+  .about-image {
+    padding: 70px 0 200px;
+  }
+
+  #about-image-container {
+    height: calc(100vh - 270px);
+  }
+
   .wider-img-container {
     bottom: -110px;
     left: 345px;
@@ -218,6 +502,23 @@
 
 /* responsive styles:: extra large devices  */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* about image container  */
+  .about-image {
+    padding: 70px 0 200px;
+  }
+
+  #about-image-container {
+    height: calc(100vh - 270px);
+  }
+
+  .about-visible .wider-img-container {
+    width: 440px;
+  }
+  .wider-img-container {
+    height: 280px;
+    bottom: -120px;
+    left: 420px;
+  }
 }
 
 /* responsive styles:: extra extra large devices  */
@@ -265,5 +566,14 @@
 
   .experience p {
     font-size: 0.65rem;
+  }
+}
+
+/* respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .about-image::before,
+  .about-image::after,
+  .bubble {
+    animation: none;
   }
 }

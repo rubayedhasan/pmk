@@ -1,6 +1,6 @@
 /* branch page header  */
 .branch-page-header {
-  padding: 40px 0 32px;
+  padding: 120px 0 32px;
   background-color: var(--pmk-white);
 }
 
@@ -534,7 +534,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* branch page header  */
   .branch-page-header {
-    padding: 32px 0 24px;
+    padding: 120px 0 24px;
   }
 
   .search-container {
@@ -553,7 +553,14 @@
 /* responsive styles:: extra large devices  */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .branch-grid-layout {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 

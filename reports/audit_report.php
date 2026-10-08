@@ -39,7 +39,7 @@ $audit_report = $dbConnection->query($get_report_query)->fetch_all(MYSQLI_ASSOC)
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/navbar.php");
+    include("../includes/navbar_outlet.php");
     ?>
 
     <!-- section::Main  -->

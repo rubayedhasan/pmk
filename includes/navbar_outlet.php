@@ -12,7 +12,7 @@
 <body>
 
     <!-- main navbar for xl to xxl devices  -->
-    <nav class="navbar-section">
+    <nav class="navbar-section nav-focused">
         <!-- brand image  -->
         <a class="nav-logo" href="../index.php">
             <img src="../assets/logo/main-logo.png" alt="pmk logo">
@@ -23,14 +23,14 @@
         <ul class="nav-menus">
             <li class="item-nav">
                 <a href="../index.php" class="link-nav">
-                    <img src="../assets/icons/house-solid-full.svg" alt="house icon" class="like-nav-icon">
+                    <!-- <img src="../assets/icons/house-solid-full.svg" alt="house icon" class="like-nav-icon"> -->
                     Home
                 </a>
             </li>
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/address-card-solid-full.svg" alt="card icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/address-card-solid-full.svg" alt="card icon" class="like-nav-icon"> -->
                         About PMK
                     </a>
                     <!-- arrow icon dropdown  -->
@@ -43,7 +43,7 @@
                 <!-- dropdown menus  -->
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
-                        <a href="../pages/our_story.php" class="nav-dropdown-link">
+                        <a href="../about/our_story.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-book-open-reader"></i>
                             Our Story
                         </a>
@@ -67,19 +67,19 @@
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/executive_committee.php" class="nav-dropdown-link">
+                        <a href="../about/executive_committee.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-users"></i>
                             Executive Committee
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/general_committee.php" class="nav-dropdown-link">
+                        <a href="../about/general_committee.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-users-line"></i>
                             General Committee
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/page.php" class="nav-dropdown-link">
+                        <a href="../about/legal_status.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-scroll"></i>
                             Legal & Registration
                         </a>
@@ -89,7 +89,7 @@
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/slack-brands-solid-full.svg" alt="brands icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/slack-brands-solid-full.svg" alt="brands icon" class="like-nav-icon"> -->
                         Our Work
                     </a>
                     <span class="nav-arrow-icon">
@@ -100,13 +100,13 @@
                 <!-- dropdown menus  -->
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
-                        <a href="../pages/pmk_mfi.php" class="nav-dropdown-link">
+                        <a href="../our_work/pmk_mfi.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-hands-bound"></i>
                             Microfinance
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/project.php" class="nav-dropdown-link">
+                        <a href="../our_work/project.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-seedling"></i>
                             RAISE Project
                         </a>
@@ -146,7 +146,7 @@
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/brain-solid-full.svg" alt="brain icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/brain-solid-full.svg" alt="brain icon" class="like-nav-icon"> -->
                         Initiatives
                     </a>
 
@@ -158,19 +158,19 @@
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
                         <a href="../pages/page.php" class="nav-dropdown-link">
-                            <i class="fa-solid fa-book-open-reader"></i>
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
                             Technical Training
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
                         <a href="../pages/page.php" class="nav-dropdown-link">
-                            <i class="fa-solid fa-bullseye"></i>
+                            <i class="fa-solid fa-seedling"></i>
                             Tissue Culture Lab
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
                         <a href="../pages/page.php" class="nav-dropdown-link">
-                            <i class="fa-regular fa-object-group"></i>
+                            <i class="fa-solid fa-stethoscope"></i>
                             PMK Community Health
                         </a>
                     </li>
@@ -179,7 +179,7 @@
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/chart-pie-solid-full.svg" alt="pie chart icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/chart-pie-solid-full.svg" alt="pie chart icon" class="like-nav-icon"> -->
                         Reports
                     </a>
 
@@ -190,14 +190,14 @@
                 <!-- dropdown menus  -->
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
-                        <a href="../pages/annual_report.php" class="nav-dropdown-link">
-                            <i class="fa-solid fa-book-open-reader"></i>
+                        <a href="../reports/annual_report.php" class="nav-dropdown-link">
+                            <i class="fa-solid fa-chart-column"></i>
                             Annual Report
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/audit_report.php" class="nav-dropdown-link">
-                            <i class="fa-solid fa-bullseye"></i>
+                        <a href="../reports/audit_report.php" class="nav-dropdown-link">
+                            <i class="fa-solid fa-chart-line"></i>
                             Audit Report
                         </a>
                     </li>
@@ -206,7 +206,7 @@
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/newspaper-solid-full.svg" alt="newspaper icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/newspaper-solid-full.svg" alt="newspaper icon" class="like-nav-icon"> -->
                         News
                     </a>
 
@@ -217,7 +217,7 @@
                 <!-- dropdown menus  -->
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
-                        <a href="../pages/news.php" class="nav-dropdown-link">
+                        <a href="../news/news.php" class="nav-dropdown-link">
                             <i class="fa-regular fa-newspaper"></i>
                             PMK News Hub
                         </a>
@@ -238,25 +238,25 @@
                         <!-- sub drop down  -->
                         <ul class="nav-sub-dropdown-menu">
                             <li class="nav-dropdown-item">
-                                <a href="../pages/news.php" class="nav-dropdown-link">
+                                <a href="../pages/page.php" class="nav-dropdown-link">
                                     <i class="fa-solid fa-book-bookmark"></i>
                                     Case Study 1
                                 </a>
                             </li>
                             <li class="nav-dropdown-item">
-                                <a href="../pages/news.php" class="nav-dropdown-link">
+                                <a href="../pages/page.php" class="nav-dropdown-link">
                                     <i class="fa-solid fa-book-bookmark"></i>
                                     Case Study 2
                                 </a>
                             </li>
                             <li class="nav-dropdown-item">
-                                <a href="../pages/news.php" class="nav-dropdown-link">
+                                <a href="../pages/page.php" class="nav-dropdown-link">
                                     <i class="fa-solid fa-book-bookmark"></i>
                                     Case Study 3
                                 </a>
                             </li>
                             <li class="nav-dropdown-item">
-                                <a href="../pages/news.php" class="nav-dropdown-link">
+                                <a href="../pages/page.php" class="nav-dropdown-link">
                                     <i class="fa-solid fa-book-bookmark"></i>
                                     Case Study 4
                                 </a>
@@ -269,7 +269,7 @@
             <li class="item-nav nav-dropdown">
                 <div class="item-nav-block">
                     <a href="javascript:void(0)" class="link-nav">
-                        <img src="../assets/icons/partnership.png" alt="phone icon" class="like-nav-icon">
+                        <!-- <img src="../assets/icons/partnership.png" alt="phone icon" class="like-nav-icon"> -->
                         Get Involved
                     </a>
                     <span class="nav-arrow-icon">
@@ -279,13 +279,13 @@
                 <!-- dropdown menus  -->
                 <ul class="nav-dropdown-menu">
                     <li class="nav-dropdown-item">
-                        <a href="../pages/contact.php" class="nav-dropdown-link">
+                        <a href="../contact/contact.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-square-phone"></i>
                             Contact Us
                         </a>
                     </li>
                     <li class="nav-dropdown-item">
-                        <a href="../pages/working_area.php" class="nav-dropdown-link">
+                        <a href="../contact/working_area.php" class="nav-dropdown-link">
                             <i class="fa-solid fa-map-location-dot"></i>
                             Working Area
                         </a>
@@ -302,7 +302,7 @@
 
         <!-- actions  -->
         <div class="nav-actions">
-            <a href="../pages/download_pmk_app.php" class="nav-btn btn-app">
+            <a href="../app/download_pmk_app.php" class="nav-btn btn-app">
                 Android
                 <i class="fa-brands fa-android"></i>
             </a>
@@ -320,10 +320,10 @@
         </a>
 
         <div class="nav-actions">
-            <a href="../pages/download_pmk_app.php" class="nav-btn btn-app">
+            <!-- <a href="../app/download_pmk_app.php" class="nav-btn btn-app">
                 Android
                 <i class="fa-brands fa-android"></i>
-            </a>
+            </a> -->
             <a href="javascript:void(0)" class="nav-btn btn-donate">
                 Donate
                 <i class="fa-solid fa-piggy-bank"></i>
@@ -372,7 +372,7 @@
                     <!-- dropdown menus  -->
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
-                            <a href="../pages/our_story.php" class="nav-dropdown-link">
+                            <a href="../about/our_story.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-book-open-reader"></i>
                                 Our Story
                             </a>
@@ -396,19 +396,19 @@
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/executive_committee.php" class="nav-dropdown-link">
+                            <a href="../about/executive_committee.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-users"></i>
                                 Executive Committee
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/general_committee.php" class="nav-dropdown-link">
+                            <a href="../about/general_committee.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-users-line"></i>
                                 General Committee
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/page.php" class="nav-dropdown-link">
+                            <a href="../about/legal_status.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-scroll"></i>
                                 Legal & Registration
                             </a>
@@ -429,13 +429,13 @@
                     <!-- dropdown menus  -->
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
-                            <a href="../pages/pmk_mfi.php" class="nav-dropdown-link">
+                            <a href="../our_work/pmk_mfi.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-hands-bound"></i>
                                 Microfinance
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/project.php" class="nav-dropdown-link">
+                            <a href="../our_work/project.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-seedling"></i>
                                 RAISE Project
                             </a>
@@ -487,19 +487,19 @@
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
                             <a href="../pages/page.php" class="nav-dropdown-link">
-                                <i class="fa-solid fa-book-open-reader"></i>
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
                                 Technical Training
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
                             <a href="../pages/page.php" class="nav-dropdown-link">
-                                <i class="fa-solid fa-bullseye"></i>
+                                <i class="fa-solid fa-seedling"></i>
                                 Tissue Culture Lab
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
                             <a href="../pages/page.php" class="nav-dropdown-link">
-                                <i class="fa-regular fa-object-group"></i>
+                                <i class="fa-solid fa-stethoscope"></i>
                                 PMK Community Health
                             </a>
                         </li>
@@ -519,14 +519,14 @@
                     <!-- dropdown menus  -->
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
-                            <a href="../pages/annual_report.php" class="nav-dropdown-link">
-                                <i class="fa-solid fa-book-open-reader"></i>
+                            <a href="../reports/annual_report.php" class="nav-dropdown-link">
+                                <i class="fa-solid fa-chart-column"></i>
                                 Annual Report
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/audit_report.php" class="nav-dropdown-link">
-                                <i class="fa-solid fa-bullseye"></i>
+                            <a href="../reports/audit_report.php" class="nav-dropdown-link">
+                                <i class="fa-solid fa-chart-line"></i>
                                 Audit Report
                             </a>
                         </li>
@@ -546,7 +546,7 @@
                     <!-- dropdown menus  -->
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
-                            <a href="../pages/news.php" class="nav-dropdown-link">
+                            <a href="../news/news.php" class="nav-dropdown-link">
                                 <i class="fa-regular fa-newspaper"></i>
                                 PMK News Hub
                             </a>
@@ -567,25 +567,25 @@
                             <!-- sub drop down  -->
                             <ul class="nav-sub-dropdown-menu">
                                 <li class="nav-dropdown-item">
-                                    <a href="../pages/news.php" class="nav-dropdown-link">
+                                    <a href="../pages/page.php" class="nav-dropdown-link">
                                         <i class="fa-solid fa-book-bookmark"></i>
                                         Case Study 1
                                     </a>
                                 </li>
                                 <li class="nav-dropdown-item">
-                                    <a href="../pages/news.php" class="nav-dropdown-link">
+                                    <a href="../pages/page.php" class="nav-dropdown-link">
                                         <i class="fa-solid fa-book-bookmark"></i>
                                         Case Study 2
                                     </a>
                                 </li>
                                 <li class="nav-dropdown-item">
-                                    <a href="../pages/news.php" class="nav-dropdown-link">
+                                    <a href="../pages/page.php" class="nav-dropdown-link">
                                         <i class="fa-solid fa-book-bookmark"></i>
                                         Case Study 3
                                     </a>
                                 </li>
                                 <li class="nav-dropdown-item">
-                                    <a href="../pages/news.php" class="nav-dropdown-link">
+                                    <a href="../pages/page.php" class="nav-dropdown-link">
                                         <i class="fa-solid fa-book-bookmark"></i>
                                         Case Study 4
                                     </a>
@@ -608,13 +608,13 @@
                     <!-- dropdown menus  -->
                     <ul class="nav-dropdown-menu">
                         <li class="nav-dropdown-item">
-                            <a href="../pages/contact.php" class="nav-dropdown-link">
+                            <a href="../contact/contact.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-square-phone"></i>
                                 Contact Us
                             </a>
                         </li>
                         <li class="nav-dropdown-item">
-                            <a href="../pages/working_area.php" class="nav-dropdown-link">
+                            <a href="../contact/working_area.php" class="nav-dropdown-link">
                                 <i class="fa-solid fa-map-location-dot"></i>
                                 Working Area
                             </a>
@@ -628,6 +628,18 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+
+        <!-- nav action  -->
+        <div class="nav-actions mobile-nav-actions">
+            <a href="../app/download_pmk_app.php" class="nav-btn btn-app">
+                Android
+                <i class="fa-brands fa-android"></i>
+            </a>
+            <a href="javascript:void(0)" class="nav-btn btn-donate">
+                Donate
+                <i class="fa-solid fa-piggy-bank"></i>
+            </a>
         </div>
     </div>
 

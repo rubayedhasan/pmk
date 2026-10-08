@@ -53,7 +53,7 @@
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/navbar.php");
+    include("../includes/navbar_outlet.php");
     ?>
 
     <!-- section::Main  -->

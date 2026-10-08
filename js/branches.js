@@ -83,7 +83,7 @@ function displayBranches(data) {
     .map(
       (branch) => `    
         <div class="branch-card" data-branch-code="${branch.branch_code}"
-        data-branch-name="${branch.branch_name}" onclick="window.location.href='../pages/branch.php?branch_code=${branch.branch_code}&branch_name=${branch.branch_name}'" style="cursor:pointer;">
+        data-branch-name="${branch.branch_name}" onclick="window.location.href='../contact/branch.php?branch_code=${branch.branch_code}&branch_name=${branch.branch_name}'" style="cursor:pointer;">
                             <div class="br_card-header">
                                 <div class="br-code">
                                     ${branch.branch_code}

@@ -72,12 +72,12 @@
 
                             <!-- footer nav  -->
                             <nav class="nav flex-column">
-                                <a class="nav-link" href="../pages/pmk_mfi.php">
+                                <a class="nav-link" href="../our_work/pmk_mfi.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Microfinance Program</span></a>
-                                <a class="nav-link" href="../pages/project.php">
+                                <a class="nav-link" href="../our_work/project.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
@@ -106,17 +106,17 @@
 
                             <!-- footer nav  -->
                             <nav class="nav flex-column">
-                                <a class="nav-link" href="../pages/our_story.php">
+                                <a class="nav-link" href="../about/our_story.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>About PMK</span></a>
-                                <a class="nav-link" href="../pages/executive_committee.php">
+                                <a class="nav-link" href="../about/executive_committee.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Leadership</span></a>
-                                <a class="nav-link" href="../pages/annual_report.php">
+                                <a class="nav-link" href="../reports/annual_report.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
@@ -126,7 +126,7 @@
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>
                                     <span>Careers</span></a>
-                                <a class="nav-link" href="../pages/contact.php">
+                                <a class="nav-link" href="../contact/contact.php">
                                     <span>
                                         <i class="fa-solid fa-angles-right"></i>
                                     </span>

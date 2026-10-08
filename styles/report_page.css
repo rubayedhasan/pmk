@@ -11,7 +11,8 @@
 
 /* hero section styles  */
 #report-hero {
-  padding: 16px 0 56px;
+  /* padding: 16px 0 56px; */
+  padding: 110px 0 56px;
   background-color: var(--pmk-white);
   border-bottom: 1px solid #dde8e3;
 }
@@ -570,6 +571,10 @@
   }
 
   /* hero section  */
+  #report-hero {
+    padding: 24px 0 56px;
+  }
+
   .report-breadcrumb {
     margin-bottom: 24px;
   }
@@ -665,6 +670,10 @@
 /* responsive styles:: medium devices  */
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* hero  */
+  #report-hero {
+    padding: 24px 0 56px;
+  }
+
   .report-hero-title {
     font-size: 1.85rem;
   }

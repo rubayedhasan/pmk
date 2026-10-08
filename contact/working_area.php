@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles/index.css">
     <style>
         #working-area {
-            margin-top: 40px;
+            padding-top: 120px;
         }
 
         .map-card {
@@ -89,11 +89,12 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            padding: 24px 28px;
+            padding: 48px 32px;
             margin-bottom: 24px;
             background: #fff;
             border-radius: 8px;
             border: 1.5px solid rgba(0, 148, 106, 0.12);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
         .blc-icon {
@@ -162,6 +163,12 @@
                 justify-content: center;
             }
         }
+
+        @media (max-width: 991.99px) {
+            #working-area {
+                padding-top: 24px;
+            }
+        }
     </style>
 </head>
 
@@ -169,7 +176,7 @@
 <body>
     <?php
     // Linked section:: Navar/Header
-    include("../includes/navbar.php");
+    include("../includes/navbar_outlet.php");
     ?>
 
     <!-- section::Main  -->
